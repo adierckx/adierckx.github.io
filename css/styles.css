@@ -11311,3 +11311,46 @@ body {
   font-size: 0.75rem;
   border-radius: 0.375rem !important;
 }
+/* ========================= */
+/* Table of Contents Styles  */
+/* ========================= */
+.toc ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.toc > ul > li {
+  margin-bottom: 10px;
+}
+
+.toc a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.toc a:hover {
+  text-decoration: underline;
+}
+
+.toc ul ul {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+.toc ul ul li {
+  font-weight: normal;
+}
+/* ========================= */
+/* Embedded PDF Viewer       */
+/* ========================= */
+.pdf-container {
+  height: 80vh;
+  margin-top: 20px;
+}
+
+.pdf-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

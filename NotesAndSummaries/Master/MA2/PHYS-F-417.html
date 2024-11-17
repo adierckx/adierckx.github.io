@@ -10,6 +10,16 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Add MathJax script -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+        <script>
+            function loadPDF(pdfFile) {
+                document.getElementById('pdf-viewer').src = '/NotesAndSummaries/Master/MA2/AQFT/' + pdfFile;
+            }
+        </script>
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -134,10 +144,35 @@
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Synthèses des cours de cinquième année de physique</li>
                         </ol>     
-                        <!-- Embed the PDF -->
+                        <!-- Embed the PDF 
                         <div class="pdf-container" style="height: 800px;">
                             <iframe src="/NotesAndSummaries/Master/MA2/AQFT/AQFT - TOC.pdf" style="width: 100%; height: 100%;" frameborder="0"></iframe>
-                        </div>               
+                        </div>-->
+                                        <!-- Table of Contents -->
+                        <div class="toc">
+                            <h2>Table of Contents</h2>
+                            <ul>
+                                <!-- Chapter 1 -->
+                                <li>
+                                    <a href="#" onclick="loadPDF('AQFT - CH1.pdf')">Chapter 1: Canonical Quantization of Free Fields</a>
+                                    <ul>
+                                        <li>Canonical Quantization of Electromagnetic Fields</li>
+                                        <li>Partition Function and Thermodynamics</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 2 -->
+                                <li>
+                                    <a href="#" onclick="loadPDF('AQFT - CH2.pdf')">Chapter 2: Path Integrals</a>
+                                    <ul>
+                                        <li>Introduction to Path Integrals and Quantum Mechanics</li>
+                                        <li>The Path Integral for the Harmonic Oscillator: $$\int \mathcal{D}x\, e^{iS[x]/\hbar}$$ </li>
+                                        <!-- Add more subsections as needed -->
+                                    </ul>
+                                </li>
+                                <!-- Add more chapters and subsections as needed -->
+                            </ul>
+                        </div>
+
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
@@ -156,5 +191,8 @@
         <script src="/assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="/js/datatables-simple-demo.js"></script>
+        <script>
+            MathJax.typeset();
+        </script>        
     </body>
 </html>
