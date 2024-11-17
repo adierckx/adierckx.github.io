@@ -8191,7 +8191,25 @@ textarea.form-control-lg {
   --bs-bg-opacity: 1;
   background-color: rgba(0, 128, 128, var(--bs-bg-opacity)) !important; /* Teal */
 }
+.color-11 {
+  --bs-bg-opacity: 1;
+  background-color: rgba(255, 140, 0, var(--bs-bg-opacity)) !important; /* Dark Orange */
+}
 
+.color-12 {
+  --bs-bg-opacity: 1;
+  background-color: rgba(30, 144, 255, var(--bs-bg-opacity)) !important; /* Dodger Blue */
+}
+
+.color-13 {
+  --bs-bg-opacity: 1;
+  background-color: rgba(34, 139, 34, var(--bs-bg-opacity)) !important; /* Forest Green */
+}
+
+.color-14 {
+  --bs-bg-opacity: 1;
+  background-color: rgba(123, 104, 238, var(--bs-bg-opacity)) !important; /* Medium Slate Blue */
+}
 /* Custom colors*/
 .bg-primary {
   --bs-bg-opacity: 1;
