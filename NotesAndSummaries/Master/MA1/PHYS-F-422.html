@@ -10,6 +10,11 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Add MathJax script -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -130,10 +135,107 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Modèle standard des interactions fondamentales</h1>
+                        <h1 class="mt-4">Modèle standard des interactions fondamentales </h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Synthèses des cours de quatrième année de physique</li>
-                        </ol>                    
+                        </ol>     
+                        <div class="warning-box">
+                            <p>
+                                <strong>Disclaimer:</strong> The notes published on this website are based on my understanding of the material and have not been independently reviewed or verified. While I hope they are helpful, there may be mistakes or inaccuracies. If you find any errors or have suggestions for improvement, please feel free to contact me at:
+                            </p>
+                            <p class="email">
+                                <a href="mailto:antwandirx@gmail.com">antwandirx@gmail.com</a>
+                            </p>
+                        </div>
+                        
+                                        <!-- Table of Contents -->
+                        <div class="toc">
+                            <h2>Table of Contents</h2>
+                            <ul>
+                                <!-- Chapter 1 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/SM/SM-CH1.pdf">Chapter 1: Champs élémentaires</a>
+                                    <ul class="subsection-list">
+                                        <li>1.1 Champ scalaire réel</li>
+                                        <li>1.2 Champ scalaire complexe</li>
+                                        <li>1.3 Champ vectoriel</li>
+                                        <li>1.4 Spineur de Dirac</li>
+                                        <li>1.5 Spineur de Weyl sans masse</li>
+                                        <li>1.6 Spineur de Majorana</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 2 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/SM/SM-CH2.pdf">Chapter 2: Symétrie de jauge</a>
+                                    <ul class="subsection-list">
+                                        <li>2.1 Cas abélien</li>
+                                        <li>2.2 Cas non abélien: théories de Yan-Mills</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 3 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/SM/SM-CH3.pdf">Chapter 3: Interaction electro-magnétique et interaction faible pour les leptons</a>
+                                    <ul class="subsection-list">
+                                        <li>3.1 Leptons</li>
+                                        <li>3.2 QED</li>
+                                        <li>3.3 \(SU(2)\)</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 4 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/SM/SM-CH4.pdf">Chapter 4: Brisure spontanée de symétrie</a>
+                                    <ul class="subsection-list">
+                                        <li>4.1 Introduction: ferromagnétisme</li>
+                                        <li>4.2 Symétrie discrete: cas d'une champ scalaire réel</li>
+                                        <li>4.3 Symétrie globale abélienne BSS avec \( \phi \in \mathbb{R}\)</li>
+                                        <li>4.4 Symétrie locale abélienne </li>
+                                        <li>4.5 Symétrie locale non-abélienne</li>
+                                        <li>4.6 BSS de \(SU(2)_L \times U(1)_Y \mapsto U(1)_{e-m}\) </li>
+                                        <li>4.7 Symétrie custodiale</li>
+                                        <li>4.8 Masses des leptons</li>
+                                        <li>4.9 Renormabilité de  \(SU(2)_L \times U(1)_Y\) avec BSS</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 5 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/SM/SM-CH5.pdf">Chapter 5: Interaction électro-faible pour les quarks</a>
+                                    <ul class="subsection-list">
+                                        <li>5.1 Zoologie</li>
+                                        <li>5.2 Interactions faibles pour les quarks</li>
+                                        <li>5.3 Mécanisme de GIM</li>
+                                        <li>5.4 Paramétrisation de \(V_\text{CKM}\)</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 6 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/SM/SM-CH6.pdf">Chapter 6: Exemples de processus du modèle standard</a>
+                                    <ul class="subsection-list">
+                                        <li>6.1 Désintégration du boson \(W\)</li>
+                                        <li>6.2 Forme du pic du \(Z\): \(m_Z\) et \(\Gamma_Z^\text{tot}\) </li>
+                                        <li>6.3 Désintégration \(t \rightarrow W\,b\) et théorème d'équivalence de Goldstone</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 7 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/SM/SM-CH7.pdf">Chapter 7: Chromodynamique quantique </a>
+                                    <ul class="subsection-list">
+                                        <li>7.1 Introduction</li>
+                                        <li>7.2 Commentaires</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 8 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/SM/SM-CH8.pdf">Chapter 8: Symétries discrètes, brisure de \(P\),\(C\),\(T\) et \(CP\). </a>
+                                    <ul class="subsection-list">
+                                        <li>8.1 Définitions</li>
+                                        <li>8.2 Transformation des spineurs sous \(C\),\(P\) et \(T\)</li>
+                                        <li>8.3 Transformation du lagrangien sous \(C\),\(P\) et \(T\)</li>
+                                        <li>8.4 Transformation des hadroons sous \(C\) et \(P\)</li>
+                                        <li>8.5 Triangle d'unitarité</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
@@ -152,5 +254,6 @@
         <script src="/assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="/js/datatables-simple-demo.js"></script>
+        <script> MathJax.typeset(); </script>              
     </body>
 </html>

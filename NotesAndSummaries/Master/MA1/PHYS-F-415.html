@@ -10,6 +10,11 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Add MathJax script -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -130,10 +135,112 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Cosmologie</h1>
+                        <h1 class="mt-4">Cosmologie </h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Synthèses des cours de quatrième année de physique</li>
-                        </ol>                    
+                        </ol>     
+                        <div class="warning-box">
+                            <p>
+                                <strong>Disclaimer:</strong> The notes published on this website are based on my understanding of the material and have not been independently reviewed or verified. While I hope they are helpful, there may be mistakes or inaccuracies. If you find any errors or have suggestions for improvement, please feel free to contact me at:
+                            </p>
+                            <p class="email">
+                                <a href="mailto:antwandirx@gmail.com">antwandirx@gmail.com</a>
+                            </p>
+                        </div>
+                        
+                                        <!-- Table of Contents -->
+                        <div class="toc">
+                            <h2>Table of Contents</h2>
+                            <ul>
+                                <!-- Chapter 1 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/COSMO/COSMO-CH1.pdf">Chapter 1: Univers homotrope: géométrie, distance et horizon </a>
+                                    <ul class="subsection-list">
+                                        <li>1.1 Echelles de grandeurs</li>
+                                        <li>1.2 Principe cosmologique et loi de Hubble</li>
+                                        <li>1.3 Géométrie d'un espace homotrope</li>
+                                        <li>1.4 Horizons</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 2 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/COSMO/COSMO-CH2.pdf">Chapter 2: Dynamique d'un univers homotrope</a>
+                                    <ul class="subsection-list">
+                                        <li>2.1 Dynamique de Newton</li>
+                                        <li>2.2 Dynamique de la relativité générale</li>
+                                        <li>2.3 Solutions aux équations de Friedmann</li>
+                                        <li>2.4 Ajustement du modèle à partir des données</li>
+                                        <li>2.5 Univers de Milne</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 3 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/COSMO/COSMO-CH3.pdf">Chapter 3: Univers primordial</a>
+                                    <ul class="subsection-list">
+                                        <li>3.1 Egalité matière - \(\Lambda\) et matière - radiation</li>
+                                        <li>3.2 Epoque doinée par la radiation</li>
+                                        <li>3.3 Entropie</li>
+                                        <li>3.4 Particule non relativiste en équilibre thermique</li>
+                                        <li>3.5 Découplage chimique d'un type de particule</li>
+                                        <li>3.6 Découplage des neutrinos</li>
+                                        <li>3.7 Ratio baryon-photon</li>
+                                        <li>3.8 Brève histoire de l'univers</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 4 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/COSMO/COSMO-CH4.pdf">Chapter 4: Nucléosynthèse primordiale</a>
+                                    <ul class="subsection-list">
+                                        <li>4.1 Equilibre statistique nucléaire</li>
+                                        <li>4.2 Rapport neutron-proton</li>
+                                        <li>4.3 Chaines de réactions nucléaires</li>
+                                        <li>4.4 Barrière de Coulomb</li>
+                                        <li>4.5 Chronologie de la nucléosynthèse primordiale</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 5 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/COSMO/COSMO-CH5.pdf">Chapter 5: Recombinaison et découplage des photons</a>
+                                    <ul class="subsection-list">
+                                        <li>5.1 Recombinaison</li>
+                                        <li>5.2 Découplage cinétique des photons</li>
+                                        <li>5.3 Commentaires</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 6 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/COSMO/COSMO-CH6.pdf">Chapter 6: Manière noire</a>
+                                    <ul class="subsection-list">
+                                        <li>6.1 Indications</li>
+                                        <li>6.2 Nature de la matière noire</li>
+                                        <li>6.3 Densité relique de la matière noire</li>
+                                        <li>6.4 Densité relique et équation de Boltzmann</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 7 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/COSMO/COSMO-CH7.pdf">Chapter 7: Origine de l'asymétrie matière - anti-matière dans l'univers</a>
+                                    <ul class="subsection-list">
+                                        <li>7.1 Généralités</li>
+                                        <li>7.2 Exemple de baryogénèse: désintégration</li>
+                                        <li>7.3 Asymétrie \(CP\)</li>
+                                        <li>7.4 Brisure explicite de \(B\)</li>
+                                        <li>7.5 Condition de déséquilibre thermique</li>
+                                        <li>7.6 Equation de Boltzmann</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 8 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/COSMO/COSMO-CH8.pdf">Chapter 8: Inflation</a>
+                                    <ul class="subsection-list">
+                                        <li>8.1 Critique de \(\Lambda\)-CDM</li>
+                                        <li>8.2 Principe de l'inflation</li>
+                                        <li>8.3 Dynamique du champ scalaire</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
@@ -152,5 +259,6 @@
         <script src="/assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="/js/datatables-simple-demo.js"></script>
+        <script> MathJax.typeset(); </script>              
     </body>
 </html>

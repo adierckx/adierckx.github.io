@@ -10,6 +10,11 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Add MathJax script -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -130,10 +135,86 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Physics of Strong Interactions</h1>
+                        <h1 class="mt-4">Physics of Strong Interactions </h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Synthèses des cours de quatrième année de physique</li>
-                        </ol>                    
+                        </ol>     
+                        <div class="warning-box">
+                            <p>
+                                <strong>Disclaimer:</strong> The notes published on this website are based on my understanding of the material and have not been independently reviewed or verified. While I hope they are helpful, there may be mistakes or inaccuracies. If you find any errors or have suggestions for improvement, please feel free to contact me at:
+                            </p>
+                            <p class="email">
+                                <a href="mailto:antwandirx@gmail.com">antwandirx@gmail.com</a>
+                            </p>
+                        </div>
+                        
+                                        <!-- Table of Contents -->
+                        <div class="toc">
+                            <h2>Table of Contents</h2>
+                            <ul>
+                                <!-- Chapter 1 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/QCD/QCD-CH1.pdf">Chapter 1: Introduction</a>
+                                    <ul class="subsection-list">
+                                        <li>1.1 Un brin d'histoire</li>
+
+                                    </ul>
+                                </li>
+                                <!-- Chapter 2 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/QCD/QCD-CH2.pdf">Chapter 2: Bases de la QCD</a>
+                                    <ul class="subsection-list">
+                                        <li>2.1 Introduction</li>
+                                        <li>2.2 Invariance de jauge en QED</li>
+                                        <li>2.3 Invariance de jauge non-abélienne et lagrangien de QCD</li>
+                                        <li>2.4 LLa liberté asymptotique</li>
+                                        <li>2.5 Le potentiel QCD</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 3 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/QCD/QCD-CH3.pdf">Chapter 3: Annihilation \(e^+-e^-\)</a>
+                                    <ul class="subsection-list">
+                                        <li>3.1 Section efficace totale \(e^+-e^- \rightarrow \text{hadrons}\)</li>
+                                        <li>3.2 Création d'une paire \(\bar{q}q\)</li>
+                                        <li>3.3 La formation de jets</li>
+                                        <li>3.4 Le pic du \(Z\)</li>
+                                        <li>3.5 Corrections radiatives QED</li>
+                                        <li>3.6 Au delà du \(Z\)</li>
+                                        <li>3.7 Production de particules</li>
+                                        <li>3.8 \(\sigma \left( e^+ e^- \rightarrow q \bar{q} g\right) \)</li>
+                                        <li>3.9 Algorithmes de reconstruction des jets</li>
+                                        <li>3.10 Structure de l'état final hadronique</li>
+                                        <li>3.11 Comparaison des mesures de \(\alpha_s\)</li>
+                                        <li>3.12 Test de la structure de jauge de QCD</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 4 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/QCD/QCD-CH4.pdf">Chapter 4: La diffusion \(e^--p\)</a>
+                                    <ul class="subsection-list">
+                                        <li>4.1 De l'atome au nucléon</li>
+                                        <li>4.2 Diffusion spin \(1/2\) sur nucléon</li>
+                                        <li>4.3 Diffusion profondément innélastique</li>
+                                        <li>4.4 Les fonctions de structure</li>
+                                        <li>4.5 Le modèle des partons</li>
+                                        <li>4.6 Mesure étendue des fonctions de structures</li>
+                                        <li>4.7 La violation d'échelle et les équations \(\text{DGLAP}\)</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 5 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/QCD/QCD-CH5.pdf">Chapter 5: Interactions proton-proton</a>
+                                    <ul class="subsection-list">
+                                        <li>5.1 Production de jets</li>
+                                        <li>5.2 Remarque sur les factorisations QCD</li>
+                                        <li>5.3 Le processus Drell-Yan</li>
+                                        <li>5.4 Conclusion</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
@@ -152,5 +233,6 @@
         <script src="/assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="/js/datatables-simple-demo.js"></script>
+        <script> MathJax.typeset(); </script>              
     </body>
 </html>

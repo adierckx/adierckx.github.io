@@ -10,6 +10,11 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Add MathJax script -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -130,10 +135,93 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Advanced general relativity</h1>
+                        <h1 class="mt-4">Advanced general relativity </h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Synthèses des cours de quatrième année de physique</li>
-                        </ol>                    
+                        </ol>     
+                        <div class="warning-box">
+                            <p>
+                                <strong>Disclaimer:</strong> The notes published on this website are based on my understanding of the material and have not been independently reviewed or verified. While I hope they are helpful, there may be mistakes or inaccuracies. If you find any errors or have suggestions for improvement, please feel free to contact me at:
+                            </p>
+                            <p class="email">
+                                <a href="mailto:antwandirx@gmail.com">antwandirx@gmail.com</a>
+                            </p>
+                        </div>
+                        
+                                        <!-- Table of Contents -->
+                        <div class="toc">
+                            <h2>Table of Contents</h2>
+                            <ul>
+                                <!-- Chapter 1 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/GR2/GR2-CH1.pdf">Chapter 1: Auxiliary fields</a>
+                                    <ul class="subsection-list">
+                                        <li>1.1 Generalized auxiliary fields and symmetries</li>
+                                        <li>1.2 Invertibilty and Legendre transforms</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 2 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/GR2/GR2-CH2.pdf">Chapter 2: Gauge symmetry</a>
+                                    <ul class="subsection-list">
+                                        <li>2.1 Introduction</li>
+                                        <li>2.2 Mathematical tools</li>
+                                        <li>2.3 Noether current</li>
+                                        <li>2.4 Linearized gauge theories</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 3 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/GR2/GR2-CH3.pdf">Chapter 3: Application to the Einstein Field Equations</a>
+                                    <ul class="subsection-list">
+                                        <li>3.1 Metric formulation</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 4 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/GR2/RG2-CH4.pdf">Chapter 4: Cartan formalism</a>
+                                    <ul class="subsection-list">
+                                        <li>4.1 Mathematical reminders
+                                            <ul>
+                                                <li>- Linear algebra</li>
+                                                <li>- Manifolds and functions</li>
+                                                <li>- Non coordinates basis</li>
+                                                <li>- Covector</li>
+                                                <li>- Change of basis</li>
+                                                <li>- Tensor algebra</li>
+                                                <li>- Metric</li>
+                                                <li>- Exterior algebra</li>
+                                                <li>- Affine connection</li>
+                                                <li>- Torsion tensor and affine connection</li>
+                                                <li>- Levi-Civita connection</li>
+                                                <li>- Lorentz connection</li>
+                                                <li>- Curvature</li>
+                                                <li>- \(GL(n,\mathbb{R})\) algebra, Bianchi identities and Poincaré algebra</li>
+                                            </ul>
+                                        </li>
+                                        <li>4.2 Cartan's action</li>
+                                        <li>4.3 Einstein-Dirac theory</li>
+                                        <li>4.4 Gravity as a Chern-Simons theory</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 5 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/GR2/GR2-CH5.A.pdf">Chapter 5: ADM formalism</a>
+                                    <ul class="subsection-list">
+                                        <li>5.1 Non-null hypersurface</li>
+                                        <li>5.2 ADM parametrization of the metric</li>
+                                        <li>5.3 Hamiltonian formulation</li>
+                                        <li>5.4 Hamiltonian constraint system</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 6 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/">Chapter 6: Hamiltonian formulation of linearized gravity</a>
+
+                                </li>
+                            </ul>
+                        </div>
+
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
@@ -152,5 +240,6 @@
         <script src="/assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="/js/datatables-simple-demo.js"></script>
+        <script> MathJax.typeset(); </script>              
     </body>
 </html>
