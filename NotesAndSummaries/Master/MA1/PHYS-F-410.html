@@ -10,6 +10,11 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Add MathJax script -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -130,10 +135,87 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Quantum field theory I</h1>
+                        <h1 class="mt-4">Quantum field theory I </h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Synthèses des cours de quatrième année de physique</li>
-                        </ol>                    
+                        </ol>     
+                        <div class="warning-box">
+                            <p>
+                                <strong>Disclaimer:</strong> The notes published on this website are based on my understanding of the material and have not been independently reviewed or verified. While I hope they are helpful, there may be mistakes or inaccuracies. If you find any errors or have suggestions for improvement, please feel free to contact me at:
+                            </p>
+                            <p class="email">
+                                <a href="mailto:antwandirx@gmail.com">antwandirx@gmail.com</a>
+                            </p>
+                        </div>
+                        
+                                        <!-- Table of Contents -->
+                        <div class="toc">
+                            <h2>Table of Contents</h2>
+                            <ul>
+                                <!-- Chapter 1 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/QFT1/QFT1-CH1.pdf">Chapter 1: Classical field</a>
+                                    <ul class="subsection-list">
+                                        <li>1.1 Scalar field</li>
+                                        <li>1.2 Symmetries and conservation laws: Noether theorem</li>
+                                        <li>1.3 Energy-momentum tensor</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 2 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/QFT1/QFT1-CH2.pdf">Chapter 2: Quantization of a free scalar field</a>
+                                    <ul class="subsection-list">
+                                        <li>2.1 Quantization in quantum mechanics</li>
+                                        <li>2.2 Quantization of a real scalar field</li>
+                                        <li>2.3 Complex scalar field</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 3 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/QFT1/QFT1-CH3.pdf">Chapter 3: Interaction</a>
+                                    <ul class="subsection-list">
+                                        <li>3.1 Interaction representation</li>
+                                        <li>3.2 Evolution in interaction representation</li>
+                                        <li>3.3 Matrix Elements of the S-Matrix</li>
+                                        <li>3.4 Calculation of the S-matrix</li>
+                                        <li>3.5 Decay of a massive particle</li>
+                                        <li>3.6 Scattering and Cross section</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 4 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/QFT1/QFT1-CH4.pdf">Chapter 4: Free Dirac field</a>
+                                    <ul class="subsection-list">
+                                        <li>4.1 Spinor representation</li>
+                                        <li>4.2 Lagrangian of a free Dirac field</li>
+                                        <li>4.3 Solution to the free Dirac equation</li>
+                                        <li>4.4 Quantization</li>
+                                        <li>4.5 Spin</li>
+                                        <li>4.6 One-particle states</li>
+                                        <li>4.7 Statistics</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 5 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/QFT1/QFT1-CH5.pdf">Chapter 5: Vector field</a>
+                                    <ul class="subsection-list">
+                                        <li>5.1 Construct a Lagrangian</li>
+                                        <li>5.2 Classical solutions</li>
+                                        <li>5.3 Canonical quantization</li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 6 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA1/QFT1/QFT1-CH6.pdf">Chapter 6: Feynman rules for fermions and vectors</a>
+                                    <ul class="subsection-list">
+                                        <li>6.1 Feynman rules for fermions</li>
+                                        <li>6.2 Feynman rules for vectors</li>
+                                        <li>6.3 Decay of a vector into two fermions</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
@@ -152,5 +234,6 @@
         <script src="/assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="/js/datatables-simple-demo.js"></script>
+        <script> MathJax.typeset(); </script>              
     </body>
 </html>

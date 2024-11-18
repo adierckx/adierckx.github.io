@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard - SB Admin</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="/css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Add MathJax script -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="/index.html">ADIERCKX</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <!---->
+                            <div class="sb-sidenav-menu-heading">Home</div>
+                            <a class="nav-link" href="/index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Notes and summaries</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseBachelors" aria-expanded="false" aria-controls="collapseBachelors">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Bachelor's Degree
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseBachelors" aria-labelledby="headingBachelors" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="/NotesAndSummaries/Bachelor/BA1.html">BA1</a>
+                                    <a class="nav-link" href="/NotesAndSummaries/Bachelor/BA2.html">BA2</a>
+                                    <a class="nav-link" href="/NotesAndSummaries/Bachelor/BA3.html">BA3</a>
+                                </nav>
+                            </div>
+                            <!---->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMasters" aria-expanded="false" aria-controls="collapseMasters">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Master's Degree
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseMasters" aria-labelledby="headingMasters" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="/NotesAndSummaries/Master/MA1.html">MA1</a>
+                                    <a class="nav-link" href="/NotesAndSummaries/Master/MA2.html">MA2</a>
+                                </nav>
+                            </div>
+                            <!---->
+                            <div class="sb-sidenav-menu-heading">Projects and Work</div>
+                            <!---->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMinternship" aria-expanded="false" aria-controls="collapseMinternship">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Master's Internship
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseMinternship" aria-labelledby="headingMinternship" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="/ProjectsAndWork/MasterInternship/AFB.html">AFB in Drell-Yan (CMS)</a>
+                                    <a class="nav-link" href="/ProjectsAndWork/MasterInternship/epluseminus.html">e⁺e⁻ → qq̅g Simulation</a>
+                                    <a class="nav-link" href="/ProjectsAndWork/MasterInternship/darkphoton.html">Dark Photon</a>
+                                    <a class="nav-link" href="/ProjectsAndWork/MasterInternship/darkphoton.html">Generalized Symmetries</a>
+                                </nav>
+                            </div>
+                            <!---->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLabReports" aria-expanded="false" aria-controls="collapseLabReports">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Lab Reports
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLabReports" aria-labelledby="headingLabReports" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="/ProjectsAndWork/LabReport/bachelor.html">Bachelor's Lab Reports</a>
+                                    <a class="nav-link" href="/ProjectsAndWork/LabReport/master.html">Master's Lab Reports</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link" href="/ProjectsAndWork/summerinternship.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Summer Internship
+                            </a>
+                            <!---->
+                            <div class="sb-sidenav-menu-heading">Math Syllabus</div>
+                            <!---->
+                            <a class="nav-link" href="/MathSyllabus/volume1.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Volume 1
+                            </a>
+                            <a class="nav-link" href="/MathSyllabus/volume2.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Volume 2
+                            </a>
+                            <!---->
+                            <div class="sb-sidenav-menu-heading">About</div>
+                            <!---->
+                            <a class="nav-link" href="/About/about.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                About
+                            </a>
+                            <a class="nav-link" href="/About/cv.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                CV
+                            </a>
+                            <!---->
+                            <div class="sb-sidenav-menu-heading">Additional Resources</div>
+                            <!---->
+                            <a class="nav-link" href="/Ressources/books.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Some books
+                            </a>
+                            <a class="nav-link" href="/Ressources/links.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Useful links
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small" style="font-size: 10px;">Bread and Roses</div>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Title </h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Synthèses des cours de quatrième année de physique</li>
+                        </ol>     
+                        <div class="warning-box">
+                            <p>
+                                <strong>Disclaimer:</strong> The notes published on this website are based on my understanding of the material and have not been independently reviewed or verified. While I hope they are helpful, there may be mistakes or inaccuracies. If you find any errors or have suggestions for improvement, please feel free to contact me at:
+                            </p>
+                            <p class="email">
+                                <a href="mailto:antwandirx@gmail.com">antwandirx@gmail.com</a>
+                            </p>
+                        </div>
+                        
+                                        <!-- Table of Contents -->
+                        <div class="toc">
+                            <h2>Table of Contents</h2>
+                            <ul>
+                                <!-- Chapter 1 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/">Chapter 1: </a>
+                                    <ul class="subsection-list">
+                                        <li>1.1 </li>
+                                        <li>1.2 </li>
+                                        <li>1.3 </li>
+                                        <li>1.4 </li>
+                                        <li>1.5 </li>
+                                        <li>1.6 </li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 2 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/">Chapter 2: </a>
+                                    <ul class="subsection-list">
+                                        <li>2.1 </li>
+                                        <li>2.2 </li>
+                                        <li>2.3 </li>
+                                        <li>2.4 </li>
+                                        <li>2.5 </li>
+                                        <li>2.6 </li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 3 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/">Chapter 3: </a>
+                                    <ul class="subsection-list">
+                                        <li>3.1 </li>
+                                        <li>3.2 </li>
+                                        <li>3.3 </li>
+                                        <li>3.4 </li>
+                                        <li>3.5 </li>
+                                        <li>3.6 </li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 4 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/">Chapter 4: </a>
+                                    <ul class="subsection-list">
+                                        <li>4.1 </li>
+                                        <li>4.2 </li>
+                                        <li>4.3 </li>
+                                        <li>4.4 </li>
+                                        <li>4.5 </li>
+                                        <li>4.6 </li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 5 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/">Chapter 5: </a>
+                                    <ul class="subsection-list">
+                                        <li>5.1 </li>
+                                        <li>5.2 </li>
+                                        <li>5.3 </li>
+                                        <li>5.4 </li>
+                                        <li>5.5 </li>
+                                        <li>5.6 </li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 6 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/">Chapter 6: </a>
+                                    <ul class="subsection-list">
+                                        <li>6.1 </li>
+                                        <li>6.2 </li>
+                                        <li>6.3 </li>
+                                        <li>6.4 </li>
+                                        <li>6.5 </li>
+                                        <li>6.6 </li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 7 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/">Chapter 7: </a>
+                                    <ul class="subsection-list">
+                                        <li>7.1 </li>
+                                        <li>7.2 </li>
+                                        <li>7.3 </li>
+                                        <li>7.4 </li>
+                                        <li>7.5 </li>
+                                        <li>7.6 </li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 8 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/">Chapter 8: </a>
+                                    <ul class="subsection-list">
+                                        <li>8.1 </li>
+                                        <li>8.2 </li>
+                                        <li>8.3 </li>
+                                        <li>8.4 </li>
+                                        <li>8.5 </li>
+                                        <li>8.6 </li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 9 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/">Chapter 9: </a>
+                                    <ul class="subsection-list">
+                                        <li>9.1 </li>
+                                        <li>9.2 </li>
+                                        <li>9.3 </li>
+                                        <li>9.4 </li>
+                                        <li>9.5 </li>
+                                        <li>9.6 </li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 10 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/">Chapter 10: </a>
+                                    <ul class="subsection-list">
+                                        <li>10.1 </li>
+                                        <li>10.2 </li>
+                                        <li>10.3 </li>
+                                        <li>10.4 </li>
+                                        <li>10.5 </li>
+                                        <li>10.6 </li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 11 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/">Chapter 11: </a>
+                                    <ul class="subsection-list">
+                                        <li>11.1 </li>
+                                        <li>11.2 </li>
+                                        <li>11.3 </li>
+                                        <li>11.4 </li>
+                                        <li>11.5 </li>
+                                        <li>11.6 </li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 12 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/">Chapter 12: </a>
+                                    <ul class="subsection-list">
+                                        <li>12.1 </li>
+                                        <li>12.2 </li>
+                                        <li>12.3 </li>
+                                        <li>12.4 </li>
+                                        <li>12.5 </li>
+                                        <li>12.6 </li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 13 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/">Chapter 13: </a>
+                                    <ul class="subsection-list">
+                                        <li>13.1 </li>
+                                        <li>13.2 </li>
+                                        <li>13.3 </li>
+                                        <li>13.4 </li>
+                                        <li>13.5 </li>
+                                        <li>13.6 </li>
+                                    </ul>
+                                </li>
+                                <!-- Chapter 14 -->
+                                <li>
+                                    <a href="/NotesAndSummaries/">Chapter 14: </a>
+                                    <ul class="subsection-list">
+                                        <li>14.1 </li>
+                                        <li>14.2 </li>
+                                        <li>14.3 </li>
+                                        <li>14.4 </li>
+                                        <li>14.5 </li>
+                                        <li>14.6 </li>
+                                    </ul>
+                                </li>
+                                <!-- End -->
+                            </ul>
+                        </div>
+
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyleft <img src="/logo/Copyleft.svg.png" alt="Copyleft Logo" style="height: 10px; vertical-align: baseline;"> 2024-2025</div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="/js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="/assets/demo/chart-area-demo.js"></script>
+        <script src="/assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="/js/datatables-simple-demo.js"></script>
+        <script> MathJax.typeset(); </script>              
+    </body>
+</html>
