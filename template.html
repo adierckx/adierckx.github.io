@@ -10,22 +10,16 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Add MathJax script -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
     </head>
-    <script type="text/javascript" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-    <script>
-        function switchLanguage(lang) {
-            // Hide all content
-            document.querySelectorAll('.content').forEach(el => el.style.display = 'none');
-            // Show the selected language
-            document.querySelector(`.content[data-lang="${lang}"]`).style.display = 'block';
-        }
-    </script>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="/index.html">\( \mathbb{A}\mathbb{D}\mathbb{I}\mathbb{E}\mathbb{R}\mathbb{C}\mathbb{K}\mathbb{X} \)</a>
+            <a class="navbar-brand ps-3" href="/index.html">ADIERCKX</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
         </nav>
@@ -37,12 +31,12 @@
                             <!---->
                             <div class="sb-sidenav-menu-heading">Home</div>
                             <a class="nav-link" href="/index.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
-                                Overview
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
                             </a>
                             <div class="sb-sidenav-menu-heading">Notes and summaries</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseBachelors" aria-expanded="false" aria-controls="collapseBachelors">
-                                <div class="sb-nav-link-icon"><i class="fas fa-edit"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Bachelor's Degree
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -55,7 +49,7 @@
                             </div>
                             <!---->
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMasters" aria-expanded="false" aria-controls="collapseMasters">
-                                <div class="sb-nav-link-icon"><i class="fas fa-edit"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Master's Degree
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -83,7 +77,7 @@
                             </div>
                             <!---->
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLabReports" aria-expanded="false" aria-controls="collapseLabReports">
-                                <div class="sb-nav-link-icon"><i class="fas fa-flask"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Lab Reports
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -94,42 +88,40 @@
                                 </nav>
                             </div>
                             <a class="nav-link" href="/ProjectsAndWork/summerinternship.html">
-                                <div class="sb-nav-link-icon">
-                                    <img src="/logo/CMS.png" alt="CERN Logo" style="height: 17px; width: auto;">
-                                </i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Summer Internship
                             </a>
                             <!---->
                             <div class="sb-sidenav-menu-heading">Math Syllabus</div>
                             <!---->
                             <a class="nav-link" href="/MathSyllabus/volume1.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-plus"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Volume 1
                             </a>
                             <a class="nav-link" href="/MathSyllabus/volume2.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-divide"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Volume 2
                             </a>
                             <!---->
                             <div class="sb-sidenav-menu-heading">About</div>
                             <!---->
                             <a class="nav-link" href="/About/about.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-info-circle"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 About
                             </a>
                             <a class="nav-link" href="/About/cv.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 CV
                             </a>
                             <!---->
                             <div class="sb-sidenav-menu-heading">Additional Resources</div>
                             <!---->
                             <a class="nav-link" href="/Ressources/books.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Some books
                             </a>
                             <a class="nav-link" href="/Ressources/links.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-link"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Useful links
                             </a>
                             
@@ -142,64 +134,15 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid px-4">
-                        <br>
-                        <!-- Language Switcher -->
-                        <div class="language-switcher">
-                            <button class="btn btn-primary" onclick="switchLanguage('en')">English</button>
-                            <button class="btn btn-secondary" onclick="switchLanguage('fr')">Français</button>
-                        </div>
 
-                            <!-- English Content -->
-                        <div class="content" data-lang="en">
-                        <h1 class="mt-4">Welcome to <a href="http://adierckx.github.io/"> adierckx.github.io/ </a></h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">adierckx.github.io/</li>
-                        </ol>
-                        <p>Hi, and thanks for visiting!</em>.</p>
-						<p>I created this website to share some notes and summaries I've made during my physics and math studies. They've helped me a lot, and I hope they might be useful to you too.<br/>
-                            <h2>What You'll Find Here</h2>
-                            <ul>
-                                <li><strong>Lecture Notes:</strong><br> 
-                                    Scanned handwritten notes from my Bachelor’s and Master’s courses, organized by year and subject. Click on a chapter title in the table of contents to access the PDF.</li>
-                                <li><strong>Lab and Internship Reports:</strong> <br>
-                                    Reports from labs and my summer internship at CERN.</li>
-                                <li><strong>Math Syllabus:</strong> <br>
-                                    Simple, high-school-level math guides I created for friends a couple years ago.</li>
-                                <li><strong>Additional Resources:</strong> <br>
-                                    A collection of textbooks and reference materials that students might find useful.</li>
-                            </ul></p>
-                        
-                        <h2>How to Use This Site</h2>
-                            <p>To access the notes, simply navigate to the table of contents, select the course you're interested in, and click on the chapter title to open the corresponding PDF. Everything is grouped by year and subject to make it easy to find what you need.</p>
-                            <p>If you're looking for textbooks, head to the <a href="/Ressources/books.html">book</a> section. You'll find a variety of books and links to download them for free.</p>
-                            <p>Feel free to explore, and thanks again for stopping by!</p>
-
-                    </div> 
-                     <!-- French Content -->
-                    <div class="content" data-lang="fr" style="display: none;">
-                        <h1 class="mt-4">Bienvenue sur <a href="http://adierckx.github.io/"> adierckx.github.io/ </a></h1>
-                        <ol class="breadcrumb mb-4"> <li class="breadcrumb-item active">adierckx.github.io/</li> </ol>
-                        <p>Bonjour, et merci de votre visite&nbsp;!</p>
-                        <p>J'ai créé ce site web pour partager des notes et des résumés que j'ai réalisés pendant mes études de physique et de mathématiques. Ils m'ont beaucoup aidé, et j'espère qu'ils pourront vous être utiles aussi.<br/> <h2>Ce que vous trouverez ici</h2>
-                            <ul> 
-                                <li><strong>Notes de cours :</strong><br> 
-                                    Des notes manuscrites numérisées de mes cours de bachelier et de master, organisées par année et par sujet. Cliquez sur le titre d'un chapitre dans la table des matières pour accéder au PDF.</li> 
-                                <li><strong>Rapports de laboratoire et de stage :</strong><br> 
-                                    Des rapports de laboratoires et de mon stage d'été au CERN.</li> 
-                                <li><strong>Syllabus de mathématiques :</strong><br>
-                                    Des notes de mathématiques élémentaires, de niveau école secondaire, que j'ai créés pour des amis il y a quelques années.</li> 
-                                <li><strong>Ressources supplémentaires :</strong><br> 
-                                    Une collection de manuels et de documents de référence qui pourraient être utiles aux étudiants en physique.</li> 
-                            </ul></p>
-                        <h2>Comment utiliser ce site</h2>
-
-                        <p>Pour accéder aux notes, naviguez simplement vers la table des matières, sélectionnez le cours qui vous intéresse, et cliquez sur le titre du chapitre pour ouvrir le PDF correspondant. Tout est regroupé par année et par sujet pour faciliter la recherche de ce dont vous avez besoin.</p>
-                         <p>Si vous cherchez des manuels, rendez-vous dans la section <a href="/Ressources/books.html">Books</a>. Vous y trouverez des livres de référence et des liens pour les télécharger gratuitement.</p> 
-                         <p>N'hésitez pas à explorer, et merci encore de votre visite&nbsp;!</p> </div>
-                    </div>
-                </div>
                 </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyleft <img src="/logo/Copyleft.svg.png" alt="Copyleft Logo" style="height: 10px; vertical-align: baseline;"> 2024-2025</div>
+                        </div>
+                    </div>
+                </footer>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
@@ -209,5 +152,6 @@
         <script src="/assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="/js/datatables-simple-demo.js"></script>
+        <script> MathJax.typeset(); </script>              
     </body>
 </html>
