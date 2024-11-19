@@ -11,31 +11,23 @@
         <link href="/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
+    <script type="text/javascript" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script>
+        function switchLanguage(lang) {
+            // Hide all content
+            document.querySelectorAll('.content').forEach(el => el.style.display = 'none');
+            // Show the selected language
+            document.querySelector(`.content[data-lang="${lang}"]`).style.display = 'block';
+        }
+    </script>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="/index.html">ADIERCKX</a>
+            <a class="navbar-brand ps-3" href="/index.html">\( \mathbb{A}\mathbb{D}\mathbb{I}\mathbb{E}\mathbb{R}\mathbb{C}\mathbb{K}\mathbb{X} \)</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-            <!-- Navbar Search-->
-            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
-                </div>
-            </form>
-            <!-- Navbar-->
-            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Settings</a></li>
-                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
@@ -45,12 +37,12 @@
                             <!---->
                             <div class="sb-sidenav-menu-heading">Home</div>
                             <a class="nav-link" href="/index.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
+                                <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
+                                Overview
                             </a>
                             <div class="sb-sidenav-menu-heading">Notes and summaries</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseBachelors" aria-expanded="false" aria-controls="collapseBachelors">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-edit"></i></div>
                                 Bachelor's Degree
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -63,7 +55,7 @@
                             </div>
                             <!---->
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMasters" aria-expanded="false" aria-controls="collapseMasters">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-edit"></i></div>
                                 Master's Degree
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -91,7 +83,7 @@
                             </div>
                             <!---->
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLabReports" aria-expanded="false" aria-controls="collapseLabReports">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-flask"></i></div>
                                 Lab Reports
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -102,40 +94,42 @@
                                 </nav>
                             </div>
                             <a class="nav-link" href="/ProjectsAndWork/summerinternship.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon">
+                                    <img src="/logo/CMS.png" alt="CERN Logo" style="height: 17px; width: auto;">
+                                </i></div>
                                 Summer Internship
                             </a>
                             <!---->
                             <div class="sb-sidenav-menu-heading">Math Syllabus</div>
                             <!---->
                             <a class="nav-link" href="/MathSyllabus/volume1.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-plus"></i></div>
                                 Volume 1
                             </a>
                             <a class="nav-link" href="/MathSyllabus/volume2.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-divide"></i></div>
                                 Volume 2
                             </a>
                             <!---->
                             <div class="sb-sidenav-menu-heading">About</div>
                             <!---->
                             <a class="nav-link" href="/About/about.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-info-circle"></i></div>
                                 About
                             </a>
                             <a class="nav-link" href="/About/cv.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                                 CV
                             </a>
                             <!---->
                             <div class="sb-sidenav-menu-heading">Additional Resources</div>
                             <!---->
                             <a class="nav-link" href="/Ressources/books.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Some books
                             </a>
                             <a class="nav-link" href="/Ressources/links.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-link"></i></div>
                                 Useful links
                             </a>
                             
