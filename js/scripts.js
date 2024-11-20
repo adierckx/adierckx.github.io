@@ -24,3 +24,7 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
 });
+function revealEasterEgg() {
+    const meme = document.getElementById('faddeev-popov-meme');
+    meme.style.display = meme.style.display === 'none' ? 'block' : 'none';
+}

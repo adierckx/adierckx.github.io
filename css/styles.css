@@ -102,7 +102,7 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  background: linear-gradient(120deg, #ffffff, #d4caf8, #ffffff);
+  background: linear-gradient(90deg, #ffffff, #e6e1f5,#e6e1f5, #ffffff);
   /*color: #ffffff; /* Optional: Ensures text is readable on dark gradients */
   min-height: 100vh; /* Ensures the background covers the full viewport */
 }
@@ -11391,4 +11391,12 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
 .email {
   text-align: center; /* Centers the email address */
   font-weight: bold; /* Makes the email address stand out */
+}
+.easter-egg {
+  border: 2px solid #ccc;
+  padding: 15px;
+  background-color: #f9f9f9;
+  text-align: center;
+  margin-top: 5px;
+  border-radius: 5px;
 }
