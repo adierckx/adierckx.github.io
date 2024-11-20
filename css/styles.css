@@ -11324,6 +11324,7 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
 .toc ul {
   list-style-type: none;
   padding-left: 0;
+  animation: fadeIn 1s forwards;
 }
 
 .toc > ul > li {
@@ -11333,7 +11334,7 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
 .toc a {
   font-weight: bold;
   text-decoration: none;
-  color: #007bff;
+  color: #15313a; /* #077bff; */
 }
 
 .toc a:hover {
@@ -11343,6 +11344,7 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
 .toc ul ul {
   margin-left: 20px;
   list-style-type: disc;
+  animation: fadeIn 3s forwards;
 }
 
 .toc ul ul li {
@@ -11390,7 +11392,12 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
 
 .email {
   text-align: center; /* Centers the email address */
-  font-weight: bold; /* Makes the email address stand out */
+}
+.email a {
+  color: #dc3545;
+}
+.email a:hover {
+  color: #a71d2a;
 }
 .easter-egg {
   border: 2px solid #ccc;
@@ -11399,4 +11406,16 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
   text-align: center;
   margin-top: 5px;
   border-radius: 5px;
+  animation: fadeIn 1s forwards;
+}
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
