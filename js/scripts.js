@@ -22,9 +22,18 @@ window.addEventListener('DOMContentLoaded', event => {
             localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
         });
     }
-
 });
-function revealEasterEgg() {
-    const meme = document.getElementById('faddeev-popov-meme');
-    meme.style.display = meme.style.display === 'none' ? 'block' : 'none';
-}
+
+// Add event listeners for all triggers
+document.querySelectorAll('.easter-egg-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+        // Get the associated Easter egg's ID
+        const memeId = trigger.getAttribute('data-id');
+        const meme = document.getElementById(memeId);
+        
+        // Toggle visibility of the selected meme
+        if (meme) {
+            meme.style.display = meme.style.display === 'none' ? 'block' : 'none';
+        }
+    });
+});
