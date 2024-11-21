@@ -11355,6 +11355,58 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
   padding-left: 20px;    /* Indents subsections for readability */
 }
 /* ========================= */
+/* Course References Styles  */
+/* ========================= */
+.references {
+  list-style-type: none;
+  padding-left: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.references > ul > li {
+  margin-bottom: 10px;
+}
+
+.references a {
+  font-size:small;
+  font-weight: normal;
+  text-decoration: none;
+  color: #15313a; /* You can adjust the color if needed */
+}
+
+.references a:hover {
+  text-decoration: underline;
+}
+
+.references ul ul {
+  margin-left: 20px;
+  list-style-type: disc; /* You can keep the bullets here for nested references */
+  animation: fadeIn 3s forwards;
+}
+
+.references ul ul li {
+  font-weight: normal;
+}
+
+.references .subsection-list li {
+  list-style-type: none; /* Ensures subsections also have no bullets */
+  padding-left: 20px;    /* Indents subsections for readability */
+}
+/*
+<div class="references">
+  <ul>
+    <li><a href="#course1">Course 1 Reference</a></li>
+    <li><a href="#course2">Course 2 Reference</a>
+      <ul>
+        <li><a href="#subcourse1">Subcourse 1 Reference</a></li>
+        <li><a href="#subcourse2">Subcourse 2 Reference</a></li>
+      </ul>
+    </li>
+    <li><a href="#course3">Course 3 Reference</a></li>
+  </ul>
+</div>
+*/
+/* ========================= */
 /* Embedded PDF Viewer       */
 /* ========================= */
 .pdf-container {
