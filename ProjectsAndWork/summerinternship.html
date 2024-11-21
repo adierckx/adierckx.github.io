@@ -141,6 +141,25 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
+
+                    <div id="draft-content" style="display: flex; justify-content: center; align-items: center; min-height: 500px; text-align: center;">
+                        <!-- Loaded content will appear here -->
+                    </div>
+                    <script>
+                        fetch('/ProjectsAndWork/SummerInternship/DRAFT___Summer_Project_Report.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                const container = document.getElementById('draft-content');
+                                container.innerHTML = data;
+                    
+                                // Optional: Center loaded content itself
+                                container.style.display = 'flex';
+                                container.style.justifyContent = 'center';
+                                container.style.alignItems = 'center';
+                            })
+                            .catch(error => console.error('Error loading DRAFT:', error));
+                    </script>
+                    
                 </main>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
