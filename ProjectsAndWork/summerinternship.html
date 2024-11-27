@@ -141,12 +141,11 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
-
                     <div id="draft-content" style="display: flex; justify-content: center; align-items: center; min-height: 500px; text-align: center;">
                         <!-- Loaded content will appear here -->
                     </div>
                     <script>
-                        fetch('/ProjectsAndWork/SummerInternship/DRAFT___Summer_Project_Report.html')
+                        fetch('/ProjectsAndWork/SummerInternship/Summer_Project.html')
                             .then(response => response.text())
                             .then(data => {
                                 const container = document.getElementById('draft-content');
