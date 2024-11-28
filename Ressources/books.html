@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Dashboard - SB Admin</title>
+        <title>Books</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -25,7 +25,7 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="/index.html">\( \mathbb{A}\mathbb{D}\mathbb{I}\mathbb{E}\mathbb{R}\mathbb{C}\mathbb{K}\mathbb{X} \)</a>
+            <a class="navbar-brand ps-3" href="/index.html">\( \mathcal{A}\mathbb{D}\mathbb{I}\mathbb{E}\mathbb{R}\mathbb{C}\mathbb{K}\mathbb{X} \)</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
         </nav>
@@ -143,14 +143,74 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Page Under Construction</h1>
+                        <h1 class="mt-4">Some books </h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Work in progress.</li>
-                        </ol>
-                        <p>Hi there! This page is currently a work in progress.</em>.</p>
-                        <p>I'm working on adding content here soon—stay tuned!</p>
-                        <p>Thanks for your patience!</p>
-                    
+                            <li class="breadcrumb-item active">Welcome to the library</li>
+                        </ol>     
+                        <div class="warning-box">
+                            <p>
+                                <strong>Disclaimer:</strong> The materials shared on this website, including books and other resources, are intended solely for educational purposes and to promote access to knowledge for students and researchers. If you are the rightful owner of any content and believe it should not be shared here, please <a href="mailto:antwandirx@gmail.com">contact me</a> , and it will be promptly removed. Readers are encouraged to support authors and publishers by purchasing legitimate copies whenever possible.
+                            </p>
+                        </div>
+                        <p>Welcome to the Book section! Here, you'll find a collection of books covering various topics in physics, from classical mechanics to quantum field theory and beyond. </p>
+                                        <!-- Table of Contents -->
+                        <div class="toc">
+                            <!--Classical Mechanics -->
+                            <h2>Classical Mechanics</h2>
+                            
+                            <!--Electromagnetism -->
+                            <h2>Electromagnetism</h2>
+
+                            <!--Statistical Mechanics -->
+                            <h2>Statistical Mechanics</h2>
+
+                            <!--Relativity -->
+                            <h2>Relativity</h2>
+
+                            <!--Quantum Mechanics -->
+                            <h2>Quantum Mechanics</h2>
+
+                            <!--Quantum Field Theory -->
+                            <h2>Quantum Field Theory</h2>
+                            <ul>
+                                <li><a href="/Ressources/QuantumFieldTheory/An Introduction To Quantum Field Theory (Michael E. Peskin Daniel V. Schroeder).pdf">Michael E. Peskin and Daniel V. Schroeder - An Introduction To Quantum Field Theory</a><br>
+                                    A standard textbook for beginners, focusing on Feynman diagrams, perturbation theory, and the basics of the Standard Model.</li>
+                                
+                                <li><a href="/Ressources/QuantumFieldTheory/The Quantum Theory of Fields Volume I Foundations (Steven Weinberg).pdf">Steven Weinberg - The Quantum Theory of Fields: Volume I Foundations</a><br>
+                                A rigorous, advanced treatment of quantum field theory with a strong emphasis on symmetry and foundational principles.
+                                </li>
+                                <li><a href="/Ressources/QuantumFieldTheory/Quantum Field Theory and Critical Phenomena (Jean Zinn-Justin).pdf">Jean Zinn-Justin - Quantum Field Theory and Critical Phenomena</a><br>
+                                Combines quantum field theory with statistical physics, focusing on critical phenomena and interdisciplinary applications.
+                            </li>
+                            </ul>
+                            <!--Beyond Standard Model -->
+                            <h2>Beyond Standard Model</h2>
+
+                            <!--Mathematics -->
+                            <h2>Mathematics</h2>
+                            <ul>
+                                <li><a href="/Ressources/Mathematics/Handbook of mathematical functions with formulas, graphs, and mathematical tables (Abramowitz, Milton (editor) Stegun etc.).pdf">Abramowitz, Milton , Stegun, Irena A. - Handbook of mathematical functions with formulas, graphs, and mathematical tables</a><br>
+                                A classic reference for mathematical functions, widely used for its extensive formulas, graphs, and numerical tables.
+                            </li>
+                            </ul>
+
+                            <!--Miscellaneous -->
+                            <h2>Miscellaneous</h2>
+                            <ul>
+                                <li><a href="/Ressources/Miscellaneous/Mathematics and Music (David Wright).pdf">David Wright - Mathematics and Music</a><br>
+                                Explores the connections between mathematics and music, including harmony, symmetry, and Fourier analysis.
+                            </li>
+                            </ul>
+                                <!-- Chapter 1 
+                                <li>
+                                    <a href="/NotesAndSummaries/Master/MA2/AQFT/AQFT - CH1.pdf">Chapter 1: Canonical Quantization of Free Fields</a>
+                                    <ul class="subsection-list">
+                                        <li>1.1 Canonical Quantization of Electromagnetic Fields</li>
+                                        <li>1.2 Partition Function and Thermodynamics</li>
+                                    </ul>
+                                </li> -->
+                                <!-- Chapter 2 -->
+                        </div>
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
@@ -169,5 +229,6 @@
         <script src="/assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="/js/datatables-simple-demo.js"></script>
+        <script> MathJax.typeset(); </script>              
     </body>
 </html>
