@@ -11471,3 +11471,15 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
     opacity: 1;
   }
 }
+.logo-letter {
+  display: inline-block;
+  animation: move 3s infinite ease-in-out;
+}
+
+@keyframes move {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-1px, 2px); }
+  50% { transform: translate(2px, -2px); }
+  75% { transform: translate(-2px, 1px); }
+  100% { transform: translate(0, 0); }
+}

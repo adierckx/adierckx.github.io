@@ -37,3 +37,7 @@ document.querySelectorAll('.easter-egg-trigger').forEach(trigger => {
         }
     });
 });
+document.querySelectorAll('.logo-letter').forEach(letter => {
+    const randomDelay = Math.random() * 2; // Random delay between 0-2 seconds
+    letter.style.animationDelay = `${randomDelay}s`;
+});
