@@ -11475,7 +11475,7 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
 }
 /* Floating Effect */
 .floating {
-  animation: float 7s infinite ease-in-out;
+  animation: float 4s infinite ease-in-out;
 }
 @keyframes float {
   0% { transform: translateY(0); }
@@ -11485,7 +11485,7 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
 
 /* Rotation Wiggle */
 .wiggle {
-  animation: wiggle 7s infinite ease-in-out;
+  animation: wiggle 4s infinite ease-in-out;
 }
 @keyframes wiggle {
   0% { transform: rotate(0); }
@@ -11497,7 +11497,7 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
 
 /* Scaling Pulse */
 .pulse {
-  animation: pulse 7s infinite ease-in-out;
+  animation: pulse 4s infinite ease-in-out;
 }
 @keyframes pulse {
   0%, 100% { transform: scale(1); }
@@ -11506,7 +11506,7 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
 
 /* Vertical Bounce */
 .bounce {
-  animation: bounce 7s infinite ease;
+  animation: bounce 4s infinite ease;
 }
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
@@ -11515,7 +11515,7 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
 
 /* Swing */
 .swing {
-  animation: swing 7s infinite ease-in-out;
+  animation: swing 4s infinite ease-in-out;
 }
 @keyframes swing {
   0% { transform: rotate(0); }
@@ -11536,8 +11536,8 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
 }
 
 /* Color Wave */
-.colorWave {
-  animation: colorWave 3s infinite ease-in-out;
+.colorWave1 {
+  animation: colorWave 7s infinite ease-in-out;
 }
 @keyframes colorWave {
   0% { color: #FF5733; }  /* Warm orange */
@@ -11546,3 +11546,14 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
   75% { color: #33C1FF; } /* Sky blue */
   100% { color: #FF5733; } /* Back to warm orange */
 }
+.colorWave2 {
+  animation: colorWave 7s infinite ease-in-out;
+}
+@keyframes colorWave {
+  0% { color: #6A5ACD; }  /* Soft indigo */
+  25% { color: #7B68EE; } /* Lavender blue */
+  50% { color: #48D1CC; } /* Turquoise */
+  75% { color: #20B2AA; } /* Light sea green */
+  100% { color: #6A5ACD; } /* Back to soft indigo */
+}
+

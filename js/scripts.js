@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Logo injected:', container.innerHTML); // Debugging log
 
             // List of animation classes
-            const animations = ['floating', 'wiggle', 'pulse', 'bounce', 'swing', 'flicker', 'colorWave'];
+            const animations = ['floating', 'wiggle', 'pulse', 'bounce', 'swing', 'flicker', 'colorWave1','colorWave2'];
 
             // Pick a random animation
             const randomAnimation = animations[Math.floor(Math.random() * animations.length)];
