@@ -67,9 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 letters.forEach(letter => {
                     letter.classList.add(randomAnimation);
 
-                    // Add random delay
+                    /*// Add random delay
                     const randomDelay = Math.random() * 2;
-                    letter.style.animationDelay = `${randomDelay}s`;
+                    letter.style.animationDelay = `${randomDelay}s`;**/
                 });
                 console.log(`Animation '${randomAnimation}' applied to letters`);
             }
