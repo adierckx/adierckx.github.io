@@ -11033,15 +11033,16 @@ body {
   margin-right: 0.5rem;
 }
 
-.sb-topnav {
+.sb-topnav {  
   background-color: #24555e;
   padding-left: 0;
   height: 56px;
   z-index: 1039;
 }
 .sb-topnav .navbar-brand {
-  width: 225px;
-  margin: 0;
+  width: auto;
+  padding-left: 10px; /* Add a small padding if needed */
+ /* margin: 0; */
 }
 .sb-topnav.navbar-dark #sidebarToggle {
   color: rgba(255, 255, 255, 0.5);
@@ -11474,7 +11475,7 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
 }
 /* Floating Effect */
 .floating {
-  animation: float 3s infinite ease-in-out;
+  animation: float 7s infinite ease-in-out;
 }
 @keyframes float {
   0% { transform: translateY(0); }
@@ -11484,7 +11485,7 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
 
 /* Rotation Wiggle */
 .wiggle {
-  animation: wiggle 2s infinite ease-in-out;
+  animation: wiggle 7s infinite ease-in-out;
 }
 @keyframes wiggle {
   0% { transform: rotate(0); }
@@ -11496,7 +11497,7 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
 
 /* Scaling Pulse */
 .pulse {
-  animation: pulse 2s infinite ease-in-out;
+  animation: pulse 7s infinite ease-in-out;
 }
 @keyframes pulse {
   0%, 100% { transform: scale(1); }
@@ -11505,7 +11506,7 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
 
 /* Vertical Bounce */
 .bounce {
-  animation: bounce 2s infinite ease;
+  animation: bounce 7s infinite ease;
 }
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
@@ -11514,7 +11515,7 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
 
 /* Swing */
 .swing {
-  animation: swing 2s infinite ease-in-out;
+  animation: swing 7s infinite ease-in-out;
 }
 @keyframes swing {
   0% { transform: rotate(0); }
