@@ -11010,6 +11010,7 @@ body {
   top: 56px;
 }
 
+
 #layoutError {
   display: flex;
   flex-direction: column;
@@ -11471,15 +11472,76 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
     opacity: 1;
   }
 }
-.logo-letter {
-  display: inline-block;
-  animation: move 3s infinite ease-in-out;
+/* Floating Effect */
+.floating {
+  animation: float 3s infinite ease-in-out;
+}
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
 }
 
-@keyframes move {
-  0% { transform: translate(0, 0); }
-  25% { transform: translate(-1px, 2px); }
-  50% { transform: translate(2px, -2px); }
-  75% { transform: translate(-2px, 1px); }
-  100% { transform: translate(0, 0); }
+/* Rotation Wiggle */
+.wiggle {
+  animation: wiggle 2s infinite ease-in-out;
+}
+@keyframes wiggle {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+  75% { transform: rotate(-3deg); }
+  100% { transform: rotate(0); }
+}
+
+/* Scaling Pulse */
+.pulse {
+  animation: pulse 2s infinite ease-in-out;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Vertical Bounce */
+.bounce {
+  animation: bounce 2s infinite ease;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Swing */
+.swing {
+  animation: swing 2s infinite ease-in-out;
+}
+@keyframes swing {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(0); }
+  75% { transform: rotate(-10deg); }
+  100% { transform: rotate(0); }
+}
+
+/* Random Flicker */
+.flicker {
+  animation: flicker 1.5s infinite ease-in-out;
+}
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+  75% { opacity: 0.9; }
+}
+
+/* Color Wave */
+.colorWave {
+  animation: colorWave 3s infinite ease-in-out;
+}
+@keyframes colorWave {
+  0% { color: #FF5733; }  /* Warm orange */
+  25% { color: #FFC300; } /* Golden yellow */
+  50% { color: #DAF7A6; } /* Soft green */
+  75% { color: #33C1FF; } /* Sky blue */
+  100% { color: #FF5733; } /* Back to warm orange */
 }

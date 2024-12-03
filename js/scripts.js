@@ -37,7 +37,55 @@ document.querySelectorAll('.easter-egg-trigger').forEach(trigger => {
         }
     });
 });
-document.querySelectorAll('.logo-letter').forEach(letter => {
-    const randomDelay = Math.random() * 2; // Random delay between 0-2 seconds
-    letter.style.animationDelay = `${randomDelay}s`;
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM fully loaded'); // Debugging log
+
+    fetch('/Includes/logo.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to load logo');
+            }
+            return response.text();
+        })
+        .then(html => {
+            const container = document.getElementById('logo-container');
+            container.innerHTML = html;
+
+            console.log('Logo injected:', container.innerHTML); // Debugging log
+
+            // List of animation classes
+            const animations = ['floating', 'wiggle', 'pulse', 'bounce', 'swing', 'flicker', 'colorWave'];
+
+            // Pick a random animation
+            const randomAnimation = animations[Math.floor(Math.random() * animations.length)];
+
+            // Apply the animation class and random delays
+            const letters = container.querySelectorAll('.logo-letter');
+            if (letters.length === 0) {
+                console.error('No .logo-letter elements found in logo.html');
+            } else {
+                letters.forEach(letter => {
+                    letter.classList.add(randomAnimation);
+
+                    // Add random delay
+                    const randomDelay = Math.random() * 2;
+                    letter.style.animationDelay = `${randomDelay}s`;
+                });
+                console.log(`Animation '${randomAnimation}' applied to letters`);
+            }
+
+            // Re-render MathJax for LaTeX
+            if (window.MathJax) {
+                console.log('Rendering LaTeX with MathJax...');
+                MathJax.typesetPromise([container])
+                    .then(() => console.log('MathJax rendering complete'))
+                    .catch(err => console.error('MathJax rendering error:', err));
+            } else {
+                console.error('MathJax not found on the page');
+            }
+        })
+        .catch(error => {
+            console.error('Error loading logo:', error);
+        });
 });
+

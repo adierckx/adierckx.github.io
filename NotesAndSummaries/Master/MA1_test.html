@@ -10,136 +10,15 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="/js/load-components.js" defer></script>
     </head>
     <script type="text/javascript" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
-    <script>
-        function switchLanguage(lang) {
-            // Hide all content
-            document.querySelectorAll('.content').forEach(el => el.style.display = 'none');
-            // Show the selected language
-            document.querySelector(`.content[data-lang="${lang}"]`).style.display = 'block';
-        }
-    </script>
     <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <!-- Navbar Brand-->
-            <div id="logo-container"></div>
-            <!-- Sidebar Toggle-->
-            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-        </nav>
+        <div id="logo-container"></div>
         <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                    <div class="sb-sidenav-menu">
-                        <div class="nav">
-                            <!---->
-                            <div class="sb-sidenav-menu-heading">Home</div>
-                            <a class="nav-link" href="/index.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
-                                Overview
-                            </a>
-                            <div class="sb-sidenav-menu-heading">Notes and summaries</div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseBachelors" aria-expanded="false" aria-controls="collapseBachelors">
-                                <div class="sb-nav-link-icon"><i class="fas fa-edit"></i></div>
-                                Bachelor's Degree
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseBachelors" aria-labelledby="headingBachelors" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/NotesAndSummaries/Bachelor/BA1.html">BA1</a>
-                                    <a class="nav-link" href="/NotesAndSummaries/Bachelor/BA2.html">BA2</a>
-                                    <a class="nav-link" href="/NotesAndSummaries/Bachelor/BA3.html">BA3</a>
-                                </nav>
-                            </div>
-                            <!---->
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMasters" aria-expanded="false" aria-controls="collapseMasters">
-                                <div class="sb-nav-link-icon"><i class="fas fa-edit"></i></div>
-                                Master's Degree
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseMasters" aria-labelledby="headingMasters" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/NotesAndSummaries/Master/MA1.html">MA1</a>
-                                    <a class="nav-link" href="/NotesAndSummaries/Master/MA2.html">MA2</a>
-                                </nav>
-                            </div>
-                            <!---->
-                            <div class="sb-sidenav-menu-heading">Projects and Work</div>
-                            <!---->
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMinternship" aria-expanded="false" aria-controls="collapseMinternship">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Master's Internship
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseMinternship" aria-labelledby="headingMinternship" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/ProjectsAndWork/MasterInternship/AFB.html">AFB in Drell-Yan (CMS)</a>
-                                    <a class="nav-link" href="/ProjectsAndWork/MasterInternship/epluseminus.html">e⁺e⁻ → qq̅g Simulation</a>
-                                    <a class="nav-link" href="/ProjectsAndWork/MasterInternship/darkphoton.html">Dark Photon</a>
-                                    <a class="nav-link" href="/ProjectsAndWork/MasterInternship/generalizedsymmetries.html">Generalized Symmetries</a>
-                                </nav>
-                            </div>
-                            <!---->
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLabReports" aria-expanded="false" aria-controls="collapseLabReports">
-                                <div class="sb-nav-link-icon"><i class="fas fa-flask"></i></div>
-                                Lab Reports
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseLabReports" aria-labelledby="headingLabReports" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/ProjectsAndWork/LabReport/bachelor.html">Bachelor's Lab Reports</a>
-                                    <a class="nav-link" href="/ProjectsAndWork/LabReport/master.html">Master's Lab Reports</a>
-                                </nav>
-                            </div>
-                            <a class="nav-link" href="/ProjectsAndWork/summerinternship.html">
-                                <div class="sb-nav-link-icon">
-                                    <img src="/logo/CMS.png" alt="CERN Logo" style="height: 17px; width: auto;">
-                                </i></div>
-                                Summer Internship
-                            </a>
-                            <!---->
-                            <div class="sb-sidenav-menu-heading">Math Syllabus</div>
-                            <!---->
-                            <a class="nav-link" href="/MathSyllabus/volume1.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-plus"></i></div>
-                                Volume 1
-                            </a>
-                            <a class="nav-link" href="/MathSyllabus/volume2.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-divide"></i></div>
-                                Volume 2
-                            </a>
-                            <!---->
-                            <div class="sb-sidenav-menu-heading">About</div>
-                            <!---->
-                            <a class="nav-link" href="/About/about.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-info-circle"></i></div>
-                                About
-                            </a>
-                            <a class="nav-link" href="/About/cv.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
-                                CV
-                            </a>
-                            <!---->
-                            <div class="sb-sidenav-menu-heading">Additional Resources</div>
-                            <!---->
-                            <a class="nav-link" href="/Ressources/books.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Some books
-                            </a>
-                            <a class="nav-link" href="/Ressources/links.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-link"></i></div>
-                                Useful links
-                            </a>
-                            
-                        </div>
-                    </div>
-                    <div class="sb-sidenav-footer">
-                        <div class="small" style="font-size: 10px;">Bread and Roses</div>
-                    </div>
-                </nav>
-            </div>
+            <div id="menu-container"></div>
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
