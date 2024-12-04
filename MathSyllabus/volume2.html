@@ -6,36 +6,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Dashboard - SB Admin</title>
+        <title>Math Syllabus - Vol 2</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
+    <script type="text/javascript" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="/index.html">ADIERCKX</a>
+            <div id="logo-container"></div>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-            <!-- Navbar Search-->
-            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
-                </div>
-            </form>
-            <!-- Navbar-->
-            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Settings</a></li>
-                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
@@ -45,12 +29,12 @@
                             <!---->
                             <div class="sb-sidenav-menu-heading">Home</div>
                             <a class="nav-link" href="/index.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
+                                <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
+                                Overview
                             </a>
                             <div class="sb-sidenav-menu-heading">Notes and summaries</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseBachelors" aria-expanded="false" aria-controls="collapseBachelors">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-edit"></i></div>
                                 Bachelor's Degree
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -63,7 +47,7 @@
                             </div>
                             <!---->
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMasters" aria-expanded="false" aria-controls="collapseMasters">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-edit"></i></div>
                                 Master's Degree
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -86,12 +70,12 @@
                                     <a class="nav-link" href="/ProjectsAndWork/MasterInternship/AFB.html">AFB in Drell-Yan (CMS)</a>
                                     <a class="nav-link" href="/ProjectsAndWork/MasterInternship/epluseminus.html">e⁺e⁻ → qq̅g Simulation</a>
                                     <a class="nav-link" href="/ProjectsAndWork/MasterInternship/darkphoton.html">Dark Photon</a>
-                                    <a class="nav-link" href="/ProjectsAndWork/MasterInternship/darkphoton.html">Generalized Symmetries</a>
+                                    <a class="nav-link" href="/ProjectsAndWork/MasterInternship/generalizedsymmetries.html">Generalized Symmetries</a>
                                 </nav>
                             </div>
                             <!---->
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLabReports" aria-expanded="false" aria-controls="collapseLabReports">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-flask"></i></div>
                                 Lab Reports
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -102,40 +86,42 @@
                                 </nav>
                             </div>
                             <a class="nav-link" href="/ProjectsAndWork/summerinternship.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon">
+                                    <img src="/logo/CMS.png" alt="CERN Logo" style="height: 17px; width: auto;">
+                                </div>
                                 Summer Internship
                             </a>
                             <!---->
                             <div class="sb-sidenav-menu-heading">Math Syllabus</div>
                             <!---->
                             <a class="nav-link" href="/MathSyllabus/volume1.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-plus"></i></div>
                                 Volume 1
                             </a>
                             <a class="nav-link" href="/MathSyllabus/volume2.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-divide"></i></div>
                                 Volume 2
                             </a>
                             <!---->
                             <div class="sb-sidenav-menu-heading">About</div>
                             <!---->
                             <a class="nav-link" href="/About/about.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-info-circle"></i></div>
                                 About
                             </a>
                             <a class="nav-link" href="/About/cv.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                                 CV
                             </a>
                             <!---->
                             <div class="sb-sidenav-menu-heading">Additional Resources</div>
                             <!---->
                             <a class="nav-link" href="/Ressources/books.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Some books
                             </a>
                             <a class="nav-link" href="/Ressources/links.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-link"></i></div>
                                 Useful links
                             </a>
                             
@@ -149,14 +135,52 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Page Under Construction</h1>
+                        <h1 class="mt-4">Syllabus de mathématique - Volume 2: Notions avancées</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Work in progress.</li>
+                            <li class="breadcrumb-item active">Études sur les fonctions en vue du test d'admission en mathématiques</li>
                         </ol>
-                        <p>Hi there! This page is currently a work in progress.</em>.</p>
-                        <p>I'm working on adding content here soon—stay tuned!l</p>
-                        <p>Thanks for your patience!</p>
-                    
+                        <div class="warning-box">
+                            <p>Ces notes ont été rédigées sur mon temps libre, et ne sont en aucun cas une source fiable pour un apprentissage mathématique rigoureux.
+                              Elle servent avant tout à introduire certaines notions utiles à la réussite du test d'admission en mathématiques pour le <a href="https://www.ephec.be/formations/promotion-sociale/bachelier-en-informatique-et-systemes-orientation-securite-des-systemes#">Bachelier en Informatique et Systèmes - Orientation : Sécurité des Systèmes</a>. </p>
+                            </div>
+                        <p>Access the PDF <a href="/MathSyllabus/Etude_fct_Vol1.pdf">here</a></p>
+                        <p>Vous trouverez ci-dessous le volume 1 du cours sur les fonctions. Il est divisé en plusieurs parties: 
+                            <ul>
+                                <li>Partie 1: Trigonométrie
+                                    <ul>
+                                        <li>Triangles et cercles: Introduction aux concepts fondamentaux de trigonométrie, y compris le cercle trigonométrique et les fonctions sinus et cosinus.</li>
+                                        <li>Étude des fonctions trigonométriques: Analyse des propriétés comme la périodicité, les identités remarquables, et les représentations graphiques.</li>
+                                        <li>Problèmes: Résolution d'exercices pratiques pour appliquer les notions de trigonométrie.</li>
+                                    </ul>
+                                </li>
+                                <li>Partie 2: Fonctions usuelles [en cours de rédaction]
+                                    <ul>
+                                        <li>Propriétés d'une fonction: Exploration des concepts d’injectivité, surjectivité, bijectivité, et symétries dans les fonctions.</li>
+                                        <li>Manipulation de fonction: Transformations comme la translation, dilatation, contraction, et renversement.</li>
+                                        <li>Inventaire des fonctions usuelles: Aperçu des fonctions courantes comme les polynômes, trigonométriques, puissances, logarithmes, et exponentielles.</li>
+                                    </ul>
+                                </li>
+                                <li>Partie 3: Calcul différentiel et Intégral [en cours de rédaction]
+                                    <ul>
+                                        <li>Notion de limite et calcul infinitésimal: Introduction aux concepts de limites et au calcul différentiel.</li>
+                                        <li>Pente et dérivée: Définition de la pente d’une courbe et introduction au calcul des dérivées.</li>
+                                        <li>Intégrale: Présentation des bases de l’intégration.</li>
+                                    </ul>
+                                </li>
+                                <li>Partie 4: Solutions des exercices et problèmes
+                                    <ul>
+                                        <li>Solutions des exercices sur la trigonométrie: Méthodes et solutions détaillées pour des problèmes de trigonométrie.</li>
+                                    </ul>
+                                </li>
+                                <li>Partie 5: Formulaire
+                                    <ul>
+                                        <li>Résumé des formules essentielles pour les sections abordées dans le document.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            
+                        </p>
+                        <iframe src="/401.html" style="width: 100%; height: 1050px; border: none;"></iframe>
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
