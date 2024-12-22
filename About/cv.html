@@ -6,36 +6,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Dashboard - SB Admin</title>
+        <title>CV</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        
     </head>
+    <script type="text/javascript" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script>
+        function switchLanguage(lang) {
+            // Hide all content
+            document.querySelectorAll('.content').forEach(el => el.style.display = 'none');
+            // Show the selected language
+            document.querySelector(`.content[data-lang="${lang}"]`).style.display = 'block';
+        }
+    </script>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="/index.html">ADIERCKX</a>
+            <a class="navbar-brand ps-3" href="/index.html">\( \mathcal{A}\mathbb{D}\mathbb{I}\mathbb{E}\mathbb{R}\mathbb{C}\mathbb{K}\mathbb{X} \)</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-            <!-- Navbar Search-->
-            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
-                </div>
-            </form>
-            <!-- Navbar-->
-            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Settings</a></li>
-                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
@@ -45,12 +38,12 @@
                             <!---->
                             <div class="sb-sidenav-menu-heading">Home</div>
                             <a class="nav-link" href="/index.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
+                                <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
+                                Overview
                             </a>
                             <div class="sb-sidenav-menu-heading">Notes and summaries</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseBachelors" aria-expanded="false" aria-controls="collapseBachelors">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-edit"></i></div>
                                 Bachelor's Degree
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -63,7 +56,7 @@
                             </div>
                             <!---->
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMasters" aria-expanded="false" aria-controls="collapseMasters">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-edit"></i></div>
                                 Master's Degree
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -86,12 +79,12 @@
                                     <a class="nav-link" href="/ProjectsAndWork/MasterInternship/AFB.html">AFB in Drell-Yan (CMS)</a>
                                     <a class="nav-link" href="/ProjectsAndWork/MasterInternship/epluseminus.html">e⁺e⁻ → qq̅g Simulation</a>
                                     <a class="nav-link" href="/ProjectsAndWork/MasterInternship/darkphoton.html">Dark Photon</a>
-                                    <a class="nav-link" href="/ProjectsAndWork/MasterInternship/darkphoton.html">Generalized Symmetries</a>
+                                    <a class="nav-link" href="/ProjectsAndWork/MasterInternship/generalizedsymmetries.html">Generalized Symmetries</a>
                                 </nav>
                             </div>
                             <!---->
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLabReports" aria-expanded="false" aria-controls="collapseLabReports">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-flask"></i></div>
                                 Lab Reports
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -102,40 +95,42 @@
                                 </nav>
                             </div>
                             <a class="nav-link" href="/ProjectsAndWork/summerinternship.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon">
+                                    <img src="/logo/CMS.png" alt="CERN Logo" style="height: 17px; width: auto;">
+                                </i></div>
                                 Summer Internship
                             </a>
                             <!---->
                             <div class="sb-sidenav-menu-heading">Math Syllabus</div>
                             <!---->
                             <a class="nav-link" href="/MathSyllabus/volume1.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-plus"></i></div>
                                 Volume 1
                             </a>
                             <a class="nav-link" href="/MathSyllabus/volume2.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-divide"></i></div>
                                 Volume 2
                             </a>
                             <!---->
                             <div class="sb-sidenav-menu-heading">About</div>
                             <!---->
                             <a class="nav-link" href="/About/about.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-info-circle"></i></div>
                                 About
                             </a>
                             <a class="nav-link" href="/About/cv.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                                 CV
                             </a>
                             <!---->
                             <div class="sb-sidenav-menu-heading">Additional Resources</div>
                             <!---->
                             <a class="nav-link" href="/Ressources/books.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Some books
                             </a>
                             <a class="nav-link" href="/Ressources/links.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-link"></i></div>
                                 Useful links
                             </a>
                             
@@ -148,15 +143,83 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid px-4">
-                        <h1 class="mt-4">Page Under Construction</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Work in progress.</li>
-                        </ol>
-                        <p>Hi there! This page is currently a work in progress.</em>.</p>
-                        <p>I'm working on adding content here soon—stay tuned!l</p>
-                        <p>Thanks for your patience!</p>
+                    <div class="container-fluid px-4">   
+                        <div class="header">
+                            <h1>Antoine Dierckx de Casterlé</h1>
+                        </div>
+                        <p>Access the PDF <a href="/About/CV.pdf">here</a></p>
+                        <div class="section">
+                            <p>
+                                I am a 25-year-old physics student in my second year of a master's at the Université Libre de Bruxelles. <br>
+                                I have a strong interest in high-energy physics, quantum gravity and cosmology. <br>
+                                As part of my master's thesis, I am investigating the role of Primordial Black Holes within the framework of Loop Quantum Gravity. <br>
+                                I value both analytical, "pen-and-paper" approaches and computational simulations as complementary tools for tackling complex questions. <br>
+                                I aspire to continue conducting research in these fascinating fields, which I find deeply inspiring.
+                              </p>
+                            </div>
                     
+                        <div class="section">
+                            <h2>Personal Information</h2>
+                            <p><i class="fas fa-user"></i> Pronouns: he/him</p>
+                            <p><i class="fas fa-birthday-cake"></i> Birthday: 12/07/1999</p>
+                            <p><i class="fas fa-phone"></i> Phone: 0032 465 80 37 83</p>
+                            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:antoine.dierckx.de.casterle@ulb.be">antoine.dierckx.de.casterle@ulb.be</a></p>
+                            <p><i class="fas fa-map-marker-alt"></i> Location: Brussels</p>
+                        </div>
+                    
+                        <div class="section">
+                            <h2>Skills</h2>
+                            <p><i class="fas fa-code"></i> Python</p>
+                            <p><i class="fas fa-project-diagram"></i> ROOT</p>
+                            <p><i class="fas fa-pencil-ruler"></i> LaTeX</p>
+                        </div>
+                    
+                        <div class="section">
+                            <h2>Languages</h2>
+                            <p><i class="fas fa-language"></i> French</p>
+                            <p><i class="fas fa-language"></i> English</p>
+                        </div>
+                    
+                        <div class="section">
+                            <h2>Education</h2>
+                            <p><strong>Secondary school</strong><br>
+                            @Collège Saint-Pierre Uccle (September 2011 - June 2013)<br>
+                            @Institut Saint-André (September 2013 - June 2017)<br>
+                            CESS - scientific type A</p>
+                            <p><strong>Bachelor</strong><br>
+                            @ Université Libre de Bruxelles (September 2020 - June 2023)<br>
+                            Bachelor in Physics - with honors</p>
+                            <p><strong>Master</strong><br>
+                            @ Université Libre de Bruxelles (September 2023 - present)<br>
+                            Master in Physics - Research focus</p>
+                        </div>
+                    
+                        <div class="section">
+                            <h2>Internship Experience</h2>
+                            <p><strong>Internship @ Inter-University Institute For High Energies</strong><br>
+                            January 2023 - April 2023<br>
+                            Study of the production of the scalar boson in proton-proton collision at s = √13 TeV in CMS data.<br>
+                            <a href="#">Project Details</a></p>
+                            <p><strong>Internship @ CERN</strong><br>
+                            July 2024 - August 2024<br>
+                            <a href="https://adierckx.github.io/ProjectsAndWork/summerinternship.html">Project Details</a><br>
+                            Vector Boson Fusion Tagging with Graph Neural Networks<br>
+                            Study of the Stability of Tagging Algorithms Applied to the Analysis of Higgs to Invisible Decays.</p>
+                        </div>
+                    
+                        <div class="section">
+                            <h2>Research Experience</h2>
+                            <p><strong>Visiting Graduate Student @ Western University, Canada</strong><br>
+                            September 2024 - present<br>
+                            Co-supervised Master's thesis on the phenomenology of primordial black holes (PBH) in the framework of Loop Quantum Gravity (LQG). Supervised by <a href="https://inspirehep.net/authors/1071151">Francesca Vidotto</a> (Western University) and <a href="https://inspirehep.net/authors/1071593">Sébastien Clesse</a> (Université Libre de Bruxelles).</p>
+                        </div>
+                    
+                        <div class="section">
+                            <h2>Hobbies / Interests</h2>
+                            <p><i class="fas fa-atom"></i> Quantum Field Theory, High Energy Physics</p>
+                            <p><i class="fas fa-globe"></i> Cosmology and Quantum Gravity</p>
+                            <p><i class="fas fa-bullhorn"></i> Physics outreach</p>
+                        </div>
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
@@ -175,5 +238,6 @@
         <script src="/assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="/js/datatables-simple-demo.js"></script>
+        <script> MathJax.typeset(); </script>              
     </body>
 </html>

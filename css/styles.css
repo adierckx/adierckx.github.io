@@ -11556,4 +11556,20 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
   75% { color: #20B2AA; } /* Light sea green */
   100% { color: #6A5ACD; } /* Back to soft indigo */
 }
-
+.header h1 {
+  margin: 30px;
+  /*color: #3b82f6;*/
+}
+.section {
+  margin-bottom: 30px;
+  background-color: white;
+  padding: 15px;
+  border: 1px solid #374151;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.section h2 {
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
