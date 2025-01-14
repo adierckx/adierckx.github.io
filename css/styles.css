@@ -11623,7 +11623,7 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
   }
 }
 
-/* END Course Grid Layout */
+
 .course-item p {
   font-size: 1rem; /* Standard readable size */
   color: var(--bs-secondary); /* Subtle text color */
@@ -11641,3 +11641,34 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
   background-color: #e8f5e9; /* Light greenish background on hover */
   color: var(--bs-primary); /* Change text color to primary on hover */
 }
+.course-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Space between columns */
+}
+
+.course-column {
+  flex: 1; /* Ensure equal width for both columns */
+}
+.course-item a.course-link {
+  color: var(--bs-primary); /* Use primary color for links */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.course-item a.course-link:hover {
+  color: var(--bs-success); /* Change to success color on hover */
+}
+@media (max-width: 768px) {
+  .course-details {
+      flex-direction: column; /* Stack columns */
+  }
+}
+.course-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+
+/* END Course Grid Layout */
