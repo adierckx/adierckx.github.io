@@ -11624,3 +11624,20 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
 }
 
 /* END Course Grid Layout */
+.course-item p {
+  font-size: 1rem; /* Standard readable size */
+  color: var(--bs-secondary); /* Subtle text color */
+  margin: 5px 0; /* Vertical spacing */
+  padding: 5px 10px; /* Add padding for spacing */
+  border-left: 4px solid var(--bs-primary); /* Primary color for the left border */
+  background-color: #f9f9f9; /* Neutral light background */
+  line-height: 1.6; /* Comfortable line spacing */
+  border-bottom: 1px solid transparent; /* Subtle underline effect starts invisible */
+  transition: all 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+.course-item p:hover {
+  border-bottom: 2px solid var(--bs-primary); /* Clean solid underline on hover */
+  background-color: #e8f5e9; /* Light greenish background on hover */
+  color: var(--bs-primary); /* Change text color to primary on hover */
+}
