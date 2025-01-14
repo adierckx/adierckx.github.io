@@ -11609,14 +11609,13 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
   padding: 10px 15px;
   text-decoration: none;
   color: #fff;
-  background-color: #007bff;
   border-radius: 5px;
 }
 
 .btn-primary:hover {
   background-color: #0056b3;
 }
-
+ 
 /* Responsive Design */
 @media (max-width: 768px) {
   .course-grid {
