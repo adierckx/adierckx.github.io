@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Plasmas</title>
+        <title>{{Titre du cours}}</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -142,9 +142,9 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Dynamique des fluides et des plasmas</h1>
+                        <h1 class="mt-4">{{Titre du cours}}</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Synthèses des cours de quatrième année de physique</li>
+                            <li class="breadcrumb-item active">{{Description du cours}}</li>
                         </ol>
                         <div class="warning-box">
                             <p>
@@ -153,26 +153,26 @@
                             <p class="email">
                                 <a href="mailto:antwandirx@gmail.com">antwandirx@gmail.com</a>
                             </p>
-                        </div> 
+                        </div>
                 
                         <div class="course-grid">
                             <!-- Informations de base sur le cours -->
                             <div class="course-item">
                                 <div class="course-details">
                                     <div class="course-column">
-                                        <p><strong>Enseignant·e :</strong> Bernard KNAEPEN</p>
-                                        <p><strong>Année :</strong> 2023 - 2024 </p>
+                                        <p><strong>Enseignant·e :</strong> {{Teacher}}</p>
+                                        <p><strong>Année :</strong> {{Year}}</p>
                                     </div>
                                     <div class="course-column">
                                         <p>
                                             <strong>Site web :</strong> 
-                                            <a href="https://www.ulb.be/fr/programme/phys-f412" target="_blank" class="course-link">Page ULB</a>
+                                            <a href="{{Lien du site web}}" target="_blank" class="course-link">Page ULB</a>
                                         </p>
                                         <p>
                                             <strong>Dochub :</strong> 
-                                            <a href="https://dochub.be/catalog/course/phys-f412" target="_blank" class="course-link">Accéder à Dochub</a>
+                                            <a href="{{Lien Dochub}}" target="_blank" class="course-link">Accéder à Dochub</a>
                                         </p>
-                                    </div> 
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -254,6 +254,7 @@
                         </div> -->
                     </div>
                 </main>
+                
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
@@ -270,5 +271,10 @@
         <script src="/assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="/js/datatables-simple-demo.js"></script>
+        <script> MathJax.typeset(); </script>              
     </body>
 </html>
+
+
+
+

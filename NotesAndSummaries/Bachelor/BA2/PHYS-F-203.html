@@ -6,15 +6,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Dashboard - SB Admin</title>
+        <title>Introduction à la mécanique quantique</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
+    <script type="text/javascript" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script>
+        function switchLanguage(lang) {
+            // Hide all content
+            document.querySelectorAll('.content').forEach(el => el.style.display = 'none');
+            // Show the selected language
+            document.querySelector(`.content[data-lang="${lang}"]`).style.display = 'block';
+        }
+    </script>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="/index.html">ADIERCKX</a>
+            <a class="navbar-brand ps-3" href="/index.html">\( \mathcal{A}\mathbb{D}\mathbb{I}\mathbb{E}\mathbb{R}\mathbb{C}\mathbb{K}\mathbb{X} \)</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
         </nav>
@@ -26,12 +37,12 @@
                             <!---->
                             <div class="sb-sidenav-menu-heading">Home</div>
                             <a class="nav-link" href="/index.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
+                                <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
+                                Overview
                             </a>
                             <div class="sb-sidenav-menu-heading">Notes and summaries</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseBachelors" aria-expanded="false" aria-controls="collapseBachelors">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-edit"></i></div>
                                 Bachelor's Degree
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -44,7 +55,7 @@
                             </div>
                             <!---->
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMasters" aria-expanded="false" aria-controls="collapseMasters">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-edit"></i></div>
                                 Master's Degree
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -57,6 +68,19 @@
                             <!---->
                             <div class="sb-sidenav-menu-heading">Projects and Work</div>
                             <!---->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLabReports" aria-expanded="false" aria-controls="collapseLabReports">
+                                <div class="sb-nav-link-icon"><i class="fas fa-flask"></i></div>
+                                Lab Reports
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLabReports" aria-labelledby="headingLabReports" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="/NotesAndSummaries/Bachelor/BA3/PHYS-F-311.html">IIHE internship</a>
+                                    <a class="nav-link" href="/ProjectsAndWork/MasterInternship/AFB.html">AFB in Drell-Yan (CMS)</a>
+                                    <a class="nav-link" href="/ProjectsAndWork/MasterInternship/epluseminus.html">e⁺e⁻ → qq̅g Simulation</a>
+                                </nav>
+                            </div>
+                            <!---->
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMinternship" aria-expanded="false" aria-controls="collapseMinternship">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Master's Internship
@@ -64,59 +88,47 @@
                             </a>
                             <div class="collapse" id="collapseMinternship" aria-labelledby="headingMinternship" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/ProjectsAndWork/MasterInternship/AFB.html">AFB in Drell-Yan (CMS)</a>
-                                    <a class="nav-link" href="/ProjectsAndWork/MasterInternship/epluseminus.html">e⁺e⁻ → qq̅g Simulation</a>
                                     <a class="nav-link" href="/ProjectsAndWork/MasterInternship/darkphoton.html">Dark Photon</a>
-                                    <a class="nav-link" href="/ProjectsAndWork/MasterInternship/darkphoton.html">Generalized Symmetries</a>
-                                </nav>
-                            </div>
-                            <!---->
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLabReports" aria-expanded="false" aria-controls="collapseLabReports">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Lab Reports
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseLabReports" aria-labelledby="headingLabReports" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/ProjectsAndWork/LabReport/bachelor.html">Bachelor's Lab Reports</a>
-                                    <a class="nav-link" href="/ProjectsAndWork/LabReport/master.html">Master's Lab Reports</a>
+                                    <a class="nav-link" href="/ProjectsAndWork/MasterInternship/generalizedsymmetries.html">Generalized Symmetries</a>
                                 </nav>
                             </div>
                             <a class="nav-link" href="/ProjectsAndWork/summerinternship.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon">
+                                    <img src="/logo/CMS.png" alt="CERN Logo" style="height: 17px; width: auto;">
+                                </i></div>
                                 Summer Internship
                             </a>
                             <!---->
                             <div class="sb-sidenav-menu-heading">Math Syllabus</div>
                             <!---->
                             <a class="nav-link" href="/MathSyllabus/volume1.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-plus"></i></div>
                                 Volume 1
                             </a>
                             <a class="nav-link" href="/MathSyllabus/volume2.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-divide"></i></div>
                                 Volume 2
                             </a>
                             <!---->
                             <div class="sb-sidenav-menu-heading">About</div>
                             <!---->
                             <a class="nav-link" href="/About/about.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-info-circle"></i></div>
                                 About
                             </a>
                             <a class="nav-link" href="/About/cv.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                                 CV
                             </a>
                             <!---->
                             <div class="sb-sidenav-menu-heading">Additional Resources</div>
                             <!---->
                             <a class="nav-link" href="/Ressources/books.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Some books
                             </a>
                             <a class="nav-link" href="/Ressources/links.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-link"></i></div>
                                 Useful links
                             </a>
                             
@@ -133,9 +145,116 @@
                         <h1 class="mt-4">Introduction à la mécanique quantique</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Synthèses des cours de deuxième année de physique</li>
-                        </ol>                    
+                        </ol>
+                        <div class="warning-box">
+                            <p>
+                                <strong>Avertissement :</strong> Les notes publiées sur ce site sont basées sur ma compréhension du matériel et n'ont pas été indépendamment vérifiées. Bien que j'espère qu'elles soient utiles, il peut y avoir des erreurs ou des inexactitudes. Si vous trouvez des erreurs ou avez des suggestions d'amélioration, n'hésitez pas à me contacter à l'adresse suivante :
+                            </p>
+                            <p class="email">
+                                <a href="mailto:antwandirx@gmail.com">antwandirx@gmail.com</a>
+                            </p>
+                        </div>
+                
+                        <div class="course-grid">
+                            <!-- Informations de base sur le cours -->
+                            <div class="course-item">
+                                <div class="course-details">
+                                    <div class="course-column">
+                                        <p><strong>Enseignant·e :</strong> Serge MASSAR</p>
+                                        <p><strong>Année :</strong> 2021 - 2022</p>
+                                    </div>
+                                    <div class="course-column">
+                                        <p>
+                                            <strong>Site web :</strong> 
+                                            <a href="https://www.ulb.be/fr/programme/phys-f203" target="_blank" class="course-link">Page ULB</a>
+                                        </p>
+                                        <p>
+                                            <strong>Dochub :</strong> 
+                                            <a href="https://dochub.be/catalog/course/phys-f203" target="_blank" class="course-link">Accéder à Dochub</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Table des matières -->
+                        <!-- <div class="toc">
+                            <h2>Table des matières</h2>
+                            <div class="container">
+                                <div class="course-grid">
+                                    <div class="course-item">
+                                        <img src="/Gallery/AQFT/AQFT - CH1.jpg" alt="Illustration du Chapitre 1" class="course-img">
+                                        <h3>Chapitre 1 : Quantification canonique des champs libres</h3>
+                                        <p>1.1 Quantification canonique des champs électromagnétiques</p>
+                                        <p>1.2 Fonction de partition et thermodynamique</p>
+                                        <a href="/NotesAndSummaries/Master/MA2/AQFT/AQFT - CH1.pdf" class="btn btn-primary">Aller aux notes</a>
+                                    </div>
+                                    <div class="course-item">
+                                        <img src="/Gallery/AQFT/AQFT - CH2.jpg" alt="Illustration du Chapitre 2" class="course-img">
+                                        <h3>Chapitre 2 : Intégrales de chemin</h3>
+                                        <p>2.1 Formulation hamiltonienne</p>
+                                        <p>2.2 Fonction de partition</p>
+                                        <p>2.3 Expansion semi-classique de \(Z(\beta)\)</p>
+                                        <p>2.4 Représentation holomorphe</p>
+                                        <a href="/NotesAndSummaries/Master/MA2/AQFT/AQFT - CH2.pdf" class="btn btn-primary">Aller aux notes</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                
+                        <!-- Ressources du cours -->
+                        <!-- <h1>Ressources du cours</h1>
+                        <div class="course-grid">
+                            <div class="course-item">
+                                <div class="course-details">
+                                    <div class="course-column">
+                                        <div class="section">
+                                            <h2>Programme</h2>
+                                            <ul>
+                                                <li><a href="#" target="_blank" class="course-link">Programme 1</a></li>
+                                                <li><a href="#" target="_blank" class="course-link">Programme 2</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="section">
+                                            <h2>Notes manuscrites</h2>
+                                            <ul>
+                                                <li><a href="#" target="_blank" class="course-link">Notes manuscrites 1</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="course-column">
+                                        <div class="section">
+                                            <h2>Références supplémentaires</h2>
+                                            <div>
+                                                <h3>Chapitre 4</h3>
+                                                <ul>
+                                                    <li>
+                                                        <a href="/Ressources/Mathematics/Handbook of mathematical functions with formulas, graphs, and mathematical tables (Abramowitz, Milton (editor) Stegun etc.).pdf" class="course-link">Handbook of mathematical functions with formulas, graphs, and mathematical tables</a>
+                                                        <br><span>Abramowitz, Milton, Stegun, Irena A.</span>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/Ressources/QuantumFieldTheory/Quantum Field Theory and Critical Phenomena (Jean Zinn-Justin).pdf" class="course-link">Quantum Field Theory and Critical Phenomena</a>
+                                                        <br><span>Jean Zinn-Justin</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <h3>Chapitre 5</h3>
+                                                <ul>
+                                                    <li>
+                                                        <a href="/Ressources/QuantumFieldTheory/Quantization of Gauge Systems (Marc Henneaux Claudio Teitelboim).pdf" class="course-link">Quantization of Gauge Systems</a>
+                                                        <br><span>Marc Henneaux, Claudio Teitelboim</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
                     </div>
                 </main>
+                
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
@@ -152,5 +271,10 @@
         <script src="/assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="/js/datatables-simple-demo.js"></script>
+        <script> MathJax.typeset(); </script>              
     </body>
 </html>
+
+
+
+
