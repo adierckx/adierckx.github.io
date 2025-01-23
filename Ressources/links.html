@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Dashboard - SB Admin</title>
+        <title>Links</title>
+        <link rel="icon" type="image/png" href="/logo/site_logo.png" />
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -25,7 +26,7 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="/index.html">\( \mathbb{A}\mathbb{D}\mathbb{I}\mathbb{E}\mathbb{R}\mathbb{C}\mathbb{K}\mathbb{X} \)</a>
+            <a class="navbar-brand ps-3" href="/index.html">\( \mathcal{A}\mathbb{D}\mathbb{I}\mathbb{E}\mathbb{R}\mathbb{C}\mathbb{K}\mathbb{X} \)</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
         </nav>
@@ -143,16 +144,183 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Page Under Construction</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Work in progress.</li>
-                        </ol>
-                        <p>Hi there! This page is currently a work in progress.</em>.</p>
-                        <p>I'm working on adding content here soon—stay tuned!</p>
-                        <p>Thanks for your patience!</p>
-                    
+
+                    <br>
+                    <!-- Language Switcher -->
+                    <div class="language-switcher">
+                        <button class="btn btn-primary" onclick="switchLanguage('en')">English</button>
+                        <button class="btn btn-secondary" onclick="switchLanguage('fr')">Français</button>
                     </div>
+
+                    <!-- English Content -->
+                    <div class="content" data-lang="en">
+
+                    </div>  
+
+                    <!-- French Content -->
+                    <div class="content" data-lang="fr" style="display: none;">
+                        <h1 class="mt-4">Ressources pour étudiant·es en physique</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Ressources en ligne</li>
+                        </ol>     
+                
+                        <p>Bienvenue sur cette page de ressources! Vous y trouverez des liens vers des manuels, notes de cours, outils, et opportunités pour les étudiant·es en physique.</p>
+                
+                        <div class="toc">
+                            <div class="course-grid">
+                        
+                                <!-- Notes de Cours en Ligne -->
+                                <div class="course-item">
+                                    <h2>Notes de cours en ligne</h2>
+                                    <div class="section">
+                                        <h3 style="font-size: smaller;">en français</h3>
+                                        <ul>
+                                            <li>
+                                                <p><a href="https://adierckx.github.io/Ressources/books.html" target="_blank" class="course-link">Livres de références</a>
+                                                <br>Collection de livres pour approfondir les concepts en physique.</p>
+                                            </li>
+                                            <li>
+                                                <p><a href="https://dochub.be/" target="_blank" class="course-link">DocHub</a>
+                                                <br>Références et notes partagées par les étudiant·es de l'ULB.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="section">
+                                        <h3 style="font-size: smaller;">en anglais</h3>
+                                        <ul>
+                                            <li>
+                                                <p><a href="http://www.damtp.cam.ac.uk/user/tong/teaching.html" target="_blank" class="course-link">David Tong - Lecture Notes</a>
+                                                <br>Notes de cours complètes sur divers sujets en physique.</p>
+                                            </li>
+                                            <li>
+                                                <p><a href="https://ocw.mit.edu/" target="_blank" class="course-link">MIT OpenCourseWare</a>
+                                                <br>Accédez à des notes de cours gratuites sur une large gamme de sujets.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                        
+                                <!-- Vidéos de Cours en Ligne -->
+                                <div class="course-item">
+                                    <h2>Vidéos de cours en ligne</h2>
+                                    <div class="section">
+                                        <h3 style="font-size: smaller;">en anglais</h3>
+                                        <ul>
+                                            <li>
+                                                <p><a href="https://pirsa.org/" target="_blank" class="course-link">Perimeter Institute Recorded Seminar Archive (PIRSA)</a>
+                                                <br>Conférences et cours sur la recherche en physique de pointe.</p>
+                                            </li>
+                                            <li>
+                                                <p><a href="https://ocw.mit.edu/" target="_blank" class="course-link">MIT OpenCourseWare</a>
+                                                <br>Vidéos gratuites sur divers sujets en physique.</p>
+                                            </li>
+                                            <li>
+                                                <p><a href="https://youtube.com/playlist?list=PL2sWi-Ow64wd1xB58nyyeVU3BmpUL0e-E&si=HV_kqgQbqcfOnEwU" target="_blank" class="course-link">General Relativity II</a>
+                                                <br>Excellent cours sur les trous noirs par Piotr Chruściel, Université de Vienne.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                        
+                                <!-- Ressources Gratuites -->
+                                <div class="course-item">
+                                    <h2>Ressources gratuites</h2>
+                                    <div class="section">
+                                        <h3 style="font-size: smaller;">en anglais</h3>
+                                        <ul>
+                                            <li>
+                                                <p><a href="https://z-lib.org/" target="_blank" class="course-link">Z-Library</a>
+                                                <br>Téléchargez des livres et articles gratuitement.</p>
+                                            </li>
+                                            <li>
+                                                <p><a href="https://sci-hub.se/" target="_blank" class="course-link">Sci-Hub</a>
+                                                <br>Accédez gratuitement à des articles de recherche scientifique.</p>
+                                            </li>
+                                            <li>
+                                                <p><a href="https://libgen.is/" target="_blank" class="course-link">Library Genesis</a>
+                                                <br>Un répertoire de livres et articles sur divers sujets.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                        
+                                <!-- Opportunités -->
+                                <div class="course-item">
+                                    <h2>Opportunités</h2>
+                                    <div class="section">
+                                        <h3 style="font-size: smaller;">en français & anglais</h3>
+                                        <ul>
+                                            <li>
+                                                <p><a href="https://careers.cern/" target="_blank" class="course-link">CERN - Stages et Emplois</a>
+                                                <br>Explorez les opportunités de carrière au CERN.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="section">
+                                        <h3 style="font-size: smaller;">en anglais</h3>
+                                        <ul>
+                                            <li>
+                                                <p><a href="https://www.esa.int/About_Us/Careers_at_ESA" target="_blank" class="course-link">ESA - Career Opportunities</a>
+                                                <br>Découvrez des opportunités d'emploi et de stage à l'ESA.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                        
+                                <!-- Sites Intéressants -->
+                                <div class="course-item">
+                                    <h2>Sites intéressants</h2>
+                                    <div class="section">
+                                        <ul>
+                                            <li>
+                                                <p><a href="https://www.geogebra.org/" target="_blank" class="course-link">GeoGebra</a>
+                                                <br>Outil interactif pour les mathématiques et la physique.</p>
+                                            </li>
+                                            <li>
+                                                <p><a href="https://www.desmos.com/" target="_blank" class="course-link">Desmos</a>
+                                                <br>Calculatrice graphique interactive pour les maths et la physique.</p>
+                                            </li>
+                                            <li>
+                                                <p><a href="https://lm.studio/" target="_blank" class="course-link">LM Studio</a>
+                                                <br>Exécutez un LLM localement et gratuitement.</p>
+                                            </li>
+                                            <li>
+                                                <p><a href="https://www.deepseek.com/" target="_blank" class="course-link">Deep Seek R1</a>
+                                                <br>Alternative à Chat-GPT.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                        
+                                <!-- Section Plus Fun -->
+                                <div class="course-item">
+                                    <h2>Divers</h2>
+                                    <div class="section">
+                                        <h3 style="font-size: smaller;">en anglais</h3>
+                                        <ul>
+                                            <li>
+                                                <p><a href="https://xkcd.com/" target="_blank" class="course-link">xkcd</a>
+                                                <br>Bandes dessinées humoristiques sur la science et la vie.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                        
+                            </div>
+                        </div>
+                        
+                    </div>
+                    </div>
+
+
+
                 </main>
+                
+                
+                
+                
+                
+                
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
@@ -169,5 +337,6 @@
         <script src="/assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="/js/datatables-simple-demo.js"></script>
+        <script> MathJax.typeset(); </script>              
     </body>
 </html>

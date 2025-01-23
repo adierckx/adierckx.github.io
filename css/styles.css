@@ -11666,7 +11666,7 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
   }
 }
 .course-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-0px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
