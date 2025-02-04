@@ -11473,19 +11473,79 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
     opacity: 1;
   }
 }
+/* EFFECT OF THE LOGO*/
 /* Floating Effect */
 .floating {
   animation: float 4s infinite ease-in-out;
+  display: inline-block; /* Ensures proper animation visibility */
 }
 @keyframes float {
   0% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+  50% { transform: translateY(-10px); }
   100% { transform: translateY(0); }
 }
 
-/* Rotation Wiggle */
+/* Rotating Effect */
+.rotating {
+  display: inline-block;
+}
+.rotating span {
+  display: inline-block;
+  animation: rotate 3s infinite linear;
+}
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* Flickering Effect */
+.flickering {
+  animation: flicker 1s infinite steps(2, start);
+  display: inline-block;
+}
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Zooming Effect */
+.zooming {
+  animation: zoom 2.5s infinite ease-in-out;
+  display: inline-block;
+}
+@keyframes zoom {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+/* Rainbow Effect */
+.rainbow {
+  animation: rainbow 5s infinite linear;
+  display: inline-block;
+}
+@keyframes rainbow {
+  0% { color: #FF0000; } /* Red */
+  16% { color: #FF7F00; } /* Orange */
+  33% { color: #FFFF00; } /* Yellow */
+  50% { color: #00FF00; } /* Green */
+  66% { color: #0000FF; } /* Blue */
+  83% { color: #4B0082; } /* Indigo */
+  100% { color: #9400D3; } /* Violet */
+}
+
+/* Disappearing Above and Reappearing Below */
+.vanish {
+  animation: disappear-reappear 3s infinite ease-in-out;
+  display: inline-block;
+}
+@keyframes disappear-reappear {
+  0%, 100% { opacity: 1; transform: translateY(0); }
+  50% { opacity: 0; transform: translateY(-20px); }
+}
+
+/* Wiggle Effect */
 .wiggle {
-  animation: wiggle 4s infinite ease-in-out;
+  animation: wiggle 2s infinite ease-in-out;
+  display: inline-block;
 }
 @keyframes wiggle {
   0% { transform: rotate(0); }
@@ -11495,27 +11555,10 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
   100% { transform: rotate(0); }
 }
 
-/* Scaling Pulse */
-.pulse {
-  animation: pulse 4s infinite ease-in-out;
-}
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-}
-
-/* Vertical Bounce */
-.bounce {
-  animation: bounce 4s infinite ease;
-}
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-/* Swing */
+/* Swing Effect */
 .swing {
-  animation: swing 4s infinite ease-in-out;
+  animation: swing 3s infinite ease-in-out;
+  display: inline-block;
 }
 @keyframes swing {
   0% { transform: rotate(0); }
@@ -11525,37 +11568,26 @@ background: linear-gradient(180deg, #102027,#102027 ,#15313a );  /*background-co
   100% { transform: rotate(0); }
 }
 
-/* Random Flicker */
-.flicker {
-  animation: flicker 1.5s infinite ease-in-out;
+/* Bounce Effect */
+.bounce {
+  animation: bounce 2s infinite ease;
+  display: inline-block;
 }
-@keyframes flicker {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.8; }
-  75% { opacity: 0.9; }
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
 }
 
-/* Color Wave */
-.colorWave1 {
-  animation: colorWave 7s infinite ease-in-out;
+
+/* Keyframes for rotation */
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
-@keyframes colorWave {
-  0% { color: #FF5733; }  /* Warm orange */
-  25% { color: #FFC300; } /* Golden yellow */
-  50% { color: #DAF7A6; } /* Soft green */
-  75% { color: #33C1FF; } /* Sky blue */
-  100% { color: #FF5733; } /* Back to warm orange */
-}
-.colorWave2 {
-  animation: colorWave 7s infinite ease-in-out;
-}
-@keyframes colorWave {
-  0% { color: #6A5ACD; }  /* Soft indigo */
-  25% { color: #7B68EE; } /* Lavender blue */
-  50% { color: #48D1CC; } /* Turquoise */
-  75% { color: #20B2AA; } /* Light sea green */
-  100% { color: #6A5ACD; } /* Back to soft indigo */
-}
+
+
+/* EFFECT OF THE LOGO - STOP  */
+
 .header h1 {
   margin: 30px;
   /*color: #3b82f6;*/
