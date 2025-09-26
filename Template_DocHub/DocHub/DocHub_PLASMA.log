@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.6)  26 SEP 2025 12:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.6)  26 SEP 2025 14:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -249,7 +249,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip52
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 21.
+Package hyperref Info: Option `colorlinks' set `true' on input line 31.
  (C:\Users\antwa\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty
 Package: tcolorbox 2024/07/10 version 6.3.0 text color boxes
  (C:\Users\antwa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\antwa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\antwa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\antwa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
@@ -661,7 +661,7 @@ Package: multicol 2024/05/23 v1.9h multicolumn formatting (FMi)
 )
 \ThumbSep=\skip62
 \ThumbW=\skip63
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 123.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 126.
  (C:\Users\antwa\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (C:\Users\antwa\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
@@ -672,24 +672,24 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 )
 \openout1 = `DocHub_PLASMA.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -725,13 +725,13 @@ LaTeX Font Info:    ... okay on input line 123.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 123.
-Package microtype Info: Applying patch `item' on input line 123.
-Package microtype Info: Applying patch `toc' on input line 123.
-Package microtype Info: Applying patch `eqnum' on input line 123.
-Package microtype Info: Applying patch `footnote' on input line 123.
-Package microtype Info: Applying patch `verbatim' on input line 123.
-LaTeX Info: Redefining \microtypesetup on input line 123.
+LaTeX Info: Redefining \microtypecontext on input line 126.
+Package microtype Info: Applying patch `item' on input line 126.
+Package microtype Info: Applying patch `toc' on input line 126.
+Package microtype Info: Applying patch `eqnum' on input line 126.
+Package microtype Info: Applying patch `footnote' on input line 126.
+Package microtype Info: Applying patch `verbatim' on input line 126.
+LaTeX Info: Redefining \microtypesetup on input line 126.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -763,7 +763,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\antwa\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 123.
+Package hyperref Info: Link coloring ON on input line 126.
  (DocHub_PLASMA.out) (DocHub_PLASMA.out)
 \@outlinefile=\write4
 \openout4 = `DocHub_PLASMA.out'.
@@ -777,44 +777,44 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-LaTeX Info: Redefining \degres on input line 123.
+LaTeX Info: Redefining \degres on input line 126.
 Package french.ldf Info: Setting StandardItemizeEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 123.
+(french.ldf)             reported on input line 126.
 Package french.ldf Info: Setting StandardEnumerateEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 123.
-LaTeX Info: Redefining \up on input line 123.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 130.
+(french.ldf)             reported on input line 126.
+LaTeX Info: Redefining \up on input line 126.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 133.
  (C:\Users\antwa\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) 
 
 <QR code requested for "https://adierckx.github.io/NotesAndSummaries/Master/MA1/PHYS-F-412" in version 0-M.>
 <Copying the QR code for "https://adierckx.github.io/NotesAndSummaries/Master/MA1/PHYS-F-412" in version 5-M as previously calculated.>
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 146.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 149.
 (C:\Users\antwa\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 146.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 149.
  (C:\Users\antwa\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 146.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 149.
  (C:\Users\antwa\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 146.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 149.
  (C:\Users\antwa\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 146.
+(Font)              <10.95> on input line 149.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 146.
+(Font)              <8> on input line 149.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 146.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 147.
+(Font)              <6> on input line 149.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 150.
  (C:\Users\antwa\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -823,155 +823,185 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 147.
+(Font)              <10> on input line 150.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 147.
+(Font)              <7> on input line 150.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 147.
+(Font)              <5> on input line 150.
+<../../Gallery/PLASMA/PLASMA - CH1.jpg, id=13, 1541.76pt x 1541.76pt>
+File: ../../Gallery/PLASMA/PLASMA - CH1.jpg Graphic file (type jpg)
+<use ../../Gallery/PLASMA/PLASMA - CH1.jpg>
+Package pdftex.def Info: ../../Gallery/PLASMA/PLASMA - CH1.jpg  used on input line 153.
+(pdftex.def)             Requested size: 70.87401pt x 70.85829pt.
+<../../Gallery/PLASMA/PLASMA - CH2.jpg, id=14, 1541.76pt x 1541.76pt>
+File: ../../Gallery/PLASMA/PLASMA - CH2.jpg Graphic file (type jpg)
+<use ../../Gallery/PLASMA/PLASMA - CH2.jpg>
+Package pdftex.def Info: ../../Gallery/PLASMA/PLASMA - CH2.jpg  used on input line 153.
+(pdftex.def)             Requested size: 70.87401pt x 70.85829pt.
+<../../Gallery/PLASMA/PLASMA - CH3.jpg, id=15, 1541.76pt x 1541.76pt>
+File: ../../Gallery/PLASMA/PLASMA - CH3.jpg Graphic file (type jpg)
+<use ../../Gallery/PLASMA/PLASMA - CH3.jpg>
+Package pdftex.def Info: ../../Gallery/PLASMA/PLASMA - CH3.jpg  used on input line 153.
+(pdftex.def)             Requested size: 70.87401pt x 70.85829pt.
+<../../Gallery/PLASMA/PLASMA - CH4.jpg, id=16, 1541.76pt x 1541.76pt>
+File: ../../Gallery/PLASMA/PLASMA - CH4.jpg Graphic file (type jpg)
+<use ../../Gallery/PLASMA/PLASMA - CH4.jpg>
+Package pdftex.def Info: ../../Gallery/PLASMA/PLASMA - CH4.jpg  used on input line 153.
+(pdftex.def)             Requested size: 70.87401pt x 70.85829pt.
+<../../Gallery/PLASMA/PLASMA - CH5.jpg, id=17, 1541.76pt x 1541.76pt>
+File: ../../Gallery/PLASMA/PLASMA - CH5.jpg Graphic file (type jpg)
+<use ../../Gallery/PLASMA/PLASMA - CH5.jpg>
+Package pdftex.def Info: ../../Gallery/PLASMA/PLASMA - CH5.jpg  used on input line 153.
+(pdftex.def)             Requested size: 70.87401pt x 70.85829pt.
+<../../Gallery/PLASMA/PLASMA - CH6.jpg, id=18, 1541.76pt x 1541.76pt>
+File: ../../Gallery/PLASMA/PLASMA - CH6.jpg Graphic file (type jpg)
+<use ../../Gallery/PLASMA/PLASMA - CH6.jpg>
+Package pdftex.def Info: ../../Gallery/PLASMA/PLASMA - CH6.jpg  used on input line 153.
+(pdftex.def)             Requested size: 70.87401pt x 70.85829pt.
 
 
 [1
 
-{C:/Users/antwa/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/antwa/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/antwa/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
-<../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, id=26, 555.37486pt x 794.97pt>
+{C:/Users/antwa/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/antwa/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/antwa/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc} <../../Gallery/PLASMA/PLASMA - CH1.jpg> <../../Gallery/PLASMA/PLASMA - CH2.jpg> <../../Gallery/PLASMA/PLASMA - CH3.jpg> <../../Gallery/PLASMA/PLASMA - CH4.jpg> <../../Gallery/PLASMA/PLASMA - CH5.jpg> <../../Gallery/PLASMA/PLASMA - CH6.jpg>]
+<../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, id=32, 555.37486pt x 794.97pt>
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf  used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf  used on input line 160.
 (pdftex.def)             Requested size: 555.3735pt x 794.96806pt.
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf  used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf  used on input line 160.
 (pdftex.def)             Requested size: 555.3735pt x 794.96806pt.
-<../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, id=29, page=1, 555.37486pt x 794.97pt>
+<../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, id=35, page=1, 555.37486pt x 794.97pt>
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, page 1>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page1 used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page1 used on input line 160.
 (pdftex.def)             Requested size: 555.3735pt x 794.96806pt.
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, page 1>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page1 used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page1 used on input line 160.
 (pdftex.def)             Requested size: 555.74637pt x 795.50179pt.
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, page 1>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page1 used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page1 used on input line 160.
 (pdftex.def)             Requested size: 555.74637pt x 795.50179pt.
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, page 1>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page1 used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page1 used on input line 160.
 (pdftex.def)             Requested size: 555.74637pt x 795.50179pt.
 
 
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, page 1>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page1 used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page1 used on input line 160.
 (pdftex.def)             Requested size: 555.74637pt x 795.50179pt.
 [2
 
  <../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf>]
-<../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, id=36, page=2, 531.18451pt x 794.97pt>
+<../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, id=42, page=2, 531.18451pt x 794.97pt>
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, page 2>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page2 used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page2 used on input line 160.
 (pdftex.def)             Requested size: 531.53983pt x 795.50179pt.
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, page 2>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page2 used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page2 used on input line 160.
 (pdftex.def)             Requested size: 531.53983pt x 795.50179pt.
 
 
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, page 2>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page2 used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page2 used on input line 160.
 (pdftex.def)             Requested size: 531.53983pt x 795.50179pt.
 [3
 
  <../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf>]
-<../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, id=42, page=3, 556.0775pt x 794.97pt>
+<../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, id=48, page=3, 556.0775pt x 794.97pt>
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, page 3>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page3 used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page3 used on input line 160.
 (pdftex.def)             Requested size: 556.44948pt x 795.50179pt.
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, page 3>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page3 used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page3 used on input line 160.
 (pdftex.def)             Requested size: 556.44948pt x 795.50179pt.
 
 
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, page 3>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page3 used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page3 used on input line 160.
 (pdftex.def)             Requested size: 556.44948pt x 795.50179pt.
 [4
 
  <../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf>]
-<../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, id=48, page=4, 529.98pt x 794.97pt>
+<../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, id=54, page=4, 529.98pt x 794.97pt>
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, page 4>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page4 used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page4 used on input line 160.
 (pdftex.def)             Requested size: 530.3345pt x 795.50179pt.
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, page 4>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page4 used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page4 used on input line 160.
 (pdftex.def)             Requested size: 530.3345pt x 795.50179pt.
 
 
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, page 4>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page4 used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page4 used on input line 160.
 (pdftex.def)             Requested size: 530.3345pt x 795.50179pt.
 [5
 
  <../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf>]
-<../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, id=54, page=5, 549.45277pt x 794.97pt>
+<../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, id=60, page=5, 549.45277pt x 794.97pt>
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, page 5>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page5 used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page5 used on input line 160.
 (pdftex.def)             Requested size: 549.82031pt x 795.50179pt.
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, page 5>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page5 used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page5 used on input line 160.
 (pdftex.def)             Requested size: 549.82031pt x 795.50179pt.
 
 
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, page 5>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page5 used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page5 used on input line 160.
 (pdftex.def)             Requested size: 549.82031pt x 795.50179pt.
 [6
 
  <../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf>]
-<../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, id=60, page=6, 528.2736pt x 794.97pt>
+<../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, id=66, page=6, 528.2736pt x 794.97pt>
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, page 6>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page6 used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page6 used on input line 160.
 (pdftex.def)             Requested size: 528.62697pt x 795.50179pt.
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, page 6>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page6 used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page6 used on input line 160.
 (pdftex.def)             Requested size: 528.62697pt x 795.50179pt.
 
 
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, page 6>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page6 used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page6 used on input line 160.
 (pdftex.def)             Requested size: 528.62697pt x 795.50179pt.
 [7
 
  <../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf>]
-<../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, id=67, page=7, 555.37486pt x 794.97pt>
+<../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, id=73, page=7, 555.37486pt x 794.97pt>
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, page 7>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page7 used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page7 used on input line 160.
 (pdftex.def)             Requested size: 555.74637pt x 795.50179pt.
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, page 7>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page7 used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page7 used on input line 160.
 (pdftex.def)             Requested size: 555.74637pt x 795.50179pt.
 
 
 File: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf Graphic file (type pdf)
 <use ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf, page 7>
-Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page7 used on input line 157.
+Package pdftex.def Info: ../../NotesAndSummaries/Master/MA1/PLASMA/PLASMA - CH1.pdf , page7 used on input line 160.
 (pdftex.def)             Requested size: 555.74637pt x 795.50179pt.
 [8
 
@@ -985,17 +1015,17 @@ Package rerunfilecheck Info: File `DocHub_PLASMA.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29156 strings out of 473899
- 563121 string characters out of 5726500
- 1055319 words of memory out of 5000000
- 51495 multiletter control sequences out of 15000+600000
+ 29187 strings out of 473899
+ 565171 string characters out of 5726500
+ 1057303 words of memory out of 5000000
+ 51526 multiletter control sequences out of 15000+600000
  619394 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,17n,101p,1662b,645s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/antwa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/antwa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/antwa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/antwa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/antwa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Users/antwa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on DocHub_PLASMA.pdf (8 pages, 3565524 bytes).
+Output written on DocHub_PLASMA.pdf (8 pages, 4379783 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
+ 113 PDF objects out of 1000 (max. 8388607)
  9 named destinations out of 1000 (max. 500000)
- 37439 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 37469 words of extra memory for PDF output out of 42996 (max. 10000000)
 

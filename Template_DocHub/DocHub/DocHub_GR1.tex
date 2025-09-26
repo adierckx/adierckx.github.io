@@ -1,0 +1,162 @@
+\documentclass[11pt]{article}
+%=== CHANGE EVERYTIME YOU COPY THIS TEMPLATE ===
+\providecommand{\CourseName}{Théorie de la gravitation}
+\providecommand{\CourseCode}{ULB MA}
+\providecommand{\Semester}{2023--2024}
+\providecommand{\Prof}{Stéphane DETOURNAY}
+\providecommand{\ChapterTitle}{\LangSwitch{Chapitre}{Chapter} 1: Introduction}
+\providecommand{\CourseURL}{https://adierckx.github.io/NotesAndSummaries/Master/MA1/PHYS-F-432}
+\providecommand{\SourceImage}{../../Gallery/GR1/GR1 - CH}
+\providecommand{\SourcePDF}{../../NotesAndSummaries/Master/MA1/GR1/GR1 - CH1.pdf}
+%==============================================
+
+% ===== Page & fonts =====
+\usepackage[a4paper,margin=2.5cm]{geometry} % switch to a5paper for A5
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% ===== Visuals & links =====
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=teal!50!black,
+  pdfauthor={Antoine Dierckx},
+  pdftitle={Course notes - Chapter 1},
+  pdfcreator={pdflatex}
+}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\usepackage{qrcode}
+\usepackage{pdfpages}
+
+% ===== Language toggle (fr/en) =====
+\newcommand{\DocLang}{fr} % <-- set to 'fr' or 'en'
+\usepackage[english,french]{babel}
+\usepackage{ifthen}
+\newcommand{\LangSwitch}[2]{\ifthenelse{\equal{\DocLang}{fr}}{#1}{#2}}
+\AtBeginDocument{%
+  \ifthenelse{\equal{\DocLang}{fr}}{\selectlanguage{french}}{\selectlanguage{english}}}
+% Optional helpers for longer blocks:
+\newcommand{\OnlyFR}[1]{\LangSwitch{#1}{}}
+\newcommand{\OnlyEN}[1]{\LangSwitch{}{#1}}
+
+% ===== Config (edit these per course) =====
+\providecommand{\AuthorName}{Antoine Dierckx}
+\providecommand{\Email}{ant.dierckx@gmail.com}
+\providecommand{\BookURL}{https://adierckx.github.io/Ressources/books}
+
+% ===== Translatable strings =====
+\newcommand{\TRHandwritten}{\LangSwitch{Notes manuscrites (scannées)}{Handwritten notes (scanned)}}
+\newcommand{\TRHeadsUp}{\LangSwitch{Attention: uniquement le chapitre 1 ici.}{Heads up: only Chapter 1 here.}}
+\newcommand{\TRAllChapters}{\LangSwitch{Tous les chapitres}{All chapters}}
+\newcommand{\TRExercise}{\LangSwitch{Corrections d'exercices \& travaux personnels}{Exercise corrections \& personal work}}
+\newcommand{\TRSeeCoursePage}{\LangSwitch{voir la page du cours}{see the course page}}
+\newcommand{\TRSeeMainPage}{\LangSwitch{voir la page principale}{see the main page}}
+\newcommand{\TRSeeBookPage}{\LangSwitch{voir la section bouquin}{see the book section}}
+\newcommand{\TRRefBooks}{\LangSwitch{Ouvrages de référence}{Reference books}}
+\newcommand{\TRGetTheRest}{\LangSwitch{Accéder au reste :}{Get the rest:}}
+\newcommand{\TRScanOrClick}{\LangSwitch{scannez ou cliquez ici}{scan or click here}}
+\newcommand{\TRDisclaimer}{\LangSwitch{Avertissement.}{Disclaimer.}}
+\newcommand{\TRDisclaimerText}{\LangSwitch{%
+Les notes publiées ici sont basées sur ma compréhension des cours et n'ont pas fait l'objet d'un examen ou d'une vérification indépendante. J'espère qu'elles sont utiles, mais il peut y avoir des erreurs ou des inexactitudes. Si vous trouvez des erreurs ou si vous avez des suggestions d'amélioration, n'hésitez pas à me contacter à l'adresse suivante :
+\href{mailto:\Email}{\Email}. Merci !%
+}{%
+The notes published here are based on my understanding of the courses and have not been independently reviewed or verified. I hope they are helpful, but there may be errors or inaccuracies. If you find any errors or have suggestions for improvement, please do not hesitate to contact me at
+\href{mailto:\Email}{\Email}. Thank you!
+}}
+
+% === Thumbnails at bottom (no shell-escape needed) ===
+\usepackage{pgffor}   % for \foreach
+\usepackage{multicol} % easy N-column grid
+
+% ---- Configure per course (override as needed) ----
+\providecommand{\IllustrationBase}{\SourceImage} % prefix up to the number
+\providecommand{\IllustrationMax}{40}   % safety cap; missing files are skipped
+\providecommand{\IllustrationCols}{6}   % ~0.2\textwidth each (5 per row)
+\newlength{\ThumbSep}\setlength{\ThumbSep}{6pt} % spacing between thumbs
+\newlength{\ThumbW} % computed cell width
+
+% Try .pdf, then .png, then .jpg for each chapter N
+\newcommand{\includeChapterThumb}[1]{%
+  \IfFileExists{\IllustrationBase#1.pdf}{%
+    \includegraphics[width=\linewidth]{\IllustrationBase#1.pdf}%
+  }{%
+    \IfFileExists{\IllustrationBase#1.png}{%
+      \includegraphics[width=\linewidth]{\IllustrationBase#1.png}%
+    }{%
+      \IfFileExists{\IllustrationBase#1.jpg}{%
+        \includegraphics[width=\linewidth]{\IllustrationBase#1.jpg}%
+      }{}%
+    }%
+  }%
+}
+% Place a compact grid at the bottom of the page
+\newcommand{\PrintIllustrationsBottom}{%
+  \vspace*{\fill}%
+  \noindent
+  \begin{minipage}{\textwidth}
+    \setlength{\columnsep}{6pt}%
+    \begin{multicols}{\IllustrationCols}
+      \centering
+      % Loop 1..IllustrationMax; includes only existing files
+      \foreach \n in {1,...,\IllustrationMax}{%
+        \begingroup
+          \includeChapterThumb{\n}%
+          \par\vspace{0.25em}%
+        \endgroup
+      }%
+    \end{multicols}
+  \end{minipage}%
+}
+% The short explanation shown on the cover (auto-picks by language)
+\providecommand{\UploadNoteFR}{%
+Ce document DocHub contient \textbf{uniquement le premier chapitre}. L'ensemble des chapitres, des notes personnelles, des corrections d'exercices et une liste d'ouvrages de référence se trouvent sur mon site web.%
+}
+\providecommand{\UploadNoteEN}{%
+This DocHub upload contains \textbf{only the first chapter}. The full set of chapters, personal notes, exercise corrections, and a reference-book list are on my website.%
+}
+\newcommand{\UploadNote}{\LangSwitch{\UploadNoteFR}{\UploadNoteEN}}
+
+% ===== Cover page =====
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+  {\huge \textbf{\CourseName}}\\[0.3em]
+  {\small \CourseCode\enspace|\enspace\Semester\enspace|\enspace Prof. \Prof}\\[1.2em]
+  {\Large \textbf{\ChapterTitle}}\\[0.9em]
+  {\large \textbf{\TRHandwritten}}\\[1.1em]
+  {\normalsize \AuthorName\quad\textbullet\quad\href{mailto:\Email}{\Email}}\\[0.4em]
+\end{center}
+
+\begin{tcolorbox}[colback=teal!7,colframe=teal!70!black,left=1em,right=1em,top=0.7em,bottom=0.7em]
+\textbf{\TRHeadsUp} \UploadNote
+
+\begin{itemize}[leftmargin=1.2em,itemsep=0.2em]
+  \item \textbf{\TRAllChapters:} \href{\CourseURL}{\TRSeeCoursePage}
+  \item \textbf{\TRExercise:} \href{\CourseURL}{\TRSeeMainPage}.
+  \item \textbf{\TRRefBooks:} \href{\BookURL}{\TRSeeBookPage}.
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{0.6em}
+\begin{center}
+  \noindent\textbf{\TRGetTheRest}  \href{\CourseURL}{\TRScanOrClick}\\[0.4em]
+  \qrcode[height=2.6cm]{\CourseURL}\hspace{1em}
+  \raisebox{1.1em}{\small\url{\CourseURL}}
+\end{center}
+
+\PrintIllustrationsBottom
+\vfill
+\footnotesize
+\textit{\TRDisclaimer} \TRDisclaimerText
+\newpage
+
+% ===== Include the scanned Chapter 1 pages =====
+\includepdf[pages=-,fitpaper=true]{\SourcePDF}
+
+\end{document}
