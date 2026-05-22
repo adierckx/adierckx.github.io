@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Antoine Dierckx</title>
+<link>https://adierckx.github.io/blog.html</link>
+<atom:link href="https://adierckx.github.io/blog.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.9.37</generator>
+<lastBuildDate>Thu, 21 May 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Some useful links for physics students</title>
+  <dc:creator>Antoine Dierckx</dc:creator>
+  <link>https://adierckx.github.io/posts/links.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="some-useful-links-for-physics-students" class="level1">
+<h1>Some useful links for physics students</h1>
+<p>This page brings together some of the resources I have found most useful. The list is personal, but I hope it can also be useful to other students and researchers.</p>
+<section id="foundations-lecture-notes" class="level2">
+<h2 data-anchor-id="foundations-lecture-notes">1. Foundations &amp; Lecture Notes</h2>
+<p>These are some of the best resources I know for learning or revisiting the essentials:</p>
+<ul>
+<li><strong><a href="http://www.damtp.cam.ac.uk/user/tong/teaching.html">David Tong - Lecture Notes</a>:</strong> The definitive standard for clear, rigorous introductions to everything from Classical Dynamics to Quantum Field Theory.</li>
+<li><strong><a href="https://www.feynmanlectures.caltech.edu/">The Feynman Lectures on Physics</a>:</strong> Old but gold.</li>
+<li><strong><a href="https://tutorial.math.lamar.edu/">Paul’s Online Math Notes</a>:</strong> High school level.</li>
+<li><strong><a href="https://ocw.mit.edu/">MIT OpenCourseWare</a>:</strong> Check out the course on general relativity, it’s fantastic.</li>
+<li><strong><a href="https://phys.libretexts.org/Bookshelves">LibreTexts Physics</a>:</strong> Peer-authored, open-access textbook content.</li>
+</ul>
+</section>
+<section id="advanced-lectures-seminars" class="level2">
+<h2 data-anchor-id="advanced-lectures-seminars">2. Advanced Lectures &amp; Seminars</h2>
+<p>If like me the reviews on arXiv make you a bit anxious, these are a great way to get a more digestible overview of the latest developments in various topics:</p>
+<ul>
+<li><strong><a href="https://pirsa.org/">Perimeter Institute (PIRSA)</a>:</strong> A massive archive of recorded seminars and specialized courses.</li>
+<li><strong><a href="https://www.youtube.com/@Physique-Chimie-CdF/playlists">Collège de France - Physique et Chimie</a>:</strong> High-level academic seminars and colloquia.</li>
+<li><strong><a href="https://youtube.com/playlist?list=PL2sWi-Ow64wd1xB58nyyeVU3BmpUL0e-E&amp;si=HV_kqgQbqcfOnEwU">General Relativity II (Piotr Chruściel)</a>:</strong> All about black holes.</li>
+<li><strong><a href="https://www.saphybru.com/">Les Samedis de la Physique (Bruxelles)</a>:</strong> High-quality lectures from ULB professors.</li>
+</ul>
+</section>
+<section id="career-growth-internships-research" class="level2">
+<h2 data-anchor-id="career-growth-internships-research">3. Career Growth: Internships &amp; Research</h2>
+<p>If you’re looking to do early research or find internships, check out these resources:</p>
+<ul>
+<li><strong><a href="https://careers.cern/summer">CERN Summer Student Programme</a>:</strong> Particle physics stuff in Geneva.</li>
+<li><strong><a href="https://summerstudents.desy.de/">DESY Summer Student Programme</a>:</strong> Particle physics stuff in Hamburg.</li>
+<li><strong><a href="https://www.esa.int/About_Us/Careers_at_ESA/Student_Internships2">ESA Student Internships</a>:</strong> Space science at the European Space Agency.</li>
+<li><strong><a href="https://perimeterinstitute.ca/training/undergraduate-program/psi-start-research-internship">PSI Start (Perimeter Institute)</a>:</strong> Theoretical physics research at Perimeter Institute in Canada.</li>
+</ul>
+</section>
+<section id="free-books" class="level2">
+<h2 data-anchor-id="free-books">4. Free books</h2>
+<p>All the nice textbooks for free, because knowledge should be free:</p>
+<ul>
+<li><strong><a href="https://sci-hub.se/">Sci-Hub</a>:</strong> For academic papers.</li>
+<li><strong><a href="https://libgen.is/">Library Genesis</a></strong> and <strong><a href="https://z-lib.org/">Z-Library</a>:</strong> For books.</li>
+</ul>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>resources</category>
+  <category>physics</category>
+  <category>tools</category>
+  <guid>https://adierckx.github.io/posts/links.html</guid>
+  <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
