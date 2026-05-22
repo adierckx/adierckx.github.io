@@ -4,16 +4,19 @@ document.addEventListener("DOMContentLoaded", function() {
   const ctx = canvas.getContext('2d'); 
   let width, height; 
 
-  // ======================================================================
+// ======================================================================
   // CONFIGURATION 
   // ======================================================================
+  // Détection d'un affichage mobile au chargement
+  const isMobile = window.innerWidth < 768;
+
   const CONFIG = {
     // Topologie de base
-    numNodes: 1000,              // Densité augmentée
-    maxDistance: 120,           // Légèrement réduit pour compenser la densité (N=800)
+    numNodes: isMobile ? 250 : 1000,            // Densité drastiquement réduite sur mobile
+    maxDistance: isMobile ? 150 : 120,          // Légèrement augmenté sur mobile pour maintenir la connectivité
     
     // Interaction
-    mouseRadius: 180,           
+    mouseRadius: isMobile ? 120 : 180,          // Zone d'interaction réduite sur petit écran
     mouseForce: 1.5,            
     
     // Esthétique (Iridescence)
@@ -24,13 +27,13 @@ document.addEventListener("DOMContentLoaded", function() {
     maxFushiaRatio: 0.45,       
     
     // Fluctuations Quantiques (Création/Destruction douce)
-    fluctuationRate: 0.01,     // Ralenti d'un facteur 15
-    fadeSmoothness: 2.5,        // Contrôle la raideur de la transition (plus c'est élevé, plus la transition est abrupte)
-    fadeOffset: 0.2,            // Biais pour déterminer le temps passé dans le "vide" (invisible)
+    fluctuationRate: 0.01,     
+    fadeSmoothness: 2.5,        
+    fadeOffset: 0.2,            
     
     // Ponts Quantiques (Connexions non-locales)
     probBridge: 0.05,           
-    maxBridges: 12,             
+    maxBridges: isMobile ? 5 : 12,              // Moins de ponts à calculer sur mobile
     bridgeLife: 150             
   };
   // ======================================================================

@@ -366,3 +366,28 @@ body::after {
   z-index: -100;          /* Le place tout au fond, derrière le texte et le canvas */
   pointer-events: none;   /* EMPÊCHE le logo de bloquer les clics sur tes liens/boutons */
 }
+/* --- Responsive Design pour Mobile (< 768px) --- */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 350px; /* Réduit la hauteur minimale de la zone */
+    height: 50vh;
+  }
+  
+  .hero-content {
+    padding: 1.2rem 1rem; /* Marges internes réduites */
+    width: 90%; /* Évite que la boîte ne touche les bords de l'écran */
+  }
+
+  .hero-title {
+    font-size: 1.4rem; /* Réduction significative du titre (était 2.1rem) */
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem; /* Ajustement du sous-titre */
+  }
+
+  .hero-links a {
+    font-size: 0.85rem;
+  }
+}
