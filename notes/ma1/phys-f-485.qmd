@@ -1,0 +1,91 @@
+﻿---
+title: "Representation of groups and application to physics"
+subtitle: "Synthèse du cours de PHYS-F485"
+toc: true
+---
+
+::: {.callout-warning appearance="minimal" collapse="true"}
+## ⚠️ Avertissement concernant ces notes
+
+Les notes publiées sur ce site sont basées sur ma compréhension
+personnelle du matériel et n'ont pas été indépendamment vérifiées. Bien
+que j'espère qu'elles soient utiles, il peut y avoir des erreurs ou des
+inexactitudes. Si vous trouvez des erreurs ou avez des suggestions
+d'amélioration, n'hésitez pas à me contacter :
+[a.d@csic.es](mailto:a.d@csic.es).
+:::
+
+**Enseignant :** Geoffrey COMPERE & Giulio COLLINUCCI (Année 2023-2024)  
+**Ressources officielles :** [<i class="bi bi-link-45deg"></i> Page de l'ULB](https://www.ulb.be/fr/programme/phys-f485){.btn .btn-outline-light .btn-sm .ms-2}  
+[<i class="bi bi-folder2-open"></i> Espace Dochub](https://dochub.be/catalog/course/phys-f485){.btn .btn-outline-light .btn-sm .ms-2}  
+
+---
+
+## Table des matières
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Syllabus & Groupes Discrets
+
+* **Ressources globales**
+  * [Syllabus complet (G. Compère)](https://ptm.ulb.be/gcompere/GroupesComplet.pdf)
+* **Groupes finis**
+  * Notes de cours manuscrites
+
+[<i class="bi bi-file-earmark-pdf"></i> Notes du Cours](./assets/GROUPS/Notes_Groupes_discrets.pdf){.btn-surface .c-teal .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Projet : Correspondance McKay
+
+* **Travaux personnels**
+  * [Énoncé du projet](./assets/GROUPS/Travail_énoncé_discret.pdf)
+  * Étude des groupes discrets et des représentations associés
+
+[<i class="bi bi-file-earmark-pdf"></i> Rapport - McKay](./assets/GROUPS/Travail_discret.pdf){.btn-surface .c-teal .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Projet : Algèbres de Lie $so(n)$
+
+* **Travaux personnels**
+  * [Énoncé du projet](./assets/GROUPS/Travail_énoncé_Lie.pdf)
+  * Représentations fondamentales et applications physiques
+
+[<i class="bi bi-file-earmark-pdf"></i> Rapport - Algèbres de Lie](./assets/GROUPS/Travail_Lie.pdf){.btn-surface .c-teal .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Exercices : Séances 1 à 5
+
+* **Travaux Pratiques**
+  * TP1 : [Énoncé](./assets/GROUPS/TPs/TP1.pdf) / [Solution](./assets/GROUPS/TPs/TP1%20-%20correction.pdf)
+  * TP2 : [Énoncé](./assets/GROUPS/TPs/TP2.pdf) / [Solution](./assets/GROUPS/TPs/TP2%20-%20correction.pdf)
+  * TP3 : [Énoncé](./assets/GROUPS/TPs/TP3.pdf) / [Solution](./assets/GROUPS/TPs/TP3%20-%20correction.pdf)
+  * TP4 : [Énoncé](./assets/GROUPS/TPs/TP4.pdf) / [Solution](./assets/GROUPS/TPs/TP4%20-%20correction.pdf)
+  * TP5 : [Énoncé](./assets/GROUPS/TPs/TP5.pdf) / [Solution](./assets/GROUPS/TPs/TP5%20-%20correction.pdf)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Exercices : Séances 6 à 10
+
+* **Travaux Pratiques**
+  * TP6 : [Énoncé](./assets/GROUPS/TPs/TP6.pdf) / [Solution](./assets/GROUPS/TPs/TP6%20-%20correction.pdf)
+  * TP7 : [Énoncé](./assets/GROUPS/TPs/TP7.pdf) / [Solution](./assets/GROUPS/TPs/TP7%20-%20correction.pdf)
+  * TP8 : [Énoncé](./assets/GROUPS/TPs/TP8.pdf) / [Solution](./assets/GROUPS/TPs/TP8%20-%20correction.pdf)
+  * TP9 : [Énoncé](./assets/GROUPS/TPs/TP9.pdf) / [Solution](./assets/GROUPS/TPs/TP9%20-%20correction.pdf)
+  * TP10 : [Énoncé](./assets/GROUPS/TPs/TP10.pdf) / [Solution](./assets/GROUPS/TPs/TP10%20-%20correction.pdf)
+:::
+:::
+
+:::

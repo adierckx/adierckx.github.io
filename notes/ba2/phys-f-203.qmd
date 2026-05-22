@@ -1,0 +1,11 @@
+﻿---
+title: "Introduction à la mécanique quantique"
+subtitle: "Synthèse du cours de PHYS-F203"
+toc: true
+---
+
+**Enseignant :** Serge MASSAR (Année 2021-2022)  
+**Ressources officielles :** [<i class="bi bi-link-45deg"></i> Page de l'ULB](https://www.ulb.be/fr/programme/phys-f203){.btn .btn-outline-light .btn-sm .ms-2}
+[<i class="bi bi-folder2-open"></i> Espace Dochub](https://dochub.be/catalog/course/phys-f203){.btn .btn-outline-light .btn-sm .ms-2}
+
+---

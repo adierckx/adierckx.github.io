@@ -1,0 +1,21 @@
+---
+title: "Talks & Events"
+toc: true
+---
+
+## Upcoming Presentations
+
+* **Signatures of LQG in PBH cosmologies** *RER-S8 Cosmology Meeting* — UCLouvain, BE (May 26, 2026)
+
+* **Phenomenology of PBH remnants** *Black Holes & Cosmology Conference* — Granada, ES (Jun 15–19, 2026)
+
+## Past Presentations & Seminars
+
+* **Constraining PBH remnants with LISA and cosmological observables** *LISA Madrid Group Meeting* — Madrid, ES (Apr 9, 2026)
+<br>[<i class="bi bi-file-earmark-slides"></i> Slides](./assets/talk_LISA-Madrid_20260409.pdf){.btn-surface .c-teal .btn-compact}
+
+* **Signatures of LQG in PBH cosmologies** *Group Meeting Presentation* — IEM-CSIC, Madrid, ES (Mar 30, 2026)  
+<!-- <br>[<i class="bi bi-file-earmark-slides"></i> Slides](./assets/talk_LQG-PBH_20260330.pdf){.btn-surface .c-teal .btn-compact} -->
+
+* **Group introduction on Causal Spinfoams** *ILQGS Group Intro Session* — IEM-CSIC, Madrid, ES (Feb 2, 2026)
+<br>[<i class="bi bi-file-earmark-slides"></i> Slides](./assets/talk_Intro-ILQGS_20260202.pdf){.btn-surface .c-teal .btn-compact}

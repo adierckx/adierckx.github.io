@@ -1,0 +1,30 @@
+---
+title: "Early Research & Internships"
+toc: true
+---
+
+Before starting my PhD, I had the opportunity to work on several research projects during my Bachelor's and Master's degrees at the Université libre de Bruxelles (ULB).
+
+## Master's Thesis
+
+**Constraints from Loop Quantum Gravity and the Memory Burden Effect in Primordial Black Hole Cosmologies**  
+*Supervisors: Dr. Francesca Vidotto & Dr. Sébastien Clesse*  
+*Western University (CA) & ULB (BE) — 2024–2025*
+
+For my Master's thesis, I investigated how Loop Quantum Gravity and the Memory Burden effect suppress Hawking evaporation, allowing light Primordial Black Holes to stabilize into relics that could be viable dark matter candidates. This work laid the foundation for my current PhD research, focusing on modeling PBH remnants and deriving observational constraints from cosmological backgrounds.
+<br>[<i class="bi bi-book"></i> Thesis](./assets/thesis_Constraints-from-LQG-and-the-MBe-in-PBH-cosmo_2025.pdf){.btn-surface .c-rose .btn-compact}
+
+## CERN Summer Internship
+
+**Graph Neural Networks for VBF Tagging**  
+*Compact Muon Solenoid (CMS) Experiment, CERN, Geneva — Summer 2024*
+
+During the CERN Summer Student Programme, I worked within the CMS collaboration. My project focused on developing and implementing Graph Neural Networks (GNNs) to improve Vector Boson Fusion (VBF) tagging. I specifically analyzed the algorithm's stability and performance for the Higgs to invisible decay channel ($H \rightarrow \mathrm{invisible}$).
+<br>[<i class="bi bi-journal-text"></i> Report](./assets/report_VBF-tagging-with-GNN_2024.pdf){.btn-surface .c-teal .btn-compact}
+
+## Undergraduate Research & Lab Reports
+
+During my curriculum, I completed several hands-on projects and short internships in both experimental high-energy physics and formal theory:
+
+* **IIHE Internship (2023):** Analysis of scalar-boson production in $pp$ collisions using CMS data at $\sqrt{s}=13\,\mathrm{TeV}$. [<i class="bi bi-file-earmark-bar-graph"></i> Report](./assets/report_BEH-pp-13TeV_2023.pdf){.btn-surface .c-teal .btn-inline}
+* **Theoretical Physics Projects:** Advanced study projects on Dark Photons [<i class="bi bi-file-earmark-text"></i> Report](./assets/report_dark-photons_2024.pdf){.btn-surface .c-teal .btn-inline} and Generalized Symmetries [<i class="bi bi-file-earmark-text"></i> Report](./assets/report_Maxwell-generalized-symmetries_2024.pdf){.btn-surface .c-teal .btn-inline}.

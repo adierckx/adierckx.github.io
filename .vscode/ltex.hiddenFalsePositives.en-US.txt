@@ -1,0 +1,1 @@
+{"rule":"WHITESPACE_RULE","sentence":"^\\QConstraining PBH remnants with LISA and cosmological observables LISA Madrid Group Meeting — Madrid, ES (Apr 9, 2026)   Slides\\E$"}

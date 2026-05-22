@@ -1,0 +1,94 @@
+---
+page-layout: full
+---
+
+::: {.column-screen .hero-section}
+<canvas id="spinfoamCanvas"></canvas>
+
+::: {.hero-content}
+<p class="hero-subtitle">PhD Candidate in Theoretical Physics</p>
+<h2 class="hero-title">Covariant loop quantum gravity,<br> 
+<span class="highlight">spinfoam cosmology</span>,<br>
+ and the phenomenology of
+<span class="highlight">primordial black holes</span>.</h2>
+
+<div class="hero-links">
+  <a href="https://arxiv.org/list/gr-qc/new" target="_blank">
+    <i class="ai ai-arxiv" style="color: #d3a3ff;"></i> arXiv
+  </a>
+  <span class="separator">|</span>
+  <a href="https://orcid.org/0009-0001-8717-1712" target="_blank">
+    <i class="ai ai-orcid" style="color: #d3a3ff;"></i> ORCiD
+  </a>
+  <span class="separator">|</span>
+  <a href="https://inspirehep.net/authors/3157664" target="_blank">
+    <i class="ai ai-inspire" style="color: #d3a3ff;"></i> iNSPIRE HEP
+  </a>
+</div>
+:::
+
+:::
+
+<script defer src="assets/js/spinfoam.js"></script>
+
+::: {.column-page}
+
+---
+
+## Research Focus
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+### Primordial Black Holes & Remnants
+Studying the phenomenological consequences of stabilization mechanisms in **PBH** evaporation, focusing on **Planckian relics** within Loop Quantum Gravity and macroscopic remnants induced by the **Memory Burden effect**.
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### Spinfoam Numerics & Cosmology
+Developing numerical and computational tools to evaluate spin foam amplitudes, with a specific application to structural transitions in **spinfoam cosmology**.
+:::
+
+:::
+
+---
+
+## Navigation
+
+### Academic Research
+::: {.grid}
+::: {.g-col-12 .g-col-md-3}
+[Research Themes](./research/themes.qmd){.btn .btn-surface .c-teal .w-100}
+:::
+::: {.g-col-12 .g-col-md-3}
+[Publications](./research/papers.qmd){.btn .btn-surface .c-indigo .w-100}
+:::
+::: {.g-col-12 .g-col-md-3}
+[Talks & Slides](./research/talks.qmd){.btn .btn-surface .c-purple .w-100}
+:::
+::: {.g-col-12 .g-col-md-3}
+[Early Research](./research/early-research.qmd){.btn .btn-surface .c-blue .w-100}
+:::
+:::
+
+### Teaching & Notes
+::: {.grid}
+::: {.g-col-12 .g-col-md-6}
+[Bachelor Notes](./notes/bachelor.qmd){.btn .btn-surface .c-emerald .w-100}
+:::
+::: {.g-col-12 .g-col-md-6}
+[Master Notes](./notes/master.qmd){.btn .btn-surface .c-teal .w-100}
+:::
+:::
+
+### Engagement & Projects
+::: {.grid}
+::: {.g-col-12 .g-col-md-6}
+[Outreach & Projects](./outreach/projects.qmd){.btn .btn-surface .c-rose .w-100}
+:::
+::: {.g-col-12 .g-col-md-6}
+[Blog](./blog.qmd){.btn .btn-surface .c-indigo .w-100}
+:::
+:::
+
+:::

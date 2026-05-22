@@ -1,0 +1,260 @@
+/* Importation des Google Fonts (Sora et Fira Code) */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Sora:wght@400;500;600;700;800&display=swap');
+
+/* --- Thème Sombre Moderne & Flat Design --- */
+:root {
+  --bg-color: #151c24; 
+  --card-bg: #1e2631;  
+  --text-main: #f0f6fc;
+  --text-muted: #8b949e;
+  --accent-teal: #00a8a8;
+  --accent-teal-hover: #00cbcb;
+  --border-flat: #2d3745;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  /* Application de Sora */
+  font-family: 'Sora', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Application de la police technique pour le code */
+div.sourceCode, code, pre {
+  font-family: 'Fira Code', monospace;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-flat);
+  border-radius: 6px;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* --- Barre de navigation --- */
+.navbar {
+  background-color: var(--bg-color) !important;
+  border-bottom: 1px solid var(--border-flat);
+  padding: 0.7rem 1rem;
+}
+
+.navbar-brand {
+  color: var(--text-main) !important;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.navbar-brand img, .brand-logo img {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navbar-brand:hover img, .brand-logo:hover img {
+  transform: rotate(15deg) scale(1.1);
+}
+
+a {
+  color: var(--accent-teal);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-teal-hover);
+}
+
+.nav-link:hover {
+  color: var(--accent-teal) !important;
+}
+
+div.sourceCode {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-flat);
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+/* --- Boutons de Navigation (Tuiles Cosmiques) --- */
+.btn-surface {
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  border: 1px solid var(--border-flat);
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.05rem;
+  
+  /* Flexbox empêche le texte de déborder et le centre */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 85px; 
+  height: 100%;
+  padding: 1rem;
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.3;
+  
+  /* Paramètres pour la couleur */
+  position: relative;
+  overflow: hidden;
+  --tile-color: var(--accent-teal); /* Teal par défaut */
+}
+
+/* Liseré coloré permanent en haut de la tuile pour donner de la vie */
+.btn-surface::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--tile-color);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.btn-surface:hover {
+  background-color: #1a222c;
+  border-color: var(--tile-color);
+  color: #ffffff;
+  transform: translateY(-4px);
+  /* Création d'une lueur (glow) de la couleur de la tuile */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4), 0 0 12px var(--tile-color);
+}
+/* Mots en gras : utilisation d'un teal clair pour le contraste */
+strong, b {
+  color: #00d6d6; 
+  font-weight: 600;
+}
+
+/* --- La Palette "Théorie Quantique" --- */
+.c-teal    { --tile-color: #00a8a8; }
+.c-indigo  { --tile-color: #6366f1; } /* Bleu-violet profond */
+.c-purple  { --tile-color: #a855f7; } /* Violet nébuleuse */
+.c-blue    { --tile-color: #3b82f6; } /* Bleu électrique */
+.c-emerald { --tile-color: #10b981; } /* Vert émeraude */
+.c-rose    { --tile-color: #ec4899; } /* Rose vif d'accentuation */
+
+/* --- Hero Banner (Pleine largeur avec animation en fond) --- */
+.hero-section {
+  position: relative;
+  width: 100vw;
+  height: 55vh; 
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -1.5em; /* Compense la marge interne par défaut de Quarto */
+  margin-bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Dégradé pour fondre l'animation dans le fond (remplace la coupure nette) */
+.hero-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px; /* Taille de la zone de fondu */
+  background: linear-gradient(to bottom, transparent, var(--bg-color));
+  pointer-events: none; /* Ne bloque pas la souris pour l'interaction avec le canvas */
+}
+
+#spinfoamCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: var(--bg-color);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  background: rgba(21, 28, 36, 0.45);
+  padding: 1.8rem 2.5rem; /* Marges réduites */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  
+  /* Ajustement magique : réduit la boîte à la taille du texte */
+  max-width: 700px;
+  width: fit-content; 
+  margin: 0 auto;
+}
+
+/* Hiérarchie du texte repensée */
+.hero-subtitle {
+  color: var(--text-muted); /* Moins d'importance pour le statut PhD */
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hero-title {
+  font-weight: 700;
+  font-size: 2.1rem; /* Les sujets de recherche au centre de l'attention */
+  margin-bottom: 1.5rem;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
+.hero-title .highlight {
+  /* Dégradé du texte principal vers le Teal */
+  background: linear-gradient(5deg, var(--text-main) 0%, var(--accent-teal) 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  display: inline-block;
+}
+
+.hero-links {
+  margin-top: 1rem;
+}
+
+.hero-links a {
+  font-weight: 600;
+  /* text-transform: uppercase; */
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  color: var(--text-main);
+  transition: color 0.2s ease;
+}
+
+.hero-links a:hover {
+  color: var(--accent-teal);
+}
+
+.hero-links a i.bi {
+  margin-right: 0.3rem;
+  font-size: 1.1em;
+  vertical-align: -0.1em;
+}
+
+.hero-links .separator {
+  color: var(--border-flat);
+  margin: 0 1rem;
+}
+/* Force la couleur des icônes Academicons en blanc (ou la couleur de ton choix) */
+.ai {
+    color: #beffff; /* Tu peux aussi mettre une couleur personnalisée comme ton teal */
+    vertical-align: middle; /* Aligne proprement l'icône avec le texte */
+}
+
+/* Optionnel : Si tu veux une couleur différente au survol du lien */
+a:hover .ai {
+    color: #008080; /* Exemple de couleur au survol */
+}

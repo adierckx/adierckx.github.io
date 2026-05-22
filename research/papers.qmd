@@ -1,0 +1,21 @@
+---
+title: "Publications"
+toc: true
+---
+
+A complete and automatically updated list of my publications can also be found on [iNSPIRE HEP](https://inspirehep.net/authors/3157664) and [ORCID](https://orcid.org/0009-0001-8717-1712).
+
+## Preprints & Working Papers
+
+* **Signatures of loop quantum gravity in primordial black hole cosmologies**  
+  Antoine Dierckx, Sébastien Clesse, Francesca Vidotto. (2026)  
+  [[arXiv:XXXX.XXXXX]](#) | [[Code: pbh-rem]](https://github.com/adierckx/pbh-rem)
+
+<!-- 
+## Published Papers
+*(Peer-reviewed articles will be listed here)*
+-->
+
+## Scientific Software & Repositories
+
+* **[pbh-rem](https://github.com/adierckx/pbh-rem):** A Mathematica framework developed to compute phenomenological constraints on Primordial Black Holes with stable remnants (including LQG Planckian relics and macroscopic remnants from the memory burden effect).

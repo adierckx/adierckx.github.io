@@ -1,0 +1,61 @@
+---
+title: "Syllabus de mathématiques — Volume 1"
+subtitle: "Notions fondamentales : Étude des fonctions"
+toc: true
+---
+
+::: {.callout-warning appearance="minimal" collapse="true"}
+## ⚠️ Contexte et finalité de ces notes
+Ces notes ont été rédigées sur mon temps libre et ne constituent en aucun cas une source académique pour un apprentissage mathématique rigoureux. Elles servent avant tout à introduire certaines notions utiles à la réussite du test d'admission en mathématiques pour le [Bachelier en Informatique et Systèmes — Orientation : Sécurité des Systèmes (EPHEC)](https://www.ephec.be/formations/promotion-sociale/bachelier-en-informatique-et-systemes-orientation-securite-des-systemes#).
+:::
+
+[<i class="bi bi-file-earmark-pdf"></i> Télécharger le syllabus](./assets/Etude_fct_Vol1.pdf){.btn .btn-outline-primary .mb-4}
+
+## Structure du volume
+
+Ce premier volume se concentre sur l'étude des fonctions et s'articule autour des cinq parties suivantes :
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%;"}
+### Partie I : Rappels
+* **Calcul numérique :** Concepts fondamentaux (vocabulaire, règle des signes, fractions, règle PEMDAS).
+* **Calcul littéral :** Introduction aux formules de distributivité, identités remarquables et lois des puissances.
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%;"}
+### Partie II : Généralités
+* **Notations mathématiques :** Égalités, opérateurs logiques, ensembles et leurs relations.
+* **Nombres et ensembles :** Types de nombres (naturels, rationnels, réels) et notations.
+* **Fonction et variable :** Exploration des concepts de base.
+* **Analyse d'une fonction :** Racines, signes, croissance et ordonnée à l'origine.
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%;"}
+### Partie III : Fonctions polynomiales
+* **Introduction :** Présentation des polynômes et propriétés générales.
+* **Premier degré :** Équations, graphes, tableaux de signes, et inéquations simples.
+* **Second degré :** Équations quadratiques, graphes, tableaux de signes, et formes des solutions.
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%;"}
+### Partie IV : Solutions
+* **Exercices et problèmes :** Résolution détaillée et méthodique des exercices associés aux polynômes du premier et du second degré pour s'auto-évaluer.
+:::
+:::
+
+::: {.g-col-12}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%;"}
+### Partie V : Formulaire
+* **Aide-mémoire :** Résumé structuré des formules clés pour les calculs numériques, littéraux, et les fonctions polynomiales.
+:::
+:::
+
+:::

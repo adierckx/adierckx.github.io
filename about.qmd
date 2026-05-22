@@ -1,0 +1,63 @@
+---
+title: "Antoine Dierckx"
+resources:
+  - "./assets/docs/CV_Antoine-Dierckx.pdf"
+---
+
+::: {.d-flex .gap-2 .mb-4 .mt-2}
+[<i class="bi bi-file-earmark-pdf"></i> Full CV](./assets/docs/CV_Antoine-Dierckx.pdf){.btn .btn-primary}
+[<i class="bi bi-envelope"></i> Email](mailto:a.d@csic.es){.btn .btn-outline-primary}
+[<i class="bi bi-globe"></i> ORCID](https://orcid.org/0009-0001-8717-1712){.btn .btn-outline-primary}
+:::
+
+## Bio
+
+I am a PhD Candidate in theoretical physics based at the **Instituto de Estructura de la Materia (IEM-CSIC)** in Madrid. My research lies at the intersection of loop quantum gravity, numerics, and early universe cosmology.
+
+* **Supervisor:** Dr. Francesca Vidotto (IEM-CSIC)
+* **Academic Tutor:** Prof. Juan García-Bellido (Universidad Autónoma de Madrid / IFT)
+
+
+### Core Research
+My current research focuses on answering open questions in early-universe cosmology using non-perturbative quantum gravity. I mainly look at **Primordial Black Holes** within **Loop Quantum Gravity**, especially how black holes might transition into white holes, how quantum effects resolve singularities, and whether stable Planck-sized **remnants** could explain **dark matter**.
+
+Alongside this, I work on numerical tools to compute **Lorentzian spinfoam amplitudes**. The goal of this work is to help develop **Spinfoam Cosmology** by building practical ways to connect quantum transition amplitudes with effective geometries and early-universe models.
+
+## Education
+
+**PhD in Theoretical Physics** | Dec 2025 – Present  
+*IEM (CSIC) / IFT - Universidad Autónoma de Madrid, Spain*
+
+**Master in Physics** (*magna cum laude*) | Sep 2023 – Jun 2025  
+*Université libre de Bruxelles, Belgium*
+
+**Bachelor in Physics** (*cum laude*) | Sep 2020 – Jun 2023  
+*Université libre de Bruxelles, Belgium*
+
+## Research Experience
+
+**Visiting Graduate Researcher** | Sep 2024 – Jun 2025  
+*Western University (CA) & ULB (BE)* Studied PBH phenomenology in Loop Quantum Gravity. Modeled PBH remnants and evaporation to derive observational constraints.
+
+**CERN Summer Student** | Jul 2024 – Aug 2024  
+*Compact Muon Solenoid (CMS), Geneva, CH* Developed Graph Neural Networks for VBF tagging; analyzed algorithm stability for the $H~\rightarrow~\mathrm{invisible}$ channel.
+
+**Research Intern** | Jan 2023 – Apr 2023  
+*Interuniversity Institute for High Energies (IIHE), BE* Analyzed scalar-boson production in pp collisions using CMS data at $\sqrt{s}=13\,\mathrm{TeV}$.
+
+### Group & Consortium Affiliations
+My PhD project is part of a larger international network, and I also participate in a couple of European research actions:
+
+* **[WithOut SpaceTime (WOST)](https://withoutspacetime.org/):** An international network of 15 groups exploring physics beyond classical space and time. My PhD research is based in the Madrid hub.
+* **[COST Action CA23130 (BridgeQG)](https://web.infn.it/BridgeQG/):** Bridging high and low energies in search of quantum gravity. Member of WG1: *High-energy quantum gravity theory*, and WG2: *High-energy quantum gravity experiment*.
+* **[COST Action CA23115 (RQI)](https://rqi-cost.org/):** Relativistic Quantum Information. Member of WG2: *Gravitational quantum physics and metrology*, and WG3: *Time, causality, and memory in quantum physics*.
+
+## Advanced Training & Schools
+
+* **[WOST School 2026](https://withoutspacetime.org/meetings/les-houches-school/)**, Les Houches School of Physics, FR (Sep 2026).
+* **[Blaumann's School on Loop Quantum Gravity](https://sites.google.com/cstq.org/2025-lqg-blaumann-school)**, Les Houches School of Physics, FR (Sep 2025).
+* **[CERN Summer Student Lecture Programme](https://indico.cern.ch/event/1347523/)**, Geneva, CH (Jul 2024).
+
+## Technical Skills
+**Programming & Tools:** Python • Wolfram Mathematica • ROOT • LaTeX  
+**Languages:** French (Native) • English (Fluent)

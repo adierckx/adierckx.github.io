@@ -1,0 +1,891 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Antoine Dierckx",
+    "section": "",
+    "text": "PhD Candidate in Theoretical Physics\n\n\n\n  arXiv  |   ORCiD  |   iNSPIRE HEP"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Antoine Dierckx",
+    "section": "",
+    "text": "Full CV  Email  ORCID"
+  },
+  {
+    "objectID": "index.html#what-youll-find-here",
+    "href": "index.html#what-youll-find-here",
+    "title": "adierckx - Home",
+    "section": "What You’ll Find Here",
+    "text": "What You’ll Find Here\n\nLecture Notes\nScanned handwritten notes from my Bachelor’s and Master’s courses, organized by year and subject.\nUse the left menu to navigate through the available notes.\n\n\nLab and Internship Reports\nReports from labs and my summer internship at CERN.\nUse the left menu to explore reports by lab.\n\n\nMath Syllabus\nSimple, high-school-level math guides I created for friends a couple years ago.\nVolume 1 Volume 2\n\n\nResources Section\nA collection of textbooks and useful links that students might find helpful.\nBooks Useful Links"
+  },
+  {
+    "objectID": "index.html#how-to-use-this-site",
+    "href": "index.html#how-to-use-this-site",
+    "title": "adierckx - Home",
+    "section": "How to Use This Site",
+    "text": "How to Use This Site\nTo access the notes, simply navigate to the table of contents, select the course you’re interested in, and click on the chapter title to open the corresponding PDF. Everything is grouped by year and subject to make it easy to find what you need.\nIf you’re looking for textbooks, head to the book section. You’ll find a variety of books and links to download them for free.\nFeel free to explore, and thanks again for stopping by!"
+  },
+  {
+    "objectID": "index.html#ce-que-vous-trouverez-ici",
+    "href": "index.html#ce-que-vous-trouverez-ici",
+    "title": "adierckx - Home",
+    "section": "Ce que vous trouverez ici",
+    "text": "Ce que vous trouverez ici\n\nNotes de cours\nDes notes manuscrites numérisées de mes cours de bachelier et de master, organisées par année et par sujet.\nUtilisez le menu de gauche pour naviguer parmi les notes disponibles.\n\n\nRapports de laboratoire et de stage\nDes rapports de laboratoires et de mon stage d’été au CERN.\nUtilisez le menu de gauche pour explorer les rapports par laboratoire.\n\n\nSyllabus de mathématiques\nDes notes de mathématiques élémentaires, de niveau école secondaire, que j’ai créées pour des ami·e·s il y a quelques années.\nVolume 1 Volume 2\n\n\nRessources supplémentaires\nUne collection de livres et de documents de référence qui pourraient être utiles aux étudiant·e·s en physique.\nLivres Liens utiles"
+  },
+  {
+    "objectID": "index.html#comment-utiliser-ce-site",
+    "href": "index.html#comment-utiliser-ce-site",
+    "title": "adierckx - Home",
+    "section": "Comment utiliser ce site",
+    "text": "Comment utiliser ce site\nPour accéder aux notes, naviguez simplement vers la table des matières, sélectionnez le cours qui vous intéresse, et cliquez sur le titre du chapitre pour ouvrir le PDF correspondant. Tout est regroupé par année et par sujet pour faciliter la recherche de ce dont vous avez besoin.\nSi vous cherchez des manuels, rendez-vous dans la section Books. Vous y trouverez des livres de référence et des liens pour les télécharger gratuitement.\nN’hésitez pas à explorer, et merci encore de votre visite !"
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Home",
+    "section": "",
+    "text": "Welcome to my personal website. I am a PhD candidate in theoretical physics, working on non-perturbative quantum gravity, loop quantum cosmology, and the phenomenology of primordial black holes.\nThis website serves a dual purpose: it tracks my current academic research, publications, and conference talks, and it hosts a comprehensive archive of lecture notes, reports, and resources accumulated during my university studies."
+  },
+  {
+    "objectID": "index.html#recent-news",
+    "href": "index.html#recent-news",
+    "title": "Home",
+    "section": "Recent News",
+    "text": "Recent News\n\n[May 2026] Our new paper regarding signatures of loop quantum gravity in primordial black hole cosmologies will be available this Friday on arXiv!\n[Upcoming] I will be presenting our recent results at the Black Holes & Cosmology conference in Granada (Spain) this June."
+  },
+  {
+    "objectID": "index.html#navigation-guide",
+    "href": "index.html#navigation-guide",
+    "title": "Home",
+    "section": "Navigation Guide",
+    "text": "Navigation Guide\nTo explore the site, you can use the top navigation bar or refer to the summary below:\n\nAcademic Research\n\nResearch Themes: A detailed overview of my current research axes, including primordial black hole remnants and numerical spinfoams.\nPublications: A chronological list of scientific articles, preprints, and active code repositories.\nTalks & Slides: Presentation slides and schedules from seminars and international conferences.\nEarly Research: Documents from my undergraduate work, including my Master’s thesis and my summer internship report from CERN.\n\n\n\nTeaching & Study Notes\nThis website originally started as a repository for my study materials. These resources remain fully accessible to students: * Lecture Notes: Scanned handwritten summaries from my Bachelor and Master courses, organized by year and topic. * Math Syllabus: Elementary, high-school-level math guides created to review foundational concepts. * Resources: A curated list of reference textbooks and useful external links for physics students.\n\n\nOutreach & Engagement\n\nOutreach & Projects: Information about my science communication initiatives (such as the STEMentiel! project) and other creative or cultural projects."
+  },
+  {
+    "objectID": "index.html#website-structure",
+    "href": "index.html#website-structure",
+    "title": "Antoine Dierckx",
+    "section": "Website Structure",
+    "text": "Website Structure\n\nAcademic Research\n\nResearch Themes: Detailed descriptions of active research axes.\nPublications: Chronological list of papers, preprints, and associated code repositories.\nTalks & Slides: Presentations, seminar slides, and upcoming talks.\nEarly Research: Master’s thesis, undergraduate reports, and internship data.\n\n\n\nTeaching & Notes\n\nBachelor Notes: Handwritten and scanned study summaries from BSc courses.\nMaster Notes: Academic summaries and lecture notes from MSc courses.\n\n\n\nEngagement & Projects\n\nOutreach & Projects: Science communication initiatives and cultural or associative work.\nBlog: Informal notes, reading reviews, and short updates."
+  },
+  {
+    "objectID": "index.html#research-focus",
+    "href": "index.html#research-focus",
+    "title": "Antoine Dierckx",
+    "section": "Research Focus",
+    "text": "Research Focus\n\n\nPrimordial Black Holes & Remnants\nStudying the phenomenological consequences of stabilization mechanisms in PBH evaporation, focusing on Planckian relics within Loop Quantum Gravity and macroscopic remnants induced by the Memory Burden effect.\n\n\nSpinfoam Numerics & Cosmology\nDeveloping numerical and computational tools to evaluate spin foam amplitudes, with a specific application to structural transitions in spinfoam cosmology."
+  },
+  {
+    "objectID": "index.html#navigation",
+    "href": "index.html#navigation",
+    "title": "Antoine Dierckx",
+    "section": "Navigation",
+    "text": "Navigation\n\nAcademic Research\n\n\nResearch Themes\n\n\nPublications\n\n\nTalks & Slides\n\n\nEarly Research\n\n\n\n\nTeaching & Notes\n\n\nBachelor Notes\n\n\nMaster Notes\n\n\n\n\nEngagement & Projects\n\n\nOutreach & Projects\n\n\nBlog"
+  },
+  {
+    "objectID": "about.html#bio",
+    "href": "about.html#bio",
+    "title": "Antoine Dierckx",
+    "section": "Bio",
+    "text": "Bio\nI am a PhD Candidate in theoretical physics based at the Instituto de Estructura de la Materia (IEM-CSIC) in Madrid. My research lies at the intersection of loop quantum gravity, numerics, and early universe cosmology.\n\nSupervisor: Dr. Francesca Vidotto (IEM-CSIC)\nAcademic Tutor: Prof. Juan García-Bellido (Universidad Autónoma de Madrid / IFT)\n\n\nCore Research\nMy current research focuses on answering open questions in early-universe cosmology using non-perturbative quantum gravity. I mainly look at Primordial Black Holes within Loop Quantum Gravity, especially how black holes might transition into white holes, how quantum effects resolve singularities, and whether stable Planck-sized remnants could explain dark matter.\nAlongside this, I work on numerical tools to compute Lorentzian spinfoam amplitudes. The goal of this work is to help develop Spinfoam Cosmology by building practical ways to connect quantum transition amplitudes with effective geometries and early-universe models."
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "Antoine Dierckx",
+    "section": "Education",
+    "text": "Education\nPhD in Theoretical Physics | Dec 2025 – Present\nIEM (CSIC) / IFT - Universidad Autónoma de Madrid, Spain\nMaster in Physics (magna cum laude) | Sep 2023 – Jun 2025\nUniversité libre de Bruxelles, Belgium\nBachelor in Physics (cum laude) | Sep 2020 – Jun 2023\nUniversité libre de Bruxelles, Belgium"
+  },
+  {
+    "objectID": "about.html#research-experience",
+    "href": "about.html#research-experience",
+    "title": "Antoine Dierckx",
+    "section": "Research Experience",
+    "text": "Research Experience\nVisiting Graduate Researcher | Sep 2024 – Jun 2025\nWestern University (CA) & ULB (BE) Studied PBH phenomenology in Loop Quantum Gravity. Modeled PBH remnants and evaporation to derive observational constraints.\nCERN Summer Student | Jul 2024 – Aug 2024\nCompact Muon Solenoid (CMS), Geneva, CH Developed Graph Neural Networks for VBF tagging; analyzed algorithm stability for the \\(H~\\rightarrow~\\mathrm{invisible}\\) channel.\nResearch Intern | Jan 2023 – Apr 2023\nInteruniversity Institute for High Energies (IIHE), BE Analyzed scalar-boson production in pp collisions using CMS data at \\(\\sqrt{s}=13\\,\\mathrm{TeV}\\).\n\nGroup & Consortium Affiliations\nMy PhD project is part of a larger international network, and I also participate in a couple of European research actions:\n\nWithOut SpaceTime (WOST): An international network of 15 groups exploring physics beyond classical space and time. My PhD research is based in the Madrid hub.\nCOST Action CA23130 (BridgeQG): Bridging high and low energies in search of quantum gravity. Member of WG1: High-energy quantum gravity theory, and WG2: High-energy quantum gravity experiment.\nCOST Action CA23115 (RQI): Relativistic Quantum Information. Member of WG2: Gravitational quantum physics and metrology, and WG3: Time, causality, and memory in quantum physics."
+  },
+  {
+    "objectID": "about.html#advanced-training-schools",
+    "href": "about.html#advanced-training-schools",
+    "title": "Antoine Dierckx",
+    "section": "Advanced Training & Schools",
+    "text": "Advanced Training & Schools\n\nWOST School 2026, Les Houches School of Physics, FR (Sep 2026).\nBlaumann’s School on Loop Quantum Gravity, Les Houches School of Physics, FR (Sep 2025).\nCERN Summer Student Lecture Programme, Geneva, CH (Jul 2024)."
+  },
+  {
+    "objectID": "about.html#technical-skills",
+    "href": "about.html#technical-skills",
+    "title": "Antoine Dierckx",
+    "section": "Technical Skills",
+    "text": "Technical Skills\nProgramming & Tools: Python • Wolfram Mathematica • ROOT • LaTeX\nLanguages: French (Native) • English (Fluent)"
+  },
+  {
+    "objectID": "research/themes.html",
+    "href": "research/themes.html",
+    "title": "Research Themes",
+    "section": "",
+    "text": "My research investigates the phenomenological consequences of non-perturbative quantum gravity corrections on the evolution of light Primordial Black Holes (PBHs) in the early universe. Standard semi-classical Hawking evaporation predicts runaway evaporation, but Loop Quantum Gravity (LQG) introduces a natural UV cut-off that fundamentally alters this late-stage behavior.\n\n\nIn LQG, the quantization of geometric operators resolves the central singularity, replacing it with a quantum bounce into an antitrapped spacetime region. A central prediction is the quantum tunneling of the classical black hole geometry to a white hole geometry, with a transition probability exponentially suppressed by the squared mass:\n\\[\nP \\sim e^{-(m/m_{\\mathrm{Pl}})^2}~.\n\\tag{1}\\]\nThis mechanism leads to Planckian relics, which represent a viable, non-baryonic candidate for dark matter and introduce specific signatures in primordial cosmological backgrounds.\n\nAssociated Code: A Mathematica framework developed to derive constraints on these PBH models can be found in the repo pbh-rem.\nRecent Preprint: Our forthcoming paper detailing these signatures will be linked here this Friday.\n\n\n\n\nOther stabilization mechanisms include the Memory Burden effect (MBe), in which the suppression of the evaporation rate is related to the information capacity of the black hole. The remnants predicted by this mechanism are macroscopic, typically after the black hole has evaporated roughly half of its initial mass (\\(m \\sim m_0 / 2\\))."
+  },
+  {
+    "objectID": "research/themes.html#theme-1-primordial-black-holes-evaporation-remnants",
+    "href": "research/themes.html#theme-1-primordial-black-holes-evaporation-remnants",
+    "title": "Research Themes",
+    "section": "",
+    "text": "My research investigates the phenomenological consequences of quantum gravity corrections on the formation, evolution, and final stages of Primordial Black Holes (PBHs) in the early universe. Standard semi-classical Hawking evaporation predicts the complete disappearance of black holes, leading to the well-known information loss paradox. I explore stabilization mechanisms that alter this late-stage behavior.\n\n\nWithin Loop Quantum Gravity (LQG), the resolution of the central singularity through a quantum bounce suggests that the evaporation process halts when the black hole approaches the Planck scale. This mechanism leaves behind a stable, stable Planck-sized remnant (\\(M_{\\text{rel}} \\sim m_p\\)).\nThe modified mass evolution can be effectively modeled by introducing a quantum suppression factor to the standard Hawking mass loss rate:\n\\[\n\\frac{dM}{dt} = -\\frac{\\alpha}{M^2} \\left(1 - \\frac{m_p^2}{M^2}\\right)\n\\tag{1}\\]\nWhere \\(\\alpha\\) depends on the particle degrees of freedom. These remnants represent a viable, non-baryonic candidate for cold dark matter (CDM) and introduce specific signatures in primordial cosmological backgrounds.\n\n\n\nAlternatively, I study the Memory Burden effect, which argues that quantum systems storing a large amount of information (such as a black hole encoding its initial state) undergo a dramatic slowdown in their decay rate. This effect becomes dominant well before the Planck scale, typically after the black hole has evaporated roughly half of its initial mass (\\(M \\approx M_i / 2\\)).\nThe evaporation rate is suppressed by a factor related to the information capacity, leading to long-lived, macroscopic remnants whose astrophysical and cosmological constraints differ significantly from those of Planckian relics.\n\nAssociated Code: A Mathematica framework developed to derive constraints on these PBH models can be found in this GitHub repository. (Repository link will be updated soon)\nRecent Preprint: Our forthcoming paper detailing these signatures will be linked here this Friday."
+  },
+  {
+    "objectID": "research/themes.html#theme-2-spinfoam-numerics-cosmology",
+    "href": "research/themes.html#theme-2-spinfoam-numerics-cosmology",
+    "title": "Research Themes",
+    "section": "Theme 2: Spinfoam Numerics & Cosmology",
+    "text": "Theme 2: Spinfoam Numerics & Cosmology\nThe second axis of my work focuses on the non-perturbative formulation of quantum spacetime, specifically through the lens of Covariant Loop Quantum Gravity (Spinfoam models) and its application to early-universe cosmology.\n\nLorentzian Spinfoam Amplitudes\nA central challenge in covariant LQG is the explicit computation of the path integral over quantum geometries. The transition amplitudes are defined by the partition function on a dual two-complex \\(\\mathcal{C}\\):\n\\[\nZ(\\mathcal{C}) = \\sum_{j_f, \\iota_e} \\prod_{f} \\dim(j_f) \\prod_{v} A_v(j_f, \\iota_e)\n\\tag{2}\\]\nWhere \\(j_f\\) are SU(2) representations (areas), \\(\\iota_e\\) are intertwiners (volumes), and \\(A_v\\) is the vertex amplitude. Evaluating \\(A_v\\) for the realistic Lorentzian gauge group \\(SL(2,\\mathbb{C})\\) requires complex multi-dimensional integrals over non-compact domains.\n\n\nComputational Framework & Cosmological Transitions\nTo bridge theory and observations, I develop and utilize high-performance numerical codes—leveraging the sl2cfoam-next C++ framework and Julia interfaces—to compute these Lorentzian amplitudes efficiently.\nThe primary objective is to apply these numerical tools to Spinfoam Cosmology, studying structural transitions and quantum geometry fluctuations in the deep Planckian regime of the early universe. This numeric-to-effective approach is crucial for computing primordial tensor perturbations and assessing the validity of effective cosmic bounce scenarios.\n\nActive Projects: Numerical evaluation of vertex amplitudes for higher-valent spins."
+  },
+  {
+    "objectID": "research/themes.html#primordial-black-holes-dark-matter-remnants",
+    "href": "research/themes.html#primordial-black-holes-dark-matter-remnants",
+    "title": "Research Themes",
+    "section": "",
+    "text": "My research investigates the phenomenological consequences of non-perturbative quantum gravity corrections on the evolution of light Primordial Black Holes (PBHs) in the early universe. Standard semi-classical Hawking evaporation predicts runaway evaporation, but Loop Quantum Gravity (LQG) introduces a natural UV cut-off that fundamentally alters this late-stage behavior.\n\n\nIn LQG, the quantization of geometric operators resolves the central singularity, replacing it with a quantum bounce into an antitrapped spacetime region. A central prediction is the quantum tunneling of the classical black hole geometry to a white hole geometry, with a transition probability exponentially suppressed by the squared mass:\n\\[\nP \\sim e^{-(m/m_{\\mathrm{Pl}})^2}~.\n\\tag{1}\\]\nThis mechanism leads to Planckian relics, which represent a viable, non-baryonic candidate for dark matter and introduce specific signatures in primordial cosmological backgrounds.\n\nAssociated Code: A Mathematica framework developed to derive constraints on these PBH models can be found in the repo pbh-rem.\nRecent Preprint: Our forthcoming paper detailing these signatures will be linked here this Friday.\n\n\n\n\nOther stabilization mechanisms include the Memory Burden effect (MBe), in which the suppression of the evaporation rate is related to the information capacity of the black hole. The remnants predicted by this mechanism are macroscopic, typically after the black hole has evaporated roughly half of its initial mass (\\(m \\sim m_0 / 2\\))."
+  },
+  {
+    "objectID": "research/themes.html#spinfoam-numerics-cosmology",
+    "href": "research/themes.html#spinfoam-numerics-cosmology",
+    "title": "Research Themes",
+    "section": "Spinfoam Numerics & Cosmology",
+    "text": "Spinfoam Numerics & Cosmology\nThe second axis of my work focuses on Covariant Loop Quantum Gravity (Spinfoam models) and its application to early-universe cosmology."
+  },
+  {
+    "objectID": "research/papers.html",
+    "href": "research/papers.html",
+    "title": "Publications",
+    "section": "",
+    "text": "A complete and automatically updated list of my publications can also be found on iNSPIRE HEP and ORCID."
+  },
+  {
+    "objectID": "research/papers.html#preprints-working-papers",
+    "href": "research/papers.html#preprints-working-papers",
+    "title": "Publications",
+    "section": "Preprints & Working Papers",
+    "text": "Preprints & Working Papers\n\nSignatures of loop quantum gravity in primordial black hole cosmologies\nAntoine Dierckx, Sébastien Clesse, Francesca Vidotto. (2026)\n[arXiv:XXXX.XXXXX] | [Code: pbh-rem]"
+  },
+  {
+    "objectID": "research/papers.html#scientific-software-repositories",
+    "href": "research/papers.html#scientific-software-repositories",
+    "title": "Publications",
+    "section": "Scientific Software & Repositories",
+    "text": "Scientific Software & Repositories\n\npbh-rem: A Mathematica framework developed to compute phenomenological constraints on Primordial Black Holes with stable remnants (including LQG Planckian relics and macroscopic remnants from the memory burden effect)."
+  },
+  {
+    "objectID": "research/talks.html",
+    "href": "research/talks.html",
+    "title": "Talks & Events",
+    "section": "",
+    "text": "Signatures of LQG in PBH cosmologies RER-S8 Cosmology Meeting — UCLouvain, BE (May 26, 2026)\nPhenomenology of PBH remnants Black Holes & Cosmology Conference — Granada, ES (Jun 15–19, 2026)"
+  },
+  {
+    "objectID": "research/talks.html#upcoming-presentations",
+    "href": "research/talks.html#upcoming-presentations",
+    "title": "Talks & Events",
+    "section": "",
+    "text": "Signatures of LQG in PBH cosmologies RER-S8 Cosmology Meeting — UCLouvain, BE (May 26, 2026)\nPhenomenology of PBH remnants Black Holes & Cosmology Conference — Granada, ES (Jun 15–19, 2026)"
+  },
+  {
+    "objectID": "research/talks.html#past-presentations-seminars",
+    "href": "research/talks.html#past-presentations-seminars",
+    "title": "Talks & Events",
+    "section": "Past Presentations & Seminars",
+    "text": "Past Presentations & Seminars\n\nConstraining PBH remnants with LISA and cosmological observables LISA Madrid Group Meeting — Madrid, ES (Apr 9, 2026)  Slides\nSignatures of LQG in PBH cosmologies Group Meeting Presentation — IEM-CSIC, Madrid, ES (Mar 30, 2026)   \nGroup introduction on Causal Spinfoams ILQGS Group Intro Session — IEM-CSIC, Madrid, ES (Feb 2, 2026)  Slides"
+  },
+  {
+    "objectID": "research/talks.html#attendance-schools",
+    "href": "research/talks.html#attendance-schools",
+    "title": "Talks & Events",
+    "section": "Attendance & Schools",
+    "text": "Attendance & Schools\n(Events attended without giving a formal presentation)\n\nAdvanced School on Quantum Gravity\nYangzhou, CN (May 2026)\nBlaumann’s School on Loop Quantum Gravity\nLes Houches School of Physics, FR (Sep 2025)\nCERN Summer Student Lecture Programme\nGeneva, CH (Jul 2024)"
+  },
+  {
+    "objectID": "research/early-research.html",
+    "href": "research/early-research.html",
+    "title": "Early Research & Internships",
+    "section": "",
+    "text": "Before starting my PhD, I had the opportunity to work on several research projects during my Bachelor’s and Master’s degrees at the Université libre de Bruxelles (ULB)."
+  },
+  {
+    "objectID": "research/early-research.html#masters-thesis",
+    "href": "research/early-research.html#masters-thesis",
+    "title": "Early Research & Internships",
+    "section": "Master’s Thesis",
+    "text": "Master’s Thesis\nConstraints from Loop Quantum Gravity and the Memory Burden Effect in Primordial Black Hole Cosmologies   Supervisors: Dr. Francesca Vidotto & Dr. Sébastien Clesse   Western University (CA) & ULB (BE) — 2024–2025\nFor my Master’s thesis, I investigated how Loop Quantum Gravity and the Memory Burden effect suppress Hawking evaporation, allowing light Primordial Black Holes to stabilize into relics that could be viable dark matter candidates. This work laid the foundation for my current PhD research, focusing on modeling PBH remnants and deriving observational constraints from cosmological backgrounds.  Thesis"
+  },
+  {
+    "objectID": "research/early-research.html#cern-summer-internship",
+    "href": "research/early-research.html#cern-summer-internship",
+    "title": "Early Research & Internships",
+    "section": "CERN Summer Internship",
+    "text": "CERN Summer Internship\nGraph Neural Networks for VBF Tagging   Compact Muon Solenoid (CMS) Experiment, CERN, Geneva — Summer 2024\nDuring the CERN Summer Student Programme, I worked within the CMS collaboration. My project focused on developing and implementing Graph Neural Networks (GNNs) to improve Vector Boson Fusion (VBF) tagging. I specifically analyzed the algorithm’s stability and performance for the Higgs to invisible decay channel (\\(H \\rightarrow \\mathrm{invisible}\\)).  Report"
+  },
+  {
+    "objectID": "research/early-research.html#undergraduate-research-lab-reports",
+    "href": "research/early-research.html#undergraduate-research-lab-reports",
+    "title": "Early Research & Internships",
+    "section": "Undergraduate Research & Lab Reports",
+    "text": "Undergraduate Research & Lab Reports\nDuring my curriculum, I completed several hands-on projects and short internships in both experimental high-energy physics and formal theory:\n\nIIHE Internship (2023): Analysis of scalar-boson production in \\(pp\\) collisions using CMS data at \\(\\sqrt{s}=13\\,\\mathrm{TeV}\\).  Report\nTheoretical Physics Projects: Advanced study projects on Dark Photons  Report and Generalized Symmetries  Report."
+  },
+  {
+    "objectID": "outreach/projects.html",
+    "href": "outreach/projects.html",
+    "title": "Outreach & Creative Projects",
+    "section": "",
+    "text": "Beyond academic research, I participate in science communication, digital content creation, and collaborative design projects aimed at opening up academic and scientific spaces."
+  },
+  {
+    "objectID": "outreach/projects.html#science-communication-outreach",
+    "href": "outreach/projects.html#science-communication-outreach",
+    "title": "Outreach & Creative Projects",
+    "section": "Science Communication & Outreach",
+    "text": "Science Communication & Outreach\n\nThe bel.sciences Project (STEMentiel!)\nAs part of the broader STEMentiel! initiative, I contribute to bel.sciences, a digital outreach project focused on sharing diverse pathways into exact sciences. I produce video content and conduct short interviews across TikTok, Instagram, and YouTube, highlighting students and researchers in mathematics and physics from a wide range of backgrounds.\n\nExplore our content via our Linktree bel.sciences."
+  },
+  {
+    "objectID": "outreach/projects.html#creative-political-work",
+    "href": "outreach/projects.html#creative-political-work",
+    "title": "Outreach & Creative Projects",
+    "section": "Creative & Political Work",
+    "text": "Creative & Political Work\n\nAntifascist Physics Stickers\nThis project is an ongoing exploration of combining theoretical physics iconography with political and social engagement. I design custom stickers that blend foundational physics formulas, quantum geometry concepts, and anti-authoritarian or antifascist symbols.\nThe goal is to reclaim educational spaces and build visual materials that spark curiosity while reaffirming militant solidarity within the scientific community.\n\nDistribution: Open-source designs shared within student, autonomous, and cooperative spaces."
+  },
+  {
+    "objectID": "outreach/projects.html#graphic-design-collaboration",
+    "href": "outreach/projects.html#graphic-design-collaboration",
+    "title": "Outreach & Creative Projects",
+    "section": "Graphic Design & Collaboration",
+    "text": "Graphic Design & Collaboration\n\nIdentity & Logo Design\nI occasionally collaborate on visual identity and graphic materials for scientific networks and working groups. This includes designing the official logo for the WOST (WithOut SpaceTime) network."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nSome useful links for physics students\n\n2 min\n\n\n\n\n\nMay 21, 2026\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog.html#coming-soon",
+    "href": "blog.html#coming-soon",
+    "title": "Blog",
+    "section": "",
+    "text": "Stay tuned!"
+  },
+  {
+    "objectID": "notes/bachelor.html",
+    "href": "notes/bachelor.html",
+    "title": "Bachelor Lecture Notes",
+    "section": "",
+    "text": "These pages contain scanned handwritten notes and personal summaries compiled during my Bachelor’s degree in Physics at the Université libre de Bruxelles (ULB)."
+  },
+  {
+    "objectID": "notes/bachelor.html#first-year-ba1",
+    "href": "notes/bachelor.html#first-year-ba1",
+    "title": "Bachelor Lecture Notes",
+    "section": "First Year (BA1)",
+    "text": "First Year (BA1)\n\n\nChimie généraleCHIM-F-101\n\n\nCalcul différentiel et intégral IMATH-F-101\n\n\nAlgèbre linéaire et GéométrieMATH-F-102\n\n\nPhysique générale I et IIPHYS-F-110"
+  },
+  {
+    "objectID": "notes/bachelor.html#second-year-ba2",
+    "href": "notes/bachelor.html#second-year-ba2",
+    "title": "Bachelor Lecture Notes",
+    "section": "Second Year (BA2)",
+    "text": "Second Year (BA2)\n\n\nAnglais scientifique ILANG-F-201\n\n\nCalcul différentiel et intégral IIMATH-F-201\n\n\nThermodynamiquePHYS-F-201\n\n\nRelativité, électromagnétisme & optiquePHYS-F-202\n\n\nIntroduction à la mécanique quantiquePHYS-F-203\n\n\nLaboratoires & Statistique appliquéePHYS-F-210\n\n\nInformatiqueINFO-F-207\n\n\nMécanique analytiqueMATH-F-204"
+  },
+  {
+    "objectID": "notes/bachelor.html#third-year-ba3",
+    "href": "notes/bachelor.html#third-year-ba3",
+    "title": "Bachelor Lecture Notes",
+    "section": "Third Year (BA3)",
+    "text": "Third Year (BA3)\n\n\nMathématiques pour la physiqueMATH-F-314\n\n\nMécanique quantiquePHYS-F-302\n\n\nPhysique statistiquePHYS-F-303\n\n\nSpectrophysique et AstrophysiquePHYS-F-304\n\n\nPhysique des particules & NucléairePHYS-F-305\n\n\nLaboratoires et Stage de recherchePHYS-F-311\n\n\nSoft Matter and Solid State PhysicsPHYS-F-308\n\n\nLa structure de l’universPHYS-F-105"
+  },
+  {
+    "objectID": "notes/master.html",
+    "href": "notes/master.html",
+    "title": "Master Lecture Notes",
+    "section": "",
+    "text": "These pages contain advanced summaries, lecture notes, and research project data compiled during my Master’s degree in Theoretical Physics at the Université libre de Bruxelles (ULB)."
+  },
+  {
+    "objectID": "notes/master.html#first-year-ma1",
+    "href": "notes/master.html#first-year-ma1",
+    "title": "Master Lecture Notes",
+    "section": "First Year (MA1)",
+    "text": "First Year (MA1)\n\n\nStage (Physique Théorique)STAG-F015\n\n\nStage (Physique Mathématique)STAG-F016\n\n\nDynamique des fluides et des plasmasPHYS-F-412\n\n\nThéorie de la gravitationPHYS-F-432\n\n\nAdvanced General RelativityPHYS-F-418\n\n\nCosmologiePHYS-F-415\n\n\nPhysique des particulesPHYS-F-416\n\n\nModèle standard des interactionsPHYS-F-422\n\n\nQuantum Field Theory IPHYS-F-410\n\n\nQuantum Field Theory IIPHYS-F-440\n\n\nPhysics of Strong InteractionsPHYS-F-477\n\n\nRepresentation of GroupsPHYS-F-485"
+  },
+  {
+    "objectID": "notes/master.html#second-year-ma2",
+    "href": "notes/master.html#second-year-ma2",
+    "title": "Master Lecture Notes",
+    "section": "Second Year (MA2)",
+    "text": "Second Year (MA2)\n\n\nAdvanced Quantum Field TheoryPHYS-F-417\n\n\nPhysics Beyond the Standard ModelPHYS-F-469\n\n\nThéorie des cordesPHYS-F-483\n\n\nGravitational WavesPHYS-F-484\n\n\nMémoire de MasterMEMO-F-534\n\n\nStage non-académiqueSTAG-F-017"
+  },
+  {
+    "objectID": "notes/ma2/stag-f-017.html",
+    "href": "notes/ma2/stag-f-017.html",
+    "title": "Stage non-académique (STAG-F-017)",
+    "section": "",
+    "text": "Notes and resources coming soon."
+  },
+  {
+    "objectID": "notes/ma2/phys-f-483.html",
+    "href": "notes/ma2/phys-f-483.html",
+    "title": "Théorie des cordes",
+    "section": "",
+    "text": "Warning⚠️ Avertissement concernant ces notes\n\n\n\n\n\nLes notes publiées sur ce site sont basées sur ma compréhension personnelle du matériel et n’ont pas été indépendamment vérifiées. Bien que j’espère qu’elles soient utiles, il peut y avoir des erreurs ou des inexactitudes. Si vous trouvez des erreurs ou avez des suggestions d’amélioration, n’hésitez pas à me contacter : a.d@csic.es.\nEnseignant : Giulio Collinucci (Année 2024 - 2025)\nRessources officielles :  Page de l’ULB  Espace Dochub"
+  },
+  {
+    "objectID": "notes/ma2/phys-f-417.html",
+    "href": "notes/ma2/phys-f-417.html",
+    "title": "Advanced Quantum Field Theory",
+    "section": "",
+    "text": "Warning⚠️ Avertissement concernant ces notes\n\n\n\n\n\nLes notes publiées sur ce site sont basées sur ma compréhension personnelle du matériel et n’ont pas été indépendamment vérifiées. Bien que j’espère qu’elles soient utiles, il peut y avoir des erreurs ou des inexactitudes. Si vous trouvez des erreurs ou avez des suggestions d’amélioration, n’hésitez pas à me contacter : a.d@csic.es.\nEnseignant : Dr. Glenn Barnich (Année 2024-2025)\nRessources officielles :  Page de l’ULB  Espace Dochub"
+  },
+  {
+    "objectID": "notes/ma2/memo-f-534.html",
+    "href": "notes/ma2/memo-f-534.html",
+    "title": "Mémoire de Master (MEMO-F-534)",
+    "section": "",
+    "text": "Notes and resources coming soon."
+  },
+  {
+    "objectID": "notes/ma1/stag-f015.html",
+    "href": "notes/ma1/stag-f015.html",
+    "title": "Stage (Physique Théorique) (STAG-F015)",
+    "section": "",
+    "text": "Notes and resources coming soon."
+  },
+  {
+    "objectID": "notes/ma1/phys-f-477.html",
+    "href": "notes/ma1/phys-f-477.html",
+    "title": "Physics of Strong Interactions",
+    "section": "",
+    "text": "Warning⚠️ Avertissement concernant ces notes\n\n\n\n\n\nLes notes publiées sur ce site sont basées sur ma compréhension personnelle du matériel et n’ont pas été indépendamment vérifiées. Bien que j’espère qu’elles soient utiles, il peut y avoir des erreurs ou des ineactitudes. Si vous trouvez des erreurs ou avez des suggestions d’amélioration, n’hésitez pas à me contacter : a.d@csic.es.\nEnseignant : Laurent FAVART (Année 2023-2024)\nRessources officielles :\n Page de l’ULB\n Espace Dochub"
+  },
+  {
+    "objectID": "notes/ma1/phys-f-432.html",
+    "href": "notes/ma1/phys-f-432.html",
+    "title": "Théorie de la gravitation",
+    "section": "",
+    "text": "Warning⚠️ Avertissement concernant ces notes\n\n\n\n\n\nLes notes publiées sur ce site sont basées sur ma compréhension personnelle du matériel et n’ont pas été indépendamment vérifiées. Bien que j’espère qu’elles soient utiles, il peut y avoir des erreurs ou des inexactitudes. Si vous trouvez des erreurs ou avez des suggestions d’amélioration, n’hésitez pas à me contacter : a.d@csic.es.\nEnseignant : Stéphane DETOURNAY (Année 2023 - 2024)\nRessources officielles :  Page de l’ULB  Espace Dochub"
+  },
+  {
+    "objectID": "notes/ma1/phys-f-418.html",
+    "href": "notes/ma1/phys-f-418.html",
+    "title": "Advanced general relativity",
+    "section": "",
+    "text": "Warning⚠️ Avertissement concernant ces notes\n\n\n\n\n\nLes notes publiées sur ce site sont basées sur ma compréhension personnelle du matériel et n’ont pas été indépendamment vérifiées. Bien que j’espère qu’elles soient utiles, il peut y avoir des erreurs ou des inexactitudes. Si vous trouvez des erreurs ou avez des suggestions d’amélioration, n’hésitez pas à me contacter : a.d@csic.es.\nEnseignant : Dr. Glenn Barnich (Année 2023-2024)\nRessources officielles :  Page de l’ULB  Espace Dochub"
+  },
+  {
+    "objectID": "notes/ma1/phys-f-415.html",
+    "href": "notes/ma1/phys-f-415.html",
+    "title": "Cosmologie",
+    "section": "",
+    "text": "Warning⚠️ Avertissement concernant ces notes\n\n\n\n\n\nLes notes publiées sur ce site sont basées sur ma compréhension personnelle du matériel et n’ont pas été indépendamment vérifiées. Bien que j’espère qu’elles soient utiles, il peut y avoir des erreurs ou des inexactitudes. Si vous trouvez des erreurs ou avez des suggestions d’amélioration, n’hésitez pas à me contacter : a.d@csic.es.\nEnseignant : Thomas HAMBYE (Année 2023-2024)\nRessources officielles :  Page de l’ULB  Espace Dochub"
+  },
+  {
+    "objectID": "notes/ma1/phys-f-410.html",
+    "href": "notes/ma1/phys-f-410.html",
+    "title": "Quantum Field Theory I",
+    "section": "",
+    "text": "Warning⚠️ Warning regarding these notes\n\n\n\n\n\nThe notes published on this website are based on my personal understanding of the material and have not been independently verified. While I hope they are helpful, there may be errors or inaccuracies. If you find any errors or have suggestions for improvement, please feel free to contact me: a.d@csic.es.\nTeacher: Petr TINIAKOV (Year 2023-2024)\nOfficial resources:  ULB page  Dochub space"
+  },
+  {
+    "objectID": "notes/ma1/phys-f-412.html",
+    "href": "notes/ma1/phys-f-412.html",
+    "title": "Dynamique des fluides et des plasmas",
+    "section": "",
+    "text": "Warning⚠️ Avertissement concernant ces notes\n\n\n\n\n\nLes notes publiées sur ce site sont basées sur ma compréhension personnelle du matériel et n’ont pas été indépendamment vérifiées. Bien que j’espère qu’elles soient utiles, il peut y avoir des erreurs ou des inexactitudes. Si vous trouvez des erreurs ou avez des suggestions d’amélioration, n’hésitez pas à me contacter : a.d@csic.es.\nEnseignant : Bernard KNAEPEN (Année 2023 - 2024)\nRessources officielles :  Page de l’ULB  Espace Dochub"
+  },
+  {
+    "objectID": "notes/ma1/phys-f-416.html",
+    "href": "notes/ma1/phys-f-416.html",
+    "title": "Physique des particules",
+    "section": "",
+    "text": "Warning⚠️ Avertissement concernant ces notes\n\n\n\n\n\nLes notes publiées sur ce site sont basées sur ma compréhension personnelle du matériel et n’ont pas été indépendamment vérifiées. Bien que j’espère qu’elles soient utiles, il peut y avoir des erreurs ou des inexactitudes. Si vous trouvez des erreurs ou avez des suggestions d’amélioration, n’hésitez pas à me contacter : a.d@csic.es.\nEnseignant : Barbara CLERBAUX (Année 2023-2024)\nRessources officielles :  Page de l’ULB  Espace Dochub"
+  },
+  {
+    "objectID": "notes/ma1/phys-f-422.html",
+    "href": "notes/ma1/phys-f-422.html",
+    "title": "Modèle standard des interactions fondamentales",
+    "section": "",
+    "text": "Warning⚠️ Avertissement concernant ces notes\n\n\n\n\n\nLes notes publiées sur ce site sont basées sur ma compréhension personnelle du matériel et n’ont pas été indépendamment vérifiées. Bien que j’espère qu’elles soient utiles, il peut y avoir des erreurs ou des inexactitudes. Si vous trouvez des erreurs ou avez des suggestions d’amélioration, n’hésitez pas à me contacter : a.d@csic.es.\nEnseignant : Thomas HAMBYE (Année 2023-2024)\nRessources officielles :  Page de l’ULB  Espace Dochub"
+  },
+  {
+    "objectID": "notes/ma1/phys-f-440.html",
+    "href": "notes/ma1/phys-f-440.html",
+    "title": "Quantum Field Theory II",
+    "section": "",
+    "text": "Warning⚠️ Avertissement concernant ces notes\n\n\n\n\n\nLes notes publiées sur ce site sont basées sur ma compréhension personnelle du matériel et n’ont pas été indépendamment vérifiées. Bien que j’espère qu’elles soient utiles, il peut y avoir des erreurs ou des inexactitudes. Si vous trouvez des erreurs ou avez des suggestions d’amélioration, n’hésitez pas à me contacter : a.d@csic.es.\nEnseignant : Riccardo ARGURIO (Année 2023-2024)\nRessources officielles :  Page de l’ULB  Espace Dochub"
+  },
+  {
+    "objectID": "notes/ma1/phys-f-485.html",
+    "href": "notes/ma1/phys-f-485.html",
+    "title": "Representation of groups and application to physics",
+    "section": "",
+    "text": "Warning⚠️ Avertissement concernant ces notes\n\n\n\n\n\nLes notes publiées sur ce site sont basées sur ma compréhension personnelle du matériel et n’ont pas été indépendamment vérifiées. Bien que j’espère qu’elles soient utiles, il peut y avoir des erreurs ou des inexactitudes. Si vous trouvez des erreurs ou avez des suggestions d’amélioration, n’hésitez pas à me contacter : a.d@csic.es.\nEnseignant : Geoffrey COMPERE & Giulio COLLINUCCI (Année 2023-2024)\nRessources officielles :  Page de l’ULB\n Espace Dochub"
+  },
+  {
+    "objectID": "notes/ma1/stag-f016.html",
+    "href": "notes/ma1/stag-f016.html",
+    "title": "Stage (Physique Mathématique) (STAG-F016)",
+    "section": "",
+    "text": "Notes and resources coming soon."
+  },
+  {
+    "objectID": "notes/ma2/phys-extra.html",
+    "href": "notes/ma2/phys-extra.html",
+    "title": "Loop Quantum Gravity (PHYS-EXTRA)",
+    "section": "",
+    "text": "Notes and resources coming soon."
+  },
+  {
+    "objectID": "notes/ma2/phys-f-469.html",
+    "href": "notes/ma2/phys-f-469.html",
+    "title": "Physics Beyond the Standard Model",
+    "section": "",
+    "text": "Warning⚠️ Warning regarding these notes\n\n\n\n\n\nThe notes published on this website are based on my personal understanding of the material and have not been independently verified. While I hope they are helpful, there may be errors or inaccuracies. If you find any errors or have suggestions for improvement, please feel free to contact me: a.d@csic.es.\nTeacher: Michel TYTGAT & Steven LOWETTE (Year 2024-2025)\nOfficial resources:  ULB page  Dochub space"
+  },
+  {
+    "objectID": "notes/ma2/phys-f-484.html",
+    "href": "notes/ma2/phys-f-484.html",
+    "title": "Gravitational Waves",
+    "section": "",
+    "text": "Warning⚠️ Avertissement concernant ces notes\n\n\n\n\n\nLes notes publiées sur ce site sont basées sur ma compréhension personnelle du matériel et n’ont pas été indépendamment vérifiées. Bien que j’espère qu’elles soient utiles, il peut y avoir des erreurs ou des inexactitudes. Si vous trouvez des erreurs ou avez des suggestions d’amélioration, n’hésitez pas à me contacter : a.d@csic.es.\nEnseignant : Sébastien Clesse, Nicolas Chamel & Geoffrey Compère (Année 2024 - 2025)\nRessources officielles :  Page de l’ULB  Espace Dochub"
+  },
+  {
+    "objectID": "notes/ba3/phys-f-305.html",
+    "href": "notes/ba3/phys-f-305.html",
+    "title": "Physique des particules et Physique Nucléaire",
+    "section": "",
+    "text": "Enseignant·e·s : Laurent FAVART & Pierre DESCOUVEMONT (Année 2022 - 2023)\nRessources officielles :  Page de l’ULB  Espace Dochub"
+  },
+  {
+    "objectID": "notes/ba3/phys-f-308.html",
+    "href": "notes/ba3/phys-f-308.html",
+    "title": "Soft Matter and Solid State Physics",
+    "section": "",
+    "text": "Enseignant : Patricia Maria LOSADA PEREZ & Simone NAPOLITANO (Année 2022 - 2023)\nRessources officielles :  Page de l’ULB  Espace Dochub"
+  },
+  {
+    "objectID": "notes/ba1/chim-f-101.html",
+    "href": "notes/ba1/chim-f-101.html",
+    "title": "Chimie générale",
+    "section": "",
+    "text": "Warning⚠️ Avertissement concernant ces notes\n\n\n\n\n\nLes notes publiées sur ce site sont basées sur ma compréhension personnelle du matériel et n’ont pas été indépendamment vérifiées. Bien que j’espère qu’elles soient utiles, il peut y avoir des erreurs ou des inexactitudes. Si vous trouvez des erreurs ou avez des suggestions d’amélioration, n’hésitez pas à me contacter : a.d@csic.es.\nEnseignant : Thierry Visart de Bocarmé (Année 2020-2021)\nRessources officielles :  Page de l’ULB  Espace Dochub"
+  },
+  {
+    "objectID": "notes/ba1/chim-f-101.html#table-des-matières",
+    "href": "notes/ba1/chim-f-101.html#table-des-matières",
+    "title": "Chimie générale",
+    "section": "Table des matières",
+    "text": "Table des matières\n\n\n\n\nChapitre 0 : Introduction\n\nIntroduction aux concepts généraux de la chimie.\n Notes du Chapitre 0\n\n\n\n\n\nChapitre 1 : Notions fondamentales\n\n\n1.1 Définitions \\({}^A_Z X\\)\n1.2 Nomenclature\n1.3 Solution aqueuse\n1.4 Réactions chimiques et Stœchiométrie\n\n1.4.1 Réaction de précipitation\n1.4.2 Réaction acide-base\n1.4.3 Réaction d’oxydoréduction\n\n\n Notes du Chapitre 1\n\n\n\n\n\nChapitre 2 : Structure atomique\n\n\n2.1 L’étude des atomes\n\nModèle nucléaire, Spectres\n\n2.2 Le monde quantique\n\nQuanta, dualité, Heisenberg, fonctions d’onde\n\n2.3 Orbitales atomiques \\(\\Psi\\)\n\nNombres quantiques \\(n, l, m_l, m_s\\)\n\n2.4 Propriétés périodiques\n\nRayon, ionisation, électronégativité \\(\\chi\\)\n\n\n Notes du Chapitre 2\n\n\n\n\n\nChapitre 3 : Structure moléculaire\n\n\n3.1 à 3.2 La liaison chimique (Énergie, polarité, ionique, covalente…)\n3.3 Règles de l’Octet et Lewis\n3.4 Modèle VSEPR\n3.5 Théorie du lien de valence\n3.6 Orbitales moléculaires\n3.7 Modèle du champ cristallin\n3.8 Spectroscopie moléculaire\n\n Notes du Chapitre 3\n\n\n\n\n\nChapitre 4 : État de la matière\n\n\n4.1 L’état gazeux\n\nGaz parfait, théorie cinétique\n\n4.2 L’état liquide\n\nStructures, viscosités, tensions\n\n4.3 L’état solide\n\n4.3.1 Arrangement cristallin\n4.3.2 Types de solides\n4.3.3 Interstices, défauts, alliages\n4.3.4 Énergie interne et capacité\n\n\n Notes du Chapitre 4\n\n\n\n\n\nChapitre 5 : Principes de thermo\n\n\n5.1 Premier principe : conservation de l’énergie\n\n5.1.1 Systèmes, états et énergies\n5.1.2 Enthalpie \\(H\\)\n5.1.3 Enthalpie chimique\n\n5.2 Deuxième et troisième principe\n\n5.2.1 Entropie \\(S\\)\n5.2.2 Variations globales d’entropie\n5.2.3 Enthalpie libre (Gibbs)\n\n\n Notes du Chapitre 5\n\n\n\n\n\nChapitre 6 : Équilibre physique\n\n\n6.1 Phases et transitions\n\nTension de vapeur, ébullition, diagramme de phase\n\n6.2 Solubilité\n\nSaturation, loi de Henry, influence de la \\(T\\)\n\n6.3 Propriétés colligatives\n\nAbaissement, cryoscopie, osmose\n\n6.4 Mélanges binaires\n\nDistillation, Azéotrope, miscibilité\n\n\n Notes du Chapitre 6\n\n\n\n\n\nChapitre 7 : Équilibre chimique\n\n\n7.3 Acide et base\n\nDéfinitions, acidité, constantes, calcul de pH, titrage\n\n7.4 Équilibre de solubilité\n\nProduit de solubilité \\(\\kappa_s\\), modification\n\n7.5 Réaction d’oxydoréduction\n\nÉlectrochimie, Pile, potentiel, Nernst\n\n\n Notes du Chapitre 7\n\n\n\n\n\nChapitre 8 : Cinétique chimique\n\n\n8.1 Concentration et vitesse\n8.2 Loi des vitesses\n\nOrdres de réaction (0, 1, 2) et modèle des collisions\n\n8.3 Mécanismes réactionnels\n\nVitesse, équilibre, influence de \\(T\\)\n\n8.4 Catalyse et sélectivité\n\nHomogène, enzymatique, hétérogène\n\n\n Notes du Chapitre 8"
+  },
+  {
+    "objectID": "notes/ba1/math-f-101.html",
+    "href": "notes/ba1/math-f-101.html",
+    "title": "Calcul différentiel et intégral I",
+    "section": "",
+    "text": "Enseignant·e·s : Mélanie BERTELSON & Joel FINE (Année 2020 - 2021)\nRessources officielles :  Page de l’ULB  Espace Dochub"
+  },
+  {
+    "objectID": "notes/ba1/math-f-102.html",
+    "href": "notes/ba1/math-f-102.html",
+    "title": "Algèbre linéaire et Géométrie",
+    "section": "",
+    "text": "Warning⚠️ Avertissement concernant ces notes\n\n\n\n\n\nLes notes publiées sur ce site sont basées sur ma compréhension personnelle du matériel et n’ont pas été indépendamment vérifiées. Bien que j’espère qu’elles soient utiles, il peut y avoir des erreurs ou des inexactitudes. Si vous trouvez des erreurs ou avez des suggestions d’amélioration, n’hésitez pas à me contacter : a.d@csic.es.\nEnseignant : Samuel FIORINI & Joost VERCRUYSSE (Année 2020 - 2021)\nRessources officielles :  Espace Dochub"
+  },
+  {
+    "objectID": "notes/ba1/math-f-102.html#table-des-matières",
+    "href": "notes/ba1/math-f-102.html#table-des-matières",
+    "title": "Algèbre linéaire et Géométrie",
+    "section": "Table des matières",
+    "text": "Table des matières\n\n\n\n\nChapitre 0 : Généralités\n\n0.1 Les ensembles\n0.2 Construction sur les ensembles\n0.3 Relation d’équivalence\n0.4 Applications, injection, surjection et bijection\n\n Notes du Chapitre 0\n\n\n\n\n\nChapitre 1 : Les espaces réels\n\n1.1 Le plan réel\n\n1.1.1 La ligne réelle\n1.1.2 Les points dans le plan et les couples de nombres réels\n1.1.3 Les vecteurs du plan\n1.1.4 Addition et multiplication par un scalaire\n1.1.5 Équation de droites\n1.1.6 Le plan euclidien et coordonnées cartésiennes\n1.1.7 Angle entre deux vecteurs\n\n1.2 L’espace tridimensionnel réel\n\n1.2.1 Points, vecteurs, triples\n1.2.2 Équations de plans\n1.2.3 Équations de droites\n\n1.3 L’espace \\(\\mathbb{R}^n\\)\n\n Notes du Chapitre 1\n\n\n\n\n\nChapitre 2 : Autres types de nombres et d’espaces\n\n2.1 Les corps finis d’ordre premier\n\n2.1.1 Arithmétique modulaire\n2.1.2 Le corps \\(\\mathbb{F}_p\\) et ses espaces finis\n\n2.2 Les nombres complexes\n\n2.2.1 Motivations et définitions\n2.2.2 Plan de Gauss\n2.2.3 Forme polaire\n\n2.3 Les polynômes\n\n2.3.1 L’anneau des polynômes\n2.3.2 La division euclidienne\n2.3.3 Les racines d’un polynôme\n2.3.4 Racines de polynômes complexes et réels\n2.3.5 Le plus grand commun diviseur\n\n\n Notes du Chapitre 2\n\n\n\n\n\nChapitre 3 : Matrices et systèmes d’équations linéaires\n\n3.1 Les matrices\n\n3.1.1 L’anneau des matrices\n3.1.2 Transposée et trace d’une matrice\n3.1.3 L’inverse d’une matrice\n3.1.4 Forme échelonnée d’une matrice\n\n3.2 Systèmes d’équations linéaires\n\n Notes du Chapitre 3\n\n\n\n\n\nChapitre 4 : Espaces vectoriels\n\n4.1 Corps commutatifs\n4.2 Définition d’un espace vectoriel\n4.3 Sous-espaces\n4.4 Produit et somme directe\n4.5 Géométrie affine d’un espace vectoriel\n\n Notes du Chapitre 4\n\n\n\n\n\nChapitre 5 : Bases et dimension\n\n5.1 Parties génératrices et parties libres\n5.2 Bases\n5.3 Dimension d’un espace vectoriel\n5.4 Espaces infinidimensionnels\n5.5 Le rang d’une matrice\n\n Notes du Chapitre 5\n\n\n\n\n\nChapitre 6 : Applications linéaires\n\n6.1 Définitions et exemples\n6.2 Propriétés des applications linéaires\n6.3 Noyau et image\n6.4 Coordonnées, produits et coproduits revisités\n6.5 Le groupe des automorphismes\n6.6 Transformations affines\n\n Notes du Chapitre 6\n\n\n\n\n\nChapitre 7 : L’espace des applications linéaires & matrices\n\n7.1 Matrice d’une application linéaire\n7.2 Propriétés des applications linéaires en termes de leurs matrices\n7.3 Applications linéaires et systèmes d’équations linéaires\n7.4 Changement de base et transformation de coordonnées\n7.5 Dualités\n\n7.5.1 L’espace dual\n7.5.2 Le dual d’une application linéaire\n7.5.3 L’espace bidual\n\n\n Notes du Chapitre 7\n\n\n\n\n\nChapitre 8 : Déterminants\n\n8.1 Permutations\n8.2 Signe d’une permutation\n8.3 Longueurs, aires, volumes orientés\n\n8.3.1 Origine du déterminant\n8.3.2 Intuition géométrique dans le plan\n\n8.4 Existence et unicité du déterminant\n8.5 Propriétés et calcul par la méthode de Gauss\n8.6 Formule de Binet\n8.7 Cofacteurs\n8.8 Matrices adjointes\n\n Notes du Chapitre 8\n\n\n\n\n\nChapitre 9 : Vecteurs propres et diagonalisation\n\n9.1 Vecteurs, valeurs et sous-espaces propres\n9.2 L’équation caractéristique\n9.3 Opérateurs et matrices diagonalisables\n9.4 Opérateurs et matrices triangulables\n\n Notes du Chapitre 9\n\n\n\n\n\nChapitre 10 : Formes normales de Jordan\n\n10.1 Polynôme minimal d’un opérateur\n\n10.1.1 Pourquoi ?\n10.1.2 Définitions et propriétés\n10.1.3 Calcul du polynôme minimal\n\n10.2 Théorème de Cayley-Hamilton\n10.3 Sous-espaces propres généralisés\n10.4 Vecteurs propres généralisés et chaînes de Jordan\n\n Notes du Chapitre 10"
+  },
+  {
+    "objectID": "notes/ba1/phys-f-110.html",
+    "href": "notes/ba1/phys-f-110.html",
+    "title": "Physique générale I et II",
+    "section": "",
+    "text": "Enseignant : Pascal VANLAER, Michele SFERRAZZA & Sophie VAN ECK (Année 2020-2021)\nRessources officielles :  Page de l’ULB  Espace Dochub"
+  },
+  {
+    "objectID": "notes/ba2/info-f-207.html",
+    "href": "notes/ba2/info-f-207.html",
+    "title": "Informatique (INFO-F-207)",
+    "section": "",
+    "text": "Notes and resources coming soon."
+  },
+  {
+    "objectID": "notes/ba2/lang-f-201.html",
+    "href": "notes/ba2/lang-f-201.html",
+    "title": "Anglais scientifique I (LANG-F-201)",
+    "section": "",
+    "text": "Notes and resources coming soon."
+  },
+  {
+    "objectID": "notes/ba2/math-f-201.html",
+    "href": "notes/ba2/math-f-201.html",
+    "title": "Calcul différentiel et intégral II (MATH-F-201)",
+    "section": "",
+    "text": "Notes and resources coming soon."
+  },
+  {
+    "objectID": "notes/ba2/math-f-204.html",
+    "href": "notes/ba2/math-f-204.html",
+    "title": "Mécanique analytique (MATH-F-204)",
+    "section": "",
+    "text": "Notes and resources coming soon."
+  },
+  {
+    "objectID": "notes/ba2/phys-f-201.html",
+    "href": "notes/ba2/phys-f-201.html",
+    "title": "Thermodynamique",
+    "section": "",
+    "text": "Enseignant : Nicolas CHAMEL (Année 2021-2022)\nRessources officielles :  Page de l’ULB  Espace Dochub"
+  },
+  {
+    "objectID": "notes/ba2/phys-f-202.html",
+    "href": "notes/ba2/phys-f-202.html",
+    "title": "Relativité, électromagnétisme et optique (PHYS-F-202)",
+    "section": "",
+    "text": "Notes and resources coming soon."
+  },
+  {
+    "objectID": "notes/ba2/phys-f-203.html",
+    "href": "notes/ba2/phys-f-203.html",
+    "title": "Introduction à la mécanique quantique (PHYS-F-203)",
+    "section": "",
+    "text": "Notes and resources coming soon."
+  },
+  {
+    "objectID": "notes/ba2/phys-f-210.html",
+    "href": "notes/ba2/phys-f-210.html",
+    "title": "Laboratoires et Statistique appliquée (PHYS-F-210)",
+    "section": "",
+    "text": "Notes and resources coming soon."
+  },
+  {
+    "objectID": "notes/ba3/math-f-314.html",
+    "href": "notes/ba3/math-f-314.html",
+    "title": "Mathématiques pour la physique",
+    "section": "",
+    "text": "Enseignant : Riccardo ARGURIO, Clément Cerovecki & Bernard KNAEPEN (Année 2023-2024)\nRessources officielles :  Page de l’ULB  Espace Dochub"
+  },
+  {
+    "objectID": "notes/ba3/phys-f-105.html",
+    "href": "notes/ba3/phys-f-105.html",
+    "title": "La structure de l’univers (PHYS-F-105)",
+    "section": "",
+    "text": "Notes and resources coming soon."
+  },
+  {
+    "objectID": "notes/ba3/phys-f-302.html",
+    "href": "notes/ba3/phys-f-302.html",
+    "title": "Mécanique quantique (PHYS-F-302)",
+    "section": "",
+    "text": "Notes and resources coming soon."
+  },
+  {
+    "objectID": "notes/ba3/phys-f-303.html",
+    "href": "notes/ba3/phys-f-303.html",
+    "title": "Physique statistique (PHYS-F-303)",
+    "section": "",
+    "text": "Notes and resources coming soon."
+  },
+  {
+    "objectID": "notes/ba3/phys-f-304.html",
+    "href": "notes/ba3/phys-f-304.html",
+    "title": "Spectrophysique et Astrophysique (PHYS-F-304)",
+    "section": "",
+    "text": "Notes and resources coming soon."
+  },
+  {
+    "objectID": "notes/ba3/phys-f-311.html",
+    "href": "notes/ba3/phys-f-311.html",
+    "title": "Laboratoires et Stage de recherche",
+    "section": "",
+    "text": "Warning⚠️ Avertissement concernant ces notes\n\n\n\n\n\nLes notes publiées sur ce site sont basées sur ma compréhension personnelle du matériel et n’ont pas été indépendamment vérifiées. Bien que j’espère qu’elles soient utiles, il peut y avoir des erreurs ou des inexactitudes. Si vous trouvez des erreurs ou avez des suggestions d’amélioration, n’hésitez pas à me contacter : a.d@csic.es.\nEnseignant : Simone NAPOLITANO, Juan Antonio AGUILAR SANCHEZ, Barbara CLERBAUX, Gilles DE LENTDECKER, Patricia Maria LOSADA PEREZ, Ioana Codrina MARIS & Simona TOSCANO (Année 2022-2023)\nRessources officielles :  Page de l’ULB  Espace Dochub"
+  },
+  {
+    "objectID": "notes/ba3/phys-f-311.html#table-des-matières",
+    "href": "notes/ba3/phys-f-311.html#table-des-matières",
+    "title": "Laboratoires et Stage de recherche",
+    "section": "Table des matières",
+    "text": "Table des matières\n\n\n\n\nChapitre 1 : Laboratoires et Statistiques\n\nPhysique expérimentale\n\nManipulations avancées et projets pratiques de laboratoire\n\nStatistique appliquée\n\nTraitement des données, analyse des incertitudes et modélisation\n\n\n\n\n\n\n\nChapitre 2 : Stage de recherche (IIHE)\n\nCollaboration CMS (CERN)\n\nAnalyse de données de collisions proton-proton (\\(pp\\)) à \\(\\sqrt{s} = 13\\text{ TeV}\\)\nIntroduction à la recherche en physique des particules instrumentale et théorique\n\n\n Rapport de stage"
+  },
+  {
+    "objectID": "notes/ma1/phys-f-410.html#table-des-matières",
+    "href": "notes/ma1/phys-f-410.html#table-des-matières",
+    "title": "Quantum field theory I",
+    "section": "Table des matières",
+    "text": "Table des matières\n\n\n\nChapitre 1 : Classical Field\n\n\nField Dynamics & Symmetries\n\nScalar field\nSymmetries and conservation laws: Noether theorem\nEnergy-momentum tensor\n\n\n Notes du Chapitre 1\n\n\n\n\nChapitre 2 : Quantization of a Free Scalar Field\n\n\nQuantization Formalism\n\nQuantization in quantum mechanics\nQuantization of a real scalar field\nComplex scalar field\n\n\n Notes du Chapitre 2\n\n\n\n\nChapitre 3 : Interaction\n\n\nS-Matrix Theory\n\nInteraction representation & evolution\nMatrix Elements & calculation of the S-Matrix\nDecay of a massive particle & Scattering cross section\n\n\n Notes du Chapitre 3\n\n\n\n\nChapitre 4 : Free Dirac Field\n\n\nFermionic Fields\n\nSpinor representation & Lagrangian\nSolutions to the Dirac equation & Quantization\nSpin, one-particle states & statistics\n\n\n Notes du Chapitre 4\n\n\n\n\nChapitre 5 : Vector Field\n\n\nGauge & Vector Fields\n\nConstruct a Lagrangian\nClassical solutions\nCanonical quantization\n\n\n Notes du Chapitre 5\n\n\n\n\nChapitre 6 : Feynman Rules for Fermions and Vectors\n\n\nDiagrammatic Techniques\n\nFeynman rules for fermions & vectors\nDecay of a vector into two fermions\n\n\n Notes du Chapitre 6"
+  },
+  {
+    "objectID": "notes/ma1/phys-f-412.html#table-des-matières",
+    "href": "notes/ma1/phys-f-412.html#table-des-matières",
+    "title": "Dynamique des fluides et des plasmas",
+    "section": "Table des matières",
+    "text": "Table des matières\n\n\n\n\nChapitre 1 : Description d’un fluide\n\n\n1.1 Introduction\n1.2 Définitions et notions préliminaires\n1.3 Équation du mouvement pour un fluide idéal\n1.4 Vorticité\n\n Notes du Chapitre 1\n\n\n\n\n\nChapitre 2 : Fluides visqueux\n\n\n2.1 Introduction\n2.2 Navier-Stokes\n2.3 Écoulements visqueux simples\n2.4 Écoulements axisymétriques\n\n Notes du Chapitre 2\n\n\n\n\n\nChapitre 3 : Vagues\n\n\n3.1 Introduction\n3.2 Vagues en eau profonde\n\n Notes du Chapitre 3\n\n\n\n\n\nChapitre 4 : Portance\n\n\n4.1 Introduction\n4.2 Potentiel et fonction de courant\n4.3 Potentiel complexe\n4.4 Méthode des images\n4.5 Écoulement irrotationnel autour d’un cylindre\n4.6 Transformation conforme\n4.7 Écoulement autour d’une aile symétrique\n4.8 Théorème de Blasius\n4.9 Théorème de la portance de Kutta-Joukowski\n\n Notes du Chapitre 4\n\n\n\n\n\nChapitre 5 : Instabilités hydrodynamiques\n\n\n5.1 Instabilité de Rayleigh-Bénard\n5.2 Instabilité de Taylor-Couette\n\n Notes du Chapitre 5\n\n\n\n\n\nChapitre 6 : Magnétohydrodynamique\n\n\n6.1 Force de Lorentz sur un fluide\n6.2 Loi d’Ampère-Maxwell\n6.3 Équation d’induction magnétique\n6.4 Adimensionnement des équations\n6.5 Écoulement de Hartmann\n6.6 Onde Alfvén\n6.7 Reconnexion magnétique\n\n Notes du Chapitre 6"
+  },
+  {
+    "objectID": "notes/ma1/phys-f-412.html#ressources-du-cours",
+    "href": "notes/ma1/phys-f-412.html#ressources-du-cours",
+    "title": "Dynamique des fluides et des plasmas",
+    "section": "Ressources du cours",
+    "text": "Ressources du cours\n\nExercices\n\nTP1 : Introduction\nTP2 : Écoulement visqueux élémentaire\nTP3 : Vagues\nTP4 : Théorie des profils aérodynamiques\nTP5 : Instabilités\nTP6 : Magnétohydrodynamique"
+  },
+  {
+    "objectID": "notes/ma1/phys-f-415.html#table-des-matières",
+    "href": "notes/ma1/phys-f-415.html#table-des-matières",
+    "title": "Cosmologie",
+    "section": "Table des matières",
+    "text": "Table des matières\n\n\n\nChapitre 1 : Univers homotrope : géométrie, distance et horizon\n\n\n1.1 Échelles de grandeurs\n1.2 Principe cosmologique et loi de Hubble\n1.3 Géométrie d’un space homotrope\n1.4 Horizons\n\n Notes du Chapitre 1\n\n\n\n\nChapitre 2 : Dynamique d’un univers homotrope\n\n\n2.1 Dynamique de Newton\n2.2 Dynamique de la relativité générale\n2.3 Solutions aux équations de Friedmann\n2.4 Ajustement du modèle à partir des données\n2.5 Univers de Milne\n\n Notes du Chapitre 2\n\n\n\n\nChapitre 3 : Univers primordial\n\n\n3.1 Égalité matière - \\(\\Lambda\\) et matière - radiation\n3.2 Époque dominée par la radiation\n3.3 Entropie\n3.4 Particule non relativiste en équilibre thermique\n3.5 Découplage chimique d’un type de particule\n3.6 Découplage des neutrinos\n3.7 Ratio baryon-photon\n3.8 Brève histoire de l’univers\n\n Notes du Chapitre 3\n\n\n\n\nChapitre 4 : Nucléosynthèse primordiale\n\n\n4.1 Équilibre statistique nucléaire\n4.2 Rapport neutron-proton\n4.3 Chaînes de réactions nucléaires\n4.4 Barrière de Coulomb\n4.5 Chronologie de la nucléosynthèse primordiale\n\n Notes du Chapitre 4\n\n\n\n\nChapitre 5 : Recombinaison et découplage des photons\n\n\n5.1 Recombinaison\n5.2 Découplage cinétique des photons\n5.3 Commentaires\n\n Notes du Chapitre 5\n\n\n\n\nChapitre 6 : Matière noire\n\n\n6.1 Indications\n6.2 Nature de la matière noire\n6.3 Densité relique de la matière noire\n6.4 Densité relique et équation de Boltzmann\n\n Notes du Chapitre 6\n\n\n\n\nChapitre 7 : Origine de l’asymétrie matière - anti-matière dans l’univers\n\n\n7.1 Généralités\n7.2 Exemple de baryogénèse : désintégration\n7.3 Asymétrie \\(CP\\)\n7.4 Brisure explicite de \\(B\\)\n7.5 Condition de déséquilibre thermique\n7.6 Équation de Boltzmann\n\n Notes du Chapitre 7\n\n\n\n\nChapitre 8 : Inflation\n\n\n8.1 Critique de \\(\\Lambda\\)-CDM\n8.2 Principe de l’inflation\n8.3 Dynamique du champ scalaire\n\n Notes du Chapitre 8"
+  },
+  {
+    "objectID": "notes/ma1/phys-f-416.html#table-des-matières",
+    "href": "notes/ma1/phys-f-416.html#table-des-matières",
+    "title": "Physique des particules",
+    "section": "Table des matières",
+    "text": "Table des matières\n\n\n\n\nChapitre 1 : Introduction et rappels\n\n\nSujets abordés :\n\n1.1 Physique des particules élémentaires\n1.2 Particules élémentaires de la matière\n1.3 Interactions fondamentales\n1.4 Modèle standard de la physique des particules\n\n\n Notes du Chapitre 1\n\n\n\n\n\nChapitre 2 : Symétries et lois de conservation\n\n\nSujets abordés :\n\n2.1 Théorème de Noether\n2.2 Symétries continues\n2.3 Symétries internes\n2.4 Symétries discrètes\n\n\n Notes du Chapitre 2\n\n\n\n\n\nChapitre 3 : Modélisation des interactions fondamentales\n\n\nSujets abordés :\n\n3.1 Nécessité d’une théorie quantique des champs\n3.2 Premières tentatives\n3.3 Ingrédients d’une théorie quantique des champs\n3.4 Formalisme du lagrangien en TQC\n3.5 Symétrie de jauge locale\n3.6 Calcul des amplitudes de transitions\n3.7 Calcul du taux de désintégration\n3.8 Résumé\n\n\n Notes du Chapitre 3\n\n\n\n\n\nChapitre 4 : Interactions faibles\n\n\nSujets abordés :\n\n4.1 Introduction\n4.2 Opérateur parité \\(P\\) sur spineur \\(\\Psi\\)\n4.3 Conservation de la parité en QED/QCD\n4.4 Conséquence de la violation de \\(P\\)\n4.5 Structure en \\(V-A\\)\n4.6 Universalité leptonique\n4.7 Couplage faible et angle de Cabibbo\n4.8 Nécessité d’un \\(4^{\\text{ème}}\\) quark : le charme\n4.9 La matrice \\(CKM\\)\n4.10 Triangle d’unitarité\n\n\n Notes du Chapitre 4\n\n\n\n\n\nChapitre 5 : Interactions électrofaibles\n\n\nSujets abordés :\n\n5.1 Introduction & courants neutres\n5.5 Contrainte d’unification\n5.6 Masse des bosons \\(W\\) et \\(Z\\)\n5.8 LEP et SLC\n5.9 Tests de précision électrofaible\n5.10 Chiralité et unification\n5.12 Boson scalaire \\(H^0\\)\n5.13 Tevatron au LHC & CMS\n5.15 Observation du \\(H^0\\) au LHC\n\n\n Notes du Chapitre 5\n\n\n\n\n\nChapitre 6 : Introduction à la violation \\(CP\\)\n\n\nSujets abordés :\n\n6.1 Introduction et modèle standard\n6.3 Système \\(K^0\\)-\\(\\bar{K}^0\\) et évolution temporelle\n6.5 Violation de \\(CP\\) dans les désintégrations\n6.8 Désintégration des bosons \\(B^0\\)\n6.9 Résultats de LHCb & Conclusion\n\n\n Notes du Chapitre 6\n\n\n\n\n\nChapitre 7 : Oscillation des neutrinos\n\n\nSujets abordés :\n\n7.1 Neutrinos \\(\\nu\\) du modèle standard\n7.2 Problème des neutrinos solaires\n7.3 Mélange des neutrinos\n\n\n Notes du Chapitre 7\n\n\n\n\n\nChapitre 8 : Oscillation des neutrinos solaires et atmosphériques\n\n\nSujets abordés :\n\n8.1 Caractéristiques des sources et des détecteurs\n8.2 Expériences pour les \\(\\nu\\) solaires\n8.3 Détection des oscillations atmosphériques\n8.4 Résumé\n\n\n Notes du Chapitre 8\n\n\n\n\n\nChapitre 9 : Oscillation des neutrinos - source artificielle\n\n\nSujets abordés :\n\n9.1 Introduction\n9.2 Détection auprès des réacteurs nucléaires\n9.3 Détection auprès des accélérateurs de particules\n9.4 Conclusion\n\n\n Notes du Chapitre 9\n\n\n\n\n\nChapitre 10 : Propriété des neutrinos\n\n\nSujets abordés :\n\n10.1 Contenus en saveur des états de masse\n10.2 Mesures directes des masses \\(m_\\nu\\)\n10.3 Recherche de la désintégration double bêta sans neutrino (\\(0\\nu\\beta\\beta\\))\n10.4 Limites cosmologiques & Conclusion\n\n\n Notes du Chapitre 10"
+  },
+  {
+    "objectID": "notes/ma1/phys-f-416.html#ressources-du-cours",
+    "href": "notes/ma1/phys-f-416.html#ressources-du-cours",
+    "title": "Physique des particules",
+    "section": "Ressources du cours",
+    "text": "Ressources du cours\n\nSlides\n\nSlide 0 : Informations générales\nSlide 1 : Rappels\nSlide 2 : Symétries et lois de conservation\nSlide 3 : Modélisation des interactions fondamentales et prédictions\nSlide 4A : Interaction faible (Partie 1)\nSlide 4B : Interaction faible (Partie 2)\nSlide 5A : Interaction électrofaible (Partie 1)\nSlide 5B : Interaction électrofaible (Partie 2)\nSlide 6A : Violation \\(CP\\) (Partie 1)\nSlide 6B : Violation \\(CP\\) (Partie 2)\nSlide 7 : Oscillations des neutrinos\nSlide 8 : Oscillations des neutrinos solaires et atmosphériques\nSlide 9 : Oscillations des neutrinos issus de sources artificielles\nSlide 10 : Propriétés des neutrinos\n\n\n\nLaboratoire et travail personnel\n\nMesure de l’asymétrie avant-arrière \\(A_{FB}\\) dans le processus de Drell-Yan auprès de l’expérience CMS"
+  },
+  {
+    "objectID": "notes/ma1/phys-f-410.html#table-of-contents",
+    "href": "notes/ma1/phys-f-410.html#table-of-contents",
+    "title": "Quantum Field Theory I",
+    "section": "Table of Contents",
+    "text": "Table of Contents\n\n\n\nChapter 1: Classical Field\n\n\nMain Topics\n\n1.1 Scalar field\n1.2 Symmetries and conservation laws: Noether theorem\n1.3 Energy-momentum tensor\n\n\n Chapter 1 Notes\n\n\n\n\nChapter 2: Quantization of a Free Scalar Field\n\n\nMain Topics\n\n2.1 Quantization in quantum mechanics\n2.2 Quantization of a real scalar field\n2.3 Complex scalar field\n\n\n Chapter 2 Notes\n\n\n\n\nChapter 3: Interaction\n\n\nMain Topics\n\n3.1 Interaction representation\n3.2 Evolution in interaction representation\n3.3 Matrix Elements of the S-Matrix\n3.4 Calculation of the S-Matrix\n3.5 Decay of a massive particle\n3.6 Scattering and Cross section\n\n\n Chapter 3 Notes\n\n\n\n\nChapter 4: Free Dirac Field\n\n\nMain Topics\n\n4.1 Spinor representation\n4.2 Lagrangian of a free Dirac field\n4.3 Solution to the free Dirac equation\n4.4 Quantization\n4.5 Spin\n4.6 One-particle states\n4.7 Statistics\n\n\n Chapter 4 Notes\n\n\n\n\nChapter 5: Vector Field\n\n\nMain Topics\n\n5.1 Construct a Lagrangian\n5.2 Classical solutions\n5.3 Canonical quantization\n\n\n Chapter 5 Notes\n\n\n\n\nChapter 6: Feynman Rules for Fermions and Vectors\n\n\nMain Topics\n\n6.1 Feynman rules for fermions\n6.2 Feynman rules for vectors\n6.3 Decay of a vector into two fermions\n\n\n Chapter 6 Notes"
+  },
+  {
+    "objectID": "notes/ma1/phys-f-418.html#table-des-matières",
+    "href": "notes/ma1/phys-f-418.html#table-des-matières",
+    "title": "Advanced general relativity",
+    "section": "Table des matières",
+    "text": "Table des matières\n\n\n\n\nChapter 1: Auxiliary Fields\n\n\n1.1 Generalized auxiliary fields and symmetries\n1.2 Invertibility and Legendre transforms\n\n Go to Notes\n\n\n\n\n\nChapter 2: Gauge Symmetry\n\n\n2.1 Introduction\n2.2 Mathematical tools\n2.3 Noether current\n2.4 Linearized gauge theories\n\n Go to Notes\n\n\n\n\n\nChapter 3: Application to the Einstein Field Equations\n\n\n3.1 Metric formulation\n\n Go to Notes\n\n\n\n\n\nChapter 4: Cartan Formalism\n\n\n4.1 Mathematical reminders\n\nLinear algebra, Manifolds, Non-coordinates basis, Covector, Change of basis, Tensor & Exterior algebra, Metric, Affine, Torsion, Levi-Civita & Lorentz connections, Curvature\n\\(GL(n,\\mathbb{R})\\) algebra, Bianchi identities and Poincaré algebra\n\n4.2 Cartan’s action\n4.3 Einstein-Dirac theory\n4.4 Gravity as a Chern-Simons theory\n\n Go to Notes\n\n\n\n\n\nChapter 5: ADM Formalism\n\n\n5.1 Non-null hypersurface\n5.2 ADM parametrization of the metric\n5.3 Hamiltonian formulation\n5.4 Hamiltonian constraint system\n\n Go to Notes\n\n\n\n\n\nChapter 6: Hamiltonian Formulation of Linearized Gravity\n\n\n6.1 Canonical analysis and Hamiltonian formulation of linearized gravitational fields"
+  },
+  {
+    "objectID": "notes/ma1/phys-f-422.html#table-des-matières",
+    "href": "notes/ma1/phys-f-422.html#table-des-matières",
+    "title": "Modèle standard des interactions fondamentales",
+    "section": "Table des matières",
+    "text": "Table des matières\n\n\n\nChapitre 1 : Champs élémentaires\n\n\nContenu du chapitre\n\n1.1 Champ scalaire réel\n1.2 Champ scalaire complexe\n1.3 Champ vectoriel\n1.4 Spineur de Dirac\n1.5 Spineur de Weyl sans masse\n1.6 Spineur de Majorana\n\n\n Notes du Chapitre 1\n\n\n\n\nChapitre 2 : Symétrie de jauge\n\n\nContenu du chapitre\n\n2.1 Cas abélien\n2.2 Cas non abélien: théories de Yang-Mills\n\n\n Notes du Chapitre 2\n\n\n\n\nChapitre 3 : Interaction électro-faible pour les leptons\n\n\nContenu du chapitre\n\n3.1 Leptons\n3.2 QED\n3.3 (SU(2))\n\n\n Notes du Chapitre 3\n\n\n\n\nChapitre 4 : Brisure spontanée de symétrie\n\n\nContenu du chapitre\n\n4.1 Introduction: ferromagnétisme\n4.2 Symétrie discrète: cas d’un champ scalaire réel\n4.3 Symétrie globale abélienne BSS avec ( )\n4.4 Symétrie locale abélienne\n4.5 Symétrie locale non-abélienne\n4.6 BSS de (SU(2)_L U(1)Y U(1){e-m})\n4.7 Symétrie custodiale\n4.8 Masses des leptons\n4.9 Renormabilité de (SU(2)_L U(1)_Y) avec BSS\n\n\n Notes du Chapitre 4\n\n\n\n\nChapitre 5 : Interaction électro-faible pour les quarks\n\n\nContenu du chapitre\n\n5.1 Zoologie\n5.2 Interactions faibles pour les quarks\n5.3 Mécanisme de GIM\n5.4 Paramétrisation de (V_)\n\n\n Notes du Chapitre 5\n\n\n\n\nChapitre 6 : Processus du modèle standard\n\n\nContenu du chapitre\n\n6.1 Désintégration du boson (W)\n6.2 Forme du pic du (Z): (m_Z) et (_Z^)\n6.3 Désintégration (t W,b) et théorème d’équivalence de Goldstone\n\n\n Notes du Chapitre 6\n\n\n\n\nChapitre 7 : Chromodynamique quantique\n\n\nContenu du chapitre\n\n7.1 Introduction\n7.2 Commentaires\n\n\n Notes du Chapitre 7\n\n\n\n\nChapitre 8 : Symétries discrètes & brisure de (P), (C), (T), (CP)\n\n\nContenu du chapitre\n\n8.1 Définitions\n8.2 Transformation des spineurs sous (C), (P) et (T)\n8.3 Transformation du lagrangien sous (C), (P) et (T)\n8.4 Transformation des hadrons sous (C) et (P)\n8.5 Triangle d’unitarité\n\n\n Notes du Chapitre 8"
+  },
+  {
+    "objectID": "notes/ma1/phys-f-432.html#table-des-matières",
+    "href": "notes/ma1/phys-f-432.html#table-des-matières",
+    "title": "Théorie de la gravitation",
+    "section": "Table des matières",
+    "text": "Table des matières\n\n\n\n\nChapitre 1 : Introduction\n\n\nIntroduction générale aux concepts de la gravitation\n\n Notes du Chapitre 1\n\n\n\n\n\nChapitre 2 : Rappels de relativité restreinte\n\n\n2.1 Référentiel inertiel\n2.2 Intervalle d’espace-temps\n2.3 Transformation de Lorentz de Poincaré\n2.4 Tenseur d’espace-temps plat\n2.5 Métrique minkowskienne\n2.6 Structure causale de l’espace-temps de Minkowski\n\n Notes du Chapitre 2\n\n\n\n\n\nChapitre 3 : Éléments de géométrie différentielle\n\n\n3.1 Variété différentielle\n3.2 Applications entre variétés\n3.3 Vecteurs 2.0\n3.4 Covecteur et tenseur\n3.5 Forme différentielle et dérivée extérieure\n3.6 Métrique\n\n Notes du Chapitre 3\n\n\n\n\n\nChapitre 4 : Principe d’équivalence\n\n\n4.1 Système de Coordonnées Localement Inertiel\n4.2 Métrique, élément de longueur et courbe\n4.3 Application des formes : équations de Maxwell\n4.4 Connexion, transport parallèle et dérivée covariante\n\n Notes du Chapitre 4\n\n\n\n\n\nChapitre 5 : La courbure\n\n\n5.1 Tenseur de Riemann\n5.2 Interprétation géométrique de \\(R_{\\alpha \\beta \\gamma \\delta}\\)\n5.3 Propriétés de \\(R_{\\alpha \\beta \\gamma \\delta}\\)\n5.4 D’autres tenseurs\n5.5 Géodésiques\n5.6 Propriétés des géodésiques\n5.7 Géodésiques et principe variationnel\n5.8 Observateur localement inertiel 2.0\n5.9 Géodésiques et limite newtonienne\n5.10 Dérivation des géodésiques et \\(R_{\\alpha \\beta \\gamma \\delta}\\)\n\n Notes du Chapitre 5\n\n\n\n\n\nChapitre 6 : Vers les équations d’Einstein\n\n\n6.1 Méthode heuristique\n6.2 Limite newtonienne\n6.3 Principe variationnel\n\n Notes du Chapitre 6\n\n\n\n\n\nChapitre 7 : Solution de Schwarzschild\n\n\n7.1 Préliminaires\n7.2 Construction d’une \\(g_{\\mu \\nu}\\) sphérique\n7.3 Métrique solution des équations d’Einstein dans le vide\n7.4 Singularités de la métrique\n7.5 Géodésiques de la métrique de Schwarzschild\n\n Notes du Chapitre 7\n\n\n\n\n\nChapitre 8 : Vers le trou noir\n\n\n8.1 Orientation des cônes de lumière\n8.2 Observateurs statiques près de \\(r=2m\\)\n8.3 Redshift gravitationnel\n8.4 Chute libre\n8.5 Structure globale de la métrique de Schwarzschild\n8.6 Effondrement gravitationnel\n\n Notes du Chapitre 8"
+  },
+  {
+    "objectID": "notes/ma1/phys-f-432.html#ressources-du-cours",
+    "href": "notes/ma1/phys-f-432.html#ressources-du-cours",
+    "title": "Théorie de la gravitation",
+    "section": "Ressources du cours",
+    "text": "Ressources du cours\n\nExercices - intro et rappels\n\nExercice 1 : intro et rappels\nExercice 2 : intro et rappels\nExercice 3 : aide-mémoire\nExercice 4 : aide-mémoire\nExercice 5 : aide-mémoire\n\n\n\nExercices - énoncés\n\nExercice 1 : énoncés\nExercice 2 : énoncés\nExercice 3 : énoncés\nExercice 4 : énoncés\nExercice 5 : énoncés\nExercice 6 : énoncés\n\n\n\nExercices - correctifs\n\nExercice 1 : correctif\nExercice 2 : correctif\nExercice 3 : correctif\nExercice 4 : correctif\nExercice 5 : correctif\nExercice 6 : correctif\n\n\n\nTravail personnel\n\nÉnoncé\nTravail personnel (Rendu)\nCorrectif partiel"
+  },
+  {
+    "objectID": "notes/ma1/phys-f-440.html#table-des-matières",
+    "href": "notes/ma1/phys-f-440.html#table-des-matières",
+    "title": "Quantum Field Theory II",
+    "section": "Table des matières",
+    "text": "Table des matières\n\n\n\nChapitre 1 : Path Integral Formulation of Quantum Mechanics\n\n\n1.1 Recall of Quantum Mechanics\n1.2 Operators and Representation\n1.3 Amplitude\n1.4 Canonical Hamiltonian and Gaussian Integrals\n1.5 Operators under the Path Integral\n1.6 Towards Field Theory\n\n Notes du Chapitre 1\n\n\n\n\nChapitre 2 : Path Integral for a Scalar Field Theory\n\n\n2.1 Formal Definition of QFT\n2.2 Free Real Scalar Theory\n2.3 Real Scalar Field with Interactions\n\n Notes du Chapitre 2\n\n\n\n\nChapitre 3 : Path Integral for a Fermionic Field\n\n\n3.1 Anticommuting Numbers\n3.2 Dirac Propagator and Generating Functional\n3.3 Interacting Fermions\n\n Notes du Chapitre 3\n\n\n\n\nChapitre 4 : Path Integral for a Vector Field\n\n\n4.1 Gauge Freedom\n4.2 Faddeev-Popov Procedure\n4.3 Adding Sources\n4.4 Example: QED\n4.5 Scalar QED\n\n Notes du Chapitre 4\n\n\n\n\nChapitre 5 : Symmetries, Ward Identity, and the Path Integral\n\n\n5.1 Noether Theorem\n5.2 Quantum Conservation Equations\n5.3 Quantum Equation of Motion\n\n Notes du Chapitre 5\n\n\n\n\nChapitre 6 : Physics of Renormalization\n\n\n6.1 A First Computation: 2-point Function in \\(\\lambda \\phi^4\\)\n6.2 A Second Computation: Vertex in \\(\\lambda \\phi^4\\)\n6.3 A Third Computation: \\(\\mathcal{L}_I = g\\, \\phi \\bar{\\psi}\\psi\\)\n\n Notes du Chapitre 6\n\n\n\n\nChapitre 7 : Radiative Corrections: Loops and Divergences\n\n\n7.1 Field-strength Renormalization\n7.2 Physical and Bare Quantities\n7.3 LSZ Reduction Formula\n\n Notes du Chapitre 7\n\n\n\n\nChapitre 8 : Power Counting, Divergences, and Renormalizability\n\n\n8.1 Example: \\(\\lambda \\phi^4\\) Theory\n8.2 Power Counting\n8.3 Renormalizability\n\n Notes du Chapitre 8\n\n\n\n\nChapitre 9 : Counter-terms and Renormalization Condition\n\n\n9.1 Renormalized Perturbation Theory\n9.2 Renormalization Conditions\n9.3 Fix \\(\\delta_\\lambda\\) through NLO of a 4-points Function\n9.4 Dimensional Regularization\n9.5 Field Strength and Mass Renormalization\n\n Notes du Chapitre 9\n\n\n\n\nChapitre 10 : Renormalization and Gauge Symmetry: QED\n\n\n10.1 Counterterms and Gauge Symmetry\n10.2 Counterterms and Ward Identity\n10.3 One-loop Structure of QED\n\n Notes du Chapitre 10\n\n\n\n\nChapitre 11 : Energy Scale and Evolution of Couplings\n\n\n11.1 Renormalization Scale \\(\\bar{M}\\)\n11.2 The Callan-Symanzik Equation\n11.3 Computation of \\(\\beta\\) and \\(\\gamma\\) in \\(\\lambda \\phi^4\\)\n11.4 Generalization to \\(\\lambda \\phi^4\\)\n11.5 An Application to QED\n11.6 Renormalization Group Flow\n\n Notes du Chapitre 11\n\n\n\n\nChapitre 12 : Non-Abelian Gauge Theories\n\n\n12.1 Global Symmetry\n12.2 Local Symmetry\n12.3 Field Strength Tensor\n12.4 Yang-Mills Lagrangian\n\n Notes du Chapitre 12\n\n\n\n\nChapitre 13 : Quantization and Ghosts\n\n\n13.1 Gauge Fixing in QED\n13.2 Gauge Fixing in QCD\n13.3 Faddeev-Popov Ghost\n13.4 Feynman Rules\n\n Notes du Chapitre 13\n\n\n\n\nChapitre 14 : Renormalization and \\(\\text{sgn}(\\beta)\\)\n\n\n14.1 Renormalization\n14.2 A Long Walk to the \\(\\beta\\)-function\n14.3 Asymptotic Freedom\n\n Notes du Chapitre 14"
+  },
+  {
+    "objectID": "notes/ma1/phys-f-477.html#table-des-matières",
+    "href": "notes/ma1/phys-f-477.html#table-des-matières",
+    "title": "Physics of Strong Interactions",
+    "section": "Table des matières",
+    "text": "Table des matières\n\n\n\n\nChapitre 1 : Introduction\n\n\n1.1 Un brin d’histoire\n\n Notes du Chapitre 1\n\n\n\n\n\nChapitre 2 : Bases de la QCD\n\n\n2.1 Introduction\n2.2 Invariance de jauge en QED\n2.3 Invariance de jauge non-abélienne et lagrangien de QCD\n2.4 La liberté asymptotique\n2.5 Le potentiel QCD\n\n Notes du Chapitre 2\n\n\n\n\n\nChapitre 3 : Annihilation \\(e^+-e^-\\)\n\n\n3.1 Section efficace totale \\(e^+-e^- \\rightarrow \\text{hadrons}\\)\n3.2 Création d’une paire \\(\\bar{q}q\\)\n3.3 La formation de jets\n3.4 Le pic du \\(Z\\)\n3.5 Corrections radiatives QED\n3.6 Au delà du \\(Z\\)\n3.7 Production de particules\n3.8 \\(\\sigma \\left( e^+ e^- \\rightarrow q \\bar{q} g\\right)\\)\n3.9 Algorithmes de reconstruction des jets\n3.10 Structure de l’état final hadronique\n3.11 Comparaison des mesures de \\(\\alpha_s\\)\n3.12 Test de la structure de jauge de QCD\n\n Notes du Chapitre 3\n\n\n\n\n\nChapitre 4 : La diffusion \\(e^--p\\)\n\n\n4.1 De l’atome au nucléon\n4.2 Diffusion spin \\(1/2\\) sur nucléon\n4.3 Diffusion profondément inélastique\n4.4 Les fonctions de structure\n4.5 Le modèle des partons\n4.6 Mesure étendue des fonctions de structures\n4.7 La violation d’échelle et les équations \\(\\text{DGLAP}\\)\n\n Notes du Chapitre 4\n\n\n\n\n\nChapitre 5 : Interactions proton-proton\n\n\n5.1 Production de jets\n5.2 Remarque sur les factorisations QCD\n5.3 Le processus Drell-Yan\n5.4 Conclusion\n\n Notes du Chapitre 5"
+  },
+  {
+    "objectID": "notes/ma1/phys-f-485.html#table-des-matières",
+    "href": "notes/ma1/phys-f-485.html#table-des-matières",
+    "title": "Representation of groups and application to physics",
+    "section": "Table des matières",
+    "text": "Table des matières\n\n\n\nSyllabus & Groupes Discrets\n\nRessources globales\n\nSyllabus complet (G. Compère)\n\nGroupes finis\n\nNotes de cours manuscrites\n\n\n Notes du Cours\n\n\n\n\nProjet : Correspondance McKay\n\nTravaux personnels\n\nÉnoncé du projet\nÉtude des groupes discrets et des représentations associés\n\n\n Rapport - McKay\n\n\n\n\nProjet : Algèbres de Lie \\(so(n)\\)\n\nTravaux personnels\n\nÉnoncé du projet\nReprésentations fondamentales et applications physiques\n\n\n Rapport - Algèbres de Lie\n\n\n\n\nExercices : Séances 1 à 5\n\nTravaux Pratiques\n\nTP1 : Énoncé / Solution\nTP2 : Énoncé / Solution\nTP3 : Énoncé / Solution\nTP4 : Énoncé / Solution\nTP5 : Énoncé / Solution\n\n\n\n\n\n\nExercices : Séances 6 à 10\n\nTravaux Pratiques\n\nTP6 : Énoncé / Solution\nTP7 : Énoncé / Solution\nTP8 : Énoncé / Solution\nTP9 : Énoncé / Solution\nTP10 : Énoncé / Solution"
+  },
+  {
+    "objectID": "notes/ma2/phys-f-417.html#table-des-matières",
+    "href": "notes/ma2/phys-f-417.html#table-des-matières",
+    "title": "Advanced Quantum Field Theory",
+    "section": "Table des matières",
+    "text": "Table des matières\n\n\n\n\nChapter 1: Canonical Quantization of Free Fields\n\n\nTopics covered:\n\n1.1 Canonical Quantization of Electromagnetic Fields\n1.2 Partition Function and Thermodynamics\n\n\n Go to Notes\n\n\n\n\n\nChapter 2: Path Integrals\n\n\nTopics covered:\n\n2.1 Hamiltonian formulation\n2.2 Partition function\n2.3 Semi-classical expansion of \\(Z(\\beta)\\)\n2.4 Holomorphic representation\n2.5 Reduction formulas\n2.6 Finite temperature results\n\n\n Go to Notes\n\n\n\n\n\nChapter 3: Functional Methods\n\n\nTopics covered:\n\n3.1 Generating functional for connected Green’s function\n3.2 Effective action\n\n\n Go to Notes\n\n\n\n\n\nChapter 4: Renormalization and Asymptotic Behavior\n\n\nTopics covered:\n\n4.1 Casimir effect\n4.2 1-loop effective action for scalar field\n\n\n Go to Notes\n\n\n\n\n\nChapter 5: Quantum Gauge Field\n\n\nTopics covered:\n\n5.1 Gauge invariance\n5.2 BRST invariance\n5.3 Gauge fixation and propagators\n5.4 Vanishing of Chern-Simons \\(\\beta\\)-function\n5.5 Gauge independence and Zinn-Justin equation\n\n\n Go to Notes"
+  },
+  {
+    "objectID": "notes/ma2/phys-f-417.html#formalisme-des-antichamps-et-cohomologie-brst",
+    "href": "notes/ma2/phys-f-417.html#formalisme-des-antichamps-et-cohomologie-brst",
+    "title": "Advanced Quantum Field Theory",
+    "section": "Formalisme des antichamps et cohomologie BRST",
+    "text": "Formalisme des antichamps et cohomologie BRST\nDocumentation supplémentaire basée sur le cours du Collège de France de Marc Henneaux.\n\n\n\n\nChapitre 1 : Principes généraux\n\n\nSujets abordés :\n\n1.1 Introduction\n1.2 Description des symétries de jauge\n\n\n Go to Notes\n\n\n\n\n\nChapitre 2 : Équations maëtresses\n\n\nSujets abordés :\n\n2.1 Algèbre différentielle graduée - (Co)homologie\n2.2 Champs fantômes et antichamps\n2.3 Équation maîtresse classique\n2.4 Yang-Mills et secteur non minimal\n2.5 Amplitudes de transition & valeurs moyennes\n2.6 Équation maîtresse quantique\n2.7 Déformations cohérentes des théories de jauge\n2.8 Valeurs moyennes d’observables\n2.9 Cohomologie locale\n\n\n Go to Notes"
+  },
+  {
+    "objectID": "notes/ma2/phys-f-417.html#course-resources",
+    "href": "notes/ma2/phys-f-417.html#course-resources",
+    "title": "Advanced Quantum Field Theory",
+    "section": "Course Resources",
+    "text": "Course Resources\n\nSyllabus\n\nNotes on Quantum Field Theory\n\n\n\nExercices\n\nExercices 1\nExercices 2\nExercices 3\nExercices 4\nExercices 5\n\n\n\nAdditional References\n\nHandbook of mathematical functions with formulas, graphs, and mathematical tables — Abramowitz, Milton, Stegun, Irena A.\nQuantum Field Theory and Critical Phenomena — Jean Zinn-Justin\nQuantization of Gauge Systems — Marc Henneaux, Claudio Teitelboim"
+  },
+  {
+    "objectID": "notes/ma2/phys-f-469.html#theoretical-part",
+    "href": "notes/ma2/phys-f-469.html#theoretical-part",
+    "title": "Physics Beyond the Standard Model",
+    "section": "Theoretical Part",
+    "text": "Theoretical Part\n\n\n\nChapter 1: Basic Elementary Fields\n\n Chapter 1 Notes\n\n\n\n\nChapter 2: Standard Model\n\n\n2.1 Gauge symmetries\n2.2 EE-W interaction for leptons and quarks\n2.3 QCD interaction for quarks\n2.4 Spontaneous Symmetry Breaking of \\(SU(2)_L \\times U(1)_Y\\)\n2.5 Fermion masses\n2.6 Some examples\n2.7 Limitations of the Standard Model\n\n Chapter 2 Notes\n\n\n\n\nChapter 3: Chiral Fermions\n\n Chapter 3 Notes\n\n\n\n\nChapter 4: Neutrino Masses\n\n\n4.1 Standard model extension\n4.2 Experimental situations\n4.3 Effective field theory\n4.4 Path integral formalism\n\n Chapter 4 Notes\n\n\n\n\nChapter 5: Grand Unification\n\n\n5.1 Running of \\(\\lambda \\phi^4\\)\n5.2 Yang - Mills theory\n5.3 Grand Unified Theories\n\n Chapter 5 Notes"
+  },
+  {
+    "objectID": "notes/ma2/phys-f-469.html#experimental-part",
+    "href": "notes/ma2/phys-f-469.html#experimental-part",
+    "title": "Physics Beyond the Standard Model",
+    "section": "Experimental Part",
+    "text": "Experimental Part\n\n\n\nChapter 1: Beyond the Standard Model\n Chapter 1 Notes\n\n\n\n\nChapter 2: Experimental Anomalies\n Chapter 2 Notes\n\n\n\n\nChapter 3: Theoretical Landscape\n\n3.1 Theoretical constraints on \\(m_H\\)\n3.2 Higgs properties\n\n Chapter 3 Notes\n\n\n\n\nChapter 4: Higgs Property Measurements\n\n4.1 Standard model extension\n4.2 Experimental situations\n4.3 Effective field theory\n4.4 Path integral formalism\n\n Chapter 4 Notes\n\n\n\n\nChapter 5: Effective Field Theories\n\n5.1 EFT in measurements\n5.2 EFT in searches\n5.3 Flavor physics\n\n Chapter 5 Notes\n\n\n\n\nChapter 6: Dark Matter\n\n6.1 Searches for dark matter\n\n Chapter 6 Notes\n\n\n\n\nChapter 7: Neutrinos\n\n7.1 Neutrino mass\n7.2 Neutrino oscillations\n7.3 Theory of \\(m_\\nu\\)\n\n\n\n\n\nChapter 8: Supersymmetry\n\n8.1 Hierarchy problem\n8.2 Constructing supersymmetry\n8.3 Minimal Supersymmetric Standard Model"
+  },
+  {
+    "objectID": "notes/ma2/phys-f-483.html#ressources-du-cours",
+    "href": "notes/ma2/phys-f-483.html#ressources-du-cours",
+    "title": "Théorie des cordes",
+    "section": "Ressources du cours",
+    "text": "Ressources du cours\n\nHandwritten Notes\n\nNotes de cours\n\n\n\nProblem Sets\n\nTP1 : actions\nTP1 - solution\nTP2 : from Polyakov to Virasoro\nTP3 : quantum strings\nTP4 : conformal Transformations\nTP5 : Ward Identities\nTP6 : Operator Formalism part 1\nTP7 : Operator Formalism part 2\nTP8 : Central Charge, Free Boson\nTP9 : String Interactions\n\n\n\nAdditional References\n\nA First Course in String Theory — Barton Zwiebach (Beginner-Friendly)\nDavid Tong: Lectures on String Theory — David Tong (Intermediate)\nSuperstring Theory — Edward Witten, John Henry Schwarz, Michael Green (Advanced, the most modern)\nString Theory and M-Theory — Katrin Becker (Intermediate-Advanced)\nString Theory — Joseph Polchinski (Advanced)\nConformal Field Theory — Philippe Francesco, Pierre Mathieu, David Sénéchal (Advanced)"
+  },
+  {
+    "objectID": "notes/ma2/phys-f-484.html#table-des-matières",
+    "href": "notes/ma2/phys-f-484.html#table-des-matières",
+    "title": "Gravitational Waves",
+    "section": "Table des matières",
+    "text": "Table des matières\n\n\n\nLecture Notes: Theory\n\nGeneral Relativity & GWs\n\nFoundations of gravitational wave theory\nLinearized gravity and wave equations\nMultipole expansion and energy loss\n\n\n Theory Notes\n\n\n\n\nExperimental & Astrophysics Notes\n\nExperimental Physics\n\nDetection principles and interferometers\n\nAstrophysical Sources\n\nNeutron stars, binary systems, and cosmic events\nRead additional Astrophysics notes\n\n\n Experimental Notes\n\n\n\n\nProblem Sets & Corrections\n\nProblem Set 1 & 2\n\nQuasi-circular Inspirals (Correction)\nGWs from Eccentric Binaries (Correction)\n\nProblem Set 3 & 4\n\nQuasi-Normal Modes Part 1 (Correction)\nQuasi-Normal Modes Part 2 (PDF)\n\n\n Problem Set 1\n\n\n\n\nPersonal Work & Presentation\n\nPost-Newtonian Formalism\n\nCore document on the PN formalism and its regularizations\n\nOral Presentation\n\nAssociated slides summarizing the study (Slides PDF)\n\n\n Personal Work PDF"
+  },
+  {
+    "objectID": "notes/ma2/phys-f-483.html#course-resources",
+    "href": "notes/ma2/phys-f-483.html#course-resources",
+    "title": "Théorie des cordes",
+    "section": "Course Resources",
+    "text": "Course Resources\n\nHandwritten Notes\n\n Notes de cours\n\n\n\nProblem Sets\n\nTP1: actions / TP1 - solution\nTP2: from Polyakov to Virasoro\nTP3: quantum strings\nTP4: conformal Transformations\nTP5: Ward Identities\nTP6: Operator Formalism part 1\nTP7: Operator Formalism part 2\nTP8: Central Charge, Free Boson\nTP9: String Interactions\n\n\n\nAdditional References\n\nA First Course in String Theory – Barton Zwiebach (Beginner-Friendly)\nDavid Tong: Lectures on String Theory – David Tong (Intermediate)\nString Theory and M-Theory – Katrin Becker (Intermediate-Advanced)\nString Theory – Joseph Polchinski (Advanced)\nSuperstring Theory – Edward Witten, John Henry Schwarz, Michael Green (Advanced, the most modern)\nConformal Field Theory – Philippe Francesco, Pierre Mathieu, David Sénéchal (Advanced)"
+  },
+  {
+    "objectID": "notes/math.html",
+    "href": "notes/math.html",
+    "title": "Syllabus de mathématiques — Volume 1",
+    "section": "",
+    "text": "Warning⚠️ Contexte et finalité de ces notes\n\n\n\n\n\nCes notes ont été rédigées sur mon temps libre et ne constituent en aucun cas une source académique pour un apprentissage mathématique rigoureux. Elles servent avant tout à introduire certaines notions utiles à la réussite du test d’admission en mathématiques pour le Bachelier en Informatique et Systèmes — Orientation : Sécurité des Systèmes (EPHEC).\nTélécharger le Syllabus complet (PDF)"
+  },
+  {
+    "objectID": "notes/math.html#structure-du-volume",
+    "href": "notes/math.html#structure-du-volume",
+    "title": "Syllabus de mathématiques — Volume 1",
+    "section": "Structure du volume",
+    "text": "Structure du volume\nCe premier volume se concentre sur l’étude des fonctions et s’articule autour des cinq parties suivantes :\n\n\n\nPartie I : Rappels\n\nCalcul numérique : Concepts fondamentaux (vocabulaire, règle des signes, fractions, règle PEMDAS).\nCalcul littéral : Introduction aux formules de distributivité, identités remarquables et lois des puissances.\n\n\n\n\n\nPartie II : Généralités\n\nNotations mathématiques : Égalités, opérateurs logiques, ensembles et leurs relations.\nNombres et ensembles : Types de nombres (naturels, rationnels, réels) et notations.\nFonction et variable : Exploration des concepts de base.\nAnalyse d’une fonction : Racines, signes, croissance et ordonnée à l’origine.\n\n\n\n\n\nPartie III : Fonctions polynomiales\n\nIntroduction : Présentation des polynômes et propriétés générales.\nPremier degré : Équations, graphes, tableaux de signes, et inéquations simples.\nSecond degré : Équations quadratiques, graphes, tableaux de signes, et formes des solutions.\n\n\n\n\n\nPartie IV : Solutions\n\nExercices et problèmes : Résolution détaillée et méthodique des exercices associés aux polynômes du premier et du second degré pour s’auto-évaluer.\n\n\n\n\n\nPartie V : Formulaire\n\nAide-mémoire : Résumé structuré des formules clés pour les calculs numériques, littéraux, et les fonctions polynomiales."
+  },
+  {
+    "objectID": "notes/math.html#version-interactive",
+    "href": "notes/math.html#version-interactive",
+    "title": "Syllabus de mathématiques — Volume 1",
+    "section": "Version interactive",
+    "text": "Version interactive"
+  },
+  {
+    "objectID": "blog.html#foundations-lecture-notes",
+    "href": "blog.html#foundations-lecture-notes",
+    "title": "Curating the Physics Toolkit",
+    "section": "1. Foundations & Lecture Notes",
+    "text": "1. Foundations & Lecture Notes\nDeveloping a strong intuition requires revisiting the basics and exploring standard derivations. These are the gold standards:\n\nDavid Tong - Lecture Notes: The definitive standard for clear, rigorous introductions to everything from Classical Dynamics to Quantum Field Theory.\nThe Feynman Lectures on Physics: Essential for building physical intuition and understanding the conceptual landscape.\nPaul’s Online Math Notes: An excellent resource for filling in gaps in calculus and algebra.\nMIT OpenCourseWare: A comprehensive repository for full-course materials.\nLibreTexts Physics: Peer-authored, open-access textbook content."
+  },
+  {
+    "objectID": "blog.html#advanced-lectures-seminars",
+    "href": "blog.html#advanced-lectures-seminars",
+    "title": "Curating the Physics Toolkit",
+    "section": "2. Advanced Lectures & Seminars",
+    "text": "2. Advanced Lectures & Seminars\nFor those looking to go beyond the curriculum, these resources bridge the gap between student-level knowledge and current research.\n\nPerimeter Institute (PIRSA): A massive archive of recorded seminars and specialized courses, particularly strong in high-energy physics and quantum gravity.\nCollège de France - Physique et Chimie: High-level academic seminars and colloquia.\nGeneral Relativity II (Piotr Chruściel): A deep dive into the mathematics and physics of black holes.\nLes Samedis de la Physique (Bruxelles): High-quality lectures from ULB professors, ideally suited for late-Bachelor to Master-level students."
+  },
+  {
+    "objectID": "blog.html#computational-visualization-tools",
+    "href": "blog.html#computational-visualization-tools",
+    "title": "Curating the Physics Toolkit",
+    "section": "3. Computational & Visualization Tools",
+    "text": "3. Computational & Visualization Tools\nEfficiency in modern theoretical physics requires a streamlined digital workspace.\n\nGeoGebra & Desmos: Essential for rapid mathematical visualization and function analysis.\nLM Studio: Allows for local execution of Large Language Models (LLMs), providing a private environment for testing code and drafting ideas without reliance on external cloud APIs.\nDeepSeek R1: A powerful open-weights model capable of assisting with complex derivations and coding tasks."
+  },
+  {
+    "objectID": "blog.html#career-growth-internships-research",
+    "href": "blog.html#career-growth-internships-research",
+    "title": "Curating the Physics Toolkit",
+    "section": "4. Career Growth: Internships & Research",
+    "text": "4. Career Growth: Internships & Research\nSecuring early research experience is vital. Keep an eye on these cycles:\n\nCERN Summer Student Programme: The premier internship for undergraduate physics students.\nDESY Summer Student Programme: A world-class opportunity in particle physics and synchrotron radiation.\nESA Student Internships: Focused on space science and engineering.\nPSI Start (Perimeter Institute): An excellent entry point for theoretical physics research."
+  },
+  {
+    "objectID": "blog.html#community-access",
+    "href": "blog.html#community-access",
+    "title": "Curating the Physics Toolkit",
+    "section": "5. Community & Access",
+    "text": "5. Community & Access\n\nDocHub (ULB): A community-driven archive of references and notes shared by students.\nAccessing Academic Literature: For those moments when institutional access is unavailable, community-driven repositories like Sci-Hub, Library Genesis, and Z-Library remain vital, though their accessibility may vary depending on your location and network."
+  },
+  {
+    "objectID": "blog.html#physics-culture",
+    "href": "blog.html#physics-culture",
+    "title": "Curating the Physics Toolkit",
+    "section": "6. Physics Culture",
+    "text": "6. Physics Culture\nFinally, never underestimate the power of humor in keeping morale high during long research stretches.\n\nxkcd & xkcd: What If?: The quintessential webcomic for physicists, blending rigorous thought experiments with irreverent humor."
+  },
+  {
+    "objectID": "posts/links.html",
+    "href": "posts/links.html",
+    "title": "Some useful links for physics students",
+    "section": "",
+    "text": "This page brings together some of the resources I have found most useful. The list is personal, but I hope it can also be useful to other students and researchers.\n\n\nThese are some of the best resources I know for learning or revisiting the essentials:\n\nDavid Tong - Lecture Notes: The definitive standard for clear, rigorous introductions to everything from Classical Dynamics to Quantum Field Theory.\nThe Feynman Lectures on Physics: Old but gold.\nPaul’s Online Math Notes: High school level.\nMIT OpenCourseWare: Check out the course on general relativity, it’s fantastic.\nLibreTexts Physics: Peer-authored, open-access textbook content.\n\n\n\n\nIf like me the reviews on arXiv make you a bit anxious, these are a great way to get a more digestible overview of the latest developments in various topics:\n\nPerimeter Institute (PIRSA): A massive archive of recorded seminars and specialized courses.\nCollège de France - Physique et Chimie: High-level academic seminars and colloquia.\nGeneral Relativity II (Piotr Chruściel): All about black holes.\nLes Samedis de la Physique (Bruxelles): High-quality lectures from ULB professors.\n\n\n\n\nIf you’re looking to do early research or find internships, check out these resources:\n\nCERN Summer Student Programme: Particle physics stuff in Geneva.\nDESY Summer Student Programme: Particle physics stuff in Hamburg.\nESA Student Internships: Space science at the European Space Agency.\nPSI Start (Perimeter Institute): Theoretical physics research at Perimeter Institute in Canada.\n\n\n\n\nAll the nice textbooks for free, because knowledge should be free:\n\nSci-Hub: For academic papers.\nLibrary Genesis and Z-Library: For books."
+  },
+  {
+    "objectID": "posts/links.html#foundations-lecture-notes",
+    "href": "posts/links.html#foundations-lecture-notes",
+    "title": "Some useful links for physics students",
+    "section": "",
+    "text": "These are some of the best resources I know for learning or revisiting the essentials:\n\nDavid Tong - Lecture Notes: The definitive standard for clear, rigorous introductions to everything from Classical Dynamics to Quantum Field Theory.\nThe Feynman Lectures on Physics: Old but gold.\nPaul’s Online Math Notes: High school level.\nMIT OpenCourseWare: Check out the course on general relativity, it’s fantastic.\nLibreTexts Physics: Peer-authored, open-access textbook content."
+  },
+  {
+    "objectID": "posts/links.html#advanced-lectures-seminars",
+    "href": "posts/links.html#advanced-lectures-seminars",
+    "title": "Some useful links for physics students",
+    "section": "",
+    "text": "If like me the reviews on arXiv make you a bit anxious, these are a great way to get a more digestible overview of the latest developments in various topics:\n\nPerimeter Institute (PIRSA): A massive archive of recorded seminars and specialized courses.\nCollège de France - Physique et Chimie: High-level academic seminars and colloquia.\nGeneral Relativity II (Piotr Chruściel): All about black holes.\nLes Samedis de la Physique (Bruxelles): High-quality lectures from ULB professors."
+  },
+  {
+    "objectID": "posts/links.html#computational-visualization-tools",
+    "href": "posts/links.html#computational-visualization-tools",
+    "title": "Curating the Physics Toolkit",
+    "section": "3. Computational & Visualization Tools",
+    "text": "3. Computational & Visualization Tools\nEfficiency in modern theoretical physics requires a streamlined digital workspace.\n\nGeoGebra & Desmos: Essential for rapid mathematical visualization and function analysis.\nLM Studio: Allows for local execution of Large Language Models (LLMs), providing a private environment for testing code and drafting ideas without reliance on external cloud APIs.\nDeepSeek R1: A powerful open-weights model capable of assisting with complex derivations and coding tasks."
+  },
+  {
+    "objectID": "posts/links.html#career-growth-internships-research",
+    "href": "posts/links.html#career-growth-internships-research",
+    "title": "Some useful links for physics students",
+    "section": "",
+    "text": "If you’re looking to do early research or find internships, check out these resources:\n\nCERN Summer Student Programme: Particle physics stuff in Geneva.\nDESY Summer Student Programme: Particle physics stuff in Hamburg.\nESA Student Internships: Space science at the European Space Agency.\nPSI Start (Perimeter Institute): Theoretical physics research at Perimeter Institute in Canada."
+  },
+  {
+    "objectID": "posts/links.html#community-access",
+    "href": "posts/links.html#community-access",
+    "title": "Curating the Physics Toolkit",
+    "section": "5. Community & Access",
+    "text": "5. Community & Access\n\nDocHub (ULB): A community-driven archive of references and notes shared by students.\nAccessing Academic Literature: For those moments when institutional access is unavailable, community-driven repositories like Sci-Hub, Library Genesis, and Z-Library remain vital, though their accessibility may vary depending on your location and network."
+  },
+  {
+    "objectID": "posts/links.html#physics-culture",
+    "href": "posts/links.html#physics-culture",
+    "title": "Curating the Physics Toolkit",
+    "section": "6. Physics Culture",
+    "text": "6. Physics Culture\nFinally, never underestimate the power of humor in keeping morale high during long research stretches.\n\nxkcd & xkcd: What If?: The quintessential webcomic for physicists, blending rigorous thought experiments with irreverent humor."
+  },
+  {
+    "objectID": "posts/links.html#free-books",
+    "href": "posts/links.html#free-books",
+    "title": "Some useful links for physics students",
+    "section": "",
+    "text": "All the nice textbooks for free, because knowledge should be free:\n\nSci-Hub: For academic papers.\nLibrary Genesis and Z-Library: For books."
+  }
+]

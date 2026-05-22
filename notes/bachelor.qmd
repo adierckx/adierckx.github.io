@@ -1,0 +1,108 @@
+---
+title: "Bachelor Lecture Notes"
+toc: true
+---
+
+These pages contain scanned handwritten notes and personal summaries compiled during my Bachelor's degree in Physics at the Université libre de Bruxelles (ULB).
+
+## First Year (BA1)
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+[**Chimie générale**<br>CHIM-F-101](./ba1/chim-f-101.qmd){.btn-surface .c-emerald .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Calcul différentiel et intégral I**<br>MATH-F-101](./ba1/math-f-101.qmd){.btn-surface .c-blue .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Algèbre linéaire et Géométrie**<br>MATH-F-102](./ba1/math-f-102.qmd){.btn-surface .c-indigo .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Physique générale I et II**<br>PHYS-F-110](./ba1/phys-f-110.qmd){.btn-surface .c-teal .w-100 .d-block}
+:::
+
+:::
+
+---
+
+## Second Year (BA2)
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+[**Anglais scientifique I**<br>LANG-F-201](./ba2/lang-f-201.qmd){.btn-surface .c-rose .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Calcul différentiel et intégral II**<br>MATH-F-201](./ba2/math-f-201.qmd){.btn-surface .c-blue .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Thermodynamique**<br>PHYS-F-201](./ba2/phys-f-201.qmd){.btn-surface .c-emerald .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Relativité, électromagnétisme & optique**<br>PHYS-F-202](./ba2/phys-f-202.qmd){.btn-surface .c-teal .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Introduction à la mécanique quantique**<br>PHYS-F-203](./ba2/phys-f-203.qmd){.btn-surface .c-purple .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Laboratoires & Statistique appliquée**<br>PHYS-F-210](./ba2/phys-f-210.qmd){.btn-surface .c-rose .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Informatique**<br>INFO-F-207](./ba2/info-f-207.qmd){.btn-surface .c-indigo .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Mécanique analytique**<br>MATH-F-204](./ba2/math-f-204.qmd){.btn-surface .c-blue .w-100 .d-block}
+:::
+
+:::
+
+---
+
+## Third Year (BA3)
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+[**Mathématiques pour la physique**<br>MATH-F-314](./ba3/math-f-314.qmd){.btn-surface .c-blue .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Mécanique quantique**<br>PHYS-F-302](./ba3/phys-f-302.qmd){.btn-surface .c-purple .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Physique statistique**<br>PHYS-F-303](./ba3/phys-f-303.qmd){.btn-surface .c-teal .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Spectrophysique et Astrophysique**<br>PHYS-F-304](./ba3/phys-f-304.qmd){.btn-surface .c-indigo .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Physique des particules & Nucléaire**<br>PHYS-F-305](./ba3/phys-f-305.qmd){.btn-surface .c-purple .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Laboratoires et Stage de recherche**<br>PHYS-F-311](./ba3/phys-f-311.qmd){.btn-surface .c-rose .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Soft Matter and Solid State Physics**<br>PHYS-F-308](./ba3/phys-f-308.qmd){.btn-surface .c-emerald .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**La structure de l'univers**<br>PHYS-F-105](./ba3/phys-f-105.qmd){.btn-surface .c-teal .w-100 .d-block}
+:::
+
+:::

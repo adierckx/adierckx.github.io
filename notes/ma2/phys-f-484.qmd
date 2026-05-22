@@ -1,0 +1,77 @@
+﻿---
+title: "Gravitational Waves"
+subtitle: "Synthèse du cours de PHYS-F484"
+toc: true
+---
+
+::: {.callout-warning appearance="minimal" collapse="true"}
+## ⚠️ Avertissement concernant ces notes
+Les notes publiées sur ce site sont basées sur ma compréhension personnelle du matériel et n'ont pas été indépendamment vérifiées. Bien que j'espère qu'elles soient utiles, il peut y avoir des erreurs ou des inexactitudes. Si vous trouvez des erreurs ou avez des suggestions d'amélioration, n'hésitez pas à me contacter : [a.d@csic.es](mailto:a.d@csic.es).
+:::
+
+**Enseignant :** Sébastien Clesse, Nicolas Chamel & Geoffrey Compère (Année 2024 - 2025)  
+**Ressources officielles :** [<i class="bi bi-link-45deg"></i> Page de l'ULB](https://www.ulb.be/fr/programme/phys-f484){.btn .btn-outline-light .btn-sm .ms-2}
+[<i class="bi bi-folder2-open"></i> Espace Dochub](https://dochub.be/catalog/course/phys-f484){.btn .btn-outline-light .btn-sm .ms-2}
+
+---
+
+## Table des matières
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Lecture Notes: Theory
+
+* **General Relativity & GWs**
+  * Foundations of gravitational wave theory
+  * Linearized gravity and wave equations
+  * Multipole expansion and energy loss
+
+[<i class="bi bi-file-earmark-pdf"></i> Theory Notes](./assets/GW/GW1.pdf){.btn-surface .c-purple .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Experimental & Astrophysics Notes
+
+* **Experimental Physics**
+  * Detection principles and interferometers
+* **Astrophysical Sources**
+  * Neutron stars, binary systems, and cosmic events
+  * Read additional [Astrophysics notes](./assets/GW/PHYS-F-484_B_16439_spl.pdf)
+
+[<i class="bi bi-file-earmark-pdf"></i> Experimental Notes](./assets/GW/GW_phys-f-484_part_Clesse.pdf){.btn-surface .c-purple .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Problem Sets & Corrections
+
+* **Problem Set 1 & 2**
+  * Quasi-circular Inspirals ([Correction](./assets/GW/TPs/TP1_ Quasi-circular Inspirals.pdf))
+  * GWs from Eccentric Binaries ([Correction](./assets/GW/TPs/TP2_ GWs from Eccentric Binaries.pdf))
+* **Problem Set 3 & 4**
+  * Quasi-Normal Modes Part 1 ([Correction](./assets/GW/TPs/TP3_ QNMs and Schwarzschild.pdf))
+  * Quasi-Normal Modes Part 2 ([PDF](./assets/GW/TPs/TP4_QNMs_II.pdf))
+
+[<i class="bi bi-file-earmark-pdf"></i> Problem Set 1](./assets/GW/TPs/TP1 - Quasi-circular inspirals.pdf){.btn-surface .c-purple .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Personal Work & Presentation
+
+* **Post-Newtonian Formalism**
+  * Core document on the PN formalism and its regularizations
+* **Oral Presentation**
+  * Associated slides summarizing the study ([Slides PDF](./assets/GW/PNreg_presentation.pdf))
+
+[<i class="bi bi-file-earmark-pdf"></i> Personal Work PDF](./assets/GW/PNreg.pdf){.btn-surface .c-purple .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+:::

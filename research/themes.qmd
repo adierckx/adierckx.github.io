@@ -1,0 +1,29 @@
+---
+title: "Research Themes"
+toc: true
+---
+
+## Primordial Black Holes & Dark Matter Remnants
+
+My research investigates the phenomenological consequences of non-perturbative quantum gravity corrections on the evolution of light Primordial Black Holes (**PBHs**) in the early universe. Standard semi-classical Hawking evaporation predicts runaway evaporation, but Loop Quantum Gravity (**LQG**) introduces a natural UV cut-off that fundamentally alters this late-stage behavior.
+
+### Planckian Relics in Loop Quantum Gravity
+In LQG, the quantization of geometric operators resolves the central singularity, replacing it with a quantum bounce into an antitrapped spacetime region. A central prediction is the quantum tunneling of the classical black hole geometry to a white hole geometry, with a transition probability exponentially suppressed by the squared mass:
+
+$$
+P \sim e^{-(m/m_{\mathrm{Pl}})^2}~.
+$$ {#eq-tunneling-probability}
+
+This mechanism leads to Planckian relics, which represent a viable, non-baryonic candidate for dark matter and introduce specific signatures in primordial cosmological backgrounds.
+
+* **Associated Code:** A Mathematica framework developed to derive constraints on these PBH models can be found in the repo [pbh-rem](https://github.com/adierckx/pbh-rem).
+* **Recent Preprint:** Our forthcoming paper detailing these signatures will be linked here this Friday.
+
+### Macroscopic Remnants via the Memory Burden Effect
+Other stabilization mechanisms include the Memory Burden effect (**MBe**), in which the suppression of the evaporation rate is related to the information capacity of the black hole. The remnants predicted by this mechanism are macroscopic, typically after the black hole has evaporated roughly half of its initial mass ($m \sim m_0 / 2$). 
+
+---
+
+## Spinfoam Numerics & Cosmology
+
+The second axis of my work focuses on Covariant Loop Quantum Gravity (**Spinfoam models**) and its application to early-universe cosmology.

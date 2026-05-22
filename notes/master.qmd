@@ -1,0 +1,92 @@
+---
+title: "Master Lecture Notes"
+toc: true
+---
+
+These pages contain advanced summaries, lecture notes, and research project data compiled during my Master's degree in Theoretical Physics at the Université libre de Bruxelles (ULB).
+
+## First Year (MA1)
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+[**Stage (Physique Théorique)**<br>STAG-F015](./ma1/stag-f015.qmd){.btn-surface .c-rose .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Stage (Physique Mathématique)**<br>STAG-F016](./ma1/stag-f016.qmd){.btn-surface .c-rose .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Dynamique des fluides et des plasmas**<br>PHYS-F-412](./ma1/phys-f-412.qmd){.btn-surface .c-emerald .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Théorie de la gravitation**<br>PHYS-F-432](./ma1/phys-f-432.qmd){.btn-surface .c-teal .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Advanced General Relativity**<br>PHYS-F-418](./ma1/phys-f-418.qmd){.btn-surface .c-teal .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Cosmologie**<br>PHYS-F-415](./ma1/phys-f-415.qmd){.btn-surface .c-purple .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Physique des particules**<br>PHYS-F-416](./ma1/phys-f-416.qmd){.btn-surface .c-blue .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Modèle standard des interactions**<br>PHYS-F-422](./ma1/phys-f-422.qmd){.btn-surface .c-indigo .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Quantum Field Theory I**<br>PHYS-F-410](./ma1/phys-f-410.qmd){.btn-surface .c-blue .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Quantum Field Theory II**<br>PHYS-F-440](./ma1/phys-f-440.qmd){.btn-surface .c-indigo .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Physics of Strong Interactions**<br>PHYS-F-477](./ma1/phys-f-477.qmd){.btn-surface .c-blue .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Representation of Groups**<br>PHYS-F-485](./ma1/phys-f-485.qmd){.btn-surface .c-purple .w-100 .d-block}
+:::
+
+:::
+
+---
+
+## Second Year (MA2)
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+[**Advanced Quantum Field Theory**<br>PHYS-F-417](./ma2/phys-f-417.qmd){.btn-surface .c-indigo .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Physics Beyond the Standard Model**<br>PHYS-F-469](./ma2/phys-f-469.qmd){.btn-surface .c-purple .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Théorie des cordes**<br>PHYS-F-483](./ma2/phys-f-483.qmd){.btn-surface .c-blue .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Gravitational Waves**<br>PHYS-F-484](./ma2/phys-f-484.qmd){.btn-surface .c-teal .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Mémoire de Master**<br>MEMO-F-534](../research/early-research.qmd){.btn-surface .c-rose .w-100 .d-block}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[**Stage non-académique**<br>STAG-F-017](../research/early-research.qmd){.btn-surface .c-rose .w-100 .d-block}
+:::
+
+:::

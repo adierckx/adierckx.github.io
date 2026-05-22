@@ -1,0 +1,174 @@
+﻿---
+title: "Physics Beyond the Standard Model"
+subtitle: "Summary of the course PHYS-F469"
+toc: true
+---
+
+::: {.callout-warning appearance="minimal" collapse="true"}
+## ⚠️ Warning regarding these notes
+The notes published on this website are based on my personal understanding of the material and have not been independently verified. While I hope they are helpful, there may be errors or inaccuracies. If you find any errors or have suggestions for improvement, please feel free to contact me: [a.d@csic.es](mailto:a.d@csic.es).
+:::
+
+**Teacher:** Michel TYTGAT & Steven LOWETTE (Year 2024-2025)  
+**Official resources:** [<i class="bi bi-link-45deg"></i> ULB page](https://www.ulb.be/fr/programme/phys-f469){.btn .btn-outline-light .btn-sm .ms-2}
+[<i class="bi bi-folder2-open"></i> Dochub space](https://dochub.be/catalog/course/phys-f469){.btn .btn-outline-light .btn-sm .ms-2}
+
+---
+
+## Theoretical Part
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapter 1: Basic Elementary Fields
+![](./assets/BSMt/BSM - CH1.jpg){.rounded .mb-3 style="width: 100%; height: auto;"}
+
+[<i class="bi bi-file-earmark-pdf"></i> Chapter 1 Notes](./assets/BSMt/BSMt - CH1.pdf){.btn-surface .c-teal .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapter 2: Standard Model
+![](./assets/BSMt/BSM - CH2.jpg){.rounded .mb-3 style="width: 100%; height: auto;"}
+
+* **2.1 Gauge symmetries**
+* **2.2 EE-W interaction for leptons and quarks**
+* **2.3 QCD interaction for quarks**
+* **2.4 Spontaneous Symmetry Breaking of $SU(2)_L \times U(1)_Y$**
+* **2.5 Fermion masses**
+* **2.6 Some examples**
+* **2.7 Limitations of the Standard Model**
+
+[<i class="bi bi-file-earmark-pdf"></i> Chapter 2 Notes](./assets/BSMt/BSMt - CH2.pdf){.btn-surface .c-teal .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapter 3: Chiral Fermions
+![](./assets/BSMt/BSM - CH3.jpg){.rounded .mb-3 style="width: 100%; height: auto;"}
+
+[<i class="bi bi-file-earmark-pdf"></i> Chapter 3 Notes](./assets/BSMt/BSMt - CH3.pdf){.btn-surface .c-teal .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapter 4: Neutrino Masses
+![](./assets/BSMt/BSM - CH4.jpg){.rounded .mb-3 style="width: 100%; height: auto;"}
+
+* **4.1 Standard model extension**
+* **4.2 Experimental situations**
+* **4.3 Effective field theory**
+* **4.4 Path integral formalism**
+
+[<i class="bi bi-file-earmark-pdf"></i> Chapter 4 Notes](./assets/BSMt/BSMt - CH4.pdf){.btn-surface .c-teal .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapter 5: Grand Unification
+![](./assets/BSMt/BSM - CH5.jpg){.rounded .mb-3 style="width: 100%; height: auto;"}
+
+* **5.1 Running of $\lambda \phi^4$**
+* **5.2 Yang - Mills theory**
+* **5.3 Grand Unified Theories**
+
+[<i class="bi bi-file-earmark-pdf"></i> Chapter 5 Notes](./assets/BSMt/BSMt - CH5.pdf){.btn-surface .c-teal .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+:::
+
+---
+
+## Experimental Part
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapter 1: Beyond the Standard Model
+
+[<i class="bi bi-file-earmark-pdf"></i> Chapter 1 Notes](./assets/BSMx/BSMx - CH1.pdf){.btn-surface .c-teal .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapter 2: Experimental Anomalies
+
+[<i class="bi bi-file-earmark-pdf"></i> Chapter 2 Notes](./assets/BSMx/BSMx - CH2.pdf){.btn-surface .c-teal .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapter 3: Theoretical Landscape
+
+* **3.1 Theoretical constraints on $m_H$**
+* **3.2 Higgs properties**
+
+[<i class="bi bi-file-earmark-pdf"></i> Chapter 3 Notes](./assets/BSMx/BSMx - CH3.pdf){.btn-surface .c-teal .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapter 4: Higgs Property Measurements
+
+* **4.1 Standard model extension**
+* **4.2 Experimental situations**
+* **4.3 Effective field theory**
+* **4.4 Path integral formalism**
+
+[<i class="bi bi-file-earmark-pdf"></i> Chapter 4 Notes](./assets/BSMx/BSMx - CH4.pdf){.btn-surface .c-teal .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapter 5: Effective Field Theories
+
+* **5.1 EFT in measurements**
+* **5.2 EFT in searches**
+* **5.3 Flavor physics**
+
+[<i class="bi bi-file-earmark-pdf"></i> Chapter 5 Notes](./assets/BSMx/BSMx - CH5.pdf){.btn-surface .c-teal .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapter 6: Dark Matter
+
+* **6.1 Searches for dark matter**
+
+[<i class="bi bi-file-earmark-pdf"></i> Chapter 6 Notes](./assets/BSMx/BSMx - CH6.pdf){.btn-surface .c-teal .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapter 7: Neutrinos
+
+* **7.1 Neutrino mass**
+* **7.2 Neutrino oscillations**
+* **7.3 Theory of $m_\nu$**
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapter 8: Supersymmetry
+
+* **8.1 Hierarchy problem**
+* **8.2 Constructing supersymmetry**
+* **8.3 Minimal Supersymmetric Standard Model**
+:::
+:::
+
+:::

@@ -1,0 +1,15 @@
+---
+title: "Blog"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: grid              # This changes the list into a card grid
+  grid-columns: 3         # Adjusts layout for desktop (3 columns)
+  fields: [image, date, title, reading-time, description] # Clean metadata
+  image-height: 200px     # Keeps cards uniform
+  image-placeholder: /assets/css/logo_bi_whiteteal_shad.svg # Prevents layout shifts
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  feed: true
+---

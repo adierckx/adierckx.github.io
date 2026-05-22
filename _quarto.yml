@@ -1,0 +1,52 @@
+project:
+  type: website
+
+website:
+  title: "Antoine Dierckx"
+  favicon: assets/css/logo_bi_whiteteal_shad.svg
+  navbar:
+    logo: assets/css/logo_bi_whiteteal_shad.svg
+    background: dark
+    collapse: true
+    search: true
+    left:
+      - href: index.qmd
+        text: Home
+      - text: Research
+        menu:
+          - href: research/themes.qmd
+            text: Research Themes
+          - href: research/papers.qmd
+            text: Publications
+          - href: research/talks.qmd
+            text: Talks & Slides
+          - href: research/early-research.qmd
+            text: Early Research
+      - text: Teaching & Notes
+        menu:
+          - href: notes/master.qmd
+            text: Master Notes
+          - href: notes/bachelor.qmd
+            text: Bachelor Notes (FR)
+          - href: notes/math.qmd
+            text: Math Notes (FR)
+      - href: outreach/projects.qmd
+        text: Outreach & Projects
+      - href: blog.qmd
+        text: Blog
+      - href: about.qmd
+        text: About
+
+format:
+  html:
+    theme:
+      - darkly
+    css: assets/css/styles.css
+    toc: false
+    code-fold: true
+    html-math-method: mathjax
+    anchor-sections: false
+    grid:
+      body-width: 1100px
+    include-in-header:
+      - text: '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">'

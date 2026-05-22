@@ -1,0 +1,213 @@
+﻿---
+title: "Algèbre linéaire et Géométrie"
+subtitle: "Synthèse du cours de MATH-F102"
+toc: true
+---
+
+::: {.callout-warning appearance="minimal" collapse="true"}
+## ⚠️ Avertissement concernant ces notes
+Les notes publiées sur ce site sont basées sur ma compréhension personnelle du matériel et n'ont pas été indépendamment vérifiées. Bien que j'espère qu'elles soient utiles, il peut y avoir des erreurs ou des inexactitudes. Si vous trouvez des erreurs ou avez des suggestions d'amélioration, n'hésitez pas à me contacter : [a.d@csic.es](mailto:a.d@csic.es).
+:::
+
+**Enseignant :** Samuel FIORINI & Joost VERCRUYSSE (Année 2020 - 2021)  
+**Ressources officielles :** 
+[<i class="bi bi-folder2-open"></i> Espace Dochub](https://dochub.be/catalog/course/math-f102){.btn .btn-outline-light .btn-sm .ms-2}
+
+---
+
+## Table des matières
+
+::: {.grid}
+
+<!-- Chapitre 0 -->
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapitre 0 : Généralités
+
+* **0.1 Les ensembles**
+* **0.2 Construction sur les ensembles**
+* **0.3 Relation d'équivalence**
+* **0.4 Applications, injection, surjection et bijection**
+
+[<i class="bi bi-file-earmark-pdf"></i> Notes du Chapitre 0](./assets/ALG/ALG - CH0.pdf){.btn-surface .c-blue .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+<!-- Chapitre 1 -->
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapitre 1 : Les espaces réels
+
+* **1.1 Le plan réel**
+  * 1.1.1 La ligne réelle
+  * 1.1.2 Les points dans le plan et les couples de nombres réels
+  * 1.1.3 Les vecteurs du plan
+  * 1.1.4 Addition et multiplication par un scalaire
+  * 1.1.5 Équation de droites
+  * 1.1.6 Le plan euclidien et coordonnées cartésiennes
+  * 1.1.7 Angle entre deux vecteurs
+* **1.2 L'espace tridimensionnel réel**
+  * 1.2.1 Points, vecteurs, triples
+  * 1.2.2 Équations de plans
+  * 1.2.3 Équations de droites
+* **1.3 L'espace $\mathbb{R}^n$**
+
+[<i class="bi bi-file-earmark-pdf"></i> Notes du Chapitre 1](./assets/ALG/ALG - CH1.pdf){.btn-surface .c-blue .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+<!-- Chapitre 2 -->
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapitre 2 : Autres types de nombres et d'espaces
+
+* **2.1 Les corps finis d'ordre premier**
+  * 2.1.1 Arithmétique modulaire
+  * 2.1.2 Le corps $\mathbb{F}_p$ et ses espaces finis
+* **2.2 Les nombres complexes**
+  * 2.2.1 Motivations et définitions
+  * 2.2.2 Plan de Gauss
+  * 2.2.3 Forme polaire
+* **2.3 Les polynômes**
+  * 2.3.1 L'anneau des polynômes
+  * 2.3.2 La division euclidienne
+  * 2.3.3 Les racines d'un polynôme
+  * 2.3.4 Racines de polynômes complexes et réels
+  * 2.3.5 Le plus grand commun diviseur
+
+[<i class="bi bi-file-earmark-pdf"></i> Notes du Chapitre 2](./assets/ALG/ALG - CH2.pdf){.btn-surface .c-blue .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+<!-- Chapitre 3 -->
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapitre 3 : Matrices et systèmes d'équations linéaires
+
+* **3.1 Les matrices**
+  * 3.1.1 L'anneau des matrices
+  * 3.1.2 Transposée et trace d'une matrice
+  * 3.1.3 L'inverse d'une matrice
+  * 3.1.4 Forme échelonnée d'une matrice
+* **3.2 Systèmes d'équations linéaires**
+
+[<i class="bi bi-file-earmark-pdf"></i> Notes du Chapitre 3](./assets/ALG/ALG - CH3.pdf){.btn-surface .c-blue .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+<!-- Chapitre 4 -->
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapitre 4 : Espaces vectoriels
+
+* **4.1 Corps commutatifs**
+* **4.2 Définition d'un espace vectoriel**
+* **4.3 Sous-espaces**
+* **4.4 Produit et somme directe**
+* **4.5 Géométrie affine d'un espace vectoriel**
+
+[<i class="bi bi-file-earmark-pdf"></i> Notes du Chapitre 4](./assets/ALG/ALG - CH4.pdf){.btn-surface .c-blue .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+<!-- Chapitre 5 -->
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapitre 5 : Bases et dimension
+
+* **5.1 Parties génératrices et parties libres**
+* **5.2 Bases**
+* **5.3 Dimension d'un espace vectoriel**
+* **5.4 Espaces infinidimensionnels**
+* **5.5 Le rang d'une matrice**
+
+[<i class="bi bi-file-earmark-pdf"></i> Notes du Chapitre 5](./assets/ALG/ALG - CH5.pdf){.btn-surface .c-blue .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+<!-- Chapitre 6 -->
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapitre 6 : Applications linéaires
+
+* **6.1 Définitions et exemples**
+* **6.2 Propriétés des applications linéaires**
+* **6.3 Noyau et image**
+* **6.4 Coordonnées, produits et coproduits revisités**
+* **6.5 Le groupe des automorphismes**
+* **6.6 Transformations affines**
+
+[<i class="bi bi-file-earmark-pdf"></i> Notes du Chapitre 6](./assets/ALG/ALG - CH6.pdf){.btn-surface .c-blue .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+<!-- Chapitre 7 -->
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapitre 7 : L'espace des applications linéaires & matrices
+
+* **7.1 Matrice d'une application linéaire**
+* **7.2 Propriétés des applications linéaires en termes de leurs matrices**
+* **7.3 Applications linéaires et systèmes d'équations linéaires**
+* **7.4 Changement de base et transformation de coordonnées**
+* **7.5 Dualités**
+  * 7.5.1 L'espace dual
+  * 7.5.2 Le dual d'une application linéaire
+  * 7.5.3 L'espace bidual
+
+[<i class="bi bi-file-earmark-pdf"></i> Notes du Chapitre 7](./assets/ALG/ALG - CH7.pdf){.btn-surface .c-blue .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+<!-- Chapitre 8 -->
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapitre 8 : Déterminants
+
+* **8.1 Permutations**
+* **8.2 Signe d'une permutation**
+* **8.3 Longueurs, aires, volumes orientés**
+  * 8.3.1 Origine du déterminant
+  * 8.3.2 Intuition géométrique dans le plan
+* **8.4 Existence et unicité du déterminant**
+* **8.5 Propriétés et calcul par la méthode de Gauss**
+* **8.6 Formule de Binet**
+* **8.7 Cofacteurs**
+* **8.8 Matrices adjointes**
+
+[<i class="bi bi-file-earmark-pdf"></i> Notes du Chapitre 8](./assets/ALG/ALG - CH8.pdf){.btn-surface .c-blue .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+<!-- Chapitre 9 -->
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapitre 9 : Vecteurs propres et diagonalisation
+
+* **9.1 Vecteurs, valeurs et sous-espaces propres**
+* **9.2 L'équation caractéristique**
+* **9.3 Opérateurs et matrices diagonalisables**
+* **9.4 Opérateurs et matrices triangulables**
+
+[<i class="bi bi-file-earmark-pdf"></i> Notes du Chapitre 9](./assets/ALG/ALG - CH9.pdf){.btn-surface .c-blue .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+<!-- Chapitre 10 -->
+::: {.g-col-12 .g-col-md-4}
+::: {.p-3 .rounded .shadow-sm style="background-color: var(--card-bg); border: 1px solid var(--border-flat); height: 100%; display: flex; flex-direction: column;"}
+### Chapitre 10 : Formes normales de Jordan
+
+* **10.1 Polynôme minimal d'un opérateur**
+  * 10.1.1 Pourquoi ?
+  * 10.1.2 Définitions et propriétés
+  * 10.1.3 Calcul du polynôme minimal
+* **10.2 Théorème de Cayley-Hamilton**
+* **10.3 Sous-espaces propres généralisés**
+* **10.4 Vecteurs propres généralisés et chaînes de Jordan**
+
+[<i class="bi bi-file-earmark-pdf"></i> Notes du Chapitre 10](./assets/ALG/ALG - CH10.pdf){.btn-surface .c-blue .w-100 style="margin-top: auto; min-height: 40px; height: auto; padding: 8px 12px; font-size: 0.9em;"}
+:::
+:::
+
+:::

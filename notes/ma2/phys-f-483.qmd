@@ -1,0 +1,41 @@
+﻿---
+title: "Théorie des cordes"
+subtitle: "Synthèse du cours de PHYS-F483"
+toc: true
+---
+
+::: {.callout-warning appearance="minimal" collapse="true"}
+## ⚠️ Avertissement concernant ces notes
+Les notes publiées sur ce site sont basées sur ma compréhension personnelle du matériel et n'ont pas été indépendamment vérifiées. Bien que j'espère qu'elles soient utiles, il peut y avoir des erreurs ou des inexactitudes. Si vous trouvez des erreurs ou avez des suggestions d'amélioration, n'hésitez pas à me contacter : [a.d@csic.es](mailto:a.d@csic.es).
+:::
+
+**Enseignant :** Giulio Collinucci (Année 2024 - 2025)  
+**Ressources officielles :** 
+[<i class="bi bi-link-45deg"></i> Page de l'ULB](https://www.ulb.be/fr/programme/phys-f483){.btn .btn-outline-light .btn-sm .ms-2}
+[<i class="bi bi-folder2-open"></i> Espace Dochub](https://dochub.be/){.btn .btn-outline-light .btn-sm .ms-2}
+
+---
+
+## Course Resources
+
+### Handwritten Notes
+* [<i class="bi bi-file-earmark-pdf"></i> Notes de cours](./assets/CORDES/Ressources/Notes_de_cours.pdf)
+
+### Problem Sets
+* [TP1: actions](./assets/CORDES/Ressources/TP1.pdf) / [TP1 - solution](./assets/CORDES/Ressources/TP1_sol.pdf)
+* [TP2: from Polyakov to Virasoro](./assets/CORDES/TPs/CordesTP2.pdf)
+* [TP3: quantum strings](./assets/CORDES/TPs/TPCordes3.pdf)
+* [TP4: conformal Transformations](./assets/CORDES/TPs/CordesTP4.pdf)
+* [TP5: Ward Identities](./assets/CORDES/TPs/CordesTP5.pdf)
+* [TP6: Operator Formalism part 1](./assets/CORDES/TPs/CordesTP6.pdf)
+* [TP7: Operator Formalism part 2](./assets/CORDES/TPs/CordesTP7.pdf)
+* [TP8: Central Charge, Free Boson](./assets/CORDES/TPs/CordesTP8.pdf)
+* [TP9: String Interactions](./assets/CORDES/TPs/CordesTP9.pdf)
+
+### Additional References
+* [A First Course in String Theory](./assets/CORDES/BeyondStandardModel/A First Course in String Theory, 2nd edition (Barton Zwiebach).pdf) – *Barton Zwiebach* (Beginner-Friendly)
+* [David Tong: Lectures on String Theory](https://www.damtp.cam.ac.uk/user/tong/string/string.pdf) – *David Tong* (Intermediate)
+* [String Theory and M-Theory](https://nucleares.unam.mx/~alberto/apuntes/bbs.pdf) – *Katrin Becker* (Intermediate-Advanced)
+* [String Theory](https://nucleares.unam.mx/~alberto/apuntes/polchinski1.pdf) – *Joseph Polchinski* (Advanced)
+* [Superstring Theory](./assets/CORDES/BeyondStandardModel/Superstring Theory (Michael B. Green etc.).pdf) – *Edward Witten, John Henry Schwarz, Michael Green* (Advanced, the most modern)
+* [Conformal Field Theory](./assets/CORDES/BeyondStandardModel/Conformal Field Theory (Graduate Texts in Contemporary Physics) (Francesco, Philippe, Mathieu, Pierre, Senechal etc.).pdf) – *Philippe Francesco, Pierre Mathieu, David Sénéchal* (Advanced)
