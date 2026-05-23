@@ -9,7 +9,7 @@ page-layout: full
 <p class="hero-subtitle">PhD Candidate in Theoretical Physics</p>
 <h2 class="hero-title">Covariant loop quantum gravity,<br> 
 <span class="highlight">spinfoam cosmology</span>,<br>
- and the phenomenology of
+ and phenomenology of
 <span class="highlight">primordial black holes</span>.</h2>
 
 <div class="hero-links">
