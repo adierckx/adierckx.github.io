@@ -391,3 +391,14 @@ body::after {
     font-size: 0.85rem;
   }
 }
+/* --- Navbar Mobile --- */
+  .navbar-brand-container {
+    display: flex !important;
+    align-items: center;
+  }
+  
+  .navbar-logo, .navbar-brand img {
+    display: block !important;
+    max-height: 40px !important; /* Légèrement réduit par rapport aux 50px du PC pour ne pas déformer la barre */
+    width: auto;
+  }
