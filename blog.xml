@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>Antoine Dierckx</title>
-<link>https://adierckx.github.io/blog.html</link>
-<atom:link href="https://adierckx.github.io/blog.xml" rel="self" type="application/rss+xml"/>
+<link>https://adierckx.com/blog.html</link>
+<atom:link href="https://adierckx.com/blog.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.9.38</generator>
 <lastBuildDate>Thu, 21 May 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Some useful links for physics students</title>
   <dc:creator>Antoine Dierckx</dc:creator>
-  <link>https://adierckx.github.io/posts/links.html</link>
+  <link>https://adierckx.com/posts/links.html</link>
   <description><![CDATA[ 
 
 
@@ -70,7 +70,7 @@
   <category>resources</category>
   <category>physics</category>
   <category>tools</category>
-  <guid>https://adierckx.github.io/posts/links.html</guid>
+  <guid>https://adierckx.com/posts/links.html</guid>
   <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>
