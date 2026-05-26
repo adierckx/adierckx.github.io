@@ -1,0 +1,38 @@
+---
+title: "Blog"
+page-layout: custom
+toc: false
+---
+
+<canvas id="spinfoamEasterEgg"></canvas>
+
+<style>
+  /* Masque les éléments d'interface globaux (navbar, footer, etc.) */
+  .navbar, header, footer { 
+    display: none !important; 
+  }
+  
+  /* Force le plein écran absolu et empêche le défilement */
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--bg-color, #151c24); /* Conserve ton fond sombre */
+  }
+  
+  /* Ajustement du canevas pour couvrir toute la fenêtre */
+  #spinfoamEasterEgg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+  }
+</style>
+
+<!-- Lien vers le futur script d'animation -->
+<script defer src="../assets/js/spinfoam_arty.js"></script>
