@@ -9,7 +9,7 @@ toc: true
 
 ## Past Presentations & Seminars
 
-* **Signatures of LQG in PBH cosmologies** *RER-S8 Cosmology Meeting* — UCLouvain, BE (May 26, [2026](./assets/talk_RERS8_temp.pdf))
+* **Signatures of LQG in PBH cosmologies** *RER-S8 Cosmology Meeting* — UCLouvain, BE (May 26, 2026)
 <br>[<i class="bi bi-file-earmark-slides"></i> Slides](./assets/talk_RERS8_20260526.pdf){.btn-surface .c-teal .btn-compact}
 
 * **Constraining PBH remnants with LISA and cosmological observables** *LISA Madrid Group Meeting* — Madrid, ES (Apr 9, 2026)
