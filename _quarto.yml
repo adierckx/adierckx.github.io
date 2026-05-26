@@ -1,6 +1,7 @@
 project:
   type: website
-
+  resources:
+    - CNAME
 website:
   title: "Antoine Dierckx"
   favicon: assets/css/logo_bi_whiteteal_shad.svg
