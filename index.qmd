@@ -33,6 +33,16 @@ page-layout: full
 
 ::: {.column-page}
 
+::: {.callout-tip appearance="simple" icon="false"}
+## Recent Release: `pbh-rem`code
+
+This Mathematica framework computes phenomenological constraints on Primordial Black Holes with stable remnants (LQG Planckian relics and Memory Burden effects). 
+
+<br>
+[Read the Blog Post ➔](./posts/pbh-rem.qmd){.btn .btn-primary .c-teal}
+
+:::
+
 ---
 
 ## Research Focus

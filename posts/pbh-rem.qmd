@@ -1,0 +1,51 @@
+---
+title: "Releasing pbh-rem: A framework for PBH remnants"
+description: "A suite of Mathematica notebooks designed to simulate the cosmological evolution of Primordial Black Holes and their remnants."
+date: "2026-05-27"
+categories: [code, cosmology, quantum gravity, primordial black holes]
+toc: true
+---
+
+The [**pbh-rem**](https://github.com/adierckx/pbh-rem) repository is a Mathematica-based model designed to simulate the cosmological evolution of **Primordial Black Holes** and the remnants they leave behind. 
+
+<div align="center">
+  <svg width="500" height="100" viewBox="0 0 400 80" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="pbh-rem-grad-center" x1="0%" y1="100%" x2="100%" y2="90%">
+        <stop offset="0%" stop-color="#a855f7" />
+        <stop offset="50%" stop-color="#0d9488" />
+        <stop offset="100%" stop-color="#0d9488" />
+      </linearGradient>
+    </defs>
+    <text x="50%" y="55" 
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" 
+          font-size="52" 
+          font-weight="800" 
+          text-anchor="middle"
+          fill="url(#pbh-rem-grad-center)">
+      PBH-REM
+    </text>
+  </svg>
+</div>
+
+In standard physics, semi-classical Hawking radiation suggests that black holes evaporate completely. However, mechanisms like **Loop Quantum Gravity** or the **Memory Burden effect** introduce a limit to this evaporation, leaving behind stable or very long-lived remnants. To understand the impact of these objects on our universe, we need to carefully track their energy density across all cosmic eras; from radiation to matter and dark energy. 
+
+This code provides a rigorous way to do exactly that.
+
+### How the framework works
+
+Built for Mathematica 14.1, the `pbh-rem` pipeline is designed to handle the differential equations that occur around the exact moment a black hole evaporates. The workflow is split into three main parts:
+
+1. **Analytical Derivations (`01_alpha.nb`):** A helper notebook that computes the analytical expressions for the initial abundance coefficients $\alpha_{A}$ for each species $A$.
+2. **The Numerical Engine (`02_model.nb`):** The core solver. It integrates the evolution of the PBH population across cosmic time, computing the transitions between standard evaporation and the stable remnant phase. 
+3. **Visualization & Data Export (`03_visuals.nb`):** This notebook generates plots of the universe's history. It also runs an optimization algorithm to find the maximum allowed initial PBH abundance $\beta_{\rm max}$, exporting detailed datasets. For every tested configuration, it tracks 96 different physical variables across four distinct cosmological milestones (Formation, Evaporation, Remnant Diffusion, and Today).
+
+### The Paper
+
+This code was developed for our paper: *"Signatures of loop quantum gravity in primordial black hole cosmologies"* (Antoine Dierckx, Sébastien Clesse, Francesca Vidotto). 
+
+You can find the preprint [here](../research/papers.qmd). Feel free to explore the repository, run the visualizer notebook to see the cosmic history plots, or adapt the model to test your own phenomenological constraints.
+
+<br>
+
+[View the **pbh-rem** repository on GitHub &rarr;](https://github.com/adierckx/pbh-rem){.btn .btn-primary}
