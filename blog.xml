@@ -10,7 +10,48 @@
 <atom:link href="https://adierckx.com/blog.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.9.38</generator>
-<lastBuildDate>Thu, 21 May 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 27 May 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Releasing pbh-rem: A framework for PBH remnants</title>
+  <link>https://adierckx.com/posts/pbh-rem.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The <a href="https://github.com/adierckx/pbh-rem"><strong>pbh-rem</strong></a> repository is a Mathematica-based model designed to simulate the cosmological evolution of <strong>Primordial Black Holes</strong> and the remnants they leave behind.</p>
+<div data-align="center">
+<p><svg width="500" height="100" viewbox="0 0 400 80" xmlns="http://www.w3.org/2000/svg"> <defs> <lineargradient id="pbh-rem-grad-center" x1="0%" y1="100%" x2="100%" y2="90%"> <stop offset="0%" stop-color="#a855f7"></stop> <stop offset="50%" stop-color="#0d9488"></stop> <stop offset="100%" stop-color="#0d9488"></stop> </lineargradient> </defs> <text x="50%" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="52" font-weight="800" text-anchor="middle" fill="url(#pbh-rem-grad-center)"> PBH-REM </text> </svg></p>
+</div>
+<p>In standard physics, semi-classical Hawking radiation suggests that black holes evaporate completely. However, mechanisms like <strong>Loop Quantum Gravity</strong> or the <strong>Memory Burden effect</strong> introduce a limit to this evaporation, leaving behind stable or very long-lived remnants. To understand the impact of these objects on our universe, we need to carefully track their energy density across all cosmic eras; from radiation to matter and dark energy.</p>
+<p>This code provides a rigorous way to do exactly that.</p>
+<section id="how-the-framework-works" class="level3">
+<h3 data-anchor-id="how-the-framework-works">How the framework works</h3>
+<p>Built for Mathematica 14.1, the <code>pbh-rem</code> pipeline is designed to handle the differential equations that occur around the exact moment a black hole evaporates. The workflow is split into three main parts:</p>
+<ol type="1">
+<li><strong>Analytical Derivations (<code>01_alpha.nb</code>):</strong> A helper notebook that computes the analytical expressions for the initial abundance coefficients <img src="https://latex.codecogs.com/png.latex?%5Calpha_%7BA%7D"> for each species <img src="https://latex.codecogs.com/png.latex?A">.</li>
+<li><strong>The Numerical Engine (<code>02_model.nb</code>):</strong> The core solver. It integrates the evolution of the PBH population across cosmic time, computing the transitions between standard evaporation and the stable remnant phase.</li>
+<li><strong>Visualization &amp; Data Export (<code>03_visuals.nb</code>):</strong> This notebook generates plots of the universe’s history. It also runs an optimization algorithm to find the maximum allowed initial PBH abundance <img src="https://latex.codecogs.com/png.latex?%5Cbeta_%7B%5Crm%20max%7D">, exporting detailed datasets. For every tested configuration, it tracks 96 different physical variables across four distinct cosmological milestones (Formation, Evaporation, Remnant Diffusion, and Today).</li>
+</ol>
+</section>
+<section id="the-paper" class="level3">
+<h3 data-anchor-id="the-paper">The Paper</h3>
+<p>This code was developed for our paper: <em>“Signatures of loop quantum gravity in primordial black hole cosmologies”</em> (Antoine Dierckx, Sébastien Clesse, Francesca Vidotto).</p>
+<p>You can find the preprint <a href="../research/papers.html">here</a>. Feel free to explore the repository, run the visualizer notebook to see the cosmic history plots, or adapt the model to test your own phenomenological constraints.</p>
+<p><br></p>
+<p><a href="https://github.com/adierckx/pbh-rem" class="btn btn-primary">View the <strong>pbh-rem</strong> repository on GitHub →</a></p>
+
+
+</section>
+
+ ]]></description>
+  <category>code</category>
+  <category>cosmology</category>
+  <category>quantum gravity</category>
+  <category>primordial black holes</category>
+  <guid>https://adierckx.com/posts/pbh-rem.html</guid>
+  <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Some useful links for physics students</title>
   <dc:creator>Antoine Dierckx</dc:creator>

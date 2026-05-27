@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-05-27">
+<meta name="description" content="A suite of Mathematica notebooks designed to simulate the cosmological evolution of Primordial Black Holes and their remnants.">
 
-<title>info-f-207 – Antoine Dierckx</title>
+<title>Releasing pbh-rem: A framework for PBH remnants – Antoine Dierckx</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,23 +28,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../assets/css/logo_bi_whiteteal_shad.svg" rel="icon" type="image/svg+xml">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-55c8b1d05ec50d1d925a7a6f99175e55.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/css/logo_bi_whiteteal_shad.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-55c8b1d05ec50d1d925a7a6f99175e55.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,22 +74,51 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../../assets/css/styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../assets/css/logo_bi_whiteteal_shad.svg" alt="" class="navbar-logo light-content">
-    <img src="../../assets/css/logo_bi_whiteteal_shad.svg" alt="" class="navbar-logo dark-content">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/css/logo_bi_whiteteal_shad.svg" alt="" class="navbar-logo light-content">
+    <img src="../assets/css/logo_bi_whiteteal_shad.svg" alt="" class="navbar-logo dark-content">
     </a>
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Antoine Dierckx</span>
     </a>
   </div>
@@ -98,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -107,19 +138,19 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-research">    
         <li>
-    <a class="dropdown-item" href="../../research/themes.html">
+    <a class="dropdown-item" href="../research/themes.html">
  <span class="dropdown-text">Research Themes</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../research/papers.html">
+    <a class="dropdown-item" href="../research/papers.html">
  <span class="dropdown-text">Publications</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../research/talks.html">
+    <a class="dropdown-item" href="../research/talks.html">
  <span class="dropdown-text">Talks &amp; Slides</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../research/early-research.html">
+    <a class="dropdown-item" href="../research/early-research.html">
  <span class="dropdown-text">Early Research</span></a>
   </li>  
     </ul>
@@ -130,29 +161,29 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-teaching--notes">    
         <li>
-    <a class="dropdown-item" href="../../notes/master.html">
+    <a class="dropdown-item" href="../notes/master.html">
  <span class="dropdown-text">Master Notes</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../notes/bachelor.html">
+    <a class="dropdown-item" href="../notes/bachelor.html">
  <span class="dropdown-text">Bachelor Notes (FR)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../notes/math.html">
+    <a class="dropdown-item" href="../notes/math.html">
  <span class="dropdown-text">Math Notes (FR)</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../outreach/projects.html"> 
+    <a class="nav-link" href="../outreach/projects.html"> 
 <span class="menu-text">Outreach &amp; Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../blog.html"> 
+    <a class="nav-link" href="../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -166,21 +197,46 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#how-the-framework-works" id="toc-how-the-framework-works" class="nav-link active" data-scroll-target="#how-the-framework-works">How the framework works</a></li>
+  <li><a href="#the-paper" id="toc-the-paper" class="nav-link" data-scroll-target="#the-paper">The Paper</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Informatique</h1>
-<p class="subtitle lead">Synthèse du cours de INFO-F207</p>
-</div>
+<h1 class="title">Releasing pbh-rem: A framework for PBH remnants</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">code</div>
+    <div class="quarto-category">cosmology</div>
+    <div class="quarto-category">quantum gravity</div>
+    <div class="quarto-category">primordial black holes</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    A suite of Mathematica notebooks designed to simulate the cosmological evolution of Primordial Black Holes and their remnants.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 27, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -190,10 +246,30 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Enseignant :</strong> Sébastien CLESSE (Année 2021-2022)<br>
-<strong>Ressources officielles :</strong> <a href="https://www.ulb.be/fr/programme/info-f207" class="btn btn-outline-light btn-sm ms-2"><i class="bi bi-link-45deg"></i> Page de l’ULB</a> <a href="https://dochub.be/catalog/course/info-f207" class="btn btn-outline-light btn-sm ms-2"><i class="bi bi-folder2-open"></i> Espace Dochub</a></p>
+<p>The <a href="https://github.com/adierckx/pbh-rem"><strong>pbh-rem</strong></a> repository is a Mathematica-based model designed to simulate the cosmological evolution of <strong>Primordial Black Holes</strong> and the remnants they leave behind.</p>
+<div data-align="center">
+<p><svg width="500" height="100" viewbox="0 0 400 80" xmlns="http://www.w3.org/2000/svg"> <defs> <lineargradient id="pbh-rem-grad-center" x1="0%" y1="100%" x2="100%" y2="90%"> <stop offset="0%" stop-color="#a855f7"></stop> <stop offset="50%" stop-color="#0d9488"></stop> <stop offset="100%" stop-color="#0d9488"></stop> </lineargradient> </defs> <text x="50%" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="52" font-weight="800" text-anchor="middle" fill="url(#pbh-rem-grad-center)"> PBH-REM </text> </svg></p>
+</div>
+<p>In standard physics, semi-classical Hawking radiation suggests that black holes evaporate completely. However, mechanisms like <strong>Loop Quantum Gravity</strong> or the <strong>Memory Burden effect</strong> introduce a limit to this evaporation, leaving behind stable or very long-lived remnants. To understand the impact of these objects on our universe, we need to carefully track their energy density across all cosmic eras; from radiation to matter and dark energy.</p>
+<p>This code provides a rigorous way to do exactly that.</p>
+<section id="how-the-framework-works" class="level3">
+<h3 data-anchor-id="how-the-framework-works">How the framework works</h3>
+<p>Built for Mathematica 14.1, the <code>pbh-rem</code> pipeline is designed to handle the differential equations that occur around the exact moment a black hole evaporates. The workflow is split into three main parts:</p>
+<ol type="1">
+<li><strong>Analytical Derivations (<code>01_alpha.nb</code>):</strong> A helper notebook that computes the analytical expressions for the initial abundance coefficients <span class="math inline">\(\alpha_{A}\)</span> for each species <span class="math inline">\(A\)</span>.</li>
+<li><strong>The Numerical Engine (<code>02_model.nb</code>):</strong> The core solver. It integrates the evolution of the PBH population across cosmic time, computing the transitions between standard evaporation and the stable remnant phase.</li>
+<li><strong>Visualization &amp; Data Export (<code>03_visuals.nb</code>):</strong> This notebook generates plots of the universe’s history. It also runs an optimization algorithm to find the maximum allowed initial PBH abundance <span class="math inline">\(\beta_{\rm max}\)</span>, exporting detailed datasets. For every tested configuration, it tracks 96 different physical variables across four distinct cosmological milestones (Formation, Evaporation, Remnant Diffusion, and Today).</li>
+</ol>
+</section>
+<section id="the-paper" class="level3">
+<h3 data-anchor-id="the-paper">The Paper</h3>
+<p>This code was developed for our paper: <em>“Signatures of loop quantum gravity in primordial black hole cosmologies”</em> (Antoine Dierckx, Sébastien Clesse, Francesca Vidotto).</p>
+<p>You can find the preprint <a href="../research/papers.html">here</a>. Feel free to explore the repository, run the visualizer notebook to see the cosmic history plots, or adapt the model to test your own phenomenological constraints.</p>
+<p><br></p>
+<p><a href="https://github.com/adierckx/pbh-rem" class="btn btn-primary">View the <strong>pbh-rem</strong> repository on GitHub →</a></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
