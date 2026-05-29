@@ -29,26 +29,43 @@ page-layout: full
 :::
 
 <script defer src="assets/js/spinfoam.js"></script>
+:::
 
 ::: {.column-page}
 
-::: {.callout-tip appearance="simple" icon="false"}
-## Recent Release: my first paper!
+## Recent Releases
 
-My first, in collaboration with Francesca Vidotto and Sébastien Clesse, is out on the arXiv! It explores the signatures of Loop Quantum Gravity in Primordial Black Hole cosmologies.
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+::: {.release-card}
+<div class="release-badge paper-badge">New Paper</div>
+### Signatures of LQG in PBH cosmologies
+*In collaboration with F. Vidotto & S. Clesse.* 
+
+Exploring the phenomenological signatures of Loop Quantum Gravity in the context of Primordial Black Hole cosmologies.
 
 <br>
-[Check the paper ➔](https://inspirehep.net/literature/3162406){.btn .btn-primary .c-teal}
-
+<a href="https://arxiv.org/..." target="_blank" class="btn btn-outline-primary btn-sm release-btn">
+  <i class="ai ai-arxiv"></i> Read on arXiv ➔
+</a>
+:::
 :::
 
-::: {.callout-tip appearance="simple" icon="false"}
-## Recent Release: `pbh-rem`code
+::: {.g-col-12 .g-col-md-6}
+::: {.release-card}
+<div class="release-badge code-badge">New Code</div>
+### Framework `pbh-rem`
+*Developed in Mathematica.*
 
-This Mathematica framework computes phenomenological constraints on Primordial Black Holes with stable remnants (LQG Planckian relics and Memory Burden effects). 
+Computational framework to evaluate phenomenological constraints on Primordial Black Holes with stable remnants (Planckian relics and Memory Burden effects).
 
 <br>
-[Read the Blog Post ➔](./posts/pbh-rem.qmd){.btn .btn-primary .c-teal}
+<a href="./posts/pbh-rem.qmd" class="btn btn-outline-info btn-sm release-btn">
+  Read the blog post ➔
+</a>
+:::
+:::
 
 :::
 

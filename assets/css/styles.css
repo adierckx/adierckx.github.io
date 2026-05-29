@@ -195,7 +195,7 @@ strong, b {
 /* --- Hero Banner (Pleine largeur avec animation en fond) --- */
 .hero-section {
   position: relative;
-  width: 100vw;
+  width: 100%;/* width: 100vw; */
   height: 55vh; 
   min-height: 450px;
   display: flex;
@@ -203,8 +203,8 @@ strong, b {
   justify-content: center;
   margin-top: -1.5em; /* Compense la marge interne par défaut de Quarto */
   margin-bottom: 3rem;
-  left: 50%;
-  transform: translateX(-50%);
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
 }
 
 /* Dégradé pour fondre l'animation dans le fond (remplace la coupure nette) */
@@ -402,3 +402,58 @@ body::after {
     max-height: 40px !important; /* Légèrement réduit par rapport aux 50px du PC pour ne pas déformer la barre */
     width: auto;
   }
+  /* Container de la carte */
+.release-card {
+  background: rgba(255, 255, 255, 0.03); /* Fond très léger */
+  border: 1px solid rgba(211, 163, 255, 0.2); /* Bordure violette discrète */
+  border-radius: 10px;
+  padding: 1.5rem;
+  height: 100%;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Effet au survol */
+.release-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(211, 163, 255, 0.15); /* Halo violet */
+  border: 1px solid rgba(211, 163, 255, 0.5);
+}
+
+/* Typographie spécifique */
+.release-card h3 {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* Badges pour identifier rapidement le type de contenu */
+.release-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.paper-badge {
+  background-color: #d3a3ff; /* Violet */
+  color: #1a1a1a;
+}
+
+.code-badge {
+  background-color: #20c997; /* Teal */
+  color: #1a1a1a;
+}
+
+/* Boutons en bas de carte */
+.release-btn {
+  margin-top: auto; /* Pousse le bouton en bas si les textes n'ont pas la même taille */
+  align-self: flex-start;
+}
