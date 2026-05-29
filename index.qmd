@@ -13,7 +13,7 @@ page-layout: full
 <span class="highlight">primordial black holes</span>.</h2>
 
 <div class="hero-links">
-  <a href="https://arxiv.org/list/gr-qc/new" target="_blank">
+  <a href="https://arxiv.org/search/gr-qc?searchtype=author&query=Dierckx,+A" target="_blank">
     <i class="ai ai-arxiv" style="color: #d3a3ff;"></i> arXiv
   </a>
   <span class="separator">|</span>
@@ -25,13 +25,22 @@ page-layout: full
     <i class="ai ai-inspire" style="color: #d3a3ff;"></i> iNSPIRE HEP
   </a>
 </div>
-:::
 
 :::
 
 <script defer src="assets/js/spinfoam.js"></script>
 
 ::: {.column-page}
+
+::: {.callout-tip appearance="simple" icon="false"}
+## Recent Release: my first paper!
+
+My first, in collaboration with Francesca Vidotto and Sébastien Clesse, is out on the arXiv! It explores the signatures of Loop Quantum Gravity in Primordial Black Hole cosmologies.
+
+<br>
+[Check the paper ➔](https://inspirehep.net/literature/3162406){.btn .btn-primary .c-teal}
+
+:::
 
 ::: {.callout-tip appearance="simple" icon="false"}
 ## Recent Release: `pbh-rem`code

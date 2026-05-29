@@ -3,6 +3,7 @@ project:
   resources:
     - CNAME
 website:
+  site-url: "https://adierckx.com"
   title: "Antoine Dierckx"
   favicon: assets/css/logo_bi_whiteteal_shad.svg
   navbar:

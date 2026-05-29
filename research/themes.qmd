@@ -17,7 +17,7 @@ $$ {#eq-tunneling-probability}
 This mechanism leads to Planckian relics, which represent a viable, non-baryonic candidate for dark matter and introduce specific signatures in primordial cosmological backgrounds.
 
 * **Associated Code:** A Mathematica framework developed to derive constraints on these PBH models can be found in the repo [pbh-rem](https://github.com/adierckx/pbh-rem).
-* **Recent Preprint:** Our forthcoming paper detailing these signatures will be linked here this Friday.
+* **Recent Preprint:** A preprint exploring the signatures of LQG in PBH cosmologies, in collaboration with Francesca Vidotto and Sébastien Clesse, is available on the arXiv: [arXiv:2605.28953](https://inspirehep.net/literature/3162406).
 
 ### Macroscopic Remnants via the Memory Burden Effect
 Other stabilization mechanisms include the Memory Burden effect (**MBe**), in which the suppression of the evaporation rate is related to the information capacity of the black hole. The remnants predicted by this mechanism are macroscopic, typically after the black hole has evaporated roughly half of its initial mass ($m \sim m_0 / 2$). 

@@ -7,9 +7,8 @@ A complete and automatically updated list of my publications can also be found o
 
 ## Preprints & Working Papers
 
-* **Signatures of loop quantum gravity in primordial black hole cosmologies**  
-  Antoine Dierckx, Sébastien Clesse, Francesca Vidotto. (2026)  
-  [[arXiv:XXXX.XXXXX]](#) | [[Code: pbh-rem]](https://github.com/adierckx/pbh-rem)
+* **Signatures of loop quantum gravity in primordial black hole cosmologies** [[arXiv:2605.28953]](https://arxiv.org/abs/2605.28953)
+  Antoine Dierckx, Sébastien Clesse, Francesca Vidotto. (2026)
 
 <!-- 
 ## Published Papers
