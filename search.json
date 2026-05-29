@@ -11,21 +11,28 @@
     "href": "index.html",
     "title": "Antoine Dierckx",
     "section": "",
-    "text": "PhD Candidate in Theoretical Physics\n\n\n\n  arXiv  |   ORCiD  |   iNSPIRE HEP \n\n\n\n\n\n\n\n\n\n\nTipRecent Release: my first paper!\n\n\n\nMy first, in collaboration with Francesca Vidotto and Sébastien Clesse, is out on the arXiv! It explores the signatures of Loop Quantum Gravity in Primordial Black Hole cosmologies.\n Check the paper ➔\n\n\n\n\n\n\n\n\nTipRecent Release: pbh-remcode\n\n\n\nThis Mathematica framework computes phenomenological constraints on Primordial Black Holes with stable remnants (LQG Planckian relics and Memory Burden effects).\n Read the Blog Post ➔\n\n\n\n\n\n\n\n\nStudying the phenomenological consequences of stabilization mechanisms in PBH evaporation, focusing on Planckian relics within Loop Quantum Gravity and macroscopic remnants induced by the Memory Burden effect.\n\n\n\nDeveloping numerical and computational tools to evaluate spin foam amplitudes, with a specific application to structural transitions in spinfoam cosmology.\n\n\n\n\n\n\n\n\n\n\nResearch Themes\n\n\nPublications\n\n\nTalks & Slides\n\n\nEarly Research\n\n\n\n\n\n\n\nBachelor Notes\n\n\nMaster Notes\n\n\n\n\n\n\n\nOutreach & Projects\n\n\nBlog"
+    "text": "PhD Candidate in Theoretical Physics\n\n\n\n  arXiv  |   ORCiD  |   iNSPIRE HEP"
+  },
+  {
+    "objectID": "index.html#recent-releases",
+    "href": "index.html#recent-releases",
+    "title": "Antoine Dierckx",
+    "section": "Recent Releases",
+    "text": "Recent Releases\n\n\n\n\nNew Paper\n\n\nSignatures of LQG in PBH cosmologies\nIn collaboration with F. Vidotto & S. Clesse.\nExploring the phenomenological signatures of Loop Quantum Gravity in the context of Primordial Black Hole cosmologies.\n   Read on arXiv ➔ \n\n\n\n\n\n\nNew Code\n\n\nFramework pbh-rem\nDeveloped in Mathematica.\nComputational framework to evaluate phenomenological constraints on Primordial Black Holes with stable remnants (Planckian relics and Memory Burden effects).\n  Read the blog post ➔"
   },
   {
     "objectID": "index.html#research-focus",
     "href": "index.html#research-focus",
     "title": "Antoine Dierckx",
-    "section": "",
-    "text": "Studying the phenomenological consequences of stabilization mechanisms in PBH evaporation, focusing on Planckian relics within Loop Quantum Gravity and macroscopic remnants induced by the Memory Burden effect.\n\n\n\nDeveloping numerical and computational tools to evaluate spin foam amplitudes, with a specific application to structural transitions in spinfoam cosmology."
+    "section": "Research Focus",
+    "text": "Research Focus\n\n\nPrimordial Black Holes & Remnants\nStudying the phenomenological consequences of stabilization mechanisms in PBH evaporation, focusing on Planckian relics within Loop Quantum Gravity and macroscopic remnants induced by the Memory Burden effect.\n\n\nSpinfoam Numerics & Cosmology\nDeveloping numerical and computational tools to evaluate spin foam amplitudes, with a specific application to structural transitions in spinfoam cosmology."
   },
   {
     "objectID": "index.html#navigation",
     "href": "index.html#navigation",
     "title": "Antoine Dierckx",
-    "section": "",
-    "text": "Research Themes\n\n\nPublications\n\n\nTalks & Slides\n\n\nEarly Research\n\n\n\n\n\n\n\nBachelor Notes\n\n\nMaster Notes\n\n\n\n\n\n\n\nOutreach & Projects\n\n\nBlog"
+    "section": "Navigation",
+    "text": "Navigation\n\nAcademic Research\n\n\nResearch Themes\n\n\nPublications\n\n\nTalks & Slides\n\n\nEarly Research\n\n\n\n\nTeaching & Notes\n\n\nBachelor Notes\n\n\nMaster Notes\n\n\n\n\nEngagement & Projects\n\n\nOutreach & Projects\n\n\nBlog"
   },
   {
     "objectID": "research/talks.html",
