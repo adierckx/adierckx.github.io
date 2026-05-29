@@ -11,21 +11,21 @@
     "href": "index.html",
     "title": "Antoine Dierckx",
     "section": "",
-    "text": "PhD Candidate in Theoretical Physics\n\n\n\n  arXiv  |   ORCiD  |   iNSPIRE HEP"
+    "text": "PhD Candidate in Theoretical Physics\n\n\n\n  arXiv  |   ORCiD  |   iNSPIRE HEP \n\n\n\n\n\n\n\n\n\n\nTipRecent Release: my first paper!\n\n\n\nMy first, in collaboration with Francesca Vidotto and Sébastien Clesse, is out on the arXiv! It explores the signatures of Loop Quantum Gravity in Primordial Black Hole cosmologies.\n Check the paper ➔\n\n\n\n\n\n\n\n\nTipRecent Release: pbh-remcode\n\n\n\nThis Mathematica framework computes phenomenological constraints on Primordial Black Holes with stable remnants (LQG Planckian relics and Memory Burden effects).\n Read the Blog Post ➔\n\n\n\n\n\n\n\n\nStudying the phenomenological consequences of stabilization mechanisms in PBH evaporation, focusing on Planckian relics within Loop Quantum Gravity and macroscopic remnants induced by the Memory Burden effect.\n\n\n\nDeveloping numerical and computational tools to evaluate spin foam amplitudes, with a specific application to structural transitions in spinfoam cosmology.\n\n\n\n\n\n\n\n\n\n\nResearch Themes\n\n\nPublications\n\n\nTalks & Slides\n\n\nEarly Research\n\n\n\n\n\n\n\nBachelor Notes\n\n\nMaster Notes\n\n\n\n\n\n\n\nOutreach & Projects\n\n\nBlog"
   },
   {
     "objectID": "index.html#research-focus",
     "href": "index.html#research-focus",
     "title": "Antoine Dierckx",
-    "section": "Research Focus",
-    "text": "Research Focus\n\n\nPrimordial Black Holes & Remnants\nStudying the phenomenological consequences of stabilization mechanisms in PBH evaporation, focusing on Planckian relics within Loop Quantum Gravity and macroscopic remnants induced by the Memory Burden effect.\n\n\nSpinfoam Numerics & Cosmology\nDeveloping numerical and computational tools to evaluate spin foam amplitudes, with a specific application to structural transitions in spinfoam cosmology."
+    "section": "",
+    "text": "Studying the phenomenological consequences of stabilization mechanisms in PBH evaporation, focusing on Planckian relics within Loop Quantum Gravity and macroscopic remnants induced by the Memory Burden effect.\n\n\n\nDeveloping numerical and computational tools to evaluate spin foam amplitudes, with a specific application to structural transitions in spinfoam cosmology."
   },
   {
     "objectID": "index.html#navigation",
     "href": "index.html#navigation",
     "title": "Antoine Dierckx",
-    "section": "Navigation",
-    "text": "Navigation\n\nAcademic Research\n\n\nResearch Themes\n\n\nPublications\n\n\nTalks & Slides\n\n\nEarly Research\n\n\n\n\nTeaching & Notes\n\n\nBachelor Notes\n\n\nMaster Notes\n\n\n\n\nEngagement & Projects\n\n\nOutreach & Projects\n\n\nBlog"
+    "section": "",
+    "text": "Research Themes\n\n\nPublications\n\n\nTalks & Slides\n\n\nEarly Research\n\n\n\n\n\n\n\nBachelor Notes\n\n\nMaster Notes\n\n\n\n\n\n\n\nOutreach & Projects\n\n\nBlog"
   },
   {
     "objectID": "research/talks.html",
@@ -60,7 +60,7 @@
     "href": "research/papers.html#preprints-working-papers",
     "title": "Publications",
     "section": "Preprints & Working Papers",
-    "text": "Preprints & Working Papers\n\nSignatures of loop quantum gravity in primordial black hole cosmologies\nAntoine Dierckx, Sébastien Clesse, Francesca Vidotto. (2026)\n[arXiv:XXXX.XXXXX] | [Code: pbh-rem]"
+    "text": "Preprints & Working Papers\n\nSignatures of loop quantum gravity in primordial black hole cosmologies [arXiv:2605.28953] Antoine Dierckx, Sébastien Clesse, Francesca Vidotto. (2026)"
   },
   {
     "objectID": "research/papers.html#scientific-software-repositories",
@@ -669,14 +669,14 @@
     "href": "research/themes.html",
     "title": "Research Themes",
     "section": "",
-    "text": "My research investigates the phenomenological consequences of non-perturbative quantum gravity corrections on the evolution of light Primordial Black Holes (PBHs) in the early universe. Standard semi-classical Hawking evaporation predicts runaway evaporation, but Loop Quantum Gravity (LQG) introduces a natural UV cut-off that fundamentally alters this late-stage behavior.\n\n\nIn LQG, the quantization of geometric operators resolves the central singularity, replacing it with a quantum bounce into an antitrapped spacetime region. A central prediction is the quantum tunneling of the classical black hole geometry to a white hole geometry, with a transition probability exponentially suppressed by the squared mass:\n\\[\nP \\sim e^{-(m/m_{\\mathrm{Pl}})^2}~.\n\\tag{1}\\]\nThis mechanism leads to Planckian relics, which represent a viable, non-baryonic candidate for dark matter and introduce specific signatures in primordial cosmological backgrounds.\n\nAssociated Code: A Mathematica framework developed to derive constraints on these PBH models can be found in the repo pbh-rem.\nRecent Preprint: Our forthcoming paper detailing these signatures will be linked here this Friday.\n\n\n\n\nOther stabilization mechanisms include the Memory Burden effect (MBe), in which the suppression of the evaporation rate is related to the information capacity of the black hole. The remnants predicted by this mechanism are macroscopic, typically after the black hole has evaporated roughly half of its initial mass (\\(m \\sim m_0 / 2\\))."
+    "text": "My research investigates the phenomenological consequences of non-perturbative quantum gravity corrections on the evolution of light Primordial Black Holes (PBHs) in the early universe. Standard semi-classical Hawking evaporation predicts runaway evaporation, but Loop Quantum Gravity (LQG) introduces a natural UV cut-off that fundamentally alters this late-stage behavior.\n\n\nIn LQG, the quantization of geometric operators resolves the central singularity, replacing it with a quantum bounce into an antitrapped spacetime region. A central prediction is the quantum tunneling of the classical black hole geometry to a white hole geometry, with a transition probability exponentially suppressed by the squared mass:\n\\[\nP \\sim e^{-(m/m_{\\mathrm{Pl}})^2}~.\n\\tag{1}\\]\nThis mechanism leads to Planckian relics, which represent a viable, non-baryonic candidate for dark matter and introduce specific signatures in primordial cosmological backgrounds.\n\nAssociated Code: A Mathematica framework developed to derive constraints on these PBH models can be found in the repo pbh-rem.\nRecent Preprint: A preprint exploring the signatures of LQG in PBH cosmologies, in collaboration with Francesca Vidotto and Sébastien Clesse, is available on the arXiv: arXiv:2605.28953.\n\n\n\n\nOther stabilization mechanisms include the Memory Burden effect (MBe), in which the suppression of the evaporation rate is related to the information capacity of the black hole. The remnants predicted by this mechanism are macroscopic, typically after the black hole has evaporated roughly half of its initial mass (\\(m \\sim m_0 / 2\\))."
   },
   {
     "objectID": "research/themes.html#primordial-black-holes-dark-matter-remnants",
     "href": "research/themes.html#primordial-black-holes-dark-matter-remnants",
     "title": "Research Themes",
     "section": "",
-    "text": "My research investigates the phenomenological consequences of non-perturbative quantum gravity corrections on the evolution of light Primordial Black Holes (PBHs) in the early universe. Standard semi-classical Hawking evaporation predicts runaway evaporation, but Loop Quantum Gravity (LQG) introduces a natural UV cut-off that fundamentally alters this late-stage behavior.\n\n\nIn LQG, the quantization of geometric operators resolves the central singularity, replacing it with a quantum bounce into an antitrapped spacetime region. A central prediction is the quantum tunneling of the classical black hole geometry to a white hole geometry, with a transition probability exponentially suppressed by the squared mass:\n\\[\nP \\sim e^{-(m/m_{\\mathrm{Pl}})^2}~.\n\\tag{1}\\]\nThis mechanism leads to Planckian relics, which represent a viable, non-baryonic candidate for dark matter and introduce specific signatures in primordial cosmological backgrounds.\n\nAssociated Code: A Mathematica framework developed to derive constraints on these PBH models can be found in the repo pbh-rem.\nRecent Preprint: Our forthcoming paper detailing these signatures will be linked here this Friday.\n\n\n\n\nOther stabilization mechanisms include the Memory Burden effect (MBe), in which the suppression of the evaporation rate is related to the information capacity of the black hole. The remnants predicted by this mechanism are macroscopic, typically after the black hole has evaporated roughly half of its initial mass (\\(m \\sim m_0 / 2\\))."
+    "text": "My research investigates the phenomenological consequences of non-perturbative quantum gravity corrections on the evolution of light Primordial Black Holes (PBHs) in the early universe. Standard semi-classical Hawking evaporation predicts runaway evaporation, but Loop Quantum Gravity (LQG) introduces a natural UV cut-off that fundamentally alters this late-stage behavior.\n\n\nIn LQG, the quantization of geometric operators resolves the central singularity, replacing it with a quantum bounce into an antitrapped spacetime region. A central prediction is the quantum tunneling of the classical black hole geometry to a white hole geometry, with a transition probability exponentially suppressed by the squared mass:\n\\[\nP \\sim e^{-(m/m_{\\mathrm{Pl}})^2}~.\n\\tag{1}\\]\nThis mechanism leads to Planckian relics, which represent a viable, non-baryonic candidate for dark matter and introduce specific signatures in primordial cosmological backgrounds.\n\nAssociated Code: A Mathematica framework developed to derive constraints on these PBH models can be found in the repo pbh-rem.\nRecent Preprint: A preprint exploring the signatures of LQG in PBH cosmologies, in collaboration with Francesca Vidotto and Sébastien Clesse, is available on the arXiv: arXiv:2605.28953.\n\n\n\n\nOther stabilization mechanisms include the Memory Burden effect (MBe), in which the suppression of the evaporation rate is related to the information capacity of the black hole. The remnants predicted by this mechanism are macroscopic, typically after the black hole has evaporated roughly half of its initial mass (\\(m \\sim m_0 / 2\\))."
   },
   {
     "objectID": "research/themes.html#spinfoam-numerics-cosmology",
