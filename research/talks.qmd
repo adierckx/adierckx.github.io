@@ -6,6 +6,7 @@ toc: true
 ## Upcoming Presentations
 
 * **Quantum Gravity and Primordial Black Holes** *Journal Club of the Service de Physique Théorique* — ULB, BE (Jun 5, 2026)
+<br>[<i class="bi bi-file-earmark-slides"></i> Slides](./assets/talk_JC-ULB_20260605.pdf){.btn-surface .c-teal .btn-compact}
 * **Phenomenology of PBH remnants** *Black Holes & Cosmology Conference* — Granada, ES (Jun 15–19, 2026)
 
 ## Past Presentations & Seminars
