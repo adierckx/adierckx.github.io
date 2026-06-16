@@ -6,7 +6,7 @@ toc: true
 ## Upcoming Presentations
 
 * **Phenomenology of PBH remnants** *[Black Holes & Cosmology Conference](https://indico.mpp.mpg.de/event/11604/overview)* — Granada, ES (Jun 15–19, 2026)
-<br>[<i class="bi bi-file-earmark-slides"></i> Slides](./assets/talk_20260618_BH%26Cosmo.pdf){.btn-surface .c-teal .btn-compact}
+<br>[<i class="bi bi-file-earmark-slides"></i> Slides](./assets/talk_20260618_BH&26Cosmo.pdf){.btn-surface .c-teal .btn-compact}
 
 ## Past Presentations & Seminars
 
