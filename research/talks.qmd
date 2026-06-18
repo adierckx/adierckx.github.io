@@ -3,12 +3,13 @@ title: "Talks & Events"
 toc: true
 ---
 
-## Upcoming Presentations
+<!-- ## Upcoming Presentations -->
 
-* **Phenomenology of PBH remnants** *[Black Holes & Cosmology Conference](https://indico.mpp.mpg.de/event/11604/overview)* — Granada, ES (Jun 15–19, 2026)
+<!-- ## Past Presentations & Seminars -->
+## Presentations & Seminars
+
+* **Black holes and their remnants** *[Black Holes & Cosmology Conference](https://indico.mpp.mpg.de/event/11604/overview)* — Granada, ES (Jun 15–19, 2026)
 <br>[<i class="bi bi-file-earmark-slides"></i> Slides](./assets/talk_20260618_BH&Cosmo.pdf){.btn-surface .c-teal .btn-compact}
-
-## Past Presentations & Seminars
 
 * **Quantum Gravity and Primordial Black Holes** *Journal Club of the [Service de Physique Théorique](https://physth.ulb.be/activities.html)* — ULB, BE (Jun 5, 2026)
 <br>[<i class="bi bi-file-earmark-slides"></i> Slides](./assets/talk_JC-ULB_20260605.pdf){.btn-surface .c-teal .btn-compact}
