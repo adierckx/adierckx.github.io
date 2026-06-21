@@ -36,5 +36,5 @@ If you're looking to do early research or find internships, check out these reso
 ## 4. Free books
 All the nice textbooks for free, because knowledge should be free:
 
-* **[Sci-Hub](https://sci-hub.se/):** For academic papers.
-* **[Library Genesis](https://libgen.is/)** and **[Z-Library](https://z-lib.org/):** For books.
+* **[Sci-Hub](https://shadowlibraries.github.io/DirectDownloads/academicpapers/):** For academic papers.
+* **[Library Genesis](https://shadowlibraries.github.io/DirectDownloads/libgen/)** and **[Anna's Archive](https://shadowlibraries.github.io/DirectDownloads/AnnasArchive/):** For books.
