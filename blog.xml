@@ -8,8 +8,8 @@
 <title>Antoine Dierckx</title>
 <link>https://adierckx.com/blog.html</link>
 <atom:link href="https://adierckx.com/blog.xml" rel="self" type="application/rss+xml"/>
-<description></description>
-<generator>quarto-1.9.38</generator>
+<description>Antoine Dierckx — theoretical physicist working on loop quantum gravity, primordial black holes and quantum cosmology.</description>
+<generator>quarto-1.10.18</generator>
 <lastBuildDate>Wed, 27 May 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Releasing pbh-rem: A framework for PBH remnants</title>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-38673626e6d0fcc79dde91bc577c55fb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-7b31fad96731a7adb847ec247316949d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -154,10 +157,10 @@ window.Quarto = {
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching--notes" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Teaching &amp; Notes</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-notes-and-resources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Notes and Resources</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-teaching--notes">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-notes-and-resources">    
         <li>
     <a class="dropdown-item" href="./notes/master.html">
  <span class="dropdown-text">Master Notes</span></a>
@@ -223,56 +226,37 @@ window.Quarto = {
 </div>
 <section id="bio" class="level2">
 <h2 data-anchor-id="bio">Bio</h2>
-<p>I am a PhD Candidate in theoretical physics based at the <strong>Instituto de Estructura de la Materia (IEM-CSIC)</strong> in Madrid. My research lies at the intersection of loop quantum gravity, numerics, and early universe cosmology.</p>
+<p>I am a PhD candidate in theoretical physics at the <strong>Instituto de Estructura de la Materia (IEM-CSIC)</strong> in Madrid. My research lies at the interface of loop quantum gravity, quantum cosmology, and early-Universe phenomenology.</p>
+<p>A central part of my work concerns <strong>primordial black holes and black-hole remnants</strong>, including their possible role as dark matter and the cosmological signatures of quantum-gravity effects. I also work on numerical tools for <strong>Lorentzian spinfoam amplitudes</strong> and their applications to spinfoam cosmology.</p>
+</section>
+<section id="current-position" class="level2">
+<h2 data-anchor-id="current-position">Current Position</h2>
+<p><strong>PhD in Theoretical Physics</strong> | Dec 2025 – Present<br>
+<em>IEM-CSIC / Universidad Autónoma de Madrid, Spain</em></p>
 <ul>
 <li><strong>Supervisor:</strong> Dr.&nbsp;Francesca Vidotto (IEM-CSIC)</li>
 <li><strong>Academic Tutor:</strong> Prof.&nbsp;Juan García-Bellido (Universidad Autónoma de Madrid / IFT)</li>
 </ul>
-<section id="core-research" class="level3">
-<h3 data-anchor-id="core-research">Core Research</h3>
-<p>My current research focuses on answering open questions in early-universe cosmology using non-perturbative quantum gravity. I mainly look at <strong>Primordial Black Holes</strong> within <strong>Loop Quantum Gravity</strong>, especially how black holes might transition into white holes, how quantum effects resolve singularities, and whether stable Planck-sized <strong>remnants</strong> could explain <strong>dark matter</strong>.</p>
-<p>Alongside this, I work on numerical tools to compute <strong>Lorentzian spinfoam amplitudes</strong>. The goal of this work is to help develop <strong>Spinfoam Cosmology</strong> by building practical ways to connect quantum transition amplitudes with effective geometries and early-universe models.</p>
 </section>
-</section>
-<section id="education" class="level2">
-<h2 data-anchor-id="education">Education</h2>
-<p><strong>PhD in Theoretical Physics</strong> | Dec 2025 – Present<br>
-<em>IEM (CSIC) / IFT - Universidad Autónoma de Madrid, Spain</em></p>
+<section id="selected-background" class="level2">
+<h2 data-anchor-id="selected-background">Selected Background</h2>
 <p><strong>Master in Physics</strong> (<em>magna cum laude</em>) | Sep 2023 – Jun 2025<br>
 <em>Université libre de Bruxelles, Belgium</em></p>
-<p><strong>Bachelor in Physics</strong> (<em>cum laude</em>) | Sep 2020 – Jun 2023<br>
-<em>Université libre de Bruxelles, Belgium</em></p>
-</section>
-<section id="research-experience" class="level2">
-<h2 data-anchor-id="research-experience">Research Experience</h2>
 <p><strong>Visiting Graduate Researcher</strong> | Sep 2024 – Jun 2025<br>
-<em>Western University (CA) &amp; ULB (BE)</em> Studied PBH phenomenology in Loop Quantum Gravity. Modeled PBH remnants and evaporation to derive observational constraints.</p>
+<em>Western University, Canada &amp; Université libre de Bruxelles, Belgium</em><br>
+Worked on primordial-black-hole phenomenology in loop quantum gravity, with a focus on remnants, evaporation, and observational constraints.</p>
 <p><strong>CERN Summer Student</strong> | Jul 2024 – Aug 2024<br>
-<em>Compact Muon Solenoid (CMS), Geneva, CH</em> Developed Graph Neural Networks for VBF tagging; analyzed algorithm stability for the <span class="math inline">\(H~\rightarrow~\mathrm{invisible}\)</span> channel.</p>
-<p><strong>Research Intern</strong> | Jan 2023 – Apr 2023<br>
-<em>Interuniversity Institute for High Energies (IIHE), BE</em> Analyzed scalar-boson production in pp collisions using CMS data at <span class="math inline">\(\sqrt{s}=13\,\mathrm{TeV}\)</span>.</p>
-<section id="group-consortium-affiliations" class="level3">
-<h3 data-anchor-id="group-consortium-affiliations">Group &amp; Consortium Affiliations</h3>
-<p>My PhD project is part of a larger international network, and I also participate in a couple of European research actions:</p>
+<em>Compact Muon Solenoid (CMS), CERN, Geneva</em><br>
+Developed graph neural networks for VBF tagging and studied algorithm stability for the <span class="math inline">\(H\rightarrow\mathrm{invisible}\)</span> channel.</p>
+</section>
+<section id="research-networks" class="level2">
+<h2 data-anchor-id="research-networks">Research Networks</h2>
 <ul>
-<li><strong><a href="https://withoutspacetime.org/">WithOut SpaceTime (WOST)</a>:</strong> An international network of 15 groups exploring physics beyond classical space and time. My PhD research is based in the Madrid hub.</li>
-<li><strong><a href="https://web.infn.it/BridgeQG/">COST Action CA23130 (BridgeQG)</a>:</strong> Bridging high and low energies in search of quantum gravity. Member of WG1: <em>High-energy quantum gravity theory</em>, and WG2: <em>High-energy quantum gravity experiment</em>.</li>
-<li><strong><a href="https://rqi-cost.org/">COST Action CA23115 (RQI)</a>:</strong> Relativistic Quantum Information. Member of WG2: <em>Gravitational quantum physics and metrology</em>, and WG3: <em>Time, causality, and memory in quantum physics</em>.</li>
+<li><strong><a href="https://withoutspacetime.org/">WithOut SpaceTime (WOST)</a>:</strong> International network exploring physics beyond classical space and time; my PhD research is based in the Madrid hub.</li>
+<li><strong><a href="https://web.infn.it/BridgeQG/">COST Action CA23130 (BridgeQG)</a>:</strong> Member of WG1 (<em>High-energy quantum gravity theory</em>) and WG2 (<em>High-energy quantum gravity experiment</em>).</li>
+<li><strong><a href="https://rqi-cost.org/">COST Action CA23115 (RQI)</a>:</strong> Member of WG2 (<em>Gravitational quantum physics and metrology</em>) and WG3 (<em>Time, causality, and memory in quantum physics</em>).</li>
 </ul>
-</section>
-</section>
-<section id="advanced-training-schools" class="level2">
-<h2 data-anchor-id="advanced-training-schools">Advanced Training &amp; Schools</h2>
-<ul>
-<li><strong><a href="https://withoutspacetime.org/meetings/les-houches-school/">WOST School 2026</a></strong>, Les Houches School of Physics, FR (Sep 2026).</li>
-<li><strong><a href="https://sites.google.com/cstq.org/2025-lqg-blaumann-school">Blaumann’s School on Loop Quantum Gravity</a></strong>, Les Houches School of Physics, FR (Sep 2025).</li>
-<li><strong><a href="https://indico.cern.ch/event/1347523/">CERN Summer Student Lecture Programme</a></strong>, Geneva, CH (Jul 2024).</li>
-</ul>
-</section>
-<section id="technical-skills" class="level2">
-<h2 data-anchor-id="technical-skills">Technical Skills</h2>
-<p><strong>Programming &amp; Tools:</strong> Python • Wolfram Mathematica • ROOT • LaTeX<br>
-<strong>Languages:</strong> French (Native) • English (Fluent)</p>
+<p>For a complete academic history, training record, and technical skills, see the <strong>Full CV</strong> above.</p>
 
 
 </section>
