@@ -52,4 +52,4 @@ format:
     grid:
       body-width: 1100px
     include-in-header:
-      - text: '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css'>'
+      - text: '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">'
