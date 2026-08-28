@@ -1,7 +1,10 @@
 project:
   type: website
+  pre-render:
+    - python3 tools/build_lagrangian_catalogue.py
   resources:
     - CNAME
+    - assets/lagrangian/**
 website:
   site-url: "https://adierckx.com"
   title: "Antoine Dierckx"
@@ -33,6 +36,8 @@ website:
             text: Bachelor Notes (FR)
           - href: notes/math.qmd
             text: Math Notes (FR)
+          - href: outreach/standard-model-lagrangian.qmd
+            text: Interactive Lagrangian
       - href: outreach/projects.qmd
         text: Outreach & Projects
       - href: blog.qmd

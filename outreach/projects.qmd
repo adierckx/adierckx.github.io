@@ -5,6 +5,19 @@ toc: true
 
 Beyond academic research, I participate in science communication, digital content creation, and collaborative design projects aimed at opening up academic and scientific spaces.
 
+## Interactive Physics
+
+### The Standard Model, unfolded
+
+Choose a field basis and the sectors you want to keep, then move from the
+canonical Standard Model Lagrangian to its explicit generations, internal
+components, and gauge-field monomials. The live equation remains Lorentz
+covariant and can be copied or downloaded as LaTeX.
+
+[**Explore the interactive Lagrangian**](standard-model-lagrangian.qmd){.btn-surface .c-teal .btn-compact}
+
+---
+
 ## Science Communication & Outreach
 
 ### The bel.sciences Project (STEMentiel!)
