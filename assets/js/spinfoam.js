@@ -1,213 +1,351 @@
-document.addEventListener("DOMContentLoaded", function() { 
-  const canvas = document.getElementById('spinfoamCanvas'); 
-  if (!canvas) return; 
-  const ctx = canvas.getContext('2d'); 
-  let width, height; 
+document.addEventListener("DOMContentLoaded", () => {
+  const canvas = document.getElementById("spinfoamCanvas");
+  if (!canvas) return;
 
-// ======================================================================
-  // CONFIGURATION 
-  // ======================================================================
-  // Détection d'un affichage mobile au chargement
-  const isMobile = window.innerWidth < 768;
+  const hero = canvas.parentElement;
+  const ctx = canvas.getContext("2d");
+  const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-  const CONFIG = {
-    // Topologie de base
-    numNodes: isMobile ? 250 : 1000,            // Densité drastiquement réduite sur mobile
-    maxDistance: isMobile ? 150 : 120,          // Légèrement augmenté sur mobile pour maintenir la connectivité
-    
-    // Interaction
-    mouseRadius: isMobile ? 120 : 180,          // Zone d'interaction réduite sur petit écran
-    mouseForce: 1.5,            
-    
-    // Esthétique (Iridescence)
-    colorTeal: { r: 0, g: 168, b: 168 },     
-    colorFushia: { r: 255, g: 0, b: 150 },   
-    waveSpeed: 0.005,           
-    waveFreq: 0.003,            
-    maxFushiaRatio: 0.45,       
-    
-    // Fluctuations Quantiques (Création/Destruction douce)
-    fluctuationRate: 0.01,     
-    fadeSmoothness: 2.5,        
-    fadeOffset: 0.2,            
-    
-    // Ponts Quantiques (Connexions non-locales)
-    probBridge: 0.05,           
-    maxBridges: isMobile ? 5 : 12,              // Moins de ponts à calculer sur mobile
-    bridgeLife: 150             
-  };
-  // ======================================================================
+  let width = 1;
+  let height = 1;
+  let dpr = 1;
+  let config;
+  let nodes = [];
+  let bridges = [];
+  let globalTime = 0;
+  let animationFrame = null;
+  let resizeFrame = null;
+  let isInView = true;
+  let reducedMotion = reducedMotionQuery.matches;
 
-  const maxDistSq = CONFIG.maxDistance * CONFIG.maxDistance;
+  const mouse = { x: null, y: null };
 
-  function resizeCanvas() { 
-    width = canvas.width = window.innerWidth; 
-    height = canvas.height = canvas.parentElement.offsetHeight; 
-  } 
-  window.addEventListener('resize', resizeCanvas); 
-  resizeCanvas(); 
+  function makeConfig() {
+    const isMobile = window.innerWidth < 768;
+    return {
+      numNodes: isMobile ? 180 : 650,
+      maxDistance: isMobile ? 145 : 120,
+      mouseRadius: isMobile ? 120 : 180,
+      mouseForce: 1.5,
+      colorTeal: { r: 0, g: 168, b: 168 },
+      colorFushia: { r: 255, g: 0, b: 150 },
+      waveSpeed: 0.005,
+      waveFreq: 0.003,
+      maxFushiaRatio: 0.45,
+      fluctuationRate: 0.01,
+      fadeSmoothness: 2.5,
+      fadeOffset: 0.2,
+      probBridge: 0.05,
+      maxBridges: isMobile ? 5 : 12,
+      bridgeLife: 150
+    };
+  }
 
-  const nodes = []; 
-  const bridges = []; 
-  let globalTime = 0; 
-  let mouse = { x: null, y: null }; 
+  function createNode() {
+    return {
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5,
+      baseRadius: Math.random() * 2 + 0.5,
+      kinematicPhase: Math.random() * Math.PI * 2,
+      existencePhase: Math.random() * Math.PI * 2,
+      amplitude: 1,
+      colorRatio: 0
+    };
+  }
 
-  window.addEventListener('mousemove', (e) => { 
-    const rect = canvas.getBoundingClientRect(); 
-    mouse.x = e.clientX - rect.left; 
-    mouse.y = e.clientY - rect.top; 
-  }); 
+  function rebuildNodes() {
+    nodes = Array.from({ length: config.numNodes }, createNode);
+    bridges = [];
+  }
 
-  window.addEventListener('mouseleave', () => { 
-    mouse.x = null; 
-    mouse.y = null; 
-  }); 
+  function resizeCanvas() {
+    config = makeConfig();
 
-  for (let i = 0; i < CONFIG.numNodes; i++) { 
-    nodes.push({ 
-      x: Math.random() * width, 
-      y: Math.random() * height, 
-      vx: (Math.random() - 0.5) * 0.5, 
-      vy: (Math.random() - 0.5) * 0.5, 
-      baseRadius: Math.random() * 2 + 0.5, 
-      kinematicPhase: Math.random() * Math.PI * 2, 
-      existencePhase: Math.random() * Math.PI * 2, 
-      amplitude: 1, // Champ d'existence continu entre 0 et 1
-      colorRatio: 0 
-    }); 
-  } 
+    const rect = hero.getBoundingClientRect();
+    width = Math.max(1, Math.round(rect.width));
+    height = Math.max(1, Math.round(hero.offsetHeight));
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    canvas.width = Math.round(width * dpr);
+    canvas.height = Math.round(height * dpr);
+    canvas.style.width = `${width}px`;
+    canvas.style.height = `${height}px`;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    if (nodes.length !== config.numNodes) {
+      rebuildNodes();
+    } else {
+      nodes.forEach((node) => {
+        node.x = Math.min(Math.max(node.x, 0), width);
+        node.y = Math.min(Math.max(node.y, 0), height);
+      });
+    }
+
+    drawFrame(false);
+  }
 
   function getMixedColor(ratio, alpha) {
-    const r = Math.round(CONFIG.colorTeal.r * (1 - ratio) + CONFIG.colorFushia.r * ratio);
-    const g = Math.round(CONFIG.colorTeal.g * (1 - ratio) + CONFIG.colorFushia.g * ratio);
-    const b = Math.round(CONFIG.colorTeal.b * (1 - ratio) + CONFIG.colorFushia.b * ratio);
+    const r = Math.round(config.colorTeal.r * (1 - ratio) + config.colorFushia.r * ratio);
+    const g = Math.round(config.colorTeal.g * (1 - ratio) + config.colorFushia.g * ratio);
+    const b = Math.round(config.colorTeal.b * (1 - ratio) + config.colorFushia.b * ratio);
     return `rgba(${r}, ${g}, ${b}, ${alpha})`;
   }
 
-  function animate() { 
-    ctx.clearRect(0, 0, width, height); 
-    globalTime += CONFIG.waveSpeed;
+  function updateNodes() {
+    globalTime += config.waveSpeed;
+    const mouseRadiusSq = config.mouseRadius * config.mouseRadius;
 
-    // 1. MISE À JOUR (Cinématique, Onde de couleur et Amplitude)
-    nodes.forEach(node => { 
-      node.kinematicPhase += 0.02; 
-      node.existencePhase += CONFIG.fluctuationRate;
-      
-      // L'amplitude remplace le booléen. Mapping lisse via sinus et bornage [0, 1]
+    nodes.forEach((node) => {
+      node.kinematicPhase += 0.02;
+      node.existencePhase += config.fluctuationRate;
+
       const rawSine = Math.sin(node.existencePhase);
-      node.amplitude = Math.max(0, Math.min(1, (rawSine + CONFIG.fadeOffset) * CONFIG.fadeSmoothness));
-      
-      const waveX = Math.sin(node.x * CONFIG.waveFreq + globalTime);
-      const waveY = Math.cos(node.y * CONFIG.waveFreq + globalTime * 0.8);
-      node.colorRatio = Math.max(0, (waveX + waveY) * 0.5) * CONFIG.maxFushiaRatio;
+      node.amplitude = Math.max(
+        0,
+        Math.min(1, (rawSine + config.fadeOffset) * config.fadeSmoothness)
+      );
 
-      node.x += node.vx + Math.sin(node.kinematicPhase) * 0.1; 
-      node.y += node.vy + Math.cos(node.kinematicPhase) * 0.1; 
-      
-      if (node.x < 0 || node.x > width) node.vx *= -1; 
-      if (node.y < 0 || node.y > height) node.vy *= -1; 
-      
-      if (mouse.x !== null && mouse.y !== null) { 
-        const dx = node.x - mouse.x; 
-        const dy = node.y - mouse.y; 
+      const waveX = Math.sin(node.x * config.waveFreq + globalTime);
+      const waveY = Math.cos(node.y * config.waveFreq + globalTime * 0.8);
+      node.colorRatio = Math.max(0, (waveX + waveY) * 0.5) * config.maxFushiaRatio;
+
+      node.x += node.vx + Math.sin(node.kinematicPhase) * 0.1;
+      node.y += node.vy + Math.cos(node.kinematicPhase) * 0.1;
+
+      if (node.x < 0) {
+        node.x = 0;
+        node.vx = Math.abs(node.vx);
+      } else if (node.x > width) {
+        node.x = width;
+        node.vx = -Math.abs(node.vx);
+      }
+
+      if (node.y < 0) {
+        node.y = 0;
+        node.vy = Math.abs(node.vy);
+      } else if (node.y > height) {
+        node.y = height;
+        node.vy = -Math.abs(node.vy);
+      }
+
+      if (mouse.x !== null && mouse.y !== null) {
+        const dx = node.x - mouse.x;
+        const dy = node.y - mouse.y;
         const distSq = dx * dx + dy * dy;
-        const mouseRadiusSq = CONFIG.mouseRadius * CONFIG.mouseRadius;
-        
-        if (distSq < mouseRadiusSq) { 
-          const dist = Math.sqrt(distSq);
-          const force = (CONFIG.mouseRadius - dist) / CONFIG.mouseRadius; 
-          node.x += (dx / dist) * force * CONFIG.mouseForce; 
-          node.y += (dy / dist) * force * CONFIG.mouseForce; 
-        } 
-      } 
-    }); 
 
-    // 2. PONTS QUANTIQUES NON-LOCAUX
-    if (Math.random() < CONFIG.probBridge && bridges.length < CONFIG.maxBridges) {
+        if (distSq > 0.0001 && distSq < mouseRadiusSq) {
+          const dist = Math.sqrt(distSq);
+          const force = (config.mouseRadius - dist) / config.mouseRadius;
+          node.x += (dx / dist) * force * config.mouseForce;
+          node.y += (dy / dist) * force * config.mouseForce;
+        }
+      }
+    });
+  }
+
+  function updateAndDrawBridges() {
+    const maxDistSq = config.maxDistance * config.maxDistance;
+
+    if (Math.random() < config.probBridge && bridges.length < config.maxBridges) {
       const n1 = nodes[Math.floor(Math.random() * nodes.length)];
       const n2 = nodes[Math.floor(Math.random() * nodes.length)];
-      
-      // On exige que les deux nœuds aient une amplitude maximale pour initier un pont
+
       if (n1 !== n2 && n1.amplitude > 0.9 && n2.amplitude > 0.9) {
         const dx = n1.x - n2.x;
         const dy = n1.y - n2.y;
-        if (dx*dx + dy*dy > maxDistSq) {
-            bridges.push({ n1, n2, life: CONFIG.bridgeLife, maxLife: CONFIG.bridgeLife });
+        if (dx * dx + dy * dy > maxDistSq) {
+          bridges.push({ n1, n2, life: config.bridgeLife, maxLife: config.bridgeLife });
         }
       }
     }
 
-    for (let i = bridges.length - 1; i >= 0; i--) {
-      const b = bridges[i];
-      b.life--;
-      
-      // Effondrement si durée de vie expirée ou si l'un des nœuds fluctue vers 0
-      if (b.life <= 0 || b.n1.amplitude < 0.1 || b.n2.amplitude < 0.1) {
+    for (let i = bridges.length - 1; i >= 0; i -= 1) {
+      const bridge = bridges[i];
+      bridge.life -= 1;
+
+      if (bridge.life <= 0 || bridge.n1.amplitude < 0.1 || bridge.n2.amplitude < 0.1) {
         bridges.splice(i, 1);
         continue;
       }
-      
-      const timeAmplitude = Math.sin((b.life / b.maxLife) * Math.PI); 
-      const avgColorRatio = (b.n1.colorRatio + b.n2.colorRatio) / 2;
-      
-      // Transparence pondérée par l'amplitude temporelle ET spatiale (topologique)
-      const finalAlpha = timeAmplitude * 0.6 * b.n1.amplitude * b.n2.amplitude;
-      
+
+      const timeAmplitude = Math.sin((bridge.life / bridge.maxLife) * Math.PI);
+      const avgColorRatio = (bridge.n1.colorRatio + bridge.n2.colorRatio) / 2;
+      const finalAlpha = timeAmplitude * 0.6 * bridge.n1.amplitude * bridge.n2.amplitude;
+
       ctx.beginPath();
-      ctx.moveTo(b.n1.x, b.n1.y);
-      ctx.lineTo(b.n2.x, b.n2.y);
+      ctx.moveTo(bridge.n1.x, bridge.n1.y);
+      ctx.lineTo(bridge.n2.x, bridge.n2.y);
       ctx.strokeStyle = getMixedColor(avgColorRatio, finalAlpha);
       ctx.lineWidth = 1.5;
       ctx.stroke();
     }
+  }
 
-    // 3. RÉSEAU LOCAL (Optimisé pour densité élevée)
-    for (let i = 0; i < nodes.length; i++) { 
-      // Culling : on ignore le nœud s'il est presque invisible
-      if (nodes[i].amplitude < 0.01) continue; 
+  function buildSpatialGrid() {
+    const grid = new Map();
+    const cellSize = config.maxDistance;
 
-      for (let j = i + 1; j < nodes.length; j++) { 
-        if (nodes[j].amplitude < 0.01) continue;
-
-        const dx = nodes[i].x - nodes[j].x; 
-        const dy = nodes[i].y - nodes[j].y; 
-        const distSq = dx * dx + dy * dy; 
-        
-        // Optimisation : On teste le carré de la distance d'abord
-        if (distSq < maxDistSq) { 
-          const dist = Math.sqrt(distSq);
-          
-          // La transparence dépend de la distance ET du produit des amplitudes des nœuds
-          const distanceAlpha = (1 - dist / CONFIG.maxDistance) * 0.4; 
-          const jointAmplitude = nodes[i].amplitude * nodes[j].amplitude;
-          const finalAlpha = distanceAlpha * jointAmplitude;
-          
-          const thickness = (Math.sin(nodes[i].kinematicPhase + j) + 1.5) * 1.0; 
-          const avgColorRatio = (nodes[i].colorRatio + nodes[j].colorRatio) / 2;
-          
-          ctx.beginPath(); 
-          ctx.moveTo(nodes[i].x, nodes[i].y); 
-          ctx.lineTo(nodes[j].x, nodes[j].y); 
-          ctx.strokeStyle = getMixedColor(avgColorRatio, finalAlpha); 
-          ctx.lineWidth = thickness; 
-          ctx.stroke(); 
-        } 
-      } 
-    } 
-
-    // 4. DESSIN DES NŒUDS
-    nodes.forEach(node => { 
+    nodes.forEach((node, index) => {
       if (node.amplitude < 0.01) return;
 
-      ctx.beginPath(); 
-      ctx.arc(node.x, node.y, node.baseRadius + Math.sin(node.kinematicPhase) * 0.5, 0, Math.PI * 2); 
-      // L'opacité du nœud est directement son champ d'amplitude
-      ctx.fillStyle = getMixedColor(node.colorRatio, node.amplitude * 0.9); 
-      ctx.fill(); 
-    }); 
+      const cx = Math.floor(node.x / cellSize);
+      const cy = Math.floor(node.y / cellSize);
+      const key = `${cx},${cy}`;
 
-    requestAnimationFrame(animate); 
-  } 
+      if (!grid.has(key)) grid.set(key, []);
+      grid.get(key).push(index);
+    });
 
-  animate(); 
+    return { grid, cellSize };
+  }
+
+  function drawLocalNetwork() {
+    const maxDistSq = config.maxDistance * config.maxDistance;
+    const { grid, cellSize } = buildSpatialGrid();
+
+    nodes.forEach((node, i) => {
+      if (node.amplitude < 0.01) return;
+
+      const cx = Math.floor(node.x / cellSize);
+      const cy = Math.floor(node.y / cellSize);
+
+      for (let ox = -1; ox <= 1; ox += 1) {
+        for (let oy = -1; oy <= 1; oy += 1) {
+          const candidates = grid.get(`${cx + ox},${cy + oy}`);
+          if (!candidates) continue;
+
+          candidates.forEach((j) => {
+            if (j <= i) return;
+            const other = nodes[j];
+
+            const dx = node.x - other.x;
+            const dy = node.y - other.y;
+            const distSq = dx * dx + dy * dy;
+            if (distSq >= maxDistSq) return;
+
+            const dist = Math.sqrt(distSq);
+            const distanceAlpha = (1 - dist / config.maxDistance) * 0.4;
+            const jointAmplitude = node.amplitude * other.amplitude;
+            const finalAlpha = distanceAlpha * jointAmplitude;
+            const thickness = (Math.sin(node.kinematicPhase + j) + 1.5) * 1.0;
+            const avgColorRatio = (node.colorRatio + other.colorRatio) / 2;
+
+            ctx.beginPath();
+            ctx.moveTo(node.x, node.y);
+            ctx.lineTo(other.x, other.y);
+            ctx.strokeStyle = getMixedColor(avgColorRatio, finalAlpha);
+            ctx.lineWidth = thickness;
+            ctx.stroke();
+          });
+        }
+      }
+    });
+  }
+
+  function drawNodes() {
+    nodes.forEach((node) => {
+      if (node.amplitude < 0.01) return;
+
+      ctx.beginPath();
+      ctx.arc(
+        node.x,
+        node.y,
+        node.baseRadius + Math.sin(node.kinematicPhase) * 0.5,
+        0,
+        Math.PI * 2
+      );
+      ctx.fillStyle = getMixedColor(node.colorRatio, node.amplitude * 0.9);
+      ctx.fill();
+    });
+  }
+
+  function drawFrame(advance = true) {
+    ctx.clearRect(0, 0, width, height);
+
+    if (advance) updateNodes();
+    updateAndDrawBridges();
+    drawLocalNetwork();
+    drawNodes();
+  }
+
+  function shouldAnimate() {
+    return !reducedMotion && isInView && !document.hidden;
+  }
+
+  function animate() {
+    animationFrame = null;
+    if (!shouldAnimate()) return;
+
+    drawFrame(true);
+    animationFrame = requestAnimationFrame(animate);
+  }
+
+  function syncAnimation() {
+    if (shouldAnimate()) {
+      if (animationFrame === null) animationFrame = requestAnimationFrame(animate);
+    } else {
+      if (animationFrame !== null) {
+        cancelAnimationFrame(animationFrame);
+        animationFrame = null;
+      }
+      drawFrame(false);
+    }
+  }
+
+  window.addEventListener("pointermove", (event) => {
+    const rect = canvas.getBoundingClientRect();
+    const withinCanvas =
+      event.clientX >= rect.left &&
+      event.clientX <= rect.right &&
+      event.clientY >= rect.top &&
+      event.clientY <= rect.bottom;
+
+    if (withinCanvas) {
+      mouse.x = event.clientX - rect.left;
+      mouse.y = event.clientY - rect.top;
+    } else {
+      mouse.x = null;
+      mouse.y = null;
+    }
+  }, { passive: true });
+
+  window.addEventListener("resize", () => {
+    if (resizeFrame !== null) cancelAnimationFrame(resizeFrame);
+    resizeFrame = requestAnimationFrame(() => {
+      resizeFrame = null;
+      resizeCanvas();
+      syncAnimation();
+    });
+  }, { passive: true });
+
+  document.addEventListener("visibilitychange", syncAnimation);
+
+  const onReducedMotionChange = (event) => {
+    reducedMotion = event.matches;
+    syncAnimation();
+  };
+
+  if (typeof reducedMotionQuery.addEventListener === "function") {
+    reducedMotionQuery.addEventListener("change", onReducedMotionChange);
+  } else if (typeof reducedMotionQuery.addListener === "function") {
+    reducedMotionQuery.addListener(onReducedMotionChange);
+  }
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        isInView = entries[0]?.isIntersecting ?? true;
+        syncAnimation();
+      },
+      { threshold: 0.02 }
+    );
+    observer.observe(hero);
+  }
+
+  config = makeConfig();
+  rebuildNodes();
+  resizeCanvas();
+  syncAnimation();
 });
