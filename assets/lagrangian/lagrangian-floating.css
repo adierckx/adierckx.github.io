@@ -1,0 +1,374 @@
+.sm-floating-math-bootstrap,
+#title-block-header,
+#quarto-header,
+.navbar {
+  display: none !important;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #050a10;
+}
+
+#quarto-content,
+#quarto-document-content,
+.page-columns,
+.column-screen {
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.sm-floating-app {
+  --sm-text: #f3fbff;
+  --sm-muted: #91a6b3;
+  --sm-line: rgba(194, 241, 255, 0.17);
+  --sm-teal: #3fe0d0;
+  --sm-gluon: #ffbd70;
+  --sm-weak: #b9a1ff;
+  --sm-hypercharge: #77d9ff;
+  --sm-photon: #ffe08a;
+  --sm-z: #c7a5ff;
+  --sm-higgs: #72e6ad;
+  --sm-quark-doublet: #ff9ebc;
+  --sm-lepton-doublet: #f6a4dc;
+  --sm-up-type: #ffadad;
+  --sm-down-type: #eaa0d8;
+  --sm-charged-lepton: #ff9fcb;
+  --sm-neutrino: #d7b4f7;
+  --sm-generic-fermion: #ec98c9;
+  --sm-up: #ffb092;
+  --sm-charm: #ff9b9d;
+  --sm-top: #ff7f9e;
+  --sm-down: #eba5cf;
+  --sm-strange: #d996d4;
+  --sm-bottom: #c681d8;
+  --sm-electron: #ffafd3;
+  --sm-muon: #f593ce;
+  --sm-tau: #df78c7;
+  --sm-nu-e: #dfc2fa;
+  --sm-nu-mu: #cab0f0;
+  --sm-nu-tau: #b99be6;
+
+  position: fixed;
+  inset: 0;
+  isolation: isolate;
+  overflow: hidden;
+  color: var(--sm-text);
+  background:
+    radial-gradient(circle at 18% 20%, rgba(63, 224, 208, 0.1), transparent 34%),
+    radial-gradient(circle at 82% 73%, rgba(211, 163, 255, 0.11), transparent 38%),
+    linear-gradient(145deg, #071019, #03070c 68%);
+}
+
+.sm-floating-app *,
+.sm-floating-app *::before,
+.sm-floating-app *::after {
+  box-sizing: border-box;
+}
+
+.sm-floating-app .sm-floating-orb {
+  position: absolute;
+  z-index: -1;
+  width: min(58rem, 80vw);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.11;
+  pointer-events: none;
+}
+
+.sm-floating-app .sm-floating-orb-one {
+  top: -34rem;
+  left: -20rem;
+  background: var(--sm-teal);
+}
+
+.sm-floating-app .sm-floating-orb-two {
+  right: -25rem;
+  bottom: -38rem;
+  background: #d3a3ff;
+}
+
+.sm-floating-app .sm-floating-toolbar {
+  position: fixed;
+  top: clamp(0.7rem, 2vw, 1.25rem);
+  right: clamp(0.7rem, 2vw, 1.25rem);
+  left: clamp(0.7rem, 2vw, 1.25rem);
+  z-index: 10;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  min-height: 60px;
+  padding: 0.65rem 0.8rem;
+  background: rgba(11, 18, 27, 0.62);
+  border: 1px solid var(--sm-line);
+  border-radius: 18px;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 20px 60px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+}
+
+.sm-floating-app .sm-floating-back,
+.sm-floating-app .sm-floating-actions button {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.52rem 0.72rem;
+  color: var(--sm-text);
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--sm-line);
+  border-radius: 11px;
+  font: inherit;
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sm-floating-app .sm-floating-back:hover,
+.sm-floating-app .sm-floating-actions button:hover {
+  color: var(--sm-text);
+  border-color: rgba(63, 224, 208, 0.45);
+}
+
+.sm-floating-app .sm-floating-summary {
+  min-width: 0;
+  text-align: center;
+}
+
+.sm-floating-app .sm-floating-summary strong {
+  display: block;
+  overflow: hidden;
+  color: var(--sm-text);
+  font-family: "Fira Code", monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sm-floating-app .sm-floating-summary span {
+  display: block;
+  margin-top: 0.12rem;
+  color: var(--sm-muted);
+  font-size: 0.62rem;
+}
+
+.sm-floating-app .sm-floating-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.sm-floating-app .sm-floating-actions label {
+  display: flex;
+  align-items: center;
+  gap: 0.42rem;
+  margin: 0;
+  color: var(--sm-muted);
+  font-family: "Fira Code", monospace;
+  font-size: 0.61rem;
+}
+
+.sm-floating-app .sm-floating-actions input {
+  width: 88px;
+  accent-color: var(--sm-teal);
+}
+
+.sm-floating-app .sm-floating-stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  outline: none;
+  perspective: 1100px;
+}
+
+.sm-floating-app .sm-floating-stage:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--sm-teal);
+}
+
+.sm-floating-app .sm-floating-field {
+  position: absolute;
+  top: 8.5rem;
+  left: 50%;
+  display: flex;
+  width: clamp(1100px, 155vw, 2200px);
+  min-height: 46vh;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: baseline;
+  gap: 0.65rem 1rem;
+  padding: clamp(2rem, 5vw, 5rem);
+  color: var(--sm-text);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.055), transparent 30%),
+    rgba(15, 25, 35, 0.43);
+  border: 1px solid rgba(194, 241, 255, 0.13);
+  border-radius: 42px;
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.055),
+    0 50px 140px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  font-size: clamp(0.9rem, 1.08vw, 1.2rem);
+  line-height: 2;
+  transform: translate3d(-50%, 0, 0);
+  transform-origin: 50% 20%;
+  will-change: transform;
+}
+
+.sm-floating-app .sm-floating-term {
+  display: inline-flex;
+  max-width: 100%;
+  flex: 0 1 auto;
+  padding: 0.15rem 0.22rem;
+  overflow-x: auto;
+  color: var(--sm-text);
+  border-radius: 8px;
+}
+
+.sm-floating-app .sm-floating-term mjx-container {
+  margin: 0 !important;
+  color: inherit;
+}
+
+.sm-floating-app .sm-floating-loading {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  color: var(--sm-muted);
+  background: rgba(3, 7, 12, 0.62);
+  transition: opacity 300ms ease, visibility 300ms ease;
+}
+
+.sm-floating-app .sm-floating-loading.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.sm-floating-app .sm-floating-loading > span {
+  width: 7px;
+  height: 7px;
+  background: var(--sm-teal);
+  border-radius: 50%;
+  animation: sm-floating-pulse 1.2s ease-in-out infinite;
+}
+
+.sm-floating-app .sm-floating-loading > span:nth-child(2) { animation-delay: 120ms; }
+.sm-floating-app .sm-floating-loading > span:nth-child(3) { animation-delay: 240ms; }
+
+.sm-floating-app .sm-floating-loading b {
+  margin-left: 0.4rem;
+  color: var(--sm-muted);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+@keyframes sm-floating-pulse {
+  50% { transform: translateY(-7px); opacity: 0.45; }
+}
+
+.sm-floating-app .sm-floating-hint {
+  position: fixed;
+  right: 0;
+  bottom: 0.8rem;
+  left: 0;
+  z-index: 8;
+  margin: 0;
+  color: rgba(155, 176, 189, 0.7);
+  font-family: "Fira Code", monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+  pointer-events: none;
+}
+
+.sm-floating-app.is-colour-mode .sm-symbol--gluon { color: var(--sm-gluon) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--weak-boson { color: var(--sm-weak) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--hypercharge-boson { color: var(--sm-hypercharge) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--photon { color: var(--sm-photon) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--z-boson { color: var(--sm-z) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--higgs-doublet,
+.sm-floating-app.is-colour-mode .sm-symbol--higgs-boson { color: var(--sm-higgs) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--quark-doublet { color: var(--sm-quark-doublet) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--lepton-doublet { color: var(--sm-lepton-doublet) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--up-type { color: var(--sm-up-type) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--down-type { color: var(--sm-down-type) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--charged-lepton { color: var(--sm-charged-lepton) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--neutrino { color: var(--sm-neutrino) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--generic-fermion { color: var(--sm-generic-fermion) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--up-quark { color: var(--sm-up) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--charm-quark { color: var(--sm-charm) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--top-quark { color: var(--sm-top) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--down-quark { color: var(--sm-down) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--strange-quark { color: var(--sm-strange) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--bottom-quark { color: var(--sm-bottom) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--electron { color: var(--sm-electron) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--muon { color: var(--sm-muon) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--tau-lepton { color: var(--sm-tau) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--electron-neutrino { color: var(--sm-nu-e) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--muon-neutrino { color: var(--sm-nu-mu) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--tau-neutrino { color: var(--sm-nu-tau) !important; }
+
+@media (max-width: 700px) {
+  .sm-floating-app .sm-floating-toolbar {
+    grid-template-columns: auto 1fr auto;
+    gap: 0.45rem;
+    min-height: 54px;
+  }
+
+  .sm-floating-app .sm-floating-back {
+    width: 38px;
+    padding: 0;
+    font-size: 0;
+  }
+
+  .sm-floating-app .sm-floating-back span {
+    font-size: 1rem;
+  }
+
+  .sm-floating-app .sm-floating-actions label {
+    display: none;
+  }
+
+  .sm-floating-app .sm-floating-actions button {
+    min-width: 38px;
+    padding: 0;
+    font-size: 0;
+  }
+
+  .sm-floating-app .sm-floating-actions button span {
+    font-size: 0.9rem;
+  }
+
+  .sm-floating-app .sm-floating-field {
+    top: 7rem;
+    width: 270vw;
+    padding: 2rem;
+    border-radius: 26px;
+    font-size: 0.88rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sm-floating-app .sm-floating-loading > span {
+    animation: none;
+  }
+
+  .sm-floating-app .sm-floating-field {
+    transform: translate3d(-50%, 0, 0) !important;
+  }
+}

@@ -1,6 +1,6 @@
 ---
 title: "The Standard Model, unfolded"
-description: "Explore the Standard Model Lagrangian sector by sector, from its canonical form to explicit finite-index and gauge-field components."
+description: "Explore the complete Standard Model Lagrangian sector by sector, with semantic colour, symbol explanations, and five levels of development."
 page-layout: full
 toc: false
 format:
@@ -11,7 +11,7 @@ format:
 ::: {.column-screen}
 
 ::: {.sm-math-bootstrap aria-hidden="true"}
-$x$
+$\require{html}\class{sm-math-probe}{x}$
 :::
 
 ```{=html}
@@ -27,38 +27,35 @@ $x$
     <p class="sm-eyebrow">Interactive field theory</p>
     <h1>The Standard Model, <span>unfolded.</span></h1>
     <p class="sm-app-lede">
-      Select a phase and its sectors, then move from the canonical notation to
+      Select a phase and its sectors, then move from canonical notation to
       explicit generations, internal components, and gauge-field monomials.
-      Lorentz indices remain covariant at every level.
+      The complete selected expression is shown below and Lorentz indices stay
+      covariant at every level.
     </p>
   </header>
 
-  <section class="sm-glass sm-formula-stage" aria-label="Animated Lagrangian">
+  <section class="sm-glass sm-formula-stage" aria-label="Complete selected Lagrangian">
     <div class="sm-stage-header">
       <div class="sm-stage-stat">
-        <span class="sm-stage-label">Selected expression</span>
+        <span class="sm-stage-label">Complete expression</span>
         <strong id="sm-term-count">Loading catalogue…</strong>
       </div>
-      <div class="sm-stage-position" id="sm-position-label"></div>
+      <div class="sm-render-status" id="sm-render-status" role="status"></div>
     </div>
 
-    <div
-      class="sm-ribbon-viewport"
-      id="sm-ribbon-viewport"
-      tabindex="0"
-      aria-label="Use the left and right arrow keys to move through the Lagrangian"
-    >
-      <div class="sm-ribbon-glint" aria-hidden="true"></div>
+    <div class="sm-equation-shell" id="sm-equation-shell" aria-busy="true">
       <div class="sm-formula-track" id="sm-formula-track"></div>
-      <div class="sm-loading" id="sm-loading" role="status">
+      <div class="sm-loading" id="sm-loading">
         <span></span><span></span><span></span>
-        <b>Preparing the fields</b>
+        <b id="sm-loading-label">Preparing the fields</b>
       </div>
     </div>
+
+    <div class="sm-colour-key" id="sm-colour-key" hidden></div>
 
     <div class="sm-stage-footer">
       <span id="sm-level-caption">Connections</span>
-      <span class="sm-stage-hint">Drag the position slider to travel through the equation</span>
+      <span class="sm-stage-hint">Every additive term in the current selection is displayed.</span>
     </div>
   </section>
 
@@ -94,26 +91,36 @@ $x$
       <p id="sm-level-description">Covariant derivatives and field strengths are exposed.</p>
     </div>
 
-    <div class="sm-control-block sm-position-control">
-      <div class="sm-control-heading">
-        <label class="sm-control-title" for="sm-position">Position in the equation</label>
-        <output id="sm-position-output" for="sm-position">1</output>
+    <fieldset class="sm-control-block sm-reading-control">
+      <legend class="sm-control-title">Reading modes</legend>
+      <div class="sm-mode-list">
+        <label class="sm-mode-switch">
+          <input id="sm-colour-mode" type="checkbox">
+          <span>
+            <strong>Smart colour</strong>
+            <small>Field families and physical flavours</small>
+          </span>
+        </label>
+        <label class="sm-mode-switch">
+          <input id="sm-explain-mode" type="checkbox">
+          <span>
+            <strong>Explain symbols</strong>
+            <small>Contextual notation guide</small>
+          </span>
+        </label>
       </div>
-      <input id="sm-position" type="range" min="0" max="0" step="1" value="0">
-    </div>
-
-    <div class="sm-control-block sm-wave-control">
-      <div class="sm-control-heading">
-        <label class="sm-control-title" for="sm-wave">Wave amplitude</label>
-        <output id="sm-wave-output" for="sm-wave">62%</output>
-      </div>
-      <input id="sm-wave" type="range" min="0" max="100" step="1" value="62">
-    </div>
+    </fieldset>
 
     <div class="sm-control-block sm-actions">
-      <button type="button" id="sm-motion-toggle" class="sm-action-button" aria-pressed="true">
-        <span aria-hidden="true">Ⅱ</span> Pause motion
-      </button>
+      <a
+        id="sm-floating-view"
+        class="sm-action-button sm-floating-button"
+        href="lagrangian-floating.html"
+        target="_blank"
+        rel="noopener"
+      >
+        <span aria-hidden="true">↗</span> Floating view
+      </a>
       <button type="button" id="sm-copy" class="sm-action-button">
         <span aria-hidden="true">⧉</span> Copy LaTeX
       </button>
@@ -123,10 +130,21 @@ $x$
     </div>
   </section>
 
+  <section class="sm-glass sm-explainer" id="sm-explainer" hidden aria-label="Symbol explanations">
+    <div class="sm-explainer-header">
+      <div>
+        <p class="sm-control-title">Notation guide</p>
+        <h2>Symbols in this selection</h2>
+      </div>
+      <p>Hover or focus a card to locate the terms that use that symbol.</p>
+    </div>
+    <div class="sm-symbol-groups" id="sm-symbol-groups"></div>
+  </section>
+
   <details class="sm-glass sm-source-panel">
     <summary>
       <span>Complete LaTeX source</span>
-      <small>The download is always complete, including terms outside the animated window.</small>
+      <small>The copied and downloaded source stays uncoloured and portable.</small>
     </summary>
     <div class="sm-source-inner">
       <pre><code id="sm-raw-latex"></code></pre>

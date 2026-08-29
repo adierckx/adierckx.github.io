@@ -12,6 +12,7 @@ from pathlib import Path
 
 from sm_lagrangian import StandardModelConfig, __version__, generate_lagrangian
 from sm_lagrangian.config import BROKEN_SECTOR_ORDER, UNBROKEN_SECTOR_ORDER
+from lagrangian_semantics import SYMBOL_DEFINITIONS, annotate_term
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -133,10 +134,17 @@ def build_catalogue() -> dict[str, object]:
                     if term_id is None:
                         term_id = len(term_pool)
                         term_ids[identity] = term_id
+                        semantic_body, symbols = annotate_term(
+                            term.body,
+                            term.sector,
+                            term.tag,
+                        )
                         term_pool.append(
                             {
                                 "sign": term.sign,
                                 "body": term.body,
+                                "semanticBody": semantic_body,
+                                "symbols": symbols,
                                 "sector": term.sector,
                                 "tag": term.tag,
                             }
@@ -155,10 +163,11 @@ def build_catalogue() -> dict[str, object]:
     }
 
     return {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
         "engineVersion": __version__,
         "levels": list(LEVELS),
         "phases": phase_data,
+        "symbolDefinitions": list(SYMBOL_DEFINITIONS),
         "terms": term_pool,
         "configurations": configurations,
         "counts": configuration_counts,

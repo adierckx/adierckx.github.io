@@ -1,0 +1,65 @@
+---
+title: "Floating Standard Model Lagrangian"
+description: "A full-screen animated view of a selected Standard Model Lagrangian."
+page-layout: full
+toc: false
+format:
+  html:
+    css: ../assets/lagrangian/lagrangian-floating.css
+---
+
+::: {.column-screen}
+
+::: {.sm-floating-math-bootstrap aria-hidden="true"}
+$\require{html}\class{sm-math-probe}{x}$
+:::
+
+```{=html}
+<div
+  class="sm-floating-app"
+  id="sm-floating-app"
+  data-catalogue="../assets/lagrangian/catalogue.json"
+>
+  <div class="sm-floating-orb sm-floating-orb-one" aria-hidden="true"></div>
+  <div class="sm-floating-orb sm-floating-orb-two" aria-hidden="true"></div>
+
+  <header class="sm-floating-toolbar">
+    <a class="sm-floating-back" href="standard-model-lagrangian.html">
+      <span aria-hidden="true">←</span> Editor
+    </a>
+    <div class="sm-floating-summary">
+      <strong id="sm-floating-level">Loading selection</strong>
+      <span id="sm-floating-count"></span>
+    </div>
+    <div class="sm-floating-actions">
+      <label>
+        <span>Speed</span>
+        <input id="sm-floating-speed" type="range" min="20" max="180" step="5" value="80">
+      </label>
+      <button type="button" id="sm-floating-motion" aria-pressed="true">
+        <span aria-hidden="true">Ⅱ</span> Pause
+      </button>
+    </div>
+  </header>
+
+  <main
+    class="sm-floating-stage"
+    id="sm-floating-stage"
+    tabindex="0"
+    aria-label="Floating complete Lagrangian. Press space to pause or resume."
+  >
+    <div class="sm-floating-field" id="sm-floating-field"></div>
+    <div class="sm-floating-loading" id="sm-floating-loading" role="status">
+      <span></span><span></span><span></span>
+      <b>Typesetting the complete expression…</b>
+    </div>
+  </main>
+
+  <p class="sm-floating-hint">Move the pointer for parallax · Space pauses motion</p>
+  <noscript>This view requires JavaScript.</noscript>
+</div>
+
+<script defer src="../assets/lagrangian/lagrangian-floating.js"></script>
+```
+
+:::

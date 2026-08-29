@@ -6,41 +6,39 @@
 
   const elements = {
     track: root.querySelector("#sm-formula-track"),
-    viewport: root.querySelector("#sm-ribbon-viewport"),
+    shell: root.querySelector("#sm-equation-shell"),
     loading: root.querySelector("#sm-loading"),
+    loadingLabel: root.querySelector("#sm-loading-label"),
     termCount: root.querySelector("#sm-term-count"),
-    positionLabel: root.querySelector("#sm-position-label"),
-    position: root.querySelector("#sm-position"),
-    positionOutput: root.querySelector("#sm-position-output"),
+    renderStatus: root.querySelector("#sm-render-status"),
     development: root.querySelector("#sm-development"),
     levelName: root.querySelector("#sm-level-name"),
     levelCaption: root.querySelector("#sm-level-caption"),
     levelDescription: root.querySelector("#sm-level-description"),
     sectorList: root.querySelector("#sm-sector-list"),
-    wave: root.querySelector("#sm-wave"),
-    waveOutput: root.querySelector("#sm-wave-output"),
-    motion: root.querySelector("#sm-motion-toggle"),
+    colourMode: root.querySelector("#sm-colour-mode"),
+    explainMode: root.querySelector("#sm-explain-mode"),
+    colourKey: root.querySelector("#sm-colour-key"),
+    explainer: root.querySelector("#sm-explainer"),
+    symbolGroups: root.querySelector("#sm-symbol-groups"),
+    floating: root.querySelector("#sm-floating-view"),
     copy: root.querySelector("#sm-copy"),
     download: root.querySelector("#sm-download"),
     raw: root.querySelector("#sm-raw-latex"),
     phaseButtons: [...root.querySelectorAll("[data-phase]")],
   };
 
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const state = {
     catalogue: null,
     phase: "unbroken",
     level: 2,
     selectedSectors: new Set(),
     terms: [],
-    position: 0,
-    motion: !prefersReducedMotion,
-    wave: 0.62,
-    pointerX: 0,
-    pointerY: 0,
-    lastAdvance: performance.now(),
+    colour: false,
+    explain: false,
+    persistentSymbol: null,
     renderToken: 0,
-    typesetQueue: Promise.resolve(),
+    renderQueue: Promise.resolve(),
   };
 
   function phaseMeta() {
@@ -81,7 +79,6 @@
       checkbox.addEventListener("change", () => {
         if (checkbox.checked) state.selectedSectors.add(sector);
         else state.selectedSectors.delete(sector);
-        state.position = 0;
         updateSelection();
       });
 
@@ -90,14 +87,14 @@
     });
   }
 
-  function signedBody(term, index, environment = "ribbon") {
+  function signedBody(term, index, semantic = false) {
+    const body = semantic ? (term.semanticBody || term.body) : term.body;
     if (index === 0) {
       const sign = term.sign < 0 ? "-" : "";
-      return String.raw`\mathcal{L}_{\mathrm{selected}} ={} ${sign}\,${term.body}`;
+      return String.raw`\mathcal{L}_{\mathrm{selected}} ={} ${sign}\,${body}`;
     }
     const sign = term.sign < 0 ? "-" : "+";
-    const spacer = environment === "ribbon" ? String.raw`\;` : " ";
-    return `${sign}${spacer}${term.body}`;
+    return `${sign}\\;${body}`;
   }
 
   function alignedLatex(environment = "aligned") {
@@ -106,7 +103,9 @@
     }
     const lines = [`\\begin{${environment}}`];
     state.terms.forEach((term, index) => {
-      const prefix = index === 0 ? String.raw`\mathcal{L}_{\mathrm{selected}} ={}& ` : String.raw`&{} `;
+      const prefix = index === 0
+        ? String.raw`\mathcal{L}_{\mathrm{selected}} ={}& `
+        : String.raw`&{} `;
       const sign = index === 0
         ? (term.sign < 0 ? "- " : "")
         : (term.sign < 0 ? "- " : "+ ");
@@ -150,103 +149,205 @@
   }
 
   async function waitForMathJax() {
-    for (let attempt = 0; attempt < 160; attempt += 1) {
+    for (let attempt = 0; attempt < 200; attempt += 1) {
       if (window.MathJax?.typesetPromise) return window.MathJax;
       await new Promise((resolve) => window.setTimeout(resolve, 50));
     }
     throw new Error("MathJax did not become available.");
   }
 
-  async function typesetTrack(token) {
-    try {
-      const mathJax = await waitForMathJax();
-      state.typesetQueue = state.typesetQueue
-        .catch(() => {})
-        .then(async () => {
-          if (token !== state.renderToken) return;
-          if (mathJax.typesetClear) mathJax.typesetClear([elements.track]);
-          await mathJax.typesetPromise([elements.track]);
-          if (token !== state.renderToken) return;
-          elements.track.classList.remove("is-changing");
-          elements.loading.classList.add("is-hidden");
-        });
-      await state.typesetQueue;
-    } catch (error) {
-      elements.track.classList.remove("is-changing");
-      elements.loading.classList.add("is-hidden");
-      elements.positionLabel.textContent = "Math rendering unavailable";
-      console.error(error);
-    }
+  function activeSymbolDefinitions() {
+    const active = new Set(state.terms.flatMap((term) => term.symbols || []));
+    active.add("lagrangian-density");
+    return state.catalogue.symbolDefinitions.filter((definition) => active.has(definition.id));
   }
 
-  function visibleWindowSize() {
-    if (window.innerWidth < 640) return 8;
-    if (window.innerWidth < 980) return 12;
-    return 20;
+  function buildColourKey() {
+    elements.colourKey.replaceChildren();
+    activeSymbolDefinitions()
+      .filter((definition) => definition.group === "Fields" || definition.group === "Fermions")
+      .forEach((definition) => {
+        const item = document.createElement("span");
+        item.className = "sm-key-item";
+        item.dataset.symbol = definition.id;
+
+        const swatch = document.createElement("i");
+        swatch.className = `sm-key-swatch sm-symbol--${definition.id}`;
+        swatch.setAttribute("aria-hidden", "true");
+
+        const label = document.createElement("span");
+        label.textContent = definition.name;
+        item.append(swatch, label);
+        elements.colourKey.append(item);
+      });
   }
 
-  function renderFormulaWindow() {
-    const token = ++state.renderToken;
-    elements.track.classList.add("is-changing");
+  function buildExplanation() {
+    elements.symbolGroups.replaceChildren();
+    const grouped = new Map();
+    activeSymbolDefinitions().forEach((definition) => {
+      if (!grouped.has(definition.group)) grouped.set(definition.group, []);
+      grouped.get(definition.group).push(definition);
+    });
+
+    grouped.forEach((definitions, groupName) => {
+      const section = document.createElement("section");
+      section.className = "sm-symbol-group";
+
+      const heading = document.createElement("h3");
+      heading.textContent = groupName;
+
+      const grid = document.createElement("div");
+      grid.className = "sm-symbol-grid";
+
+      definitions.forEach((definition) => {
+        const card = document.createElement("button");
+        card.type = "button";
+        card.className = "sm-symbol-card";
+        card.dataset.symbol = definition.id;
+        card.setAttribute("aria-pressed", "false");
+
+        const notation = document.createElement("span");
+        notation.className = `sm-symbol-notation sm-symbol--${definition.id}`;
+        notation.textContent = `\\(${definition.latex}\\)`;
+
+        const copy = document.createElement("span");
+        copy.className = "sm-symbol-copy";
+
+        const name = document.createElement("strong");
+        name.textContent = definition.name;
+
+        const description = document.createElement("small");
+        description.textContent = definition.description;
+
+        copy.append(name, description);
+        card.append(notation, copy);
+        grid.append(card);
+      });
+
+      section.append(heading, grid);
+      elements.symbolGroups.append(section);
+    });
+    elements.symbolGroups.dataset.typeset = "false";
+  }
+
+  function buildEquationDOM(semantic = true) {
     elements.track.replaceChildren();
+    const fragment = document.createDocumentFragment();
 
     if (!state.terms.length) {
       const empty = document.createElement("span");
       empty.className = "sm-formula-term";
+      empty.dataset.symbols = "";
       empty.textContent = String.raw`\(\mathcal{L}_{\mathrm{selected}} = 0\)`;
-      elements.track.append(empty);
-      elements.positionLabel.textContent = "No sector selected";
-      void typesetTrack(token);
-      return;
+      fragment.append(empty);
+    } else {
+      state.terms.forEach((term, index) => {
+        const wrapper = document.createElement("span");
+        wrapper.className = `sm-formula-term sm-sector--${term.sector}`;
+        wrapper.dataset.index = String(index);
+        const symbols = [...(term.symbols || [])];
+        if (index === 0) symbols.push("lagrangian-density");
+        wrapper.dataset.symbols = symbols.join(" ");
+        wrapper.textContent = `\\(${signedBody(term, index, semantic)}\\)`;
+        fragment.append(wrapper);
+      });
     }
+    elements.track.append(fragment);
+  }
 
-    const size = visibleWindowSize();
-    const start = Math.min(state.position, Math.max(0, state.terms.length - 1));
-    const end = Math.min(state.terms.length, start + size);
+  function setLoading(message) {
+    elements.loadingLabel.textContent = message;
+    elements.loading.classList.remove("is-hidden");
+    elements.shell.setAttribute("aria-busy", "true");
+    elements.track.classList.add("is-changing");
+  }
 
-    if (start > 0) {
-      const ellipsis = document.createElement("span");
-      ellipsis.className = "sm-formula-term sm-formula-ellipsis";
-      ellipsis.textContent = String.raw`\(\cdots\)`;
-      elements.track.append(ellipsis);
-    }
+  function scheduleTypeset(element) {
+    state.renderQueue = state.renderQueue
+      .catch(() => {})
+      .then(async () => {
+        const mathJax = await waitForMathJax();
+        if (mathJax.typesetClear) mathJax.typesetClear([element]);
+        await mathJax.typesetPromise([element]);
+        element.dataset.typeset = "true";
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
 
-    state.terms.slice(start, end).forEach((term, offset) => {
-      const wrapper = document.createElement("span");
-      wrapper.className = "sm-formula-term";
-      wrapper.dataset.index = String(start + offset);
+  function renderCompleteEquation() {
+    const token = ++state.renderToken;
+    const count = state.terms.length.toLocaleString();
+    setLoading(state.terms.length ? `Typesetting ${count} terms…` : "Typesetting the empty selection…");
+    elements.renderStatus.textContent = "Rendering complete expression";
+    buildExplanation();
+    buildColourKey();
+    clearSymbolHighlight();
 
-      const inner = document.createElement("span");
-      inner.className = "sm-term-inner";
-      inner.textContent = `\\(${signedBody(term, start + offset)}\\)`;
-      wrapper.append(inner);
-      elements.track.append(wrapper);
+    state.renderQueue = state.renderQueue
+      .catch(() => {})
+      .then(async () => {
+        if (token !== state.renderToken) return;
+        const mathJax = await waitForMathJax();
+        if (mathJax.typesetClear) mathJax.typesetClear([elements.track]);
+        buildEquationDOM(true);
+        await mathJax.typesetPromise([elements.track]);
+        if (token !== state.renderToken) return;
+
+        elements.track.classList.remove("is-changing");
+        elements.loading.classList.add("is-hidden");
+        elements.shell.setAttribute("aria-busy", "false");
+        elements.renderStatus.textContent = state.terms.length
+          ? `All ${count} terms rendered`
+          : "No sector selected";
+
+        if (state.explain && elements.symbolGroups.dataset.typeset !== "true") {
+          if (mathJax.typesetClear) mathJax.typesetClear([elements.symbolGroups]);
+          await mathJax.typesetPromise([elements.symbolGroups]);
+          elements.symbolGroups.dataset.typeset = "true";
+        }
+      })
+      .catch(async (error) => {
+        console.error(error);
+        try {
+          const mathJax = await waitForMathJax();
+          if (mathJax.typesetClear) mathJax.typesetClear([elements.track]);
+          buildEquationDOM(false);
+          await mathJax.typesetPromise([elements.track]);
+          elements.colourMode.checked = false;
+          state.colour = false;
+          updateModeClasses();
+          elements.renderStatus.textContent = "Rendered without semantic colour";
+        } catch (fallbackError) {
+          console.error(fallbackError);
+          elements.renderStatus.textContent = "Math rendering unavailable";
+        } finally {
+          elements.track.classList.remove("is-changing");
+          elements.loading.classList.add("is-hidden");
+          elements.shell.setAttribute("aria-busy", "false");
+        }
+      });
+  }
+
+  function updateFloatingLink() {
+    const params = new URLSearchParams({
+      phase: state.phase,
+      level: String(state.level),
+      mask: String(selectedMask()),
+      colour: state.colour ? "1" : "0",
     });
-
-    if (end < state.terms.length) {
-      const ellipsis = document.createElement("span");
-      ellipsis.className = "sm-formula-term sm-formula-ellipsis";
-      ellipsis.textContent = String.raw`\(\cdots\)`;
-      elements.track.append(ellipsis);
-    }
-
-    elements.positionLabel.textContent = `Terms ${start + 1}–${end} of ${state.terms.length}`;
-    void typesetTrack(token);
+    elements.floating.href = `lagrangian-floating.html?${params.toString()}`;
   }
 
   function updateSelection() {
     const ids = state.catalogue.configurations[configurationKey()] || [];
     state.terms = ids.map((id) => state.catalogue.terms[id]);
-    state.position = Math.min(state.position, Math.max(0, state.terms.length - 1));
-
-    elements.position.max = String(Math.max(0, state.terms.length - 1));
-    elements.position.value = String(state.position);
-    elements.position.disabled = state.terms.length <= 1;
-    elements.positionOutput.value = state.terms.length ? `${state.position + 1} / ${state.terms.length}` : "0 / 0";
     elements.termCount.textContent = `${state.terms.length.toLocaleString()} additive term${state.terms.length === 1 ? "" : "s"}`;
     elements.raw.textContent = alignedLatex();
-    state.lastAdvance = performance.now();
-    renderFormulaWindow();
+    updateFloatingLink();
+    renderCompleteEquation();
   }
 
   function updateLevel() {
@@ -263,15 +364,57 @@
     });
     setAllSectors();
     renderSectorControls();
-    state.position = 0;
     updateSelection();
   }
 
-  function updateMotionButton() {
-    elements.motion.setAttribute("aria-pressed", String(state.motion));
-    elements.motion.innerHTML = state.motion
-      ? '<span aria-hidden="true">Ⅱ</span> Pause motion'
-      : '<span aria-hidden="true">▶</span> Resume motion';
+  function updateModeClasses() {
+    root.classList.toggle("is-colour-mode", state.colour);
+    root.classList.toggle("is-explain-mode", state.explain);
+    elements.colourKey.hidden = !state.colour;
+    elements.explainer.hidden = !state.explain;
+    updateFloatingLink();
+  }
+
+  function setExplainMode(enabled) {
+    state.explain = enabled;
+    if (!enabled) {
+      state.persistentSymbol = null;
+      clearSymbolHighlight();
+    }
+    updateModeClasses();
+    if (enabled && elements.symbolGroups.dataset.typeset !== "true") {
+      scheduleTypeset(elements.symbolGroups);
+    }
+  }
+
+  function termsContaining(symbolId) {
+    return [...elements.track.querySelectorAll(".sm-formula-term")].filter((term) =>
+      term.dataset.symbols.split(" ").includes(symbolId),
+    );
+  }
+
+  function highlightSymbol(symbolId) {
+    const terms = [...elements.track.querySelectorAll(".sm-formula-term")];
+    terms.forEach((term) => {
+      const matches = symbolId && term.dataset.symbols.split(" ").includes(symbolId);
+      term.classList.toggle("is-symbol-match", Boolean(matches));
+      term.classList.toggle("is-symbol-dimmed", Boolean(symbolId) && !matches);
+    });
+    elements.symbolGroups.querySelectorAll(".sm-symbol-card").forEach((card) => {
+      card.classList.toggle("is-active", card.dataset.symbol === symbolId);
+      card.setAttribute("aria-pressed", String(state.persistentSymbol === card.dataset.symbol));
+    });
+    if (symbolId) {
+      const count = termsContaining(symbolId).length;
+      elements.renderStatus.textContent = `${count.toLocaleString()} matching term${count === 1 ? "" : "s"}`;
+    }
+  }
+
+  function clearSymbolHighlight() {
+    highlightSymbol(null);
+    if (state.terms.length && elements.shell.getAttribute("aria-busy") !== "true") {
+      elements.renderStatus.textContent = `All ${state.terms.length.toLocaleString()} terms rendered`;
+    }
   }
 
   function buttonFeedback(button, label) {
@@ -303,37 +446,35 @@
     buttonFeedback(elements.download, "Downloaded");
   }
 
-  function movePosition(delta) {
-    if (!state.terms.length) return;
-    state.position = Math.max(0, Math.min(state.terms.length - 1, state.position + delta));
-    elements.position.value = String(state.position);
-    elements.positionOutput.value = `${state.position + 1} / ${state.terms.length}`;
-    state.lastAdvance = performance.now();
-    renderFormulaWindow();
-  }
-
-  function animate(now) {
-    const amplitude = state.motion ? state.wave : 0;
-    const terms = [...elements.track.querySelectorAll(".sm-term-inner")];
-    terms.forEach((term, index) => {
-      const phase = now * 0.00072 + index * 0.72;
-      const y = Math.sin(phase) * 17 * amplitude + state.pointerY * 4 * amplitude;
-      const rotation = Math.cos(phase * 0.83) * 1.45 * amplitude + state.pointerX * 0.35 * amplitude;
-      const scaleY = 1 + Math.sin(phase * 0.57) * 0.045 * amplitude;
-      term.style.transform = `translate3d(0, ${y.toFixed(2)}px, 0) rotate(${rotation.toFixed(2)}deg) scaleY(${scaleY.toFixed(3)})`;
+  function bindExplanationEvents() {
+    elements.symbolGroups.addEventListener("pointerover", (event) => {
+      const card = event.target.closest(".sm-symbol-card");
+      if (card && !state.persistentSymbol) highlightSymbol(card.dataset.symbol);
     });
-
-    const drift = Math.sin(now * 0.00024) * 10 * amplitude + state.pointerX * 7 * amplitude;
-    elements.track.style.transform = `translate3d(${drift.toFixed(2)}px, 0, 0)`;
-
-    if (state.motion && state.terms.length > 1 && now - state.lastAdvance > 3300) {
-      state.position = state.position >= state.terms.length - 1 ? 0 : state.position + 1;
-      elements.position.value = String(state.position);
-      elements.positionOutput.value = `${state.position + 1} / ${state.terms.length}`;
-      state.lastAdvance = now;
-      renderFormulaWindow();
-    }
-    window.requestAnimationFrame(animate);
+    elements.symbolGroups.addEventListener("pointerout", (event) => {
+      const card = event.target.closest(".sm-symbol-card");
+      if (card && !state.persistentSymbol && !card.contains(event.relatedTarget)) {
+        clearSymbolHighlight();
+      }
+    });
+    elements.symbolGroups.addEventListener("focusin", (event) => {
+      const card = event.target.closest(".sm-symbol-card");
+      if (card && !state.persistentSymbol) highlightSymbol(card.dataset.symbol);
+    });
+    elements.symbolGroups.addEventListener("focusout", (event) => {
+      if (!state.persistentSymbol && !elements.symbolGroups.contains(event.relatedTarget)) {
+        clearSymbolHighlight();
+      }
+    });
+    elements.symbolGroups.addEventListener("click", (event) => {
+      const card = event.target.closest(".sm-symbol-card");
+      if (!card) return;
+      state.persistentSymbol = state.persistentSymbol === card.dataset.symbol
+        ? null
+        : card.dataset.symbol;
+      if (state.persistentSymbol) highlightSymbol(state.persistentSymbol);
+      else clearSymbolHighlight();
+    });
   }
 
   function bindEvents() {
@@ -343,60 +484,22 @@
 
     elements.development.addEventListener("input", () => {
       state.level = Number(elements.development.value);
-      state.position = 0;
       updateLevel();
       updateSelection();
     });
 
-    elements.position.addEventListener("input", () => {
-      state.position = Number(elements.position.value);
-      elements.positionOutput.value = state.terms.length ? `${state.position + 1} / ${state.terms.length}` : "0 / 0";
-      state.lastAdvance = performance.now();
-      renderFormulaWindow();
+    elements.colourMode.addEventListener("change", () => {
+      state.colour = elements.colourMode.checked;
+      updateModeClasses();
     });
 
-    elements.wave.addEventListener("input", () => {
-      state.wave = Number(elements.wave.value) / 100;
-      elements.waveOutput.value = `${elements.wave.value}%`;
+    elements.explainMode.addEventListener("change", () => {
+      setExplainMode(elements.explainMode.checked);
     });
 
-    elements.motion.addEventListener("click", () => {
-      state.motion = !state.motion;
-      state.lastAdvance = performance.now();
-      updateMotionButton();
-    });
     elements.copy.addEventListener("click", copyLatex);
     elements.download.addEventListener("click", downloadLatex);
-
-    elements.viewport.addEventListener("keydown", (event) => {
-      if (event.key === "ArrowRight") {
-        event.preventDefault();
-        movePosition(1);
-      } else if (event.key === "ArrowLeft") {
-        event.preventDefault();
-        movePosition(-1);
-      } else if (event.key === " ") {
-        event.preventDefault();
-        state.motion = !state.motion;
-        updateMotionButton();
-      }
-    });
-
-    elements.viewport.addEventListener("pointermove", (event) => {
-      const rect = elements.viewport.getBoundingClientRect();
-      state.pointerX = (event.clientX - rect.left) / rect.width - 0.5;
-      state.pointerY = (event.clientY - rect.top) / rect.height - 0.5;
-    });
-    elements.viewport.addEventListener("pointerleave", () => {
-      state.pointerX = 0;
-      state.pointerY = 0;
-    });
-
-    let resizeTimer;
-    window.addEventListener("resize", () => {
-      window.clearTimeout(resizeTimer);
-      resizeTimer = window.setTimeout(renderFormulaWindow, 180);
-    });
+    bindExplanationEvents();
   }
 
   async function init() {
@@ -407,13 +510,13 @@
       setAllSectors();
       renderSectorControls();
       updateLevel();
-      updateMotionButton();
       bindEvents();
+      updateModeClasses();
       updateSelection();
-      window.requestAnimationFrame(animate);
     } catch (error) {
       elements.loading.innerHTML = "<b>The Lagrangian catalogue could not be loaded.</b>";
       elements.termCount.textContent = "Unavailable";
+      elements.renderStatus.textContent = "Catalogue error";
       console.error(error);
     }
   }
