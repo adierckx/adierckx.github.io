@@ -28,6 +28,9 @@
     phaseButtons: [...root.querySelectorAll("[data-phase]")],
   };
 
+  const REQUIRED_SCHEMA = 2;
+  const TYPESET_BATCH = 72;
+
   const state = {
     catalogue: null,
     phase: "unbroken",
@@ -60,47 +63,17 @@
     state.selectedSectors = new Set(phaseMeta().sectors);
   }
 
-  function renderSectorControls() {
-    elements.sectorList.replaceChildren();
-    const meta = phaseMeta();
-    meta.sectors.forEach((sector) => {
-      const label = document.createElement("label");
-      label.className = "sm-sector-chip";
-
-      const checkbox = document.createElement("input");
-      checkbox.type = "checkbox";
-      checkbox.value = sector;
-      checkbox.checked = state.selectedSectors.has(sector);
-      checkbox.setAttribute("aria-label", meta.labels[sector]);
-
-      const text = document.createElement("span");
-      text.textContent = meta.labels[sector];
-
-      checkbox.addEventListener("change", () => {
-        if (checkbox.checked) state.selectedSectors.add(sector);
-        else state.selectedSectors.delete(sector);
-        updateSelection();
-      });
-
-      label.append(checkbox, text);
-      elements.sectorList.append(label);
-    });
-  }
-
   function signedBody(term, index, semantic = false) {
-    const body = semantic ? (term.semanticBody || term.body) : term.body;
+    const body = semantic && term.semanticBody ? term.semanticBody : term.body;
     if (index === 0) {
       const sign = term.sign < 0 ? "-" : "";
       return String.raw`\mathcal{L}_{\mathrm{selected}} ={} ${sign}\,${body}`;
     }
-    const sign = term.sign < 0 ? "-" : "+";
-    return `${sign}\\;${body}`;
+    return `${term.sign < 0 ? "-" : "+"}\\;${body}`;
   }
 
   function alignedLatex(environment = "aligned") {
-    if (!state.terms.length) {
-      return String.raw`\mathcal{L}_{\mathrm{selected}} = 0`;
-    }
+    if (!state.terms.length) return String.raw`\mathcal{L}_{\mathrm{selected}} = 0`;
     const lines = [`\\begin{${environment}}`];
     state.terms.forEach((term, index) => {
       const prefix = index === 0
@@ -149,11 +122,55 @@
   }
 
   async function waitForMathJax() {
-    for (let attempt = 0; attempt < 200; attempt += 1) {
+    for (let attempt = 0; attempt < 240; attempt += 1) {
       if (window.MathJax?.typesetPromise) return window.MathJax;
       await new Promise((resolve) => window.setTimeout(resolve, 50));
     }
     throw new Error("MathJax did not become available.");
+  }
+
+  function validateCatalogue(data) {
+    if (!data || typeof data !== "object") throw new Error("Catalogue is not an object.");
+    if (data.schemaVersion !== REQUIRED_SCHEMA) {
+      throw new Error(`Catalogue schema ${data.schemaVersion ?? "unknown"}; expected ${REQUIRED_SCHEMA}.`);
+    }
+    if (!Array.isArray(data.levels) || !data.phases || !Array.isArray(data.terms) || !data.configurations) {
+      throw new Error("Catalogue is missing required fields.");
+    }
+    if (!Array.isArray(data.symbolDefinitions)) data.symbolDefinitions = [];
+    return data;
+  }
+
+  async function loadCatalogue() {
+    const base = root.dataset.catalogue;
+    const separator = base.includes("?") ? "&" : "?";
+    const url = `${base}${separator}schema=${REQUIRED_SCHEMA}`;
+    const response = await fetch(url, { cache: "no-store" });
+    if (!response.ok) throw new Error(`Catalogue request failed (${response.status}).`);
+    return validateCatalogue(await response.json());
+  }
+
+  function renderSectorControls() {
+    elements.sectorList.replaceChildren();
+    const meta = phaseMeta();
+    meta.sectors.forEach((sector) => {
+      const label = document.createElement("label");
+      label.className = "sm-sector-chip";
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.value = sector;
+      checkbox.checked = state.selectedSectors.has(sector);
+      checkbox.setAttribute("aria-label", meta.labels[sector]);
+      const text = document.createElement("span");
+      text.textContent = meta.labels[sector];
+      checkbox.addEventListener("change", () => {
+        if (checkbox.checked) state.selectedSectors.add(sector);
+        else state.selectedSectors.delete(sector);
+        updateSelection();
+      });
+      label.append(checkbox, text);
+      elements.sectorList.append(label);
+    });
   }
 
   function activeSymbolDefinitions() {
@@ -170,11 +187,9 @@
         const item = document.createElement("span");
         item.className = "sm-key-item";
         item.dataset.symbol = definition.id;
-
         const swatch = document.createElement("i");
         swatch.className = `sm-key-swatch sm-symbol--${definition.id}`;
         swatch.setAttribute("aria-hidden", "true");
-
         const label = document.createElement("span");
         label.textContent = definition.name;
         item.append(swatch, label);
@@ -189,52 +204,41 @@
       if (!grouped.has(definition.group)) grouped.set(definition.group, []);
       grouped.get(definition.group).push(definition);
     });
-
     grouped.forEach((definitions, groupName) => {
       const section = document.createElement("section");
       section.className = "sm-symbol-group";
-
       const heading = document.createElement("h3");
       heading.textContent = groupName;
-
       const grid = document.createElement("div");
       grid.className = "sm-symbol-grid";
-
       definitions.forEach((definition) => {
         const card = document.createElement("button");
         card.type = "button";
         card.className = "sm-symbol-card";
         card.dataset.symbol = definition.id;
         card.setAttribute("aria-pressed", "false");
-
         const notation = document.createElement("span");
         notation.className = `sm-symbol-notation sm-symbol--${definition.id}`;
         notation.textContent = `\\(${definition.latex}\\)`;
-
         const copy = document.createElement("span");
         copy.className = "sm-symbol-copy";
-
         const name = document.createElement("strong");
         name.textContent = definition.name;
-
         const description = document.createElement("small");
         description.textContent = definition.description;
-
         copy.append(name, description);
         card.append(notation, copy);
         grid.append(card);
       });
-
       section.append(heading, grid);
       elements.symbolGroups.append(section);
     });
     elements.symbolGroups.dataset.typeset = "false";
   }
 
-  function buildEquationDOM(semantic = true) {
+  function buildEquationDOM(useSemantic) {
     elements.track.replaceChildren();
     const fragment = document.createDocumentFragment();
-
     if (!state.terms.length) {
       const empty = document.createElement("span");
       empty.className = "sm-formula-term";
@@ -249,7 +253,7 @@
         const symbols = [...(term.symbols || [])];
         if (index === 0) symbols.push("lagrangian-density");
         wrapper.dataset.symbols = symbols.join(" ");
-        wrapper.textContent = `\\(${signedBody(term, index, semantic)}\\)`;
+        wrapper.textContent = `\\(${signedBody(term, index, useSemantic)}\\)`;
         fragment.append(wrapper);
       });
     }
@@ -263,6 +267,21 @@
     elements.track.classList.add("is-changing");
   }
 
+  async function typesetBatches(mathJax, token) {
+    const nodes = [...elements.track.children];
+    for (let start = 0; start < nodes.length; start += TYPESET_BATCH) {
+      if (token !== state.renderToken) return false;
+      const batch = nodes.slice(start, start + TYPESET_BATCH);
+      await mathJax.typesetPromise(batch);
+      const done = Math.min(nodes.length, start + TYPESET_BATCH);
+      if (nodes.length > TYPESET_BATCH) {
+        elements.renderStatus.textContent = `Rendering ${done.toLocaleString()} / ${nodes.length.toLocaleString()} terms`;
+      }
+      await new Promise((resolve) => window.setTimeout(resolve, 0));
+    }
+    return token === state.renderToken;
+  }
+
   function scheduleTypeset(element) {
     state.renderQueue = state.renderQueue
       .catch(() => {})
@@ -272,16 +291,22 @@
         await mathJax.typesetPromise([element]);
         element.dataset.typeset = "true";
       })
-      .catch((error) => {
-        console.error(error);
-      });
+      .catch((error) => console.error("Notation guide typesetting failed:", error));
+  }
+
+  function finishRender(count) {
+    elements.track.classList.remove("is-changing");
+    elements.loading.classList.add("is-hidden");
+    elements.shell.setAttribute("aria-busy", "false");
+    elements.renderStatus.textContent = state.terms.length ? `All ${count} terms rendered` : "No sector selected";
   }
 
   function renderCompleteEquation() {
     const token = ++state.renderToken;
     const count = state.terms.length.toLocaleString();
+    const wantsSemantic = state.colour;
     setLoading(state.terms.length ? `Typesetting ${count} terms…` : "Typesetting the empty selection…");
-    elements.renderStatus.textContent = "Rendering complete expression";
+    elements.renderStatus.textContent = "Preparing expression";
     buildExplanation();
     buildColourKey();
     clearSymbolHighlight();
@@ -292,42 +317,34 @@
         if (token !== state.renderToken) return;
         const mathJax = await waitForMathJax();
         if (mathJax.typesetClear) mathJax.typesetClear([elements.track]);
-        buildEquationDOM(true);
-        await mathJax.typesetPromise([elements.track]);
+        buildEquationDOM(wantsSemantic);
+        try {
+          const completed = await typesetBatches(mathJax, token);
+          if (!completed) return;
+        } catch (semanticError) {
+          if (!wantsSemantic) throw semanticError;
+          console.warn("Semantic MathJax markup failed; falling back to plain TeX.", semanticError);
+          if (mathJax.typesetClear) mathJax.typesetClear([elements.track]);
+          buildEquationDOM(false);
+          const completed = await typesetBatches(mathJax, token);
+          if (!completed) return;
+          state.colour = false;
+          elements.colourMode.checked = false;
+          updateModeClasses(false);
+        }
+        finishRender(count);
+        if (state.explain && elements.symbolGroups.dataset.typeset !== "true") {
+          scheduleTypeset(elements.symbolGroups);
+        }
+      })
+      .catch((error) => {
+        console.error("Lagrangian MathJax rendering failed:", error);
         if (token !== state.renderToken) return;
-
         elements.track.classList.remove("is-changing");
         elements.loading.classList.add("is-hidden");
         elements.shell.setAttribute("aria-busy", "false");
-        elements.renderStatus.textContent = state.terms.length
-          ? `All ${count} terms rendered`
-          : "No sector selected";
-
-        if (state.explain && elements.symbolGroups.dataset.typeset !== "true") {
-          if (mathJax.typesetClear) mathJax.typesetClear([elements.symbolGroups]);
-          await mathJax.typesetPromise([elements.symbolGroups]);
-          elements.symbolGroups.dataset.typeset = "true";
-        }
-      })
-      .catch(async (error) => {
-        console.error(error);
-        try {
-          const mathJax = await waitForMathJax();
-          if (mathJax.typesetClear) mathJax.typesetClear([elements.track]);
-          buildEquationDOM(false);
-          await mathJax.typesetPromise([elements.track]);
-          elements.colourMode.checked = false;
-          state.colour = false;
-          updateModeClasses();
-          elements.renderStatus.textContent = "Rendered without semantic colour";
-        } catch (fallbackError) {
-          console.error(fallbackError);
-          elements.renderStatus.textContent = "Math rendering unavailable";
-        } finally {
-          elements.track.classList.remove("is-changing");
-          elements.loading.classList.add("is-hidden");
-          elements.shell.setAttribute("aria-busy", "false");
-        }
+        elements.renderStatus.textContent = "Math rendering unavailable";
+        buildEquationDOM(false);
       });
   }
 
@@ -343,7 +360,7 @@
 
   function updateSelection() {
     const ids = state.catalogue.configurations[configurationKey()] || [];
-    state.terms = ids.map((id) => state.catalogue.terms[id]);
+    state.terms = ids.map((id) => state.catalogue.terms[id]).filter(Boolean);
     elements.termCount.textContent = `${state.terms.length.toLocaleString()} additive term${state.terms.length === 1 ? "" : "s"}`;
     elements.raw.textContent = alignedLatex();
     updateFloatingLink();
@@ -359,20 +376,18 @@
 
   function setPhase(phase) {
     state.phase = phase;
-    elements.phaseButtons.forEach((button) => {
-      button.setAttribute("aria-pressed", String(button.dataset.phase === phase));
-    });
+    elements.phaseButtons.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.phase === phase)));
     setAllSectors();
     renderSectorControls();
     updateSelection();
   }
 
-  function updateModeClasses() {
+  function updateModeClasses(updateLink = true) {
     root.classList.toggle("is-colour-mode", state.colour);
     root.classList.toggle("is-explain-mode", state.explain);
     elements.colourKey.hidden = !state.colour;
     elements.explainer.hidden = !state.explain;
-    updateFloatingLink();
+    if (updateLink) updateFloatingLink();
   }
 
   function setExplainMode(enabled) {
@@ -382,21 +397,19 @@
       clearSymbolHighlight();
     }
     updateModeClasses();
-    if (enabled && elements.symbolGroups.dataset.typeset !== "true") {
-      scheduleTypeset(elements.symbolGroups);
-    }
+    if (enabled && elements.symbolGroups.dataset.typeset !== "true") scheduleTypeset(elements.symbolGroups);
   }
 
   function termsContaining(symbolId) {
     return [...elements.track.querySelectorAll(".sm-formula-term")].filter((term) =>
-      term.dataset.symbols.split(" ").includes(symbolId),
+      (term.dataset.symbols || "").split(" ").includes(symbolId),
     );
   }
 
   function highlightSymbol(symbolId) {
     const terms = [...elements.track.querySelectorAll(".sm-formula-term")];
     terms.forEach((term) => {
-      const matches = symbolId && term.dataset.symbols.split(" ").includes(symbolId);
+      const matches = symbolId && (term.dataset.symbols || "").split(" ").includes(symbolId);
       term.classList.toggle("is-symbol-match", Boolean(matches));
       term.classList.toggle("is-symbol-dimmed", Boolean(symbolId) && !matches);
     });
@@ -412,9 +425,6 @@
 
   function clearSymbolHighlight() {
     highlightSymbol(null);
-    if (state.terms.length && elements.shell.getAttribute("aria-busy") !== "true") {
-      elements.renderStatus.textContent = `All ${state.terms.length.toLocaleString()} terms rendered`;
-    }
   }
 
   function buttonFeedback(button, label) {
@@ -453,50 +463,37 @@
     });
     elements.symbolGroups.addEventListener("pointerout", (event) => {
       const card = event.target.closest(".sm-symbol-card");
-      if (card && !state.persistentSymbol && !card.contains(event.relatedTarget)) {
-        clearSymbolHighlight();
-      }
+      if (card && !state.persistentSymbol && !card.contains(event.relatedTarget)) clearSymbolHighlight();
     });
     elements.symbolGroups.addEventListener("focusin", (event) => {
       const card = event.target.closest(".sm-symbol-card");
       if (card && !state.persistentSymbol) highlightSymbol(card.dataset.symbol);
     });
     elements.symbolGroups.addEventListener("focusout", (event) => {
-      if (!state.persistentSymbol && !elements.symbolGroups.contains(event.relatedTarget)) {
-        clearSymbolHighlight();
-      }
+      if (!state.persistentSymbol && !elements.symbolGroups.contains(event.relatedTarget)) clearSymbolHighlight();
     });
     elements.symbolGroups.addEventListener("click", (event) => {
       const card = event.target.closest(".sm-symbol-card");
       if (!card) return;
-      state.persistentSymbol = state.persistentSymbol === card.dataset.symbol
-        ? null
-        : card.dataset.symbol;
+      state.persistentSymbol = state.persistentSymbol === card.dataset.symbol ? null : card.dataset.symbol;
       if (state.persistentSymbol) highlightSymbol(state.persistentSymbol);
       else clearSymbolHighlight();
     });
   }
 
   function bindEvents() {
-    elements.phaseButtons.forEach((button) => {
-      button.addEventListener("click", () => setPhase(button.dataset.phase));
-    });
-
+    elements.phaseButtons.forEach((button) => button.addEventListener("click", () => setPhase(button.dataset.phase)));
     elements.development.addEventListener("input", () => {
       state.level = Number(elements.development.value);
       updateLevel();
       updateSelection();
     });
-
     elements.colourMode.addEventListener("change", () => {
       state.colour = elements.colourMode.checked;
       updateModeClasses();
+      renderCompleteEquation();
     });
-
-    elements.explainMode.addEventListener("change", () => {
-      setExplainMode(elements.explainMode.checked);
-    });
-
+    elements.explainMode.addEventListener("change", () => setExplainMode(elements.explainMode.checked));
     elements.copy.addEventListener("click", copyLatex);
     elements.download.addEventListener("click", downloadLatex);
     bindExplanationEvents();
@@ -504,9 +501,17 @@
 
   async function init() {
     try {
-      const response = await fetch(root.dataset.catalogue, { cache: "force-cache" });
-      if (!response.ok) throw new Error(`Catalogue request failed (${response.status}).`);
-      state.catalogue = await response.json();
+      elements.loadingLabel.textContent = "Loading catalogue…";
+      state.catalogue = await loadCatalogue();
+    } catch (error) {
+      console.error("Catalogue loading failed:", error);
+      elements.loading.innerHTML = "<b>The Lagrangian catalogue could not be loaded.</b>";
+      elements.termCount.textContent = "Unavailable";
+      elements.renderStatus.textContent = "Catalogue error";
+      return;
+    }
+
+    try {
       setAllSectors();
       renderSectorControls();
       updateLevel();
@@ -514,10 +519,10 @@
       updateModeClasses();
       updateSelection();
     } catch (error) {
-      elements.loading.innerHTML = "<b>The Lagrangian catalogue could not be loaded.</b>";
-      elements.termCount.textContent = "Unavailable";
-      elements.renderStatus.textContent = "Catalogue error";
-      console.error(error);
+      console.error("Lagrangian interface setup failed:", error);
+      elements.loading.classList.add("is-hidden");
+      elements.termCount.textContent = "Interface error";
+      elements.renderStatus.textContent = "Open the browser console for details";
     }
   }
 
