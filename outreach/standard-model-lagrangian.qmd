@@ -5,7 +5,9 @@ page-layout: full
 toc: false
 format:
   html:
-    css: ../assets/lagrangian/lagrangian.css
+    css:
+      - ../assets/lagrangian/lagrangian.css
+      - ../assets/lagrangian/lagrangian-colour-variation.css
 ---
 
 ::: {.column-screen}
@@ -161,6 +163,7 @@ $\require{html}\class{sm-math-probe}{x}$
 </div>
 
 <script defer src="../assets/lagrangian/lagrangian-app.js"></script>
+<script defer src="../assets/lagrangian/lagrangian-reading-modes.js"></script>
 ```
 
 :::

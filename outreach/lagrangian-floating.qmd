@@ -5,7 +5,9 @@ page-layout: full
 toc: false
 format:
   html:
-    css: ../assets/lagrangian/lagrangian-floating.css
+    css:
+      - ../assets/lagrangian/lagrangian-floating.css
+      - ../assets/lagrangian/lagrangian-colour-variation.css
 ---
 
 ::: {.column-screen}
@@ -46,7 +48,7 @@ $\require{html}\class{sm-math-probe}{x}$
     class="sm-floating-stage"
     id="sm-floating-stage"
     tabindex="0"
-    aria-label="Floating complete Lagrangian. Press space to pause or resume."
+    aria-label="Floating complete Lagrangian. Move the pointer to guide it; press space to pause or resume."
   >
     <div class="sm-floating-field" id="sm-floating-field"></div>
     <div class="sm-floating-loading" id="sm-floating-loading" role="status">
@@ -55,7 +57,7 @@ $\require{html}\class{sm-math-probe}{x}$
     </div>
   </main>
 
-  <p class="sm-floating-hint">Move the pointer for parallax · Space pauses motion</p>
+  <p class="sm-floating-hint">Guide the ribbon with the pointer · Move away and it wanders freely · Space pauses motion</p>
   <noscript>This view requires JavaScript.</noscript>
 </div>
 

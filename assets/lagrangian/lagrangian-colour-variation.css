@@ -1,0 +1,69 @@
+.is-colour-mode :is(
+  .sm-symbol--up-quark,
+  .sm-symbol--charm-quark,
+  .sm-symbol--top-quark,
+  .sm-symbol--down-quark,
+  .sm-symbol--strange-quark,
+  .sm-symbol--bottom-quark,
+  .sm-symbol--electron,
+  .sm-symbol--muon,
+  .sm-symbol--tau-lepton,
+  .sm-symbol--electron-neutrino,
+  .sm-symbol--muon-neutrino,
+  .sm-symbol--tau-neutrino,
+  .sm-symbol--up-type,
+  .sm-symbol--down-type,
+  .sm-symbol--charged-lepton,
+  .sm-symbol--neutrino,
+  .sm-symbol--generic-fermion
+):nth-of-type(3n + 1) {
+  filter: hue-rotate(-7deg) saturate(1.05) brightness(1.02);
+}
+
+.is-colour-mode :is(
+  .sm-symbol--up-quark,
+  .sm-symbol--charm-quark,
+  .sm-symbol--top-quark,
+  .sm-symbol--down-quark,
+  .sm-symbol--strange-quark,
+  .sm-symbol--bottom-quark,
+  .sm-symbol--electron,
+  .sm-symbol--muon,
+  .sm-symbol--tau-lepton,
+  .sm-symbol--electron-neutrino,
+  .sm-symbol--muon-neutrino,
+  .sm-symbol--tau-neutrino,
+  .sm-symbol--up-type,
+  .sm-symbol--down-type,
+  .sm-symbol--charged-lepton,
+  .sm-symbol--neutrino,
+  .sm-symbol--generic-fermion
+):nth-of-type(3n + 2) {
+  filter: hue-rotate(6deg) saturate(1.08) brightness(0.99);
+}
+
+.is-colour-mode :is(
+  .sm-symbol--up-quark,
+  .sm-symbol--charm-quark,
+  .sm-symbol--top-quark,
+  .sm-symbol--down-quark,
+  .sm-symbol--strange-quark,
+  .sm-symbol--bottom-quark,
+  .sm-symbol--electron,
+  .sm-symbol--muon,
+  .sm-symbol--tau-lepton,
+  .sm-symbol--electron-neutrino,
+  .sm-symbol--muon-neutrino,
+  .sm-symbol--tau-neutrino,
+  .sm-symbol--up-type,
+  .sm-symbol--down-type,
+  .sm-symbol--charged-lepton,
+  .sm-symbol--neutrino,
+  .sm-symbol--generic-fermion
+):nth-of-type(5n) {
+  filter: hue-rotate(11deg) saturate(1.04) brightness(1.04);
+}
+
+.sm-floating-app.is-colour-mode .sm-floating-term {
+  filter: hue-rotate(var(--sm-hue-drift, 0deg)) saturate(1.03);
+}
