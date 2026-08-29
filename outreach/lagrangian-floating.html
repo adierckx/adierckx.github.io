@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Explore the complete Standard Model Lagrangian sector by sector, with semantic colour, symbol explanations, and five levels of development.">
+<meta name="description" content="A full-screen animated view of a selected Standard Model Lagrangian.">
 
-<title>The Standard Model, unfolded – Antoine Dierckx</title>
+<title>Floating Standard Model Lagrangian – Antoine Dierckx</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -107,7 +107,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../assets/css/styles.css">
-<link rel="stylesheet" href="../assets/lagrangian/lagrangian.css">
+<link rel="stylesheet" href="../assets/lagrangian/lagrangian-floating.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -210,12 +210,12 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">The Standard Model, unfolded</h1>
+<h1 class="title">Floating Standard Model Lagrangian</h1>
 </div>
 
 <div>
   <div class="description">
-    Explore the complete Standard Model Lagrangian sector by sector, with semantic colour, symbol explanations, and five levels of development.
+    A full-screen animated view of a selected Standard Model Lagrangian.
   </div>
 </div>
 
@@ -232,146 +232,46 @@ window.Quarto = {
 </header>
 
 
-<div class="column-screen page-columns page-full">
-<div class="sm-math-bootstrap" aria-hidden="true">
+<div class="column-screen">
+<div class="sm-floating-math-bootstrap" aria-hidden="true">
 <p><span class="math inline">\(\require{html}\class{sm-math-probe}{x}\)</span></p>
 </div>
-<div class="sm-lagrangian-app page-columns page-full" id="sm-lagrangian-app" data-catalogue="../assets/lagrangian/catalogue.json">
-  <div class="sm-app-aura sm-app-aura-one" aria-hidden="true"></div>
-  <div class="sm-app-aura sm-app-aura-two" aria-hidden="true"></div>
+<div class="sm-floating-app" id="sm-floating-app" data-catalogue="../assets/lagrangian/catalogue.json">
+  <div class="sm-floating-orb sm-floating-orb-one" aria-hidden="true"></div>
+  <div class="sm-floating-orb sm-floating-orb-two" aria-hidden="true"></div>
 
-  <header class="sm-app-intro">
-    <p class="sm-eyebrow">Interactive field theory</p>
-    <h1>The Standard Model, <span>unfolded.</span></h1>
-    <p class="sm-app-lede">
-      Select a phase and its sectors, then move from canonical notation to
-      explicit generations, internal components, and gauge-field monomials.
-      The complete selected expression is shown below and Lorentz indices stay
-      covariant at every level.
-    </p>
+  <header class="sm-floating-toolbar">
+    <a class="sm-floating-back" href="standard-model-lagrangian.html">
+      <span aria-hidden="true">←</span> Editor
+    </a>
+    <div class="sm-floating-summary">
+      <strong id="sm-floating-level">Loading selection</strong>
+      <span id="sm-floating-count"></span>
+    </div>
+    <div class="sm-floating-actions">
+      <label>
+        <span>Speed</span>
+        <input id="sm-floating-speed" type="range" min="20" max="180" step="5" value="80">
+      </label>
+      <button type="button" id="sm-floating-motion" aria-pressed="true">
+        <span aria-hidden="true">Ⅱ</span> Pause
+      </button>
+    </div>
   </header>
 
-  <section class="sm-glass sm-formula-stage" aria-label="Complete selected Lagrangian">
-    <div class="sm-stage-header">
-      <div class="sm-stage-stat">
-        <span class="sm-stage-label">Complete expression</span>
-        <strong id="sm-term-count">Loading catalogue…</strong>
-      </div>
-      <div class="sm-render-status" id="sm-render-status" role="status"></div>
+  <main class="sm-floating-stage" id="sm-floating-stage" tabindex="0" aria-label="Floating complete Lagrangian. Press space to pause or resume.">
+    <div class="sm-floating-field" id="sm-floating-field"></div>
+    <div class="sm-floating-loading" id="sm-floating-loading" role="status">
+      <span></span><span></span><span></span>
+      <b>Typesetting the complete expression…</b>
     </div>
+  </main>
 
-    <div class="sm-equation-shell" id="sm-equation-shell" aria-busy="true">
-      <div class="sm-formula-track" id="sm-formula-track"></div>
-      <div class="sm-loading" id="sm-loading">
-        <span></span><span></span><span></span>
-        <b id="sm-loading-label">Preparing the fields</b>
-      </div>
-    </div>
-
-    <div class="sm-colour-key" id="sm-colour-key" hidden=""></div>
-
-    <div class="sm-stage-footer">
-      <span id="sm-level-caption">Connections</span>
-      <span class="sm-stage-hint">Every additive term in the current selection is displayed.</span>
-    </div>
-  </section>
-
-  <section class="sm-glass sm-controls" aria-label="Lagrangian controls">
-    <div class="sm-control-block sm-phase-control">
-      <span class="sm-control-title">Field basis</span>
-      <div class="sm-segmented" role="group" aria-label="Field basis">
-        <button type="button" data-phase="unbroken" aria-pressed="true">
-          Symmetric
-          <small>before EWSB</small>
-        </button>
-        <button type="button" data-phase="broken" aria-pressed="false">
-          Physical
-          <small>after EWSB</small>
-        </button>
-      </div>
-    </div>
-
-    <fieldset class="sm-control-block sm-sector-control">
-      <legend class="sm-control-title">Active sectors</legend>
-      <div class="sm-sector-list" id="sm-sector-list"></div>
-    </fieldset>
-
-    <div class="sm-control-block sm-development-control">
-      <div class="sm-control-heading">
-        <label class="sm-control-title" for="sm-development">Development</label>
-        <output id="sm-level-name" for="sm-development">Connections</output>
-      </div>
-      <input id="sm-development" type="range" min="0" max="4" step="1" value="2">
-      <div class="sm-range-ticks" aria-hidden="true">
-        <span>Canonical</span><span>Multiplets</span><span>Connections</span><span>Components</span><span>Unfolded</span>
-      </div>
-      <p id="sm-level-description">Covariant derivatives and field strengths are exposed.</p>
-    </div>
-
-    <fieldset class="sm-control-block sm-reading-control">
-      <legend class="sm-control-title">Reading modes</legend>
-      <div class="sm-mode-list">
-        <label class="sm-mode-switch">
-          <input id="sm-colour-mode" type="checkbox">
-          <span>
-            <strong>Smart colour</strong>
-            <small>Field families and physical flavours</small>
-          </span>
-        </label>
-        <label class="sm-mode-switch">
-          <input id="sm-explain-mode" type="checkbox">
-          <span>
-            <strong>Explain symbols</strong>
-            <small>Contextual notation guide</small>
-          </span>
-        </label>
-      </div>
-    </fieldset>
-
-    <div class="sm-control-block sm-actions">
-      <a id="sm-floating-view" class="sm-action-button sm-floating-button" href="lagrangian-floating.html" target="_blank" rel="noopener">
-        <span aria-hidden="true">↗</span> Floating view
-      </a>
-      <button type="button" id="sm-copy" class="sm-action-button">
-        <span aria-hidden="true">⧉</span> Copy LaTeX
-      </button>
-      <button type="button" id="sm-download" class="sm-action-button sm-action-primary">
-        <span aria-hidden="true">↓</span> Download .tex
-      </button>
-    </div>
-  </section>
-
-  <section class="sm-glass sm-explainer" id="sm-explainer" hidden="" aria-label="Symbol explanations">
-    <div class="sm-explainer-header">
-      <div>
-        <p class="sm-control-title">Notation guide</p>
-        <h2>Symbols in this selection</h2>
-      </div>
-      <p>Hover or focus a card to locate the terms that use that symbol.</p>
-    </div>
-    <div class="sm-symbol-groups" id="sm-symbol-groups"></div>
-  </section>
-
-  <details class="sm-glass sm-source-panel">
-    <summary>
-      <span>Complete LaTeX source</span>
-      <small>The copied and downloaded source stays uncoloured and portable.</small>
-    </summary>
-    <div class="sm-source-inner">
-      <pre><code id="sm-raw-latex"></code></pre>
-    </div>
-  </details>
-
-  <aside class="sm-scope-note">
-    <strong>Scope.</strong> This is the classical, gauge-invariant minimal Standard Model.
-    Gauge-fixing, ghosts, the QCD theta term, right-handed neutrinos, and
-    higher-dimensional operators are not included.
-  </aside>
-
-  <noscript>This interactive page requires JavaScript.</noscript>
+  <p class="sm-floating-hint">Move the pointer for parallax · Space pauses motion</p>
+  <noscript>This view requires JavaScript.</noscript>
 </div>
 
-<script defer="" src="../assets/lagrangian/lagrangian-app.js"></script>
+<script defer="" src="../assets/lagrangian/lagrangian-floating.js"></script>
 </div>
 
 

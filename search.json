@@ -242,140 +242,70 @@
     "href": "outreach/standard-model-lagrangian.html",
     "title": "The Standard Model, unfolded",
     "section": "",
-    "text": "\\(x\\)\n\n\n  \n  \n\n  \n    Interactive field theory\n    The Standard Model, unfolded.\n    \n      Select a phase and its sectors, then move from the canonical notation to\n      explicit generations, internal components, and gauge-field monomials.\n      Lorentz indices remain covariant at every level.\n    \n  \n\n  \n    \n      \n        Selected expression\n        Loading catalogue…\n      \n      \n    \n\n    \n      \n      \n      \n        \n        Preparing the fields\n      \n    \n\n    \n      Connections\n      Drag the position slider to travel through the equation\n    \n  \n\n  \n    \n      Field basis\n      \n        \n          Symmetric\n          before EWSB\n        \n        \n          Physical\n          after EWSB\n        \n      \n    \n\n    \n      Active sectors\n      \n    \n\n    \n      \n        Development\n        Connections\n      \n      \n      \n        CanonicalMultipletsConnectionsComponentsUnfolded\n      \n      Covariant derivatives and field strengths are exposed.\n    \n\n    \n      \n        Position in the equation\n        1\n      \n      \n    \n\n    \n      \n        Wave amplitude\n        62%\n      \n      \n    \n\n    \n      \n        Ⅱ Pause motion\n      \n      \n        ⧉ Copy LaTeX\n      \n      \n        ↓ Download .tex\n      \n    \n  \n\n  \n    \n      Complete LaTeX source\n      The download is always complete, including terms outside the animated window.\n    \n    \n      \n    \n  \n\n  \n    Scope. This is the classical, gauge-invariant minimal Standard Model.\n    Gauge-fixing, ghosts, the QCD theta term, right-handed neutrinos, and\n    higher-dimensional operators are not included.\n  \n\n  This interactive page requires JavaScript."
+    "text": "\\(\\require{html}\\class{sm-math-probe}{x}\\)\n\n\n  \n  \n\n  \n    Interactive field theory\n    The Standard Model, unfolded.\n    \n      Select a phase and its sectors, then move from canonical notation to\n      explicit generations, internal components, and gauge-field monomials.\n      The complete selected expression is shown below and Lorentz indices stay\n      covariant at every level.\n    \n  \n\n  \n    \n      \n        Complete expression\n        Loading catalogue…\n      \n      \n    \n\n    \n      \n      \n        \n        Preparing the fields\n      \n    \n\n    \n\n    \n      Connections\n      Every additive term in the current selection is displayed.\n    \n  \n\n  \n    \n      Field basis\n      \n        \n          Symmetric\n          before EWSB\n        \n        \n          Physical\n          after EWSB\n        \n      \n    \n\n    \n      Active sectors\n      \n    \n\n    \n      \n        Development\n        Connections\n      \n      \n      \n        CanonicalMultipletsConnectionsComponentsUnfolded\n      \n      Covariant derivatives and field strengths are exposed.\n    \n\n    \n      Reading modes\n      \n        \n          \n          \n            Smart colour\n            Field families and physical flavours\n          \n        \n        \n          \n          \n            Explain symbols\n            Contextual notation guide\n          \n        \n      \n    \n\n    \n      \n        ↗ Floating view\n      \n      \n        ⧉ Copy LaTeX\n      \n      \n        ↓ Download .tex\n      \n    \n  \n\n  \n    \n      \n        Notation guide\n        Symbols in this selection\n      \n      Hover or focus a card to locate the terms that use that symbol.\n    \n    \n  \n\n  \n    \n      Complete LaTeX source\n      The copied and downloaded source stays uncoloured and portable.\n    \n    \n      \n    \n  \n\n  \n    Scope. This is the classical, gauge-invariant minimal Standard Model.\n    Gauge-fixing, ghosts, the QCD theta term, right-handed neutrinos, and\n    higher-dimensional operators are not included.\n  \n\n  This interactive page requires JavaScript."
   },
   {
-    "objectID": "outreach/projects.html",
-    "href": "outreach/projects.html",
-    "title": "Outreach & Creative Projects",
+    "objectID": "outreach/lagrangian-floating.html",
+    "href": "outreach/lagrangian-floating.html",
+    "title": "Floating Standard Model Lagrangian",
     "section": "",
-    "text": "Beyond academic research, I participate in science communication, digital content creation, and collaborative design projects aimed at opening up academic and scientific spaces."
+    "text": "\\(\\require{html}\\class{sm-math-probe}{x}\\)\n\n\n  \n  \n\n  \n    \n      ← Editor\n    \n    \n      Loading selection\n      \n    \n    \n      \n        Speed\n        \n      \n      \n        Ⅱ Pause\n      \n    \n  \n\n  \n    \n    \n      \n      Typesetting the complete expression…\n    \n  \n\n  Move the pointer for parallax · Space pauses motion\n  This view requires JavaScript."
   },
   {
-    "objectID": "outreach/projects.html#interactive-physics",
-    "href": "outreach/projects.html#interactive-physics",
-    "title": "Outreach & Creative Projects",
-    "section": "Interactive Physics",
-    "text": "Interactive Physics\n\nThe Standard Model, unfolded\nChoose a field basis and the sectors you want to keep, then move from the canonical Standard Model Lagrangian to its explicit generations, internal components, and gauge-field monomials. The live equation remains Lorentz covariant and can be copied or downloaded as LaTeX.\nExplore the interactive Lagrangian"
-  },
-  {
-    "objectID": "outreach/projects.html#science-communication-outreach",
-    "href": "outreach/projects.html#science-communication-outreach",
-    "title": "Outreach & Creative Projects",
-    "section": "Science Communication & Outreach",
-    "text": "Science Communication & Outreach\n\nThe bel.sciences Project (STEMentiel!)\nAs part of the broader STEMentiel! initiative, I contribute to bel.sciences, a digital outreach project focused on sharing diverse pathways into exact sciences. I produce video content and conduct short interviews across TikTok, Instagram, and YouTube, highlighting students and researchers in mathematics and physics from a wide range of backgrounds.\n\nExplore our content via our Linktree bel.sciences."
-  },
-  {
-    "objectID": "outreach/projects.html#graphic-design-collaboration",
-    "href": "outreach/projects.html#graphic-design-collaboration",
-    "title": "Outreach & Creative Projects",
-    "section": "Graphic Design & Collaboration",
-    "text": "Graphic Design & Collaboration\n\nIdentity & Logo Design\nI occasionally collaborate on visual identity and graphic materials for scientific networks and working groups. This includes designing the official logo for the WOST (WithOut SpaceTime) network."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Antoine Dierckx",
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
     "section": "",
-    "text": "PhD Candidate in Theoretical Physics\n\n\n\n  arXiv  |   ORCiD  |   iNSPIRE HEP"
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nReleasing pbh-rem: A framework for PBH remnants\n\n3 min\n\nA suite of Mathematica notebooks designed to simulate the cosmological evolution of Primordial Black Holes and their remnants.\n\n\n\nMay 27, 2026\n\n\n\n\n\n\n\n\n\n\n\nSome useful links for physics students\n\n2 min\n\n\n\n\n\nMay 21, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "index.html#recent-releases",
-    "href": "index.html#recent-releases",
-    "title": "Antoine Dierckx",
-    "section": "Recent Releases",
-    "text": "Recent Releases\n\n\n\n\nNew Paper\n\n\nSignatures of LQG in PBH cosmologies\nIn collaboration with F. Vidotto & S. Clesse.\nExploring the phenomenological signatures of Loop Quantum Gravity in the context of Primordial Black Hole cosmologies.\n   Read on arXiv ➔ \n\n\n\n\n\n\nNew Code\n\n\nFramework pbh-rem\nDeveloped in Mathematica.\nComputational framework to evaluate phenomenological constraints on Primordial Black Holes with stable remnants (Planckian relics and Memory Burden effects).\n  Read the blog post ➔"
-  },
-  {
-    "objectID": "index.html#research-focus",
-    "href": "index.html#research-focus",
-    "title": "Antoine Dierckx",
-    "section": "Research Focus",
-    "text": "Research Focus\n\n\nPrimordial Black Holes & Remnants\nStudying the phenomenological consequences of stabilization mechanisms in PBH evaporation, focusing on Planckian relics within Loop Quantum Gravity and macroscopic remnants induced by the Memory Burden effect.\n\n\nSpinfoam Numerics & Cosmology\nDeveloping numerical and computational tools to evaluate spin foam amplitudes, with a specific application to structural transitions in spinfoam cosmology."
-  },
-  {
-    "objectID": "index.html#navigation",
-    "href": "index.html#navigation",
-    "title": "Antoine Dierckx",
-    "section": "Navigation",
-    "text": "Navigation\n\nAcademic Research\n\n\nResearch Themes\n\n\nPublications\n\n\nTalks & Slides\n\n\nEarly Research\n\n\n\n\nTeaching & Notes\n\n\nBachelor Notes\n\n\nMaster Notes\n\n\n\n\nEngagement & Projects\n\n\nOutreach & Projects\n\n\nBlog"
-  },
-  {
-    "objectID": "research/themes.html",
-    "href": "research/themes.html",
-    "title": "Research Themes",
+    "objectID": "research/early-research.html",
+    "href": "research/early-research.html",
+    "title": "Early Research & Internships",
     "section": "",
-    "text": "My research investigates the phenomenological consequences of non-perturbative quantum gravity corrections on the evolution of light Primordial Black Holes (PBHs) in the early universe. Standard semi-classical Hawking evaporation predicts runaway evaporation, but Loop Quantum Gravity (LQG) introduces a natural UV cut-off that fundamentally alters this late-stage behavior.\n\n\nIn LQG, the quantization of geometric operators resolves the central singularity, replacing it with a quantum bounce into an antitrapped spacetime region. A central prediction is the quantum tunneling of the classical black hole geometry to a white hole geometry, with a transition probability exponentially suppressed by the squared mass:\n\\[\nP \\sim e^{-(m/m_{\\mathrm{Pl}})^2}~.\n\\tag{1}\\]\nThis mechanism leads to Planckian relics, which represent a viable, non-baryonic candidate for dark matter and introduce specific signatures in primordial cosmological backgrounds.\n\nAssociated Code: A Mathematica framework developed to derive constraints on these PBH models can be found in the repo pbh-rem.\nRecent Preprint: A preprint exploring the signatures of LQG in PBH cosmologies, in collaboration with Francesca Vidotto and Sébastien Clesse, is available on the arXiv: arXiv:2605.28953.\n\n\n\n\nOther stabilization mechanisms include the Memory Burden effect (MBe), in which the suppression of the evaporation rate is related to the information capacity of the black hole. The remnants predicted by this mechanism are macroscopic, typically after the black hole has evaporated roughly half of its initial mass (\\(m \\sim m_0 / 2\\))."
+    "text": "Before starting my PhD, I had the opportunity to work on several research projects during my Bachelor’s and Master’s degrees at the Université libre de Bruxelles (ULB)."
   },
   {
-    "objectID": "research/themes.html#primordial-black-holes-dark-matter-remnants",
-    "href": "research/themes.html#primordial-black-holes-dark-matter-remnants",
-    "title": "Research Themes",
+    "objectID": "research/early-research.html#masters-thesis",
+    "href": "research/early-research.html#masters-thesis",
+    "title": "Early Research & Internships",
+    "section": "Master’s Thesis",
+    "text": "Master’s Thesis\nConstraints from Loop Quantum Gravity and the Memory Burden Effect in Primordial Black Hole Cosmologies   Supervisors: Dr. Francesca Vidotto & Dr. Sébastien Clesse   Western University (CA) & ULB (BE) — 2024–2025\nFor my Master’s thesis, I investigated how Loop Quantum Gravity and the Memory Burden effect suppress Hawking evaporation, allowing light Primordial Black Holes to stabilize into relics that could be viable dark matter candidates. This work laid the foundation for my current PhD research, focusing on modeling PBH remnants and deriving observational constraints from cosmological backgrounds.  Thesis"
+  },
+  {
+    "objectID": "research/early-research.html#cern-summer-internship",
+    "href": "research/early-research.html#cern-summer-internship",
+    "title": "Early Research & Internships",
+    "section": "CERN Summer Internship",
+    "text": "CERN Summer Internship\nGraph Neural Networks for VBF Tagging   Compact Muon Solenoid (CMS) Experiment, CERN, Geneva — Summer 2024\nDuring the CERN Summer Student Programme, I worked within the CMS collaboration. My project focused on developing and implementing Graph Neural Networks (GNNs) to improve Vector Boson Fusion (VBF) tagging. I specifically analyzed the algorithm’s stability and performance for the Higgs to invisible decay channel (\\(H \\rightarrow \\mathrm{invisible}\\)).  Report"
+  },
+  {
+    "objectID": "research/early-research.html#undergraduate-research-lab-reports",
+    "href": "research/early-research.html#undergraduate-research-lab-reports",
+    "title": "Early Research & Internships",
+    "section": "Undergraduate Research & Lab Reports",
+    "text": "Undergraduate Research & Lab Reports\nDuring my curriculum, I completed several hands-on projects and short internships in both experimental high-energy physics and formal theory:\n\nIIHE Internship (2023): Analysis of scalar-boson production in \\(pp\\) collisions using CMS data at \\(\\sqrt{s}=13\\,\\mathrm{TeV}\\).  Report\nTheoretical Physics Projects: Advanced study projects on Dark Photons  Report and Generalized Symmetries  Report."
+  },
+  {
+    "objectID": "research/papers.html",
+    "href": "research/papers.html",
+    "title": "Publications",
     "section": "",
-    "text": "My research investigates the phenomenological consequences of non-perturbative quantum gravity corrections on the evolution of light Primordial Black Holes (PBHs) in the early universe. Standard semi-classical Hawking evaporation predicts runaway evaporation, but Loop Quantum Gravity (LQG) introduces a natural UV cut-off that fundamentally alters this late-stage behavior.\n\n\nIn LQG, the quantization of geometric operators resolves the central singularity, replacing it with a quantum bounce into an antitrapped spacetime region. A central prediction is the quantum tunneling of the classical black hole geometry to a white hole geometry, with a transition probability exponentially suppressed by the squared mass:\n\\[\nP \\sim e^{-(m/m_{\\mathrm{Pl}})^2}~.\n\\tag{1}\\]\nThis mechanism leads to Planckian relics, which represent a viable, non-baryonic candidate for dark matter and introduce specific signatures in primordial cosmological backgrounds.\n\nAssociated Code: A Mathematica framework developed to derive constraints on these PBH models can be found in the repo pbh-rem.\nRecent Preprint: A preprint exploring the signatures of LQG in PBH cosmologies, in collaboration with Francesca Vidotto and Sébastien Clesse, is available on the arXiv: arXiv:2605.28953.\n\n\n\n\nOther stabilization mechanisms include the Memory Burden effect (MBe), in which the suppression of the evaporation rate is related to the information capacity of the black hole. The remnants predicted by this mechanism are macroscopic, typically after the black hole has evaporated roughly half of its initial mass (\\(m \\sim m_0 / 2\\))."
+    "text": "A complete and automatically updated list of my publications can also be found on iNSPIRE HEP and ORCID."
   },
   {
-    "objectID": "research/themes.html#spinfoam-numerics-cosmology",
-    "href": "research/themes.html#spinfoam-numerics-cosmology",
-    "title": "Research Themes",
-    "section": "Spinfoam Numerics & Cosmology",
-    "text": "Spinfoam Numerics & Cosmology\nThe second axis of my work focuses on Covariant Loop Quantum Gravity (Spinfoam models) and its application to early-universe cosmology."
+    "objectID": "research/papers.html#preprints-working-papers",
+    "href": "research/papers.html#preprints-working-papers",
+    "title": "Publications",
+    "section": "Preprints & Working Papers",
+    "text": "Preprints & Working Papers\n\nSignatures of loop quantum gravity in primordial black hole cosmologies [arXiv:2605.28953] Antoine Dierckx, Sébastien Clesse, Francesca Vidotto. (2026)"
   },
   {
-    "objectID": "research/talks.html",
-    "href": "research/talks.html",
-    "title": "Talks & Events",
-    "section": "",
-    "text": "Black holes and their remnants Black Holes & Cosmology Conference — Granada, ES (Jun 15–19, 2026)  Slides\nQuantum Gravity and Primordial Black Holes Journal Club of the Service de Physique Théorique — ULB, BE (Jun 5, 2026)  Slides\nSignatures of LQG in PBH cosmologies RER-S8 Cosmology Meeting — UCLouvain, BE (May 26, 2026)  Slides\nConstraining PBH remnants with LISA and cosmological observables LISA Madrid Group Meeting — Madrid, ES (Apr 9, 2026)  Slides\nSignatures of LQG in PBH cosmologies Group Meeting Presentation — IEM-CSIC, Madrid, ES (Mar 30, 2026)   \nGroup introduction on Causal Spinfoams ILQGS Group Intro Session — IEM-CSIC, Madrid, ES (Feb 2, 2026)  Slides"
-  },
-  {
-    "objectID": "research/talks.html#presentations-seminars",
-    "href": "research/talks.html#presentations-seminars",
-    "title": "Talks & Events",
-    "section": "",
-    "text": "Black holes and their remnants Black Holes & Cosmology Conference — Granada, ES (Jun 15–19, 2026)  Slides\nQuantum Gravity and Primordial Black Holes Journal Club of the Service de Physique Théorique — ULB, BE (Jun 5, 2026)  Slides\nSignatures of LQG in PBH cosmologies RER-S8 Cosmology Meeting — UCLouvain, BE (May 26, 2026)  Slides\nConstraining PBH remnants with LISA and cosmological observables LISA Madrid Group Meeting — Madrid, ES (Apr 9, 2026)  Slides\nSignatures of LQG in PBH cosmologies Group Meeting Presentation — IEM-CSIC, Madrid, ES (Mar 30, 2026)   \nGroup introduction on Causal Spinfoams ILQGS Group Intro Session — IEM-CSIC, Madrid, ES (Feb 2, 2026)  Slides"
-  },
-  {
-    "objectID": "posts/pbh-rem.html",
-    "href": "posts/pbh-rem.html",
-    "title": "Releasing pbh-rem: A framework for PBH remnants",
-    "section": "",
-    "text": "The pbh-rem repository is a Mathematica-based model designed to simulate the cosmological evolution of Primordial Black Holes and the remnants they leave behind.\n\n         PBH-REM  \n\nIn standard physics, semi-classical Hawking radiation suggests that black holes evaporate completely. However, mechanisms like Loop Quantum Gravity or the Memory Burden effect introduce a limit to this evaporation, leaving behind stable or very long-lived remnants. To understand the impact of these objects on our universe, we need to carefully track their energy density across all cosmic eras; from radiation to matter and dark energy.\nThis code provides a rigorous way to do exactly that.\n\nHow the framework works\nBuilt for Mathematica 14.1, the pbh-rem pipeline is designed to handle the differential equations that occur around the exact moment a black hole evaporates. The workflow is split into three main parts:\n\nAnalytical Derivations (01_alpha.nb): A helper notebook that computes the analytical expressions for the initial abundance coefficients \\(\\alpha_{A}\\) for each species \\(A\\).\nThe Numerical Engine (02_model.nb): The core solver. It integrates the evolution of the PBH population across cosmic time, computing the transitions between standard evaporation and the stable remnant phase.\nVisualization & Data Export (03_visuals.nb): This notebook generates plots of the universe’s history. It also runs an optimization algorithm to find the maximum allowed initial PBH abundance \\(\\beta_{\\rm max}\\), exporting detailed datasets. For every tested configuration, it tracks 96 different physical variables across four distinct cosmological milestones (Formation, Evaporation, Remnant Diffusion, and Today).\n\n\n\nThe Paper\nThis code was developed for our paper: “Signatures of loop quantum gravity in primordial black hole cosmologies” (Antoine Dierckx, Sébastien Clesse, Francesca Vidotto).\nYou can find the preprint here. Feel free to explore the repository, run the visualizer notebook to see the cosmic history plots, or adapt the model to test your own phenomenological constraints.\n\nView the pbh-rem repository on GitHub →"
-  },
-  {
-    "objectID": "posts/links.html",
-    "href": "posts/links.html",
-    "title": "Some useful links for physics students",
-    "section": "",
-    "text": "This page brings together some of the resources I have found most useful. The list is personal, but I hope it can also be useful to other students and researchers.\n\n\nThese are some of the best resources I know for learning or revisiting the essentials:\n\nDavid Tong - Lecture Notes: The definitive standard for clear, rigorous introductions to everything from Classical Dynamics to Quantum Field Theory.\nThe Feynman Lectures on Physics: Old but gold.\nPaul’s Online Math Notes: High school level.\nMIT OpenCourseWare: Check out the course on general relativity, it’s fantastic.\nLibreTexts Physics: Peer-authored, open-access textbook content.\n\n\n\n\nIf like me the reviews on arXiv make you a bit anxious, these are a great way to get a more digestible overview of the latest developments in various topics:\n\nPerimeter Institute (PIRSA): A massive archive of recorded seminars and specialized courses.\nCollège de France - Physique et Chimie: High-level academic seminars and colloquia.\nGeneral Relativity II (Piotr Chruściel): All about black holes.\nLes Samedis de la Physique (Bruxelles): High-quality lectures from ULB professors.\n\n\n\n\nIf you’re looking to do early research or find internships, check out these resources:\n\nCERN Summer Student Programme: Particle physics stuff in Geneva.\nDESY Summer Student Programme: Particle physics stuff in Hamburg.\nESA Student Internships: Space science at the European Space Agency.\nPSI Start (Perimeter Institute): Theoretical physics research at Perimeter Institute in Canada.\n\n\n\n\nAll the nice textbooks for free, because knowledge should be free:\n\nSci-Hub: For academic papers.\nLibrary Genesis and Anna’s Archive: For books."
-  },
-  {
-    "objectID": "posts/links.html#foundations-lecture-notes",
-    "href": "posts/links.html#foundations-lecture-notes",
-    "title": "Some useful links for physics students",
-    "section": "",
-    "text": "These are some of the best resources I know for learning or revisiting the essentials:\n\nDavid Tong - Lecture Notes: The definitive standard for clear, rigorous introductions to everything from Classical Dynamics to Quantum Field Theory.\nThe Feynman Lectures on Physics: Old but gold.\nPaul’s Online Math Notes: High school level.\nMIT OpenCourseWare: Check out the course on general relativity, it’s fantastic.\nLibreTexts Physics: Peer-authored, open-access textbook content."
-  },
-  {
-    "objectID": "posts/links.html#advanced-lectures-seminars",
-    "href": "posts/links.html#advanced-lectures-seminars",
-    "title": "Some useful links for physics students",
-    "section": "",
-    "text": "If like me the reviews on arXiv make you a bit anxious, these are a great way to get a more digestible overview of the latest developments in various topics:\n\nPerimeter Institute (PIRSA): A massive archive of recorded seminars and specialized courses.\nCollège de France - Physique et Chimie: High-level academic seminars and colloquia.\nGeneral Relativity II (Piotr Chruściel): All about black holes.\nLes Samedis de la Physique (Bruxelles): High-quality lectures from ULB professors."
-  },
-  {
-    "objectID": "posts/links.html#career-growth-internships-research",
-    "href": "posts/links.html#career-growth-internships-research",
-    "title": "Some useful links for physics students",
-    "section": "",
-    "text": "If you’re looking to do early research or find internships, check out these resources:\n\nCERN Summer Student Programme: Particle physics stuff in Geneva.\nDESY Summer Student Programme: Particle physics stuff in Hamburg.\nESA Student Internships: Space science at the European Space Agency.\nPSI Start (Perimeter Institute): Theoretical physics research at Perimeter Institute in Canada."
-  },
-  {
-    "objectID": "posts/links.html#free-books",
-    "href": "posts/links.html#free-books",
-    "title": "Some useful links for physics students",
-    "section": "",
-    "text": "All the nice textbooks for free, because knowledge should be free:\n\nSci-Hub: For academic papers.\nLibrary Genesis and Anna’s Archive: For books."
+    "objectID": "research/papers.html#scientific-software-repositories",
+    "href": "research/papers.html#scientific-software-repositories",
+    "title": "Publications",
+    "section": "Scientific Software & Repositories",
+    "text": "Scientific Software & Repositories\n\npbh-rem: A Mathematica framework developed to compute phenomenological constraints on Primordial Black Holes with stable remnants (including LQG Planckian relics and macroscopic remnants from the memory burden effect)."
   },
   {
     "objectID": "about.html",
@@ -413,60 +343,137 @@
     "text": "Research Networks\n\nWithOut SpaceTime (WOST): International network exploring physics beyond classical space and time; my PhD research is based in the Madrid hub.\nCOST Action CA23130 (BridgeQG): Member of WG1 (High-energy quantum gravity theory) and WG2 (High-energy quantum gravity experiment).\nCOST Action CA23115 (RQI): Member of WG2 (Gravitational quantum physics and metrology) and WG3 (Time, causality, and memory in quantum physics).\n\nFor a complete academic history, training record, and technical skills, see the Full CV above."
   },
   {
-    "objectID": "research/papers.html",
-    "href": "research/papers.html",
-    "title": "Publications",
+    "objectID": "posts/links.html",
+    "href": "posts/links.html",
+    "title": "Some useful links for physics students",
     "section": "",
-    "text": "A complete and automatically updated list of my publications can also be found on iNSPIRE HEP and ORCID."
+    "text": "This page brings together some of the resources I have found most useful. The list is personal, but I hope it can also be useful to other students and researchers.\n\n\nThese are some of the best resources I know for learning or revisiting the essentials:\n\nDavid Tong - Lecture Notes: The definitive standard for clear, rigorous introductions to everything from Classical Dynamics to Quantum Field Theory.\nThe Feynman Lectures on Physics: Old but gold.\nPaul’s Online Math Notes: High school level.\nMIT OpenCourseWare: Check out the course on general relativity, it’s fantastic.\nLibreTexts Physics: Peer-authored, open-access textbook content.\n\n\n\n\nIf like me the reviews on arXiv make you a bit anxious, these are a great way to get a more digestible overview of the latest developments in various topics:\n\nPerimeter Institute (PIRSA): A massive archive of recorded seminars and specialized courses.\nCollège de France - Physique et Chimie: High-level academic seminars and colloquia.\nGeneral Relativity II (Piotr Chruściel): All about black holes.\nLes Samedis de la Physique (Bruxelles): High-quality lectures from ULB professors.\n\n\n\n\nIf you’re looking to do early research or find internships, check out these resources:\n\nCERN Summer Student Programme: Particle physics stuff in Geneva.\nDESY Summer Student Programme: Particle physics stuff in Hamburg.\nESA Student Internships: Space science at the European Space Agency.\nPSI Start (Perimeter Institute): Theoretical physics research at Perimeter Institute in Canada.\n\n\n\n\nAll the nice textbooks for free, because knowledge should be free:\n\nSci-Hub: For academic papers.\nLibrary Genesis and Anna’s Archive: For books."
   },
   {
-    "objectID": "research/papers.html#preprints-working-papers",
-    "href": "research/papers.html#preprints-working-papers",
-    "title": "Publications",
-    "section": "Preprints & Working Papers",
-    "text": "Preprints & Working Papers\n\nSignatures of loop quantum gravity in primordial black hole cosmologies [arXiv:2605.28953] Antoine Dierckx, Sébastien Clesse, Francesca Vidotto. (2026)"
-  },
-  {
-    "objectID": "research/papers.html#scientific-software-repositories",
-    "href": "research/papers.html#scientific-software-repositories",
-    "title": "Publications",
-    "section": "Scientific Software & Repositories",
-    "text": "Scientific Software & Repositories\n\npbh-rem: A Mathematica framework developed to compute phenomenological constraints on Primordial Black Holes with stable remnants (including LQG Planckian relics and macroscopic remnants from the memory burden effect)."
-  },
-  {
-    "objectID": "research/early-research.html",
-    "href": "research/early-research.html",
-    "title": "Early Research & Internships",
+    "objectID": "posts/links.html#foundations-lecture-notes",
+    "href": "posts/links.html#foundations-lecture-notes",
+    "title": "Some useful links for physics students",
     "section": "",
-    "text": "Before starting my PhD, I had the opportunity to work on several research projects during my Bachelor’s and Master’s degrees at the Université libre de Bruxelles (ULB)."
+    "text": "These are some of the best resources I know for learning or revisiting the essentials:\n\nDavid Tong - Lecture Notes: The definitive standard for clear, rigorous introductions to everything from Classical Dynamics to Quantum Field Theory.\nThe Feynman Lectures on Physics: Old but gold.\nPaul’s Online Math Notes: High school level.\nMIT OpenCourseWare: Check out the course on general relativity, it’s fantastic.\nLibreTexts Physics: Peer-authored, open-access textbook content."
   },
   {
-    "objectID": "research/early-research.html#masters-thesis",
-    "href": "research/early-research.html#masters-thesis",
-    "title": "Early Research & Internships",
-    "section": "Master’s Thesis",
-    "text": "Master’s Thesis\nConstraints from Loop Quantum Gravity and the Memory Burden Effect in Primordial Black Hole Cosmologies   Supervisors: Dr. Francesca Vidotto & Dr. Sébastien Clesse   Western University (CA) & ULB (BE) — 2024–2025\nFor my Master’s thesis, I investigated how Loop Quantum Gravity and the Memory Burden effect suppress Hawking evaporation, allowing light Primordial Black Holes to stabilize into relics that could be viable dark matter candidates. This work laid the foundation for my current PhD research, focusing on modeling PBH remnants and deriving observational constraints from cosmological backgrounds.  Thesis"
-  },
-  {
-    "objectID": "research/early-research.html#cern-summer-internship",
-    "href": "research/early-research.html#cern-summer-internship",
-    "title": "Early Research & Internships",
-    "section": "CERN Summer Internship",
-    "text": "CERN Summer Internship\nGraph Neural Networks for VBF Tagging   Compact Muon Solenoid (CMS) Experiment, CERN, Geneva — Summer 2024\nDuring the CERN Summer Student Programme, I worked within the CMS collaboration. My project focused on developing and implementing Graph Neural Networks (GNNs) to improve Vector Boson Fusion (VBF) tagging. I specifically analyzed the algorithm’s stability and performance for the Higgs to invisible decay channel (\\(H \\rightarrow \\mathrm{invisible}\\)).  Report"
-  },
-  {
-    "objectID": "research/early-research.html#undergraduate-research-lab-reports",
-    "href": "research/early-research.html#undergraduate-research-lab-reports",
-    "title": "Early Research & Internships",
-    "section": "Undergraduate Research & Lab Reports",
-    "text": "Undergraduate Research & Lab Reports\nDuring my curriculum, I completed several hands-on projects and short internships in both experimental high-energy physics and formal theory:\n\nIIHE Internship (2023): Analysis of scalar-boson production in \\(pp\\) collisions using CMS data at \\(\\sqrt{s}=13\\,\\mathrm{TeV}\\).  Report\nTheoretical Physics Projects: Advanced study projects on Dark Photons  Report and Generalized Symmetries  Report."
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
+    "objectID": "posts/links.html#advanced-lectures-seminars",
+    "href": "posts/links.html#advanced-lectures-seminars",
+    "title": "Some useful links for physics students",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nReleasing pbh-rem: A framework for PBH remnants\n\n3 min\n\nA suite of Mathematica notebooks designed to simulate the cosmological evolution of Primordial Black Holes and their remnants.\n\n\n\nMay 27, 2026\n\n\n\n\n\n\n\n\n\n\n\nSome useful links for physics students\n\n2 min\n\n\n\n\n\nMay 21, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "If like me the reviews on arXiv make you a bit anxious, these are a great way to get a more digestible overview of the latest developments in various topics:\n\nPerimeter Institute (PIRSA): A massive archive of recorded seminars and specialized courses.\nCollège de France - Physique et Chimie: High-level academic seminars and colloquia.\nGeneral Relativity II (Piotr Chruściel): All about black holes.\nLes Samedis de la Physique (Bruxelles): High-quality lectures from ULB professors."
+  },
+  {
+    "objectID": "posts/links.html#career-growth-internships-research",
+    "href": "posts/links.html#career-growth-internships-research",
+    "title": "Some useful links for physics students",
+    "section": "",
+    "text": "If you’re looking to do early research or find internships, check out these resources:\n\nCERN Summer Student Programme: Particle physics stuff in Geneva.\nDESY Summer Student Programme: Particle physics stuff in Hamburg.\nESA Student Internships: Space science at the European Space Agency.\nPSI Start (Perimeter Institute): Theoretical physics research at Perimeter Institute in Canada."
+  },
+  {
+    "objectID": "posts/links.html#free-books",
+    "href": "posts/links.html#free-books",
+    "title": "Some useful links for physics students",
+    "section": "",
+    "text": "All the nice textbooks for free, because knowledge should be free:\n\nSci-Hub: For academic papers.\nLibrary Genesis and Anna’s Archive: For books."
+  },
+  {
+    "objectID": "posts/pbh-rem.html",
+    "href": "posts/pbh-rem.html",
+    "title": "Releasing pbh-rem: A framework for PBH remnants",
+    "section": "",
+    "text": "The pbh-rem repository is a Mathematica-based model designed to simulate the cosmological evolution of Primordial Black Holes and the remnants they leave behind.\n\n         PBH-REM  \n\nIn standard physics, semi-classical Hawking radiation suggests that black holes evaporate completely. However, mechanisms like Loop Quantum Gravity or the Memory Burden effect introduce a limit to this evaporation, leaving behind stable or very long-lived remnants. To understand the impact of these objects on our universe, we need to carefully track their energy density across all cosmic eras; from radiation to matter and dark energy.\nThis code provides a rigorous way to do exactly that.\n\nHow the framework works\nBuilt for Mathematica 14.1, the pbh-rem pipeline is designed to handle the differential equations that occur around the exact moment a black hole evaporates. The workflow is split into three main parts:\n\nAnalytical Derivations (01_alpha.nb): A helper notebook that computes the analytical expressions for the initial abundance coefficients \\(\\alpha_{A}\\) for each species \\(A\\).\nThe Numerical Engine (02_model.nb): The core solver. It integrates the evolution of the PBH population across cosmic time, computing the transitions between standard evaporation and the stable remnant phase.\nVisualization & Data Export (03_visuals.nb): This notebook generates plots of the universe’s history. It also runs an optimization algorithm to find the maximum allowed initial PBH abundance \\(\\beta_{\\rm max}\\), exporting detailed datasets. For every tested configuration, it tracks 96 different physical variables across four distinct cosmological milestones (Formation, Evaporation, Remnant Diffusion, and Today).\n\n\n\nThe Paper\nThis code was developed for our paper: “Signatures of loop quantum gravity in primordial black hole cosmologies” (Antoine Dierckx, Sébastien Clesse, Francesca Vidotto).\nYou can find the preprint here. Feel free to explore the repository, run the visualizer notebook to see the cosmic history plots, or adapt the model to test your own phenomenological constraints.\n\nView the pbh-rem repository on GitHub →"
+  },
+  {
+    "objectID": "research/talks.html",
+    "href": "research/talks.html",
+    "title": "Talks & Events",
+    "section": "",
+    "text": "Black holes and their remnants Black Holes & Cosmology Conference — Granada, ES (Jun 15–19, 2026)  Slides\nQuantum Gravity and Primordial Black Holes Journal Club of the Service de Physique Théorique — ULB, BE (Jun 5, 2026)  Slides\nSignatures of LQG in PBH cosmologies RER-S8 Cosmology Meeting — UCLouvain, BE (May 26, 2026)  Slides\nConstraining PBH remnants with LISA and cosmological observables LISA Madrid Group Meeting — Madrid, ES (Apr 9, 2026)  Slides\nSignatures of LQG in PBH cosmologies Group Meeting Presentation — IEM-CSIC, Madrid, ES (Mar 30, 2026)   \nGroup introduction on Causal Spinfoams ILQGS Group Intro Session — IEM-CSIC, Madrid, ES (Feb 2, 2026)  Slides"
+  },
+  {
+    "objectID": "research/talks.html#presentations-seminars",
+    "href": "research/talks.html#presentations-seminars",
+    "title": "Talks & Events",
+    "section": "",
+    "text": "Black holes and their remnants Black Holes & Cosmology Conference — Granada, ES (Jun 15–19, 2026)  Slides\nQuantum Gravity and Primordial Black Holes Journal Club of the Service de Physique Théorique — ULB, BE (Jun 5, 2026)  Slides\nSignatures of LQG in PBH cosmologies RER-S8 Cosmology Meeting — UCLouvain, BE (May 26, 2026)  Slides\nConstraining PBH remnants with LISA and cosmological observables LISA Madrid Group Meeting — Madrid, ES (Apr 9, 2026)  Slides\nSignatures of LQG in PBH cosmologies Group Meeting Presentation — IEM-CSIC, Madrid, ES (Mar 30, 2026)   \nGroup introduction on Causal Spinfoams ILQGS Group Intro Session — IEM-CSIC, Madrid, ES (Feb 2, 2026)  Slides"
+  },
+  {
+    "objectID": "research/themes.html",
+    "href": "research/themes.html",
+    "title": "Research Themes",
+    "section": "",
+    "text": "My research investigates the phenomenological consequences of non-perturbative quantum gravity corrections on the evolution of light Primordial Black Holes (PBHs) in the early universe. Standard semi-classical Hawking evaporation predicts runaway evaporation, but Loop Quantum Gravity (LQG) introduces a natural UV cut-off that fundamentally alters this late-stage behavior.\n\n\nIn LQG, the quantization of geometric operators resolves the central singularity, replacing it with a quantum bounce into an antitrapped spacetime region. A central prediction is the quantum tunneling of the classical black hole geometry to a white hole geometry, with a transition probability exponentially suppressed by the squared mass:\n\\[\nP \\sim e^{-(m/m_{\\mathrm{Pl}})^2}~.\n\\tag{1}\\]\nThis mechanism leads to Planckian relics, which represent a viable, non-baryonic candidate for dark matter and introduce specific signatures in primordial cosmological backgrounds.\n\nAssociated Code: A Mathematica framework developed to derive constraints on these PBH models can be found in the repo pbh-rem.\nRecent Preprint: A preprint exploring the signatures of LQG in PBH cosmologies, in collaboration with Francesca Vidotto and Sébastien Clesse, is available on the arXiv: arXiv:2605.28953.\n\n\n\n\nOther stabilization mechanisms include the Memory Burden effect (MBe), in which the suppression of the evaporation rate is related to the information capacity of the black hole. The remnants predicted by this mechanism are macroscopic, typically after the black hole has evaporated roughly half of its initial mass (\\(m \\sim m_0 / 2\\))."
+  },
+  {
+    "objectID": "research/themes.html#primordial-black-holes-dark-matter-remnants",
+    "href": "research/themes.html#primordial-black-holes-dark-matter-remnants",
+    "title": "Research Themes",
+    "section": "",
+    "text": "My research investigates the phenomenological consequences of non-perturbative quantum gravity corrections on the evolution of light Primordial Black Holes (PBHs) in the early universe. Standard semi-classical Hawking evaporation predicts runaway evaporation, but Loop Quantum Gravity (LQG) introduces a natural UV cut-off that fundamentally alters this late-stage behavior.\n\n\nIn LQG, the quantization of geometric operators resolves the central singularity, replacing it with a quantum bounce into an antitrapped spacetime region. A central prediction is the quantum tunneling of the classical black hole geometry to a white hole geometry, with a transition probability exponentially suppressed by the squared mass:\n\\[\nP \\sim e^{-(m/m_{\\mathrm{Pl}})^2}~.\n\\tag{1}\\]\nThis mechanism leads to Planckian relics, which represent a viable, non-baryonic candidate for dark matter and introduce specific signatures in primordial cosmological backgrounds.\n\nAssociated Code: A Mathematica framework developed to derive constraints on these PBH models can be found in the repo pbh-rem.\nRecent Preprint: A preprint exploring the signatures of LQG in PBH cosmologies, in collaboration with Francesca Vidotto and Sébastien Clesse, is available on the arXiv: arXiv:2605.28953.\n\n\n\n\nOther stabilization mechanisms include the Memory Burden effect (MBe), in which the suppression of the evaporation rate is related to the information capacity of the black hole. The remnants predicted by this mechanism are macroscopic, typically after the black hole has evaporated roughly half of its initial mass (\\(m \\sim m_0 / 2\\))."
+  },
+  {
+    "objectID": "research/themes.html#spinfoam-numerics-cosmology",
+    "href": "research/themes.html#spinfoam-numerics-cosmology",
+    "title": "Research Themes",
+    "section": "Spinfoam Numerics & Cosmology",
+    "text": "Spinfoam Numerics & Cosmology\nThe second axis of my work focuses on Covariant Loop Quantum Gravity (Spinfoam models) and its application to early-universe cosmology."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Antoine Dierckx",
+    "section": "",
+    "text": "PhD Candidate in Theoretical Physics\n\n\n\n  arXiv  |   ORCiD  |   iNSPIRE HEP"
+  },
+  {
+    "objectID": "index.html#recent-releases",
+    "href": "index.html#recent-releases",
+    "title": "Antoine Dierckx",
+    "section": "Recent Releases",
+    "text": "Recent Releases\n\n\n\n\nNew Paper\n\n\nSignatures of LQG in PBH cosmologies\nIn collaboration with F. Vidotto & S. Clesse.\nExploring the phenomenological signatures of Loop Quantum Gravity in the context of Primordial Black Hole cosmologies.\n   Read on arXiv ➔ \n\n\n\n\n\n\nNew Code\n\n\nFramework pbh-rem\nDeveloped in Mathematica.\nComputational framework to evaluate phenomenological constraints on Primordial Black Holes with stable remnants (Planckian relics and Memory Burden effects).\n  Read the blog post ➔"
+  },
+  {
+    "objectID": "index.html#research-focus",
+    "href": "index.html#research-focus",
+    "title": "Antoine Dierckx",
+    "section": "Research Focus",
+    "text": "Research Focus\n\n\nPrimordial Black Holes & Remnants\nStudying the phenomenological consequences of stabilization mechanisms in PBH evaporation, focusing on Planckian relics within Loop Quantum Gravity and macroscopic remnants induced by the Memory Burden effect.\n\n\nSpinfoam Numerics & Cosmology\nDeveloping numerical and computational tools to evaluate spin foam amplitudes, with a specific application to structural transitions in spinfoam cosmology."
+  },
+  {
+    "objectID": "index.html#navigation",
+    "href": "index.html#navigation",
+    "title": "Antoine Dierckx",
+    "section": "Navigation",
+    "text": "Navigation\n\nAcademic Research\n\n\nResearch Themes\n\n\nPublications\n\n\nTalks & Slides\n\n\nEarly Research\n\n\n\n\nTeaching & Notes\n\n\nBachelor Notes\n\n\nMaster Notes\n\n\n\n\nEngagement & Projects\n\n\nOutreach & Projects\n\n\nBlog"
+  },
+  {
+    "objectID": "outreach/projects.html",
+    "href": "outreach/projects.html",
+    "title": "Outreach & Creative Projects",
+    "section": "",
+    "text": "Beyond academic research, I participate in science communication, digital content creation, and collaborative design projects aimed at opening up academic and scientific spaces."
+  },
+  {
+    "objectID": "outreach/projects.html#interactive-physics",
+    "href": "outreach/projects.html#interactive-physics",
+    "title": "Outreach & Creative Projects",
+    "section": "Interactive Physics",
+    "text": "Interactive Physics\n\nThe Standard Model, unfolded\nChoose a field basis and the sectors you want to keep, then move from the canonical Standard Model Lagrangian to its explicit generations, internal components, and gauge-field monomials. The live equation remains Lorentz covariant and can be copied or downloaded as LaTeX.\nExplore the interactive Lagrangian"
+  },
+  {
+    "objectID": "outreach/projects.html#science-communication-outreach",
+    "href": "outreach/projects.html#science-communication-outreach",
+    "title": "Outreach & Creative Projects",
+    "section": "Science Communication & Outreach",
+    "text": "Science Communication & Outreach\n\nThe bel.sciences Project (STEMentiel!)\nAs part of the broader STEMentiel! initiative, I contribute to bel.sciences, a digital outreach project focused on sharing diverse pathways into exact sciences. I produce video content and conduct short interviews across TikTok, Instagram, and YouTube, highlighting students and researchers in mathematics and physics from a wide range of backgrounds.\n\nExplore our content via our Linktree bel.sciences."
+  },
+  {
+    "objectID": "outreach/projects.html#graphic-design-collaboration",
+    "href": "outreach/projects.html#graphic-design-collaboration",
+    "title": "Outreach & Creative Projects",
+    "section": "Graphic Design & Collaboration",
+    "text": "Graphic Design & Collaboration\n\nIdentity & Logo Design\nI occasionally collaborate on visual identity and graphic materials for scientific networks and working groups. This includes designing the official logo for the WOST (WithOut SpaceTime) network."
   },
   {
     "objectID": "notes/ma2/phys-f-417.html",
