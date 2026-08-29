@@ -6,7 +6,6 @@
 
   const sectorList = root.querySelector("#sm-sector-list");
   const phaseButtons = [...root.querySelectorAll("[data-phase]")];
-  const savedSelections = new Map();
 
   function activePhase() {
     return phaseButtons.find((button) => button.getAttribute("aria-pressed") === "true")?.dataset.phase || "unbroken";
@@ -44,8 +43,7 @@
   }
 
   function applySelection(selection) {
-    const inputs = [...sectorList.querySelectorAll('input[type="checkbox"]')];
-    inputs.forEach((input) => {
+    [...sectorList.querySelectorAll('input[type="checkbox"]')].forEach((input) => {
       const wanted = selection.has(input.value);
       if (input.checked === wanted) return;
       input.checked = wanted;
@@ -58,19 +56,11 @@
       const fromPhase = activePhase();
       const toPhase = button.dataset.phase;
       if (!toPhase || toPhase === fromPhase) return;
-
       const before = selectedSectors();
-      savedSelections.set(fromPhase, new Set(before));
 
       window.setTimeout(() => {
         const available = availableSectors();
-        const remembered = savedSelections.get(toPhase);
-        const target = remembered
-          ? new Set([...remembered].filter((sector) => available.has(sector)))
-          : translatedSelection(before, fromPhase, toPhase, available);
-
-        applySelection(target);
-        savedSelections.set(toPhase, new Set(target));
+        applySelection(translatedSelection(before, fromPhase, toPhase, available));
       }, 0);
     }, true);
   });
