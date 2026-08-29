@@ -1,0 +1,107 @@
+/* Section-aware atmospheric backgrounds
+   Inspired by the Standard Model Lagrangian page, but deliberately subtler
+   on ordinary reading pages. Palettes follow the colour language used by
+   the homepage navigation tiles. */
+
+html[data-page-theme] {
+  --page-aura-1: 0, 168, 168;
+  --page-aura-2: 99, 102, 241;
+}
+
+html[data-page-theme="research"] {
+  --page-aura-1: 0, 168, 168;
+  --page-aura-2: 119, 217, 255;
+}
+
+html[data-page-theme="publications"] {
+  --page-aura-1: 99, 102, 241;
+  --page-aura-2: 168, 85, 247;
+}
+
+html[data-page-theme="talks"] {
+  --page-aura-1: 168, 85, 247;
+  --page-aura-2: 236, 72, 153;
+}
+
+html[data-page-theme="early-research"] {
+  --page-aura-1: 59, 130, 246;
+  --page-aura-2: 0, 168, 168;
+}
+
+html[data-page-theme="bachelor"] {
+  --page-aura-1: 16, 185, 129;
+  --page-aura-2: 0, 168, 168;
+}
+
+html[data-page-theme="master"] {
+  --page-aura-1: 0, 168, 168;
+  --page-aura-2: 59, 130, 246;
+}
+
+html[data-page-theme="math"] {
+  --page-aura-1: 59, 130, 246;
+  --page-aura-2: 99, 102, 241;
+}
+
+html[data-page-theme="outreach"] {
+  --page-aura-1: 236, 72, 153;
+  --page-aura-2: 168, 85, 247;
+}
+
+html[data-page-theme="blog"] {
+  --page-aura-1: 99, 102, 241;
+  --page-aura-2: 168, 85, 247;
+}
+
+html[data-page-theme="about"] {
+  --page-aura-1: 0, 168, 168;
+  --page-aura-2: 99, 102, 241;
+}
+
+/*
+  The first two layers play the role of the blurred organic auras used by
+  the Lagrangian app. Keeping them in the body background is more robust for
+  normal Quarto pages than fixed pseudo-elements: no extra stacking context
+  is introduced, so figures, tooltips, dropdowns and MathJax remain untouched.
+*/
+html[data-page-theme] body {
+  background-color: var(--bg-color);
+  background-image:
+    radial-gradient(
+      ellipse 54rem 44rem at -10% 16%,
+      rgba(var(--page-aura-1), 0.14) 0%,
+      rgba(var(--page-aura-1), 0.065) 32%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 52rem 42rem at 108% 72%,
+      rgba(var(--page-aura-2), 0.11) 0%,
+      rgba(var(--page-aura-2), 0.05) 34%,
+      transparent 72%
+    ),
+    radial-gradient(
+      ellipse 32rem 22rem at 52% 108%,
+      rgba(var(--page-aura-1), 0.035) 0%,
+      transparent 72%
+    ),
+    linear-gradient(
+      155deg,
+      rgba(11, 18, 27, 0.10),
+      rgba(21, 28, 36, 0.72)
+    );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Slightly echo the section colour around the document title without
+   recolouring the typography itself. */
+html[data-page-theme] #title-block-header .title {
+  text-shadow: 0 0 34px rgba(var(--page-aura-1), 0.11);
+}
+
+/* Fixed backgrounds can be janky on some mobile browsers. */
+@media (max-width: 768px) {
+  html[data-page-theme] body {
+    background-attachment: scroll;
+  }
+}
