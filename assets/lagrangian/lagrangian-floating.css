@@ -61,8 +61,8 @@ body {
   overflow: hidden;
   color: var(--sm-text);
   background:
-    radial-gradient(circle at 18% 20%, rgba(63, 224, 208, 0.1), transparent 34%),
-    radial-gradient(circle at 82% 73%, rgba(211, 163, 255, 0.11), transparent 38%),
+    radial-gradient(circle at 22% 24%, rgba(63, 224, 208, 0.08), transparent 34%),
+    radial-gradient(circle at 78% 72%, rgba(211, 163, 255, 0.09), transparent 38%),
     linear-gradient(145deg, #071019, #03070c 68%);
 }
 
@@ -78,8 +78,8 @@ body {
   width: min(58rem, 80vw);
   aspect-ratio: 1;
   border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.11;
+  filter: blur(110px);
+  opacity: 0.1;
   pointer-events: none;
 }
 
@@ -100,17 +100,17 @@ body {
   top: clamp(0.7rem, 2vw, 1.25rem);
   right: clamp(0.7rem, 2vw, 1.25rem);
   left: clamp(0.7rem, 2vw, 1.25rem);
-  z-index: 10;
+  z-index: 3000;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 1rem;
   min-height: 60px;
   padding: 0.65rem 0.8rem;
-  background: rgba(11, 18, 27, 0.62);
+  background: rgba(11, 18, 27, 0.56);
   border: 1px solid var(--sm-line);
   border-radius: 18px;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 20px 60px rgba(0, 0, 0, 0.28);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 20px 60px rgba(0, 0, 0, 0.24);
   backdrop-filter: blur(24px) saturate(140%);
   -webkit-backdrop-filter: blur(24px) saturate(140%);
 }
@@ -189,7 +189,17 @@ body {
   inset: 0;
   overflow: hidden;
   outline: none;
-  perspective: 1100px;
+  perspective: 1200px;
+}
+
+.sm-floating-app .sm-floating-stage::before {
+  content: "";
+  position: absolute;
+  inset: 11% 7% 8%;
+  border: 1px solid rgba(194, 241, 255, 0.025);
+  border-radius: 50%;
+  filter: blur(0.2px);
+  pointer-events: none;
 }
 
 .sm-floating-app .sm-floating-stage:focus-visible {
@@ -198,59 +208,54 @@ body {
 
 .sm-floating-app .sm-floating-field {
   position: absolute;
-  top: 8.5rem;
-  left: 50%;
-  display: flex;
-  width: clamp(1100px, 155vw, 2200px);
-  min-height: 46vh;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  align-items: baseline;
-  gap: 0.65rem 1rem;
-  padding: clamp(2rem, 5vw, 5rem);
-  color: var(--sm-text);
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.055), transparent 30%),
-    rgba(15, 25, 35, 0.43);
-  border: 1px solid rgba(194, 241, 255, 0.13);
-  border-radius: 42px;
-  box-shadow:
-    inset 0 1px rgba(255, 255, 255, 0.055),
-    0 50px 140px rgba(0, 0, 0, 0.32);
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px);
-  font-size: clamp(0.9rem, 1.08vw, 1.2rem);
-  line-height: 2;
-  transform: translate3d(-50%, 0, 0);
-  transform-origin: 50% 20%;
-  will-change: transform;
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;
+  transform-style: preserve-3d;
 }
 
 .sm-floating-app .sm-floating-term {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: inline-flex;
-  max-width: 100%;
-  flex: 0 1 auto;
-  padding: 0.15rem 0.22rem;
-  overflow-x: auto;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  max-width: none;
+  padding: 0.08rem 0.12rem;
   color: var(--sm-text);
-  border-radius: 8px;
+  font-size: clamp(0.78rem, 1.02vw, 1.12rem);
+  line-height: 1;
+  white-space: nowrap;
+  opacity: 0;
+  transform-origin: center center;
+  will-change: transform, opacity;
+  backface-visibility: visible;
+  text-shadow: 0 0 12px rgba(214, 245, 255, 0.08);
+  transition: opacity 100ms linear;
 }
 
 .sm-floating-app .sm-floating-term mjx-container {
   margin: 0 !important;
   color: inherit;
+  overflow: visible !important;
+}
+
+.sm-floating-app .sm-floating-term:hover {
+  filter: brightness(1.2);
 }
 
 .sm-floating-app .sm-floating-loading {
   position: absolute;
   inset: 0;
-  z-index: 6;
+  z-index: 3500;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.45rem;
   color: var(--sm-muted);
-  background: rgba(3, 7, 12, 0.62);
+  background: rgba(3, 7, 12, 0.7);
   transition: opacity 300ms ease, visibility 300ms ease;
 }
 
@@ -286,9 +291,9 @@ body {
   right: 0;
   bottom: 0.8rem;
   left: 0;
-  z-index: 8;
+  z-index: 3200;
   margin: 0;
-  color: rgba(155, 176, 189, 0.7);
+  color: rgba(155, 176, 189, 0.68);
   font-family: "Fira Code", monospace;
   font-size: 0.58rem;
   letter-spacing: 0.04em;
@@ -354,12 +359,8 @@ body {
     font-size: 0.9rem;
   }
 
-  .sm-floating-app .sm-floating-field {
-    top: 7rem;
-    width: 270vw;
-    padding: 2rem;
-    border-radius: 26px;
-    font-size: 0.88rem;
+  .sm-floating-app .sm-floating-term {
+    font-size: 0.78rem;
   }
 }
 
@@ -368,7 +369,7 @@ body {
     animation: none;
   }
 
-  .sm-floating-app .sm-floating-field {
-    transform: translate3d(-50%, 0, 0) !important;
+  .sm-floating-app .sm-floating-term {
+    transition: none;
   }
 }
