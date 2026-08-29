@@ -16,6 +16,7 @@
 
   const REQUIRED_SCHEMA = 2;
   const TYPESET_BATCH = 72;
+  const SAMPLE_SPACING = 7;
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const params = new URLSearchParams(window.location.search);
   const levelParam = params.get("level");
@@ -34,11 +35,18 @@
     ready: false,
     motion: !prefersReducedMotion,
     speed: 0.8,
+    pointerActive: false,
     pointerX: 0,
     pointerY: 0,
-    startTime: performance.now(),
-    pausedElapsed: 0,
+    headX: 0,
+    headY: 0,
+    velocityX: 0,
+    velocityY: 0,
+    history: [],
+    travelled: 0,
+    lastFrame: performance.now(),
     resizeTimer: 0,
+    seed: Math.random() * 1000,
   };
 
   function signedBody(term, index, semantic = false) {
@@ -90,6 +98,7 @@
         const wrapper = document.createElement("span");
         wrapper.className = `sm-floating-term sm-sector--${term.sector}`;
         wrapper.dataset.index = String(index);
+        wrapper.style.setProperty("--sm-hue-drift", `${((index * 17) % 19) - 9}deg`);
         wrapper.textContent = `\\(${signedBody(term, index, useSemantic)}\\)`;
         fragment.append(wrapper);
       });
@@ -126,80 +135,143 @@
     state.nodes = [...elements.field.querySelectorAll(".sm-floating-term")];
     state.offsets = [];
     let cursor = 0;
-    const gap = Math.max(18, Math.min(42, window.innerWidth * 0.022));
+    const gap = Math.max(18, Math.min(38, window.innerWidth * 0.019));
     state.nodes.forEach((node) => {
       const width = Math.max(42, node.getBoundingClientRect().width);
       state.offsets.push(cursor + width / 2);
       cursor += width + gap;
     });
     state.totalLength = Math.max(cursor, 1);
+    trimHistory();
   }
 
-  function curvePoint(u, time) {
+  function trimHistory() {
+    const keep = state.totalLength + Math.max(elements.stage.clientWidth, elements.stage.clientHeight) * 2.4;
+    while (state.history.length > 3 && state.travelled - state.history[0].s > keep) {
+      state.history.shift();
+    }
+  }
+
+  function randomTarget(now) {
     const w = elements.stage.clientWidth;
     const h = elements.stage.clientHeight;
-    const cx = w * 0.5;
-    const cy = h * 0.54;
-    const theta = u * Math.PI * 2 - Math.PI * 0.18;
-    const breathe = Math.sin(time * 0.00017) * 0.16;
-    const sway = Math.sin(time * 0.00011) * 0.24;
-    const ax = Math.min(w * 0.42, 720);
-    const ay = Math.min(h * 0.34, 360);
-
-    const x = cx
-      + ax * Math.sin(theta + sway)
-      + ax * 0.12 * Math.sin(3 * theta - time * 0.00013);
-    const y = cy
-      + ay * Math.sin(2 * theta + breathe)
-      + ay * 0.13 * Math.cos(3 * theta + time * 0.00009);
-    const z = Math.sin(3 * theta + time * 0.00016) * 0.78
-      + Math.cos(theta - time * 0.00008) * 0.22;
-
-    return { x, y, z };
+    const t = now * 0.00013 * (0.75 + state.speed * 0.35) + state.seed;
+    const x = w * (0.5 + 0.34 * Math.sin(t * 1.17) + 0.08 * Math.sin(t * 2.73 + 1.8));
+    const y = h * (0.54 + 0.28 * Math.sin(t * 0.83 + 1.1) + 0.08 * Math.cos(t * 2.11));
+    return {
+      x: Math.max(w * 0.1, Math.min(w * 0.9, x)),
+      y: Math.max(h * 0.16, Math.min(h * 0.9, y)),
+    };
   }
 
-  function curveFrame(u, time) {
-    const eps = 0.0015;
-    const p = curvePoint(u, time);
-    const a = curvePoint(Math.max(0, u - eps), time);
-    const b = curvePoint(Math.min(1, u + eps), time);
+  function advanceHead(now) {
+    const dt = Math.min(34, Math.max(1, now - state.lastFrame));
+    state.lastFrame = now;
+    if (!state.motion) return;
+
+    const target = state.pointerActive
+      ? { x: state.pointerX, y: state.pointerY }
+      : randomTarget(now);
+
+    const dx = target.x - state.headX;
+    const dy = target.y - state.headY;
+    const distance = Math.hypot(dx, dy) || 1;
+    const desiredSpeed = (0.045 + state.speed * 0.055) * dt;
+    const desiredVX = dx / distance * desiredSpeed;
+    const desiredVY = dy / distance * desiredSpeed;
+    const steering = state.pointerActive ? 0.075 : 0.026;
+
+    state.velocityX += (desiredVX - state.velocityX) * steering;
+    state.velocityY += (desiredVY - state.velocityY) * steering;
+
+    const oldX = state.headX;
+    const oldY = state.headY;
+    state.headX += state.velocityX;
+    state.headY += state.velocityY;
+
+    const marginX = elements.stage.clientWidth * 0.07;
+    const marginTop = Math.max(92, elements.stage.clientHeight * 0.08);
+    const marginBottom = elements.stage.clientHeight * 0.06;
+    if (state.headX < marginX || state.headX > elements.stage.clientWidth - marginX) state.velocityX *= -0.86;
+    if (state.headY < marginTop || state.headY > elements.stage.clientHeight - marginBottom) state.velocityY *= -0.86;
+    state.headX = Math.max(marginX, Math.min(elements.stage.clientWidth - marginX, state.headX));
+    state.headY = Math.max(marginTop, Math.min(elements.stage.clientHeight - marginBottom, state.headY));
+
+    const step = Math.hypot(state.headX - oldX, state.headY - oldY);
+    if (step >= SAMPLE_SPACING * 0.45) {
+      state.travelled += step;
+      const z = Math.sin(state.travelled * 0.0063 + now * 0.00042)
+        + 0.34 * Math.sin(state.travelled * 0.011 + 1.7);
+      state.history.push({ x: state.headX, y: state.headY, s: state.travelled, z });
+      trimHistory();
+    }
+  }
+
+  function sampleHistory(distanceBehind) {
+    if (state.history.length < 2) return null;
+    const targetS = state.travelled - distanceBehind;
+    if (targetS < state.history[0].s) return null;
+
+    let low = 0;
+    let high = state.history.length - 1;
+    while (low + 1 < high) {
+      const mid = (low + high) >> 1;
+      if (state.history[mid].s < targetS) low = mid;
+      else high = mid;
+    }
+
+    const a = state.history[low];
+    const b = state.history[high];
+    const span = Math.max(0.001, b.s - a.s);
+    const f = Math.max(0, Math.min(1, (targetS - a.s) / span));
+    const x = a.x + (b.x - a.x) * f;
+    const y = a.y + (b.y - a.y) * f;
+    const z = a.z + (b.z - a.z) * f;
     const angle = Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI;
-    return { ...p, angle };
+    return { x, y, z, angle };
   }
 
   function updateRibbon(now) {
     if (!state.ready) return;
-
-    const elapsed = state.motion ? Math.max(0, now - state.startTime) : state.pausedElapsed;
-    const flow = (elapsed * 0.030 * state.speed) % state.totalLength;
-    const visibleLength = Math.max(2600, Math.min(6200, elements.stage.clientWidth * 5.2));
-    const parallaxX = state.pointerX * Math.min(46, elements.stage.clientWidth * 0.035);
-    const parallaxY = state.pointerY * Math.min(30, elements.stage.clientHeight * 0.04);
+    advanceHead(now);
 
     state.nodes.forEach((node, index) => {
-      let distance = state.offsets[index] - flow;
-      while (distance < 0) distance += state.totalLength;
-      const u = distance / visibleLength;
-
-      if (u < 0 || u > 1) {
+      const frame = sampleHistory(state.offsets[index]);
+      if (!frame) {
         node.style.opacity = "0";
-        node.style.pointerEvents = "none";
         return;
       }
 
-      const frame = curveFrame(u, now);
       const depth = Math.max(-1, Math.min(1, frame.z));
-      const scale = 0.82 + (depth + 1) * 0.12;
-      const depthX = parallaxX * (0.55 + 0.45 * depth);
-      const depthY = parallaxY * (0.55 + 0.45 * depth);
-      const edgeFade = Math.min(1, u / 0.045, (1 - u) / 0.045);
-      const depthFade = 0.48 + (depth + 1) * 0.25;
-
-      node.style.opacity = String(Math.max(0, Math.min(1, edgeFade * depthFade)));
-      node.style.zIndex = String(1000 + Math.round(depth * 400));
-      node.style.pointerEvents = "auto";
-      node.style.transform = `translate3d(${(frame.x + depthX).toFixed(2)}px, ${(frame.y + depthY).toFixed(2)}px, 0) translate(-50%, -50%) rotate(${frame.angle.toFixed(2)}deg) scale(${scale.toFixed(3)})`;
+      const scale = 0.84 + (depth + 1) * 0.105;
+      const depthFade = 0.54 + (depth + 1) * 0.23;
+      node.style.opacity = String(depthFade);
+      node.style.zIndex = String(1000 + Math.round(depth * 420));
+      node.style.transform = `translate3d(${frame.x.toFixed(2)}px, ${frame.y.toFixed(2)}px, 0) translate(-50%, -50%) rotate(${frame.angle.toFixed(2)}deg) scale(${scale.toFixed(3)})`;
     });
+  }
+
+  function seedHistory() {
+    const w = elements.stage.clientWidth;
+    const h = elements.stage.clientHeight;
+    state.headX = w * 0.58;
+    state.headY = h * 0.55;
+    state.velocityX = 0.8;
+    state.velocityY = -0.25;
+    state.history = [];
+    state.travelled = 0;
+
+    const seedLength = state.totalLength + Math.max(w, h) * 1.5;
+    for (let s = seedLength; s >= 0; s -= SAMPLE_SPACING) {
+      const q = s / Math.max(seedLength, 1);
+      const x = w * (0.5 + 0.32 * Math.sin(q * 8.4 + 0.3) + 0.06 * Math.sin(q * 19.1));
+      const y = h * (0.54 + 0.27 * Math.sin(q * 6.1 + 1.0) + 0.07 * Math.cos(q * 15.7));
+      state.history.push({ x, y, s: state.travelled, z: Math.sin(q * 15.5) });
+      state.travelled += SAMPLE_SPACING;
+    }
+    const tail = state.history[state.history.length - 1];
+    state.headX = tail.x;
+    state.headY = tail.y;
   }
 
   function updateMotionButton() {
@@ -210,13 +282,8 @@
   }
 
   function toggleMotion() {
-    if (state.motion) {
-      state.pausedElapsed = performance.now() - state.startTime;
-      state.motion = false;
-    } else {
-      state.startTime = performance.now() - state.pausedElapsed;
-      state.motion = true;
-    }
+    state.motion = !state.motion;
+    state.lastFrame = performance.now();
     updateMotionButton();
   }
 
@@ -228,9 +295,7 @@
   function bindEvents() {
     elements.motion.addEventListener("click", toggleMotion);
     elements.speed.addEventListener("input", () => {
-      const elapsed = state.motion ? performance.now() - state.startTime : state.pausedElapsed;
       state.speed = Number(elements.speed.value) / 100;
-      if (state.motion) state.startTime = performance.now() - elapsed;
     });
 
     elements.stage.addEventListener("keydown", (event) => {
@@ -242,17 +307,20 @@
 
     elements.stage.addEventListener("pointermove", (event) => {
       const rect = elements.stage.getBoundingClientRect();
-      state.pointerX = (event.clientX - rect.left) / rect.width - 0.5;
-      state.pointerY = (event.clientY - rect.top) / rect.height - 0.5;
+      state.pointerActive = true;
+      state.pointerX = event.clientX - rect.left;
+      state.pointerY = event.clientY - rect.top;
     });
     elements.stage.addEventListener("pointerleave", () => {
-      state.pointerX = 0;
-      state.pointerY = 0;
+      state.pointerActive = false;
     });
 
     window.addEventListener("resize", () => {
       window.clearTimeout(state.resizeTimer);
-      state.resizeTimer = window.setTimeout(measureRibbon, 120);
+      state.resizeTimer = window.setTimeout(() => {
+        measureRibbon();
+        seedHistory();
+      }, 120);
     });
   }
 
@@ -272,9 +340,10 @@
 
       await typesetEquation();
       measureRibbon();
+      seedHistory();
       elements.loading.classList.add("is-hidden");
       state.ready = true;
-      state.startTime = performance.now();
+      state.lastFrame = performance.now();
       elements.stage.focus({ preventScroll: true });
     } catch (error) {
       elements.loading.innerHTML = "<b>The floating Lagrangian could not be loaded.</b>";
