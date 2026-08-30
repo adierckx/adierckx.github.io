@@ -15,13 +15,15 @@
     levelName: root.querySelector("#sm-level-name"),
     levelCaption: root.querySelector("#sm-level-caption"),
     levelDescription: root.querySelector("#sm-level-description"),
+    stageHint: root.querySelector("#sm-stage-hint"),
     sectorList: root.querySelector("#sm-sector-list"),
+    focusSector: root.querySelector("#sm-focus-sector"),
+    focusDescription: root.querySelector("#sm-focus-description"),
     colourMode: root.querySelector("#sm-colour-mode"),
     explainMode: root.querySelector("#sm-explain-mode"),
     colourKey: root.querySelector("#sm-colour-key"),
     explainer: root.querySelector("#sm-explainer"),
     symbolGroups: root.querySelector("#sm-symbol-groups"),
-    floating: root.querySelector("#sm-floating-view"),
     copy: root.querySelector("#sm-copy"),
     download: root.querySelector("#sm-download"),
     raw: root.querySelector("#sm-raw-latex"),
@@ -59,6 +61,11 @@
     selectedSectors: new Set(),
     termIds: [],
     terms: [],
+    displayTermIds: [],
+    displayTerms: [],
+    focusSector: "all",
+    focusExplicit: false,
+    focusAutomatic: false,
     colour: false,
     explain: false,
     persistentSymbol: null,
@@ -199,7 +206,7 @@
   }
 
   function activeSymbolDefinitions() {
-    const active = new Set(state.terms.flatMap((term) => term.symbols || []));
+    const active = new Set(state.displayTerms.flatMap((term) => term.symbols || []));
     active.add("lagrangian-density");
     return state.catalogue.symbolDefinitions.filter((definition) => active.has(definition.id));
   }
@@ -265,7 +272,7 @@
     elements.track.replaceChildren();
     const fragment = document.createDocumentFragment();
     const pending = [];
-    if (!state.terms.length) {
+    if (!state.displayTerms.length) {
       const empty = document.createElement("span");
       empty.className = "sm-formula-term";
       empty.dataset.symbols = "";
@@ -275,14 +282,14 @@
       fragment.append(empty);
       pending.push(empty);
     } else {
-      state.terms.forEach((term, index) => {
+      state.displayTerms.forEach((term, index) => {
         const wrapper = document.createElement("span");
         wrapper.className = `sm-formula-term sm-sector--${term.sector}`;
         wrapper.dataset.index = String(index);
         const symbols = [...(term.symbols || [])];
         if (index === 0) symbols.push("lagrangian-density");
         wrapper.dataset.symbols = symbols.join(" ");
-        const cacheKey = `${state.termIds[index]}|${index === 0 ? "first" : "next"}|${useSemantic ? "semantic" : "plain"}`;
+        const cacheKey = `${state.displayTermIds[index]}|${index === 0 ? "first" : "next"}|${useSemantic ? "semantic" : "plain"}`;
         wrapper.dataset.cacheKey = cacheKey;
         const renderedBody = useSemantic && term.semanticBody ? term.semanticBody : term.body;
         wrapper.classList.toggle("is-long-term", renderedBody.length > 220);
@@ -387,14 +394,14 @@
     elements.track.classList.remove("is-changing");
     elements.loading.classList.add("is-hidden");
     elements.shell.setAttribute("aria-busy", "false");
-    elements.renderStatus.textContent = state.terms.length ? `All ${count} terms rendered` : "No sector selected";
+    elements.renderStatus.textContent = state.displayTerms.length ? `All ${count} visible terms rendered` : "No terms in this view";
   }
 
   function renderCompleteEquation() {
     const token = ++state.renderToken;
-    const count = state.terms.length.toLocaleString();
+    const count = state.displayTerms.length.toLocaleString();
     const wantsSemantic = state.colour;
-    setLoading(state.terms.length ? `Typesetting ${count} terms…` : "Typesetting the empty selection…");
+    setLoading(state.displayTerms.length ? `Typesetting ${count} terms…` : "Typesetting the empty selection…");
     elements.renderStatus.textContent = "Preparing expression";
     buildExplanation();
     buildColourKey();
@@ -437,28 +444,102 @@
       });
   }
 
-  function updateFloatingLink() {
+  function updateUrlState() {
     const params = new URLSearchParams({
       phase: state.phase,
       level: String(state.level),
       mask: String(selectedMask()),
       colour: state.colour ? "1" : "0",
+      explain: state.explain ? "1" : "0",
     });
-    elements.floating.href = `lagrangian-floating.html?${params.toString()}`;
+    if (state.focusSector !== "all" || state.focusExplicit) params.set("focus", state.focusSector);
+    const url = new URL(window.location.href);
+    url.search = params.toString();
+    window.history.replaceState(null, "", url);
+  }
+
+  function selectedSectorNames() {
+    return phaseMeta().sectors.filter((sector) => state.selectedSectors.has(sector));
+  }
+
+  function sectorTermCount(sector) {
+    return state.terms.reduce((count, term) => count + (term.sector === sector ? 1 : 0), 0);
+  }
+
+  function chooseFocus() {
+    const selected = selectedSectorNames();
+    state.focusAutomatic = false;
+
+    if (!state.focusExplicit) state.focusSector = "all";
+    if (state.focusSector !== "all" && !selected.includes(state.focusSector)) {
+      state.focusSector = "all";
+      state.focusExplicit = false;
+    }
+
+    if (!state.focusExplicit && state.level === 4 && state.terms.length > DENSE_TERM_COUNT && selected.length > 1) {
+      state.focusSector = [...selected].sort((left, right) => sectorTermCount(left) - sectorTermCount(right))[0];
+      state.focusAutomatic = true;
+    }
+  }
+
+  function updateFocusControl() {
+    elements.focusSector.replaceChildren();
+    const all = document.createElement("option");
+    all.value = "all";
+    all.textContent = `Complete selection · ${state.terms.length.toLocaleString()}`;
+    elements.focusSector.append(all);
+
+    selectedSectorNames().forEach((sector) => {
+      const option = document.createElement("option");
+      option.value = sector;
+      option.textContent = `${phaseMeta().labels[sector]} · ${sectorTermCount(sector).toLocaleString()}`;
+      elements.focusSector.append(option);
+    });
+    elements.focusSector.value = state.focusSector;
+    elements.focusSector.disabled = state.terms.length === 0;
+  }
+
+  function updateDisplayedSelection() {
+    const pairs = state.terms.map((term, index) => ({ term, id: state.termIds[index] }));
+    const visible = state.focusSector === "all"
+      ? pairs
+      : pairs.filter(({ term }) => term.sector === state.focusSector);
+    state.displayTerms = visible.map(({ term }) => term);
+    state.displayTermIds = visible.map(({ id }) => id);
+
+    const visibleCount = state.displayTerms.length;
+    const totalCount = state.terms.length;
+    elements.termCount.textContent = state.focusSector === "all"
+      ? `${totalCount.toLocaleString()} additive term${totalCount === 1 ? "" : "s"}`
+      : `${visibleCount.toLocaleString()} shown · ${totalCount.toLocaleString()} selected`;
+    root.classList.toggle("is-dense-equation", visibleCount > DENSE_TERM_COUNT);
+    elements.shell.scrollTop = 0;
+    elements.shell.scrollLeft = 0;
+
+    if (state.focusSector === "all") {
+      elements.focusDescription.textContent = "Show every selected sector in the equation and in the export.";
+      elements.stageHint.textContent = "Every additive term in the current selection is displayed.";
+    } else {
+      const label = phaseMeta().labels[state.focusSector] || state.focusSector;
+      elements.focusDescription.textContent = state.focusAutomatic
+        ? `Focused automatically on ${label} to keep the deepest expansion readable.`
+        : `Only ${label} is shown here; the complete selection is preserved.`;
+      elements.stageHint.textContent = `Focused on ${label}. Copy and export still include every selected sector.`;
+    }
+
+    updateUrlState();
+    renderCompleteEquation();
   }
 
   function updateSelection() {
     const ids = state.catalogue.configurations[configurationKey()] || [];
     state.termIds = ids;
     state.terms = ids.map((id) => state.catalogue.terms[id]).filter(Boolean);
-    elements.termCount.textContent = `${state.terms.length.toLocaleString()} additive term${state.terms.length === 1 ? "" : "s"}`;
-    root.classList.toggle("is-dense-equation", state.terms.length > DENSE_TERM_COUNT);
-    elements.shell.scrollTop = 0;
-    elements.shell.scrollLeft = 0;
     state.rawDirty = true;
     if (elements.sourcePanel.open) updateRawSource();
-    updateFloatingLink();
-    renderCompleteEquation();
+    chooseFocus();
+    updateFocusControl();
+    updateDisplayedSelection();
   }
 
   function updateLevel() {
@@ -504,7 +585,7 @@
     root.classList.toggle("is-explain-mode", state.explain);
     elements.colourKey.hidden = !state.colour;
     elements.explainer.hidden = !state.explain;
-    if (updateLink) updateFloatingLink();
+    if (updateLink) updateUrlState();
   }
 
   function setExplainMode(enabled) {
@@ -615,6 +696,13 @@
       state.selectionTimer = 0;
       updateSelection();
     });
+    elements.focusSector.addEventListener("change", () => {
+      state.focusSector = elements.focusSector.value;
+      state.focusExplicit = true;
+      state.focusAutomatic = false;
+      updateFocusControl();
+      updateDisplayedSelection();
+    });
     elements.colourMode.addEventListener("change", () => {
       state.colour = elements.colourMode.checked;
       updateModeClasses();
@@ -627,6 +715,41 @@
       if (elements.sourcePanel.open) updateRawSource();
     });
     bindExplanationEvents();
+  }
+
+  function readInitialState() {
+    const params = new URLSearchParams(window.location.search);
+    const requestedPhase = params.get("phase");
+    if (requestedPhase && state.catalogue.phases[requestedPhase]) state.phase = requestedPhase;
+
+    const requestedLevel = Number(params.get("level"));
+    if (Number.isInteger(requestedLevel) && requestedLevel >= 0 && requestedLevel < state.catalogue.levels.length) {
+      state.level = requestedLevel;
+    }
+
+    const requestedMask = params.get("mask");
+    if (requestedMask === null || !Number.isInteger(Number(requestedMask)) || Number(requestedMask) < 0) {
+      setAllSectors();
+    } else {
+      const mask = Number(requestedMask);
+      state.selectedSectors = new Set(
+        phaseMeta().sectors.filter((sector, index) => (mask & (1 << index)) !== 0),
+      );
+    }
+
+    state.colour = params.get("colour") === "1";
+    state.explain = params.get("explain") === "1";
+    if (params.has("focus")) {
+      state.focusSector = params.get("focus") || "all";
+      state.focusExplicit = true;
+    }
+
+    elements.development.value = String(state.level);
+    elements.colourMode.checked = state.colour;
+    elements.explainMode.checked = state.explain;
+    elements.phaseButtons.forEach((button) => {
+      button.setAttribute("aria-pressed", String(button.dataset.phase === state.phase));
+    });
   }
 
   async function init() {
@@ -642,11 +765,11 @@
     }
 
     try {
-      setAllSectors();
+      readInitialState();
       renderSectorControls();
       updateLevel();
       bindEvents();
-      updateModeClasses();
+      updateModeClasses(false);
       updateSelection();
     } catch (error) {
       console.error("Lagrangian interface setup failed:", error);

@@ -1,0 +1,100 @@
+---
+title: "Build the Standard Model Lagrangian"
+description: "Build the gauge-invariant minimal Standard Model Lagrangian one conceptual layer at a time."
+page-layout: full
+toc: false
+format:
+  html:
+    css:
+      - ../assets/lagrangian/lagrangian-project.css
+      - ../assets/lagrangian/lagrangian-guide.css
+      - ../assets/lagrangian/lagrangian-colour-variation.css
+---
+
+::: {.column-screen}
+
+::: {.sm-guide-math-bootstrap aria-hidden="true"}
+$\require{html}\class{sm-math-probe}{x}$
+:::
+
+```{=html}
+<div
+  class="sm-project-page sm-guide-app"
+  id="sm-guide-app"
+  data-catalogue="../assets/lagrangian/catalogue.json"
+>
+  <nav class="sm-project-nav" aria-label="Standard Model project">
+    <a href="standard-model.html">Overview</a>
+    <a href="build-standard-model.html" aria-current="page">Build the equation</a>
+    <a href="standard-model-lagrangian.html">Equation Atlas</a>
+    <span>Art mode later</span>
+  </nav>
+
+  <header class="sm-guide-intro">
+    <p class="sm-project-eyebrow">Guided route · symmetric phase</p>
+    <h1>Build the equation.</h1>
+    <p>
+      The Standard Model Lagrangian is not a single inspired guess. Its broad
+      structure follows from the chosen fields, Lorentz invariance,
+      renormalisability, and local \(SU(3)_c\times SU(2)_L\times U(1)_Y\)
+      gauge symmetry.
+    </p>
+  </header>
+
+  <div class="sm-guide-layout">
+    <aside class="sm-guide-rail" aria-label="Chapter steps">
+      <p class="sm-guide-rail-label">Construction</p>
+      <div class="sm-guide-step-list" id="sm-guide-step-list">
+        <button type="button" data-step="0"><span>01</span><b>Symmetry and fields</b></button>
+        <button type="button" data-step="1"><span>02</span><b>Gauge dynamics</b></button>
+        <button type="button" data-step="2"><span>03</span><b>Matter fields</b></button>
+        <button type="button" data-step="3"><span>04</span><b>The Higgs sector</b></button>
+        <button type="button" data-step="4"><span>05</span><b>Yukawa couplings</b></button>
+        <button type="button" data-step="5"><span>06</span><b>The complete structure</b></button>
+      </div>
+    </aside>
+
+    <section class="sm-guide-workspace" aria-live="polite">
+      <div class="sm-guide-progress" aria-hidden="true"><span id="sm-guide-progress"></span></div>
+
+      <section class="sm-guide-formula-card" aria-label="Lagrangian constructed so far">
+        <div class="sm-guide-formula-header">
+          <div>
+            <span>Equation so far</span>
+            <strong id="sm-guide-term-count">Preparing catalogue…</strong>
+          </div>
+          <span id="sm-guide-added">Start with the ingredients</span>
+        </div>
+        <div class="sm-guide-formula is-colour-mode" id="sm-guide-formula" aria-busy="true"></div>
+      </section>
+
+      <article class="sm-guide-copy">
+        <p class="sm-guide-step-kicker" id="sm-guide-kicker">Step 1 of 6</p>
+        <h2 id="sm-guide-title">Symmetry and fields</h2>
+        <p class="sm-guide-question" id="sm-guide-question"></p>
+        <p class="sm-guide-explanation" id="sm-guide-explanation"></p>
+        <ul class="sm-guide-facts" id="sm-guide-facts"></ul>
+      </article>
+
+      <footer class="sm-guide-actions">
+        <button type="button" id="sm-guide-previous"><span aria-hidden="true">←</span> Previous</button>
+        <a id="sm-guide-atlas-link" href="standard-model-lagrangian.html">Open this state in the Atlas</a>
+        <button type="button" id="sm-guide-next">Next <span aria-hidden="true">→</span></button>
+      </footer>
+    </section>
+  </div>
+
+  <aside class="sm-guide-caveat">
+    <strong>What this chapter does—and does not claim.</strong>
+    The symmetry and field content strongly constrain the renormalisable
+    Lagrangian, but they do not predict the numerical gauge couplings, Higgs
+    parameters, or Yukawa matrices. Those remain measured inputs.
+  </aside>
+
+  <noscript>This guided chapter requires JavaScript.</noscript>
+</div>
+
+<script defer src="../assets/lagrangian/lagrangian-guide.js"></script>
+```
+
+:::

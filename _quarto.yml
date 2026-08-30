@@ -36,8 +36,8 @@ website:
             text: Bachelor Notes (FR)
           - href: notes/math.qmd
             text: Math Notes (FR)
-          - href: outreach/standard-model-lagrangian.qmd
-            text: Interactive Lagrangian
+          - href: outreach/standard-model.qmd
+            text: Standard Model, unfolded
       - href: outreach/projects.qmd
         text: Outreach & Projects
       - href: blog.qmd

@@ -1,0 +1,114 @@
+---
+title: "The Standard Model, unfolded"
+description: "An interactive journey from the symmetries of the Standard Model to its particles, interactions, and open questions."
+page-layout: full
+toc: false
+format:
+  html:
+    css:
+      - ../assets/lagrangian/lagrangian-project.css
+---
+
+::: {.column-screen}
+
+```{=html}
+<div class="sm-project-page sm-project-hub">
+  <nav class="sm-project-nav" aria-label="Standard Model project">
+    <a href="standard-model.html" aria-current="page">Overview</a>
+    <a href="build-standard-model.html">Build the equation</a>
+    <a href="standard-model-lagrangian.html">Equation Atlas</a>
+    <span>Art mode later</span>
+  </nav>
+
+  <header class="sm-project-hero">
+    <p class="sm-project-eyebrow">Interactive field theory</p>
+    <h1>The Standard Model, <span>unfolded.</span></h1>
+    <p class="sm-project-lede">
+      Follow the equation in both directions: backwards to the symmetries that
+      constrain it, and forwards to the particles and interactions it describes.
+    </p>
+
+    <div class="sm-project-signature" aria-label="The main structural pieces of the minimal Standard Model Lagrangian">
+      <span class="sm-signature-label">One equation</span>
+      <span class="sm-signature-equation">\(\mathcal L_{\mathrm{SM}}=\mathcal L_{\mathrm{gauge}}+\mathcal L_{\mathrm{fermions}}+\mathcal L_{\mathrm{Higgs}}+\mathcal L_{\mathrm{Yukawa}}\)</span>
+      <span class="sm-signature-label">many consequences</span>
+    </div>
+  </header>
+
+  <section class="sm-project-section" aria-labelledby="sm-project-start">
+    <div class="sm-project-section-heading">
+      <div>
+        <p class="sm-project-kicker">Available now</p>
+        <h2 id="sm-project-start">Choose how you want to enter</h2>
+      </div>
+      <p>The two views use the same mathematical catalogue, so every term keeps the same notation, sector, and meaning.</p>
+    </div>
+
+    <div class="sm-project-entry-grid">
+      <a class="sm-entry-card sm-entry-build" href="build-standard-model.html">
+        <span class="sm-card-index">01</span>
+        <div>
+          <p class="sm-card-label">Guided route</p>
+          <h3>Build the Lagrangian</h3>
+          <p>Start from the gauge symmetry and add gauge fields, matter, the Higgs sector, and Yukawa couplings one layer at a time.</p>
+        </div>
+        <span class="sm-card-action">Begin the guided chapter <b aria-hidden="true">→</b></span>
+      </a>
+
+      <a class="sm-entry-card sm-entry-atlas" href="standard-model-lagrangian.html">
+        <span class="sm-card-index">02</span>
+        <div>
+          <p class="sm-card-label">Free exploration</p>
+          <h3>Open the Equation Atlas</h3>
+          <p>Choose a field basis, isolate sectors, compare five levels of development, explain symbols, and export clean LaTeX.</p>
+        </div>
+        <span class="sm-card-action">Explore the equation <b aria-hidden="true">→</b></span>
+      </a>
+    </div>
+  </section>
+
+  <section class="sm-project-section sm-project-roadmap" aria-labelledby="sm-project-roadmap">
+    <div class="sm-project-section-heading">
+      <div>
+        <p class="sm-project-kicker">Growing atlas</p>
+        <h2 id="sm-project-roadmap">Where the project goes next</h2>
+      </div>
+      <p>Each future module will remain traceable to the same exact terms rather than becoming a separate particle-physics poster.</p>
+    </div>
+
+    <div class="sm-roadmap-grid">
+      <article>
+        <span>03</span>
+        <h3>Interaction Atlas</h3>
+        <p>Move from a monomial to its vertex, a representative Feynman diagram, and a physical process.</p>
+        <small>Planned</small>
+      </article>
+      <article>
+        <span>04</span>
+        <h3>EWSB Laboratory</h3>
+        <p>Watch the Higgs shift reorganise fields into the photon, \(W^\pm\), \(Z\), masses, and Higgs interactions.</p>
+        <small>Planned</small>
+      </article>
+      <article>
+        <span>05</span>
+        <h3>Scope and extensions</h3>
+        <p>Separate quantisation machinery, allowed but omitted terms, and genuine extensions such as neutrino masses, EFT operators, and gravity.</p>
+        <small>Planned</small>
+      </article>
+      <article class="sm-roadmap-muted">
+        <span>06</span>
+        <h3>Art mode</h3>
+        <p>The previous floating ribbon is paused. A new visual idea will be developed only when it adds something genuinely worthwhile.</p>
+        <small>On hold</small>
+      </article>
+    </div>
+  </section>
+
+  <aside class="sm-project-principle">
+    <strong>The organising rule</strong>
+    <p>Every visual explanation should point to an exact term, and every term should eventually lead to a physical consequence.</p>
+  </aside>
+</div>
+```
+
+:::

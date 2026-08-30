@@ -9,12 +9,12 @@ Beyond academic research, I participate in science communication, digital conten
 
 ### The Standard Model, unfolded
 
-Choose a field basis and the sectors you want to keep, then move from the
-canonical Standard Model Lagrangian to its explicit generations, internal
-components, and gauge-field monomials. The live equation remains Lorentz
-covariant and can be copied or downloaded as LaTeX.
+Follow the Standard Model Lagrangian in both directions: build its compact
+structure from gauge symmetry and field content, or explore its sectors down to
+explicit generations, internal components, and gauge-field monomials. The
+project combines a guided chapter with a free Equation Atlas.
 
-[**Explore the interactive Lagrangian**](standard-model-lagrangian.qmd){.btn-surface .c-teal .btn-compact}
+[**Enter the Standard Model project**](standard-model.qmd){.btn-surface .c-teal .btn-compact}
 
 ---
 

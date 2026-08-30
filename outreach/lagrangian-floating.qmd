@@ -1,67 +1,43 @@
 ---
-title: "Floating Standard Model Lagrangian"
-description: "A full-screen animated view of a selected Standard Model Lagrangian."
+title: "Standard Model art mode"
+description: "The previous floating Lagrangian experiment is paused while a new art mode is developed."
 page-layout: full
 toc: false
 format:
   html:
     css:
-      - ../assets/lagrangian/lagrangian-floating.css
-      - ../assets/lagrangian/lagrangian-colour-variation.css
+      - ../assets/lagrangian/lagrangian-project.css
 ---
 
 ::: {.column-screen}
 
-::: {.sm-floating-math-bootstrap aria-hidden="true"}
-$\require{html}\class{sm-math-probe}{x}$
-:::
-
 ```{=html}
-<div
-  class="sm-floating-app"
-  id="sm-floating-app"
-  data-catalogue="../assets/lagrangian/catalogue.json"
->
-  <div class="sm-floating-orb sm-floating-orb-one" aria-hidden="true"></div>
-  <div class="sm-floating-orb sm-floating-orb-two" aria-hidden="true"></div>
+<div class="sm-project-page sm-art-hold">
+  <nav class="sm-project-nav" aria-label="Standard Model project">
+    <a href="standard-model.html">Overview</a>
+    <a href="build-standard-model.html">Build the equation</a>
+    <a href="standard-model-lagrangian.html">Equation Atlas</a>
+    <span aria-current="page">Art mode later</span>
+  </nav>
 
-  <header class="sm-floating-toolbar">
-    <a class="sm-floating-back" href="standard-model-lagrangian.html">
-      <span aria-hidden="true">←</span> Editor
-    </a>
-    <div class="sm-floating-summary">
-      <strong id="sm-floating-level">Loading selection</strong>
-      <span id="sm-floating-count"></span>
+  <section class="sm-art-hold-card">
+    <p class="sm-project-eyebrow">Experiment paused</p>
+    <h1>The formula should move for a reason.</h1>
+    <p>
+      The previous floating-ribbon view was visually unstable and did not add
+      enough understanding to justify the distraction. It has been put on hold
+      while the explanatory parts of the project are built properly.
+    </p>
+    <p>
+      A different art mode may return later, with its own visual logic rather
+      than as an animated version of the complete equation.
+    </p>
+    <div class="sm-art-hold-actions">
+      <a href="build-standard-model.html">Build the equation</a>
+      <a href="standard-model-lagrangian.html">Open the Equation Atlas</a>
     </div>
-    <div class="sm-floating-actions">
-      <label>
-        <span>Speed</span>
-        <input id="sm-floating-speed" type="range" min="20" max="180" step="5" value="80">
-      </label>
-      <button type="button" id="sm-floating-motion" aria-pressed="true">
-        <span aria-hidden="true">Ⅱ</span> Pause
-      </button>
-    </div>
-  </header>
-
-  <main
-    class="sm-floating-stage"
-    id="sm-floating-stage"
-    tabindex="0"
-    aria-label="Floating complete Lagrangian. Move the pointer to guide it; press space to pause or resume."
-  >
-    <div class="sm-floating-field" id="sm-floating-field"></div>
-    <div class="sm-floating-loading" id="sm-floating-loading" role="status">
-      <span></span><span></span><span></span>
-      <b>Typesetting the complete expression…</b>
-    </div>
-  </main>
-
-  <p class="sm-floating-hint">The complete sequence streams through an open ribbon · Guide it with the pointer · Space pauses motion</p>
-  <noscript>This view requires JavaScript.</noscript>
+  </section>
 </div>
-
-<script defer src="../assets/lagrangian/lagrangian-floating.js"></script>
 ```
 
 :::
