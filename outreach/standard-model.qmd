@@ -11,6 +11,10 @@ format:
 
 ::: {.column-screen}
 
+::: {.sm-project-math-bootstrap aria-hidden="true"}
+$x$
+:::
+
 ```{=html}
 <div class="sm-project-page sm-project-hub">
   <nav class="sm-project-nav" aria-label="Standard Model project">
