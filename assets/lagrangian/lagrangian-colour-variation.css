@@ -1,3 +1,6 @@
+/* Subtle per-occurrence variation for fermion families. JavaScript assigns
+   the tone after MathJax has produced stable semantic nodes; relying on
+   :nth-of-type inside MathJax's nested markup made the old colours erratic. */
 .is-colour-mode :is(
   .sm-symbol--up-quark,
   .sm-symbol--charm-quark,
@@ -16,54 +19,39 @@
   .sm-symbol--charged-lepton,
   .sm-symbol--neutrino,
   .sm-symbol--generic-fermion
-):nth-of-type(3n + 1) {
-  filter: hue-rotate(-7deg) saturate(1.05) brightness(1.02);
+) {
+  filter:
+    hue-rotate(var(--sm-tone-hue, 0deg))
+    saturate(var(--sm-tone-saturation, 1))
+    brightness(var(--sm-tone-brightness, 1));
 }
 
-.is-colour-mode :is(
-  .sm-symbol--up-quark,
-  .sm-symbol--charm-quark,
-  .sm-symbol--top-quark,
-  .sm-symbol--down-quark,
-  .sm-symbol--strange-quark,
-  .sm-symbol--bottom-quark,
-  .sm-symbol--electron,
-  .sm-symbol--muon,
-  .sm-symbol--tau-lepton,
-  .sm-symbol--electron-neutrino,
-  .sm-symbol--muon-neutrino,
-  .sm-symbol--tau-neutrino,
-  .sm-symbol--up-type,
-  .sm-symbol--down-type,
-  .sm-symbol--charged-lepton,
-  .sm-symbol--neutrino,
-  .sm-symbol--generic-fermion
-):nth-of-type(3n + 2) {
-  filter: hue-rotate(6deg) saturate(1.08) brightness(0.99);
+.is-colour-mode [data-sm-tone="0"] {
+  --sm-tone-hue: -6deg;
+  --sm-tone-saturation: 1.04;
+  --sm-tone-brightness: 1.02;
 }
 
-.is-colour-mode :is(
-  .sm-symbol--up-quark,
-  .sm-symbol--charm-quark,
-  .sm-symbol--top-quark,
-  .sm-symbol--down-quark,
-  .sm-symbol--strange-quark,
-  .sm-symbol--bottom-quark,
-  .sm-symbol--electron,
-  .sm-symbol--muon,
-  .sm-symbol--tau-lepton,
-  .sm-symbol--electron-neutrino,
-  .sm-symbol--muon-neutrino,
-  .sm-symbol--tau-neutrino,
-  .sm-symbol--up-type,
-  .sm-symbol--down-type,
-  .sm-symbol--charged-lepton,
-  .sm-symbol--neutrino,
-  .sm-symbol--generic-fermion
-):nth-of-type(5n) {
-  filter: hue-rotate(11deg) saturate(1.04) brightness(1.04);
+.is-colour-mode [data-sm-tone="1"] {
+  --sm-tone-hue: 4deg;
+  --sm-tone-saturation: 1.07;
+  --sm-tone-brightness: 0.99;
 }
 
-.sm-floating-app.is-colour-mode .sm-floating-term {
-  filter: hue-rotate(var(--sm-hue-drift, 0deg)) saturate(1.03);
+.is-colour-mode [data-sm-tone="2"] {
+  --sm-tone-hue: 9deg;
+  --sm-tone-saturation: 1.03;
+  --sm-tone-brightness: 1.04;
+}
+
+.is-colour-mode [data-sm-tone="3"] {
+  --sm-tone-hue: -2deg;
+  --sm-tone-saturation: 0.98;
+  --sm-tone-brightness: 0.97;
+}
+
+.is-colour-mode [data-sm-tone="4"] {
+  --sm-tone-hue: 6deg;
+  --sm-tone-saturation: 1.02;
+  --sm-tone-brightness: 1.01;
 }

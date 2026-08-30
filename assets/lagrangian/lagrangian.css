@@ -32,6 +32,8 @@
   --sm-photon: #ffe08a;
   --sm-z: #c7a5ff;
   --sm-higgs: #72e6ad;
+  --sm-higgs-vev: #9bf0b9;
+  --sm-higgs-potential: #5fd69f;
   --sm-quark-doublet: #ff9ebc;
   --sm-lepton-doublet: #f6a4dc;
   --sm-up-type: #ffadad;
@@ -205,6 +207,8 @@
 .sm-lagrangian-app .sm-equation-shell {
   position: relative;
   min-height: 250px;
+  overflow-x: auto;
+  overscroll-behavior: contain;
   background:
     radial-gradient(circle at 50% 0, rgba(63, 224, 208, 0.035), transparent 34rem),
     rgba(4, 10, 16, 0.16);
@@ -237,12 +241,35 @@
   flex: 0 1 auto;
   align-items: baseline;
   padding: 0.16rem 0.24rem;
-  overflow-x: auto;
+  overflow: visible;
   color: var(--sm-text);
   border: 1px solid transparent;
   border-radius: 8px;
-  scrollbar-width: thin;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 2.2rem;
   transition: opacity 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.sm-lagrangian-app .sm-formula-term.is-pending {
+  min-height: 2.1rem;
+  visibility: hidden;
+}
+
+.sm-lagrangian-app .sm-formula-term.is-long-term {
+  font-size: 0.9em;
+}
+
+.sm-lagrangian-app.is-dense-equation .sm-equation-shell {
+  max-height: min(72vh, 900px);
+  overflow: auto;
+  scrollbar-color: rgba(138, 233, 255, 0.45) rgba(3, 8, 13, 0.35);
+}
+
+.sm-lagrangian-app.is-dense-equation .sm-formula-track {
+  gap: 0.3rem 0.52rem;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  font-size: clamp(0.78rem, 0.96vw, 0.98rem);
+  line-height: 1.65;
 }
 
 .sm-lagrangian-app .sm-formula-term mjx-container {
@@ -819,6 +846,8 @@
 .sm-lagrangian-app.is-colour-mode .sm-symbol--z-boson { color: var(--sm-z) !important; }
 .sm-lagrangian-app.is-colour-mode .sm-symbol--higgs-doublet,
 .sm-lagrangian-app.is-colour-mode .sm-symbol--higgs-boson { color: var(--sm-higgs) !important; }
+.sm-lagrangian-app.is-colour-mode .sm-symbol--higgs-vev { color: var(--sm-higgs-vev) !important; }
+.sm-lagrangian-app.is-colour-mode .sm-symbol--higgs-potential { color: var(--sm-higgs-potential) !important; }
 .sm-lagrangian-app.is-colour-mode .sm-symbol--quark-doublet { color: var(--sm-quark-doublet) !important; }
 .sm-lagrangian-app.is-colour-mode .sm-symbol--lepton-doublet { color: var(--sm-lepton-doublet) !important; }
 .sm-lagrangian-app.is-colour-mode .sm-symbol--up-type { color: var(--sm-up-type) !important; }

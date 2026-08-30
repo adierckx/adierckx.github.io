@@ -15,41 +15,70 @@
   };
 
   const REQUIRED_SCHEMA = 2;
-  const TYPESET_BATCH = 72;
-  const SAMPLE_SPACING = 7;
+  const MAX_POOL_SIZE = 24;
+  const MAX_RENDER_CACHE = 1800;
+  const PATH_SAMPLES = 128;
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const params = new URLSearchParams(window.location.search);
   const levelParam = params.get("level");
   const maskParam = params.get("mask");
+  const FLAVOUR_SELECTOR = [
+    ".sm-symbol--up-quark",
+    ".sm-symbol--charm-quark",
+    ".sm-symbol--top-quark",
+    ".sm-symbol--down-quark",
+    ".sm-symbol--strange-quark",
+    ".sm-symbol--bottom-quark",
+    ".sm-symbol--electron",
+    ".sm-symbol--muon",
+    ".sm-symbol--tau-lepton",
+    ".sm-symbol--electron-neutrino",
+    ".sm-symbol--muon-neutrino",
+    ".sm-symbol--tau-neutrino",
+    ".sm-symbol--up-type",
+    ".sm-symbol--down-type",
+    ".sm-symbol--charged-lepton",
+    ".sm-symbol--neutrino",
+    ".sm-symbol--generic-fermion",
+  ].join(",");
 
   const state = {
     catalogue: null,
+    mathJax: null,
     phase: params.get("phase") || "unbroken",
     level: levelParam === null ? 2 : Number(levelParam),
     mask: maskParam === null ? Number.NaN : Number(maskParam),
     colour: params.get("colour") === "1",
     terms: [],
     nodes: [],
-    offsets: [],
-    totalLength: 1,
+    path: [],
+    pathLength: 1,
+    progress: 0,
+    lastTail: 0,
+    nextTermIndex: 0,
+    renderQueue: Promise.resolve(),
+    renderCache: new Map(),
     ready: false,
     motion: !prefersReducedMotion,
     speed: 0.8,
     pointerActive: false,
+    pointerBlend: 0,
     pointerX: 0,
     pointerY: 0,
-    headX: 0,
-    headY: 0,
-    velocityX: 0,
-    velocityY: 0,
-    history: [],
-    travelled: 0,
+    waveTime: 0,
     lastFrame: performance.now(),
-    resizeTimer: 0,
-    seed: Math.random() * 1000,
   };
 
+  function sequenceLength() {
+    return Math.max(1, state.terms.length);
+  }
+
+  function termAt(index) {
+    return state.terms.length ? state.terms[index] : null;
+  }
+
   function signedBody(term, index, semantic = false) {
+    if (!term) return String.raw`\mathcal{L}_{\mathrm{selected}}=0`;
     const body = semantic && term.semanticBody ? term.semanticBody : term.body;
     if (index === 0) {
       const sign = term.sign < 0 ? "-" : "";
@@ -85,193 +114,229 @@
     if (!Number.isInteger(state.mask) || state.mask < 0 || state.mask > phase.allMask) state.mask = phase.allMask;
   }
 
-  function buildEquation(useSemantic) {
-    elements.field.replaceChildren();
-    const fragment = document.createDocumentFragment();
-    if (!state.terms.length) {
-      const empty = document.createElement("span");
-      empty.className = "sm-floating-term";
-      empty.textContent = String.raw`\(\mathcal{L}_{\mathrm{selected}}=0\)`;
-      fragment.append(empty);
-    } else {
-      state.terms.forEach((term, index) => {
-        const wrapper = document.createElement("span");
-        wrapper.className = `sm-floating-term sm-sector--${term.sector}`;
-        wrapper.dataset.index = String(index);
-        wrapper.style.setProperty("--sm-hue-drift", `${((index * 17) % 19) - 9}deg`);
-        wrapper.textContent = `\\(${signedBody(term, index, useSemantic)}\\)`;
-        fragment.append(wrapper);
+  function cacheKey(termIndex) {
+    if (!state.terms.length) return "empty";
+    return `${termIndex}|${state.colour ? "semantic" : "plain"}`;
+  }
+
+  function estimateWidth(termIndex) {
+    const term = termAt(termIndex);
+    if (!term) return 240;
+    const body = term.body;
+    // TeX commands collapse substantially when typeset.  This conservative
+    // estimate is used while an off-screen recycled node is being prepared.
+    return Math.max(130, Math.min(1180, 90 + body.length * 5.8));
+  }
+
+  function applyColourVariation(record) {
+    if (!state.colour) return;
+    record.element.querySelectorAll(FLAVOUR_SELECTOR).forEach((symbol, index) => {
+      symbol.dataset.smTone = String((record.termIndex + index) % 5);
+    });
+  }
+
+  function rememberRecord(record) {
+    applyColourVariation(record);
+    const key = cacheKey(record.termIndex);
+    state.renderCache.set(key, record.element.innerHTML);
+    while (state.renderCache.size > MAX_RENDER_CACHE) {
+      state.renderCache.delete(state.renderCache.keys().next().value);
+    }
+  }
+
+  function prepareRecordMarkup(record, termIndex) {
+    const term = termAt(termIndex);
+    record.termIndex = termIndex;
+    record.ready = false;
+    record.element.className = term
+      ? `sm-floating-term sm-sector--${term.sector}`
+      : "sm-floating-term";
+    record.element.dataset.termIndex = String(termIndex);
+    record.element.style.opacity = "0";
+    const key = cacheKey(termIndex);
+    const cached = state.renderCache.get(key);
+    if (cached) {
+      record.element.innerHTML = cached;
+      state.renderCache.delete(key);
+      state.renderCache.set(key, cached);
+      record.ready = true;
+      return false;
+    }
+    record.element.textContent = `\\(${signedBody(term, termIndex, state.colour)}\\)`;
+    return true;
+  }
+
+  function measuredWidth(record) {
+    return Math.max(90, Math.min(1600, record.element.getBoundingClientRect().width || record.spacingWidth));
+  }
+
+  async function typesetRecords(records) {
+    const pending = records.filter((record) => !record.ready);
+    for (let start = 0; start < pending.length; start += 8) {
+      const batch = pending.slice(start, start + 8);
+      await state.mathJax.typesetPromise(batch.map((record) => record.element));
+      batch.forEach((record) => {
+        record.ready = true;
+        rememberRecord(record);
       });
+      await new Promise((resolve) => window.setTimeout(resolve, 0));
+    }
+  }
+
+  async function buildInitialPool() {
+    elements.field.replaceChildren();
+    const poolSize = Math.min(
+      sequenceLength(),
+      MAX_POOL_SIZE,
+      Math.max(10, Math.ceil(elements.stage.clientWidth / 240) + 6),
+    );
+    const fragment = document.createDocumentFragment();
+    state.nodes = [];
+    for (let index = 0; index < poolSize; index += 1) {
+      const element = document.createElement("span");
+      const record = {
+        element,
+        termIndex: index,
+        center: 0,
+        spacingWidth: estimateWidth(index),
+        ready: false,
+        renderVersion: 0,
+      };
+      prepareRecordMarkup(record, index);
+      state.nodes.push(record);
+      fragment.append(element);
     }
     elements.field.append(fragment);
-  }
+    await typesetRecords(state.nodes);
 
-  async function typesetEquation() {
-    const mathJax = await waitForMathJax();
-    const trySemantic = state.colour;
-
-    async function run(useSemantic) {
-      if (mathJax.typesetClear) mathJax.typesetClear([elements.field]);
-      buildEquation(useSemantic);
-      const nodes = [...elements.field.children];
-      for (let start = 0; start < nodes.length; start += TYPESET_BATCH) {
-        await mathJax.typesetPromise(nodes.slice(start, start + TYPESET_BATCH));
-        await new Promise((resolve) => window.setTimeout(resolve, 0));
-      }
-    }
-
-    try {
-      await run(trySemantic);
-    } catch (error) {
-      if (!trySemantic) throw error;
-      console.warn("Semantic floating rendering failed; using plain TeX.", error);
-      state.colour = false;
-      root.classList.remove("is-colour-mode");
-      await run(false);
-    }
-  }
-
-  function measureRibbon() {
-    state.nodes = [...elements.field.querySelectorAll(".sm-floating-term")];
-    state.offsets = [];
+    const gap = Math.max(42, Math.min(86, elements.stage.clientWidth * 0.05));
     let cursor = 0;
-    const gap = Math.max(18, Math.min(38, window.innerWidth * 0.019));
-    state.nodes.forEach((node) => {
-      const width = Math.max(42, node.getBoundingClientRect().width);
-      state.offsets.push(cursor + width / 2);
-      cursor += width + gap;
+    state.nodes.forEach((record) => {
+      record.spacingWidth = Math.max(record.spacingWidth, measuredWidth(record));
+      record.center = cursor + record.spacingWidth / 2;
+      cursor += record.spacingWidth + gap;
     });
-    state.totalLength = Math.max(cursor, 1);
-    trimHistory();
+    state.lastTail = Math.max(0, cursor - gap);
+    state.nextTermIndex = poolSize % sequenceLength();
+    state.progress = 0;
   }
 
-  function trimHistory() {
-    const keep = state.totalLength + Math.max(elements.stage.clientWidth, elements.stage.clientHeight) * 2.4;
-    while (state.history.length > 3 && state.travelled - state.history[0].s > keep) {
-      state.history.shift();
+  async function renderRecycledRecord(record, version) {
+    if (record.ready || version !== record.renderVersion) return;
+    try {
+      await state.mathJax.typesetPromise([record.element]);
+      if (version !== record.renderVersion) return;
+      record.ready = true;
+      rememberRecord(record);
+    } catch (error) {
+      console.error("Floating term rendering failed:", error);
+      if (version !== record.renderVersion) return;
+      record.element.textContent = `\\(${signedBody(termAt(record.termIndex), record.termIndex, false)}\\)`;
+      await state.mathJax.typesetPromise([record.element]);
+      if (version !== record.renderVersion) return;
+      record.ready = true;
     }
   }
 
-  function randomTarget(now) {
-    const w = elements.stage.clientWidth;
-    const h = elements.stage.clientHeight;
-    const t = now * 0.00013 * (0.75 + state.speed * 0.35) + state.seed;
-    const x = w * (0.5 + 0.34 * Math.sin(t * 1.17) + 0.08 * Math.sin(t * 2.73 + 1.8));
-    const y = h * (0.54 + 0.28 * Math.sin(t * 0.83 + 1.1) + 0.08 * Math.cos(t * 2.11));
-    return {
-      x: Math.max(w * 0.1, Math.min(w * 0.9, x)),
-      y: Math.max(h * 0.16, Math.min(h * 0.9, y)),
-    };
+  function queueRecordRender(record) {
+    const version = ++record.renderVersion;
+    state.renderQueue = state.renderQueue
+      .catch(() => {})
+      .then(() => renderRecycledRecord(record, version));
   }
 
-  function advanceHead(now) {
-    const dt = Math.min(34, Math.max(1, now - state.lastFrame));
-    state.lastFrame = now;
-    if (!state.motion) return;
+  function recycleExitedNodes() {
+    const gap = Math.max(42, Math.min(86, elements.stage.clientWidth * 0.05));
+    state.nodes.forEach((record) => {
+      if (record.center + record.spacingWidth / 2 >= state.progress - gap) return;
+      const termIndex = state.nextTermIndex;
+      state.nextTermIndex = (state.nextTermIndex + 1) % sequenceLength();
+      const spacingWidth = estimateWidth(termIndex);
+      record.spacingWidth = spacingWidth;
+      record.center = state.lastTail + gap + spacingWidth / 2;
+      state.lastTail = record.center + spacingWidth / 2;
+      if (state.mathJax.typesetClear) state.mathJax.typesetClear([record.element]);
+      const needsTypeset = prepareRecordMarkup(record, termIndex);
+      if (needsTypeset) queueRecordRender(record);
+    });
+  }
 
-    const target = state.pointerActive
-      ? { x: state.pointerX, y: state.pointerY }
-      : randomTarget(now);
+  function buildPath() {
+    const width = elements.stage.clientWidth;
+    const height = elements.stage.clientHeight;
+    const top = Math.max(118, height * 0.14);
+    const bottom = Math.max(top + 120, height - Math.max(70, height * 0.08));
+    const usable = Math.max(160, bottom - top);
+    const margin = Math.min(320, Math.max(150, width * 0.18));
+    const phase = state.waveTime * 0.00012;
+    const points = [];
+    let length = 0;
 
-    const dx = target.x - state.headX;
-    const dy = target.y - state.headY;
-    const distance = Math.hypot(dx, dy) || 1;
-    const desiredSpeed = (0.045 + state.speed * 0.055) * dt;
-    const desiredVX = dx / distance * desiredSpeed;
-    const desiredVY = dy / distance * desiredSpeed;
-    const steering = state.pointerActive ? 0.075 : 0.026;
+    for (let index = 0; index <= PATH_SAMPLES; index += 1) {
+      const u = index / PATH_SAMPLES;
+      const x = -margin + (width + margin * 2) * u;
+      const slowDrift = Math.sin(phase * 0.63) * usable * 0.055;
+      let y = top + usable * (
+        0.51
+        + 0.24 * Math.sin(Math.PI * 2 * u + phase)
+        + 0.065 * Math.sin(Math.PI * 4 * u - phase * 0.72 + 0.8)
+      ) + slowDrift;
 
-    state.velocityX += (desiredVX - state.velocityX) * steering;
-    state.velocityY += (desiredVY - state.velocityY) * steering;
+      if (state.pointerBlend > 0.001) {
+        const radius = Math.max(170, width * 0.24);
+        const local = Math.exp(-((x - state.pointerX) ** 2) / (2 * radius ** 2));
+        y += (state.pointerY - y) * local * state.pointerBlend * 0.68;
+      }
 
-    const oldX = state.headX;
-    const oldY = state.headY;
-    state.headX += state.velocityX;
-    state.headY += state.velocityY;
-
-    const marginX = elements.stage.clientWidth * 0.07;
-    const marginTop = Math.max(92, elements.stage.clientHeight * 0.08);
-    const marginBottom = elements.stage.clientHeight * 0.06;
-    if (state.headX < marginX || state.headX > elements.stage.clientWidth - marginX) state.velocityX *= -0.86;
-    if (state.headY < marginTop || state.headY > elements.stage.clientHeight - marginBottom) state.velocityY *= -0.86;
-    state.headX = Math.max(marginX, Math.min(elements.stage.clientWidth - marginX, state.headX));
-    state.headY = Math.max(marginTop, Math.min(elements.stage.clientHeight - marginBottom, state.headY));
-
-    const step = Math.hypot(state.headX - oldX, state.headY - oldY);
-    if (step >= SAMPLE_SPACING * 0.45) {
-      state.travelled += step;
-      const z = Math.sin(state.travelled * 0.0063 + now * 0.00042)
-        + 0.34 * Math.sin(state.travelled * 0.011 + 1.7);
-      state.history.push({ x: state.headX, y: state.headY, s: state.travelled, z });
-      trimHistory();
+      y = Math.max(top, Math.min(bottom, y));
+      if (points.length) length += Math.hypot(x - points.at(-1).x, y - points.at(-1).y);
+      points.push({ x, y, s: length });
     }
+    state.path = points;
+    state.pathLength = Math.max(1, length);
   }
 
-  function sampleHistory(distanceBehind) {
-    if (state.history.length < 2) return null;
-    const targetS = state.travelled - distanceBehind;
-    if (targetS < state.history[0].s) return null;
-
+  function samplePath(distance) {
+    if (distance < 0 || distance > state.pathLength || state.path.length < 2) return null;
     let low = 0;
-    let high = state.history.length - 1;
+    let high = state.path.length - 1;
     while (low + 1 < high) {
       const mid = (low + high) >> 1;
-      if (state.history[mid].s < targetS) low = mid;
+      if (state.path[mid].s < distance) low = mid;
       else high = mid;
     }
-
-    const a = state.history[low];
-    const b = state.history[high];
+    const a = state.path[low];
+    const b = state.path[high];
     const span = Math.max(0.001, b.s - a.s);
-    const f = Math.max(0, Math.min(1, (targetS - a.s) / span));
-    const x = a.x + (b.x - a.x) * f;
-    const y = a.y + (b.y - a.y) * f;
-    const z = a.z + (b.z - a.z) * f;
-    const angle = Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI;
-    return { x, y, z, angle };
+    const fraction = Math.max(0, Math.min(1, (distance - a.s) / span));
+    const x = a.x + (b.x - a.x) * fraction;
+    const y = a.y + (b.y - a.y) * fraction;
+    const tangent = Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI;
+    return { x, y, tangent, u: distance / state.pathLength };
   }
 
-  function updateRibbon(now) {
-    if (!state.ready) return;
-    advanceHead(now);
-
-    state.nodes.forEach((node, index) => {
-      const frame = sampleHistory(state.offsets[index]);
-      if (!frame) {
-        node.style.opacity = "0";
+  function updateRibbon() {
+    buildPath();
+    recycleExitedNodes();
+    state.nodes.forEach((record) => {
+      if (!record.ready) {
+        record.element.style.opacity = "0";
         return;
       }
-
-      const depth = Math.max(-1, Math.min(1, frame.z));
-      const scale = 0.84 + (depth + 1) * 0.105;
-      const depthFade = 0.54 + (depth + 1) * 0.23;
-      node.style.opacity = String(depthFade);
-      node.style.zIndex = String(1000 + Math.round(depth * 420));
-      node.style.transform = `translate3d(${frame.x.toFixed(2)}px, ${frame.y.toFixed(2)}px, 0) translate(-50%, -50%) rotate(${frame.angle.toFixed(2)}deg) scale(${scale.toFixed(3)})`;
+      const distance = record.center - state.progress;
+      const frame = samplePath(distance);
+      if (!frame) {
+        record.element.style.opacity = "0";
+        return;
+      }
+      const edge = Math.max(0, Math.min(1, distance / 150, (state.pathLength - distance) / 150));
+      const depth = Math.sin(frame.u * Math.PI * 2 + state.waveTime * 0.00022 + record.termIndex * 0.17);
+      const scale = 0.9 + (depth + 1) * 0.06;
+      const angle = Math.max(-52, Math.min(52, frame.tangent));
+      record.element.style.opacity = String(edge * (0.68 + (depth + 1) * 0.16));
+      record.element.style.zIndex = String(1000 + Math.round(depth * 250));
+      record.element.style.transform = `translate3d(${frame.x.toFixed(2)}px, ${frame.y.toFixed(2)}px, 0) translate(-50%, -50%) rotate(${angle.toFixed(2)}deg) scale(${scale.toFixed(3)})`;
     });
-  }
-
-  function seedHistory() {
-    const w = elements.stage.clientWidth;
-    const h = elements.stage.clientHeight;
-    state.headX = w * 0.58;
-    state.headY = h * 0.55;
-    state.velocityX = 0.8;
-    state.velocityY = -0.25;
-    state.history = [];
-    state.travelled = 0;
-
-    const seedLength = state.totalLength + Math.max(w, h) * 1.5;
-    for (let s = seedLength; s >= 0; s -= SAMPLE_SPACING) {
-      const q = s / Math.max(seedLength, 1);
-      const x = w * (0.5 + 0.32 * Math.sin(q * 8.4 + 0.3) + 0.06 * Math.sin(q * 19.1));
-      const y = h * (0.54 + 0.27 * Math.sin(q * 6.1 + 1.0) + 0.07 * Math.cos(q * 15.7));
-      state.history.push({ x, y, s: state.travelled, z: Math.sin(q * 15.5) });
-      state.travelled += SAMPLE_SPACING;
-    }
-    const tail = state.history[state.history.length - 1];
-    state.headX = tail.x;
-    state.headY = tail.y;
   }
 
   function updateMotionButton() {
@@ -288,7 +353,15 @@
   }
 
   function animate(now) {
-    updateRibbon(now);
+    const elapsed = Math.min(40, Math.max(0, now - state.lastFrame));
+    state.lastFrame = now;
+    const targetBlend = state.pointerActive ? 1 : 0;
+    state.pointerBlend += (targetBlend - state.pointerBlend) * Math.min(1, elapsed * 0.006);
+    if (state.ready && state.motion) {
+      state.waveTime += elapsed;
+      state.progress += elapsed * (0.026 + state.speed * 0.064);
+    }
+    if (state.ready) updateRibbon();
     window.requestAnimationFrame(animate);
   }
 
@@ -297,14 +370,12 @@
     elements.speed.addEventListener("input", () => {
       state.speed = Number(elements.speed.value) / 100;
     });
-
     elements.stage.addEventListener("keydown", (event) => {
       if (event.key === " ") {
         event.preventDefault();
         toggleMotion();
       }
     });
-
     elements.stage.addEventListener("pointermove", (event) => {
       const rect = elements.stage.getBoundingClientRect();
       state.pointerActive = true;
@@ -313,14 +384,6 @@
     });
     elements.stage.addEventListener("pointerleave", () => {
       state.pointerActive = false;
-    });
-
-    window.addEventListener("resize", () => {
-      window.clearTimeout(state.resizeTimer);
-      state.resizeTimer = window.setTimeout(() => {
-        measureRibbon();
-        seedHistory();
-      }, 120);
     });
   }
 
@@ -336,15 +399,23 @@
       const phaseLabel = state.phase === "unbroken" ? "Symmetric basis" : "Physical basis";
       const level = state.catalogue.levels[state.level];
       elements.level.textContent = `${phaseLabel} · ${level.name}`;
-      elements.count.textContent = `${state.terms.length.toLocaleString()} additive term${state.terms.length === 1 ? "" : "s"}`;
+      elements.count.textContent = `${state.terms.length.toLocaleString()} additive term${state.terms.length === 1 ? "" : "s"} · continuous ribbon`;
 
-      await typesetEquation();
-      measureRibbon();
-      seedHistory();
+      state.mathJax = await waitForMathJax();
+      try {
+        await buildInitialPool();
+      } catch (semanticError) {
+        if (!state.colour) throw semanticError;
+        console.warn("Semantic floating rendering failed; using plain TeX.", semanticError);
+        state.colour = false;
+        root.classList.remove("is-colour-mode");
+        if (state.mathJax.typesetClear) state.mathJax.typesetClear([elements.field]);
+        await buildInitialPool();
+      }
+      buildPath();
       elements.loading.classList.add("is-hidden");
       state.ready = true;
       state.lastFrame = performance.now();
-      elements.stage.focus({ preventScroll: true });
     } catch (error) {
       elements.loading.innerHTML = "<b>The floating Lagrangian could not be loaded.</b>";
       console.error("Floating Lagrangian failed:", error);

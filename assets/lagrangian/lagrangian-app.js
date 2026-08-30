@@ -25,23 +25,48 @@
     copy: root.querySelector("#sm-copy"),
     download: root.querySelector("#sm-download"),
     raw: root.querySelector("#sm-raw-latex"),
+    sourcePanel: root.querySelector(".sm-source-panel"),
     phaseButtons: [...root.querySelectorAll("[data-phase]")],
   };
 
   const REQUIRED_SCHEMA = 2;
-  const TYPESET_BATCH = 72;
+  const DENSE_TERM_COUNT = 180;
+  const MAX_RENDER_CACHE = 3200;
+  const FLAVOUR_SELECTOR = [
+    ".sm-symbol--up-quark",
+    ".sm-symbol--charm-quark",
+    ".sm-symbol--top-quark",
+    ".sm-symbol--down-quark",
+    ".sm-symbol--strange-quark",
+    ".sm-symbol--bottom-quark",
+    ".sm-symbol--electron",
+    ".sm-symbol--muon",
+    ".sm-symbol--tau-lepton",
+    ".sm-symbol--electron-neutrino",
+    ".sm-symbol--muon-neutrino",
+    ".sm-symbol--tau-neutrino",
+    ".sm-symbol--up-type",
+    ".sm-symbol--down-type",
+    ".sm-symbol--charged-lepton",
+    ".sm-symbol--neutrino",
+    ".sm-symbol--generic-fermion",
+  ].join(",");
 
   const state = {
     catalogue: null,
     phase: "unbroken",
     level: 2,
     selectedSectors: new Set(),
+    termIds: [],
     terms: [],
     colour: false,
     explain: false,
     persistentSymbol: null,
     renderToken: 0,
     renderQueue: Promise.resolve(),
+    renderCache: new Map(),
+    selectionTimer: 0,
+    rawDirty: true,
   };
 
   function phaseMeta() {
@@ -239,12 +264,16 @@
   function buildEquationDOM(useSemantic) {
     elements.track.replaceChildren();
     const fragment = document.createDocumentFragment();
+    const pending = [];
     if (!state.terms.length) {
       const empty = document.createElement("span");
       empty.className = "sm-formula-term";
       empty.dataset.symbols = "";
+      empty.dataset.cacheKey = `empty|${useSemantic ? "semantic" : "plain"}`;
       empty.textContent = String.raw`\(\mathcal{L}_{\mathrm{selected}} = 0\)`;
+      empty.classList.add("is-pending");
       fragment.append(empty);
+      pending.push(empty);
     } else {
       state.terms.forEach((term, index) => {
         const wrapper = document.createElement("span");
@@ -253,11 +282,27 @@
         const symbols = [...(term.symbols || [])];
         if (index === 0) symbols.push("lagrangian-density");
         wrapper.dataset.symbols = symbols.join(" ");
-        wrapper.textContent = `\\(${signedBody(term, index, useSemantic)}\\)`;
+        const cacheKey = `${state.termIds[index]}|${index === 0 ? "first" : "next"}|${useSemantic ? "semantic" : "plain"}`;
+        wrapper.dataset.cacheKey = cacheKey;
+        const renderedBody = useSemantic && term.semanticBody ? term.semanticBody : term.body;
+        wrapper.classList.toggle("is-long-term", renderedBody.length > 220);
+        const cached = state.renderCache.get(cacheKey);
+        if (cached) {
+          wrapper.innerHTML = cached;
+          wrapper.classList.add("is-rendered");
+          // Refresh insertion order so frequently reused terms survive the cap.
+          state.renderCache.delete(cacheKey);
+          state.renderCache.set(cacheKey, cached);
+        } else {
+          wrapper.textContent = `\\(${signedBody(term, index, useSemantic)}\\)`;
+          wrapper.classList.add("is-pending");
+          pending.push(wrapper);
+        }
         fragment.append(wrapper);
       });
     }
     elements.track.append(fragment);
+    return pending;
   }
 
   function setLoading(message) {
@@ -267,17 +312,61 @@
     elements.track.classList.add("is-changing");
   }
 
-  async function typesetBatches(mathJax, token) {
-    const nodes = [...elements.track.children];
-    for (let start = 0; start < nodes.length; start += TYPESET_BATCH) {
-      if (token !== state.renderToken) return false;
-      const batch = nodes.slice(start, start + TYPESET_BATCH);
-      await mathJax.typesetPromise(batch);
-      const done = Math.min(nodes.length, start + TYPESET_BATCH);
-      if (nodes.length > TYPESET_BATCH) {
-        elements.renderStatus.textContent = `Rendering ${done.toLocaleString()} / ${nodes.length.toLocaleString()} terms`;
+  function batchSizeFor(count) {
+    if (count > 700) return 6;
+    if (count > DENSE_TERM_COUNT) return 10;
+    return 24;
+  }
+
+  function yieldToBrowser() {
+    return new Promise((resolve) => {
+      if ("requestIdleCallback" in window) {
+        window.requestIdleCallback(() => resolve(), { timeout: 80 });
+      } else {
+        window.setTimeout(resolve, 8);
       }
-      await new Promise((resolve) => window.setTimeout(resolve, 0));
+    });
+  }
+
+  function applyColourVariation(node) {
+    if (!state.colour) return;
+    node.querySelectorAll(FLAVOUR_SELECTOR).forEach((symbol, index) => {
+      symbol.dataset.smTone = String((Number(node.dataset.index || 0) + index) % 5);
+    });
+  }
+
+  function rememberRenderedNode(node) {
+    applyColourVariation(node);
+    node.classList.remove("is-pending");
+    node.classList.add("is-rendered");
+    const key = node.dataset.cacheKey;
+    if (!key) return;
+    state.renderCache.set(key, node.innerHTML);
+    while (state.renderCache.size > MAX_RENDER_CACHE) {
+      state.renderCache.delete(state.renderCache.keys().next().value);
+    }
+  }
+
+  function revealProgress(done, total) {
+    elements.track.classList.remove("is-changing");
+    elements.loading.classList.add("is-hidden");
+    elements.renderStatus.textContent = `Rendered ${done.toLocaleString()} / ${total.toLocaleString()} terms`;
+  }
+
+  async function typesetBatches(mathJax, token, nodes) {
+    const total = elements.track.children.length;
+    let done = total - nodes.length;
+    const batchSize = batchSizeFor(total);
+    if (done > 0 && nodes.length > 0) revealProgress(done, total);
+    for (let start = 0; start < nodes.length; start += batchSize) {
+      if (token !== state.renderToken) return false;
+      const batch = nodes.slice(start, start + batchSize);
+      await mathJax.typesetPromise(batch);
+      if (token !== state.renderToken) return false;
+      batch.forEach(rememberRenderedNode);
+      done += batch.length;
+      if (done < total) revealProgress(done, total);
+      await yieldToBrowser();
     }
     return token === state.renderToken;
   }
@@ -317,16 +406,16 @@
         if (token !== state.renderToken) return;
         const mathJax = await waitForMathJax();
         if (mathJax.typesetClear) mathJax.typesetClear([elements.track]);
-        buildEquationDOM(wantsSemantic);
+        let pending = buildEquationDOM(wantsSemantic);
         try {
-          const completed = await typesetBatches(mathJax, token);
+          const completed = await typesetBatches(mathJax, token, pending);
           if (!completed) return;
         } catch (semanticError) {
           if (!wantsSemantic) throw semanticError;
           console.warn("Semantic MathJax markup failed; falling back to plain TeX.", semanticError);
           if (mathJax.typesetClear) mathJax.typesetClear([elements.track]);
-          buildEquationDOM(false);
-          const completed = await typesetBatches(mathJax, token);
+          pending = buildEquationDOM(false);
+          const completed = await typesetBatches(mathJax, token, pending);
           if (!completed) return;
           state.colour = false;
           elements.colourMode.checked = false;
@@ -360,9 +449,14 @@
 
   function updateSelection() {
     const ids = state.catalogue.configurations[configurationKey()] || [];
+    state.termIds = ids;
     state.terms = ids.map((id) => state.catalogue.terms[id]).filter(Boolean);
     elements.termCount.textContent = `${state.terms.length.toLocaleString()} additive term${state.terms.length === 1 ? "" : "s"}`;
-    elements.raw.textContent = alignedLatex();
+    root.classList.toggle("is-dense-equation", state.terms.length > DENSE_TERM_COUNT);
+    elements.shell.scrollTop = 0;
+    elements.shell.scrollLeft = 0;
+    state.rawDirty = true;
+    if (elements.sourcePanel.open) updateRawSource();
     updateFloatingLink();
     renderCompleteEquation();
   }
@@ -374,12 +468,35 @@
     elements.levelDescription.textContent = level.description;
   }
 
+  function translatedSectors(selection, fromPhase, toPhase) {
+    const available = new Set(state.catalogue.phases[toPhase].sectors);
+    const translated = new Set([...selection].filter((sector) => available.has(sector)));
+    if (fromPhase === "unbroken" && toPhase === "broken" && selection.has("electroweak")) {
+      translated.add("qed");
+      translated.add("weak");
+    }
+    if (fromPhase === "broken" && toPhase === "unbroken"
+        && (selection.has("qed") || selection.has("weak"))) {
+      translated.add("electroweak");
+    }
+    return translated;
+  }
+
   function setPhase(phase) {
+    if (phase === state.phase || !state.catalogue.phases[phase]) return;
+    const fromPhase = state.phase;
+    const previousSelection = new Set(state.selectedSectors);
     state.phase = phase;
+    state.selectedSectors = translatedSectors(previousSelection, fromPhase, phase);
     elements.phaseButtons.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.phase === phase)));
-    setAllSectors();
     renderSectorControls();
     updateSelection();
+  }
+
+  function updateRawSource() {
+    if (!state.rawDirty) return;
+    elements.raw.textContent = alignedLatex();
+    state.rawDirty = false;
   }
 
   function updateModeClasses(updateLink = true) {
@@ -486,6 +603,16 @@
     elements.development.addEventListener("input", () => {
       state.level = Number(elements.development.value);
       updateLevel();
+      window.clearTimeout(state.selectionTimer);
+      state.selectionTimer = window.setTimeout(() => {
+        state.selectionTimer = 0;
+        updateSelection();
+      }, 140);
+    });
+    elements.development.addEventListener("change", () => {
+      if (!state.selectionTimer) return;
+      window.clearTimeout(state.selectionTimer);
+      state.selectionTimer = 0;
       updateSelection();
     });
     elements.colourMode.addEventListener("change", () => {
@@ -496,6 +623,9 @@
     elements.explainMode.addEventListener("change", () => setExplainMode(elements.explainMode.checked));
     elements.copy.addEventListener("click", copyLatex);
     elements.download.addEventListener("click", downloadLatex);
+    elements.sourcePanel.addEventListener("toggle", () => {
+      if (elements.sourcePanel.open) updateRawSource();
+    });
     bindExplanationEvents();
   }
 

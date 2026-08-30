@@ -35,6 +35,8 @@ body {
   --sm-photon: #ffe08a;
   --sm-z: #c7a5ff;
   --sm-higgs: #72e6ad;
+  --sm-higgs-vev: #9bf0b9;
+  --sm-higgs-potential: #5fd69f;
   --sm-quark-doublet: #ff9ebc;
   --sm-lepton-doublet: #f6a4dc;
   --sm-up-type: #ffadad;
@@ -211,6 +213,7 @@ body {
   inset: 0;
   overflow: visible;
   pointer-events: none;
+  contain: layout style paint;
   transform-style: preserve-3d;
 }
 
@@ -225,7 +228,7 @@ body {
   max-width: none;
   padding: 0.08rem 0.12rem;
   color: var(--sm-text);
-  font-size: clamp(0.78rem, 1.02vw, 1.12rem);
+  font-size: clamp(0.74rem, 0.92vw, 1.02rem);
   line-height: 1;
   white-space: nowrap;
   opacity: 0;
@@ -308,6 +311,8 @@ body {
 .sm-floating-app.is-colour-mode .sm-symbol--z-boson { color: var(--sm-z) !important; }
 .sm-floating-app.is-colour-mode .sm-symbol--higgs-doublet,
 .sm-floating-app.is-colour-mode .sm-symbol--higgs-boson { color: var(--sm-higgs) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--higgs-vev { color: var(--sm-higgs-vev) !important; }
+.sm-floating-app.is-colour-mode .sm-symbol--higgs-potential { color: var(--sm-higgs-potential) !important; }
 .sm-floating-app.is-colour-mode .sm-symbol--quark-doublet { color: var(--sm-quark-doublet) !important; }
 .sm-floating-app.is-colour-mode .sm-symbol--lepton-doublet { color: var(--sm-lepton-doublet) !important; }
 .sm-floating-app.is-colour-mode .sm-symbol--up-type { color: var(--sm-up-type) !important; }
