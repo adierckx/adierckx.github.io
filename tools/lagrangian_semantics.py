@@ -427,6 +427,18 @@ _PROTECTED_RULES: tuple[re.Pattern[str], ...] = (
 _STATIC_COLOUR_RULES: tuple[tuple[str, re.Pattern[str]], ...] = (
     ("quark-doublet", re.compile(r"(?<=\\overline\{)Q(?=\})")),
     ("lepton-doublet", re.compile(r"(?<=\\overline\{)L(?=\})")),
+    # TeX permits adjacent one-letter factors (``gH``, ``gW``, ``hW`` and
+    # ``hZ``).  The generic atom matcher deliberately avoids command names,
+    # so these physically meaningful products need explicit rules.
+    ("higgs-doublet", re.compile(r"(?<=g)H" + _SCRIPT)),
+    ("weak-boson", re.compile(r"(?<=[gh])W" + _SCRIPT)),
+    ("z-boson", re.compile(r"(?<=h)Z" + _SCRIPT)),
+    # Higgs-sector parameters belong to the same semantic family.  Matching
+    # the complete TeX atom also prevents the H in ``\\mu_H`` from being
+    # mistaken for the scalar doublet.
+    ("higgs-potential", re.compile(r"\\mu_H" + _SCRIPT)),
+    ("higgs-potential", _command_atom(r"\\lambda")),
+    ("higgs-vev", re.compile(r"(?<![A-Za-z\\])v(?![A-Za-z])")),
     ("gluon", _atom("G")),
     ("gluon", re.compile(r"(?<=g_s)G" + _SCRIPT)),
     ("weak-boson", _atom("W")),

@@ -5,6 +5,13 @@ on:
     branches:
       - main
 
+# Rapid successive pushes used to race while both jobs updated gh-pages.
+# Keep only the newest publication for a branch so the deploy ref cannot move
+# underneath an older Quarto job.
+concurrency:
+  group: quarto-publish-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
