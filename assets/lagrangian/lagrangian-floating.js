@@ -125,7 +125,7 @@
     const body = term.body;
     // TeX commands collapse substantially when typeset.  This conservative
     // estimate is used while an off-screen recycled node is being prepared.
-    return Math.max(130, Math.min(1180, 90 + body.length * 5.8));
+    return Math.max(110, Math.min(760, 55 + body.length * 1.9));
   }
 
   function applyColourVariation(record) {
@@ -153,6 +153,7 @@
       : "sm-floating-term";
     record.element.dataset.termIndex = String(termIndex);
     record.element.style.opacity = "0";
+    record.element.style.transform = "";
     const key = cacheKey(termIndex);
     const cached = state.renderCache.get(key);
     if (cached) {
@@ -212,7 +213,7 @@
     const gap = Math.max(42, Math.min(86, elements.stage.clientWidth * 0.05));
     let cursor = 0;
     state.nodes.forEach((record) => {
-      record.spacingWidth = Math.max(record.spacingWidth, measuredWidth(record));
+      record.spacingWidth = measuredWidth(record);
       record.center = cursor + record.spacingWidth / 2;
       cursor += record.spacingWidth + gap;
     });
@@ -251,12 +252,12 @@
       if (record.center + record.spacingWidth / 2 >= state.progress - gap) return;
       const termIndex = state.nextTermIndex;
       state.nextTermIndex = (state.nextTermIndex + 1) % sequenceLength();
-      const spacingWidth = estimateWidth(termIndex);
+      if (state.mathJax.typesetClear) state.mathJax.typesetClear([record.element]);
+      const needsTypeset = prepareRecordMarkup(record, termIndex);
+      const spacingWidth = record.ready ? measuredWidth(record) : estimateWidth(termIndex);
       record.spacingWidth = spacingWidth;
       record.center = state.lastTail + gap + spacingWidth / 2;
       state.lastTail = record.center + spacingWidth / 2;
-      if (state.mathJax.typesetClear) state.mathJax.typesetClear([record.element]);
-      const needsTypeset = prepareRecordMarkup(record, termIndex);
       if (needsTypeset) queueRecordRender(record);
     });
   }
