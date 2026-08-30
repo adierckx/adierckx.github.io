@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="A full-screen animated view of a selected Standard Model Lagrangian.">
+<meta name="description" content="The previous floating Lagrangian experiment is paused while a new art mode is developed.">
 
-<title>Floating Standard Model Lagrangian – Antoine Dierckx</title>
+<title>Standard Model art mode – Antoine Dierckx</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -77,40 +77,10 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 <script src="../assets/js/page-backgrounds.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../assets/css/styles.css">
 <link rel="stylesheet" href="../assets/css/page-backgrounds.css">
-<link rel="stylesheet" href="../assets/lagrangian/lagrangian-floating.css">
-<link rel="stylesheet" href="../assets/lagrangian/lagrangian-colour-variation.css">
+<link rel="stylesheet" href="../assets/lagrangian/lagrangian-project.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -179,8 +149,8 @@ window.Quarto = {
  <span class="dropdown-text">Math Notes (FR)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../outreach/standard-model-lagrangian.html">
- <span class="dropdown-text">Interactive Lagrangian</span></a>
+    <a class="dropdown-item" href="../outreach/standard-model.html">
+ <span class="dropdown-text">Standard Model, unfolded</span></a>
   </li>  
     </ul>
   </li>
@@ -213,12 +183,12 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Floating Standard Model Lagrangian</h1>
+<h1 class="title">Standard Model art mode</h1>
 </div>
 
 <div>
   <div class="description">
-    A full-screen animated view of a selected Standard Model Lagrangian.
+    The previous floating Lagrangian experiment is paused while a new art mode is developed.
   </div>
 </div>
 
@@ -236,45 +206,32 @@ window.Quarto = {
 
 
 <div class="column-screen">
-<div class="sm-floating-math-bootstrap" aria-hidden="true">
-<p><span class="math inline">\(\require{html}\class{sm-math-probe}{x}\)</span></p>
+<div class="sm-project-page sm-art-hold">
+  <nav class="sm-project-nav" aria-label="Standard Model project">
+    <a href="standard-model.html">Overview</a>
+    <a href="build-standard-model.html">Build the equation</a>
+    <a href="standard-model-lagrangian.html">Equation Atlas</a>
+    <span aria-current="page">Art mode later</span>
+  </nav>
+
+  <section class="sm-art-hold-card">
+    <p class="sm-project-eyebrow">Experiment paused</p>
+    <h1>The formula should move for a reason.</h1>
+    <p>
+      The previous floating-ribbon view was visually unstable and did not add
+      enough understanding to justify the distraction. It has been put on hold
+      while the explanatory parts of the project are built properly.
+    </p>
+    <p>
+      A different art mode may return later, with its own visual logic rather
+      than as an animated version of the complete equation.
+    </p>
+    <div class="sm-art-hold-actions">
+      <a href="build-standard-model.html">Build the equation</a>
+      <a href="standard-model-lagrangian.html">Open the Equation Atlas</a>
+    </div>
+  </section>
 </div>
-<div class="sm-floating-app" id="sm-floating-app" data-catalogue="../assets/lagrangian/catalogue.json">
-  <div class="sm-floating-orb sm-floating-orb-one" aria-hidden="true"></div>
-  <div class="sm-floating-orb sm-floating-orb-two" aria-hidden="true"></div>
-
-  <header class="sm-floating-toolbar">
-    <a class="sm-floating-back" href="standard-model-lagrangian.html">
-      <span aria-hidden="true">←</span> Editor
-    </a>
-    <div class="sm-floating-summary">
-      <strong id="sm-floating-level">Loading selection</strong>
-      <span id="sm-floating-count"></span>
-    </div>
-    <div class="sm-floating-actions">
-      <label>
-        <span>Speed</span>
-        <input id="sm-floating-speed" type="range" min="20" max="180" step="5" value="80">
-      </label>
-      <button type="button" id="sm-floating-motion" aria-pressed="true">
-        <span aria-hidden="true">Ⅱ</span> Pause
-      </button>
-    </div>
-  </header>
-
-  <main class="sm-floating-stage" id="sm-floating-stage" tabindex="0" aria-label="Floating complete Lagrangian. Move the pointer to guide it; press space to pause or resume.">
-    <div class="sm-floating-field" id="sm-floating-field"></div>
-    <div class="sm-floating-loading" id="sm-floating-loading" role="status">
-      <span></span><span></span><span></span>
-      <b>Typesetting the complete expression…</b>
-    </div>
-  </main>
-
-  <p class="sm-floating-hint">The complete sequence streams through an open ribbon · Guide it with the pointer · Space pauses motion</p>
-  <noscript>This view requires JavaScript.</noscript>
-</div>
-
-<script defer="" src="../assets/lagrangian/lagrangian-floating.js"></script>
 </div>
 
 

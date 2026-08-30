@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Explore the complete Standard Model Lagrangian sector by sector, with semantic colour, symbol explanations, and five levels of development.">
+<meta name="description" content="Explore the Standard Model Lagrangian sector by sector, with focused deep expansions, semantic colour, symbol explanations, and portable LaTeX.">
 
-<title>The Standard Model, unfolded – Antoine Dierckx</title>
+<title>Equation Atlas – The Standard Model, unfolded – Antoine Dierckx</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -109,6 +109,7 @@ window.Quarto = {
 
 <link rel="stylesheet" href="../assets/css/styles.css">
 <link rel="stylesheet" href="../assets/css/page-backgrounds.css">
+<link rel="stylesheet" href="../assets/lagrangian/lagrangian-project.css">
 <link rel="stylesheet" href="../assets/lagrangian/lagrangian.css">
 <link rel="stylesheet" href="../assets/lagrangian/lagrangian-colour-variation.css">
 </head>
@@ -179,8 +180,8 @@ window.Quarto = {
  <span class="dropdown-text">Math Notes (FR)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../outreach/standard-model-lagrangian.html">
- <span class="dropdown-text">Interactive Lagrangian</span></a>
+    <a class="dropdown-item" href="../outreach/standard-model.html">
+ <span class="dropdown-text">Standard Model, unfolded</span></a>
   </li>  
     </ul>
   </li>
@@ -213,12 +214,12 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">The Standard Model, unfolded</h1>
+<h1 class="title">Equation Atlas – The Standard Model, unfolded</h1>
 </div>
 
 <div>
   <div class="description">
-    Explore the complete Standard Model Lagrangian sector by sector, with semantic colour, symbol explanations, and five levels of development.
+    Explore the Standard Model Lagrangian sector by sector, with focused deep expansions, semantic colour, symbol explanations, and portable LaTeX.
   </div>
 </div>
 
@@ -239,18 +240,25 @@ window.Quarto = {
 <div class="sm-math-bootstrap" aria-hidden="true">
 <p><span class="math inline">\(\require{html}\class{sm-math-probe}{x}\)</span></p>
 </div>
-<div class="sm-lagrangian-app page-columns page-full" id="sm-lagrangian-app" data-catalogue="../assets/lagrangian/catalogue.json">
+<div class="sm-project-page sm-lagrangian-app page-columns page-full" id="sm-lagrangian-app" data-catalogue="../assets/lagrangian/catalogue.json">
   <div class="sm-app-aura sm-app-aura-one" aria-hidden="true"></div>
   <div class="sm-app-aura sm-app-aura-two" aria-hidden="true"></div>
 
+  <nav class="sm-project-nav" aria-label="Standard Model project">
+    <a href="standard-model.html">Overview</a>
+    <a href="build-standard-model.html">Build the equation</a>
+    <a href="standard-model-lagrangian.html" aria-current="page">Equation Atlas</a>
+    <span>Art mode later</span>
+  </nav>
+
   <header class="sm-app-intro">
-    <p class="sm-eyebrow">Interactive field theory</p>
-    <h1>The Standard Model, <span>unfolded.</span></h1>
+    <p class="sm-eyebrow">Free exploration · Standard Model</p>
+    <h1>Equation <span>Atlas.</span></h1>
     <p class="sm-app-lede">
-      Select a phase and its sectors, then move from canonical notation to
+      Select a field basis and its sectors, then move from compact notation to
       explicit generations, internal components, and gauge-field monomials.
-      The complete selected expression is shown below and Lorentz indices stay
-      covariant at every level.
+      At the deepest level you can focus on one sector without changing the
+      complete selection used by the LaTeX export.
     </p>
   </header>
 
@@ -275,7 +283,7 @@ window.Quarto = {
 
     <div class="sm-stage-footer">
       <span id="sm-level-caption">Connections</span>
-      <span class="sm-stage-hint">Every additive term in the current selection is displayed.</span>
+      <span class="sm-stage-hint" id="sm-stage-hint">Every additive term in the current selection is displayed.</span>
     </div>
   </section>
 
@@ -311,6 +319,14 @@ window.Quarto = {
       <p id="sm-level-description">Covariant derivatives and field strengths are exposed.</p>
     </div>
 
+    <div class="sm-control-block sm-focus-control">
+      <label class="sm-control-title" for="sm-focus-sector">Display focus</label>
+      <select id="sm-focus-sector">
+        <option value="all">Complete selection</option>
+      </select>
+      <p id="sm-focus-description">Show every selected sector in the equation.</p>
+    </div>
+
     <fieldset class="sm-control-block sm-reading-control">
       <legend class="sm-control-title">Reading modes</legend>
       <div class="sm-mode-list">
@@ -332,8 +348,8 @@ window.Quarto = {
     </fieldset>
 
     <div class="sm-control-block sm-actions">
-      <a id="sm-floating-view" class="sm-action-button sm-floating-button" href="lagrangian-floating.html" target="_blank" rel="noopener">
-        <span aria-hidden="true">↗</span> Floating view
+      <a class="sm-action-button sm-guide-button" href="build-standard-model.html">
+        <span aria-hidden="true">↖</span> Guided build
       </a>
       <button type="button" id="sm-copy" class="sm-action-button">
         <span aria-hidden="true">⧉</span> Copy LaTeX
@@ -368,7 +384,8 @@ window.Quarto = {
   <aside class="sm-scope-note">
     <strong>Scope.</strong> This is the classical, gauge-invariant minimal Standard Model.
     Gauge-fixing, ghosts, the QCD theta term, right-handed neutrinos, and
-    higher-dimensional operators are not included.
+    higher-dimensional operators are not included. The future “Scope and extensions”
+    chapter will place these omissions explicitly around the equation.
   </aside>
 
   <noscript>This interactive page requires JavaScript.</noscript>

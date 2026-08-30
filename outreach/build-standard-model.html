@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Build the gauge-invariant minimal Standard Model Lagrangian one conceptual layer at a time.">
 
-<title>Outreach &amp; Creative Projects – Antoine Dierckx</title>
+<title>Build the Standard Model Lagrangian – Antoine Dierckx</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -76,9 +77,41 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 <script src="../assets/js/page-backgrounds.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../assets/css/styles.css">
 <link rel="stylesheet" href="../assets/css/page-backgrounds.css">
+<link rel="stylesheet" href="../assets/lagrangian/lagrangian-project.css">
+<link rel="stylesheet" href="../assets/lagrangian/lagrangian-guide.css">
+<link rel="stylesheet" href="../assets/lagrangian/lagrangian-colour-variation.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -153,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="../outreach/projects.html" aria-current="page"> 
+    <a class="nav-link" href="../outreach/projects.html"> 
 <span class="menu-text">Outreach &amp; Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -172,40 +205,26 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#interactive-physics" id="toc-interactive-physics" class="nav-link active" data-scroll-target="#interactive-physics">Interactive Physics</a>
-  <ul class="collapse">
-  <li><a href="#the-standard-model-unfolded" id="toc-the-standard-model-unfolded" class="nav-link" data-scroll-target="#the-standard-model-unfolded">The Standard Model, unfolded</a></li>
-  </ul></li>
-  <li><a href="#science-communication-outreach" id="toc-science-communication-outreach" class="nav-link" data-scroll-target="#science-communication-outreach">Science Communication &amp; Outreach</a>
-  <ul class="collapse">
-  <li><a href="#the-bel.sciences-project-stementiel" id="toc-the-bel.sciences-project-stementiel" class="nav-link" data-scroll-target="#the-bel.sciences-project-stementiel">The bel.sciences Project (STEMentiel!)</a></li>
-  </ul></li>
-  <li><a href="#graphic-design-collaboration" id="toc-graphic-design-collaboration" class="nav-link" data-scroll-target="#graphic-design-collaboration">Graphic Design &amp; Collaboration</a>
-  <ul class="collapse">
-  <li><a href="#identity-logo-design" id="toc-identity-logo-design" class="nav-link" data-scroll-target="#identity-logo-design">Identity &amp; Logo Design</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full column-body" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Outreach &amp; Creative Projects</h1>
+<h1 class="title">Build the Standard Model Lagrangian</h1>
+</div>
+
+<div>
+  <div class="description">
+    Build the gauge-invariant minimal Standard Model Lagrangian one conceptual layer at a time.
+  </div>
 </div>
 
 
-
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-body">
 
     
   
@@ -217,36 +236,86 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Beyond academic research, I participate in science communication, digital content creation, and collaborative design projects aimed at opening up academic and scientific spaces.</p>
-<section id="interactive-physics" class="level2">
-<h2 data-anchor-id="interactive-physics">Interactive Physics</h2>
-<section id="the-standard-model-unfolded" class="level3">
-<h3 data-anchor-id="the-standard-model-unfolded">The Standard Model, unfolded</h3>
-<p>Follow the Standard Model Lagrangian in both directions: build its compact structure from gauge symmetry and field content, or explore its sectors down to explicit generations, internal components, and gauge-field monomials. The project combines a guided chapter with a free Equation Atlas.</p>
-<p><a href="../outreach/standard-model.html" class="btn-surface c-teal btn-compact"><strong>Enter the Standard Model project</strong></a></p>
-<hr>
-</section>
-</section>
-<section id="science-communication-outreach" class="level2">
-<h2 data-anchor-id="science-communication-outreach">Science Communication &amp; Outreach</h2>
-<section id="the-bel.sciences-project-stementiel" class="level3">
-<h3 data-anchor-id="the-bel.sciences-project-stementiel">The bel.sciences Project (STEMentiel!)</h3>
-<p>As part of the broader <strong>STEMentiel!</strong> initiative, I contribute to <strong>bel.sciences</strong>, a digital outreach project focused on sharing diverse pathways into exact sciences. I produce video content and conduct short interviews across TikTok, Instagram, and YouTube, highlighting students and researchers in mathematics and physics from a wide range of backgrounds.</p>
-<ul>
-<li>Explore our content via our Linktree <a href="https://linktr.ee/bel.sciences" class="btn-surface c-purple btn-compact"><strong>bel.sciences</strong></a>.</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="graphic-design-collaboration" class="level2">
-<h2 data-anchor-id="graphic-design-collaboration">Graphic Design &amp; Collaboration</h2>
-<section id="identity-logo-design" class="level3">
-<h3 data-anchor-id="identity-logo-design">Identity &amp; Logo Design</h3>
-<p>I occasionally collaborate on visual identity and graphic materials for scientific networks and working groups. This includes designing the official logo for the <strong>WOST</strong> (WithOut SpaceTime) network.</p>
+<div class="column-screen page-columns page-full">
+<div class="sm-guide-math-bootstrap" aria-hidden="true">
+<p><span class="math inline">\(\require{html}\class{sm-math-probe}{x}\)</span></p>
+</div>
+<div class="sm-project-page sm-guide-app page-columns page-full" id="sm-guide-app" data-catalogue="../assets/lagrangian/catalogue.json">
+  <nav class="sm-project-nav" aria-label="Standard Model project">
+    <a href="standard-model.html">Overview</a>
+    <a href="build-standard-model.html" aria-current="page">Build the equation</a>
+    <a href="standard-model-lagrangian.html">Equation Atlas</a>
+    <span>Art mode later</span>
+  </nav>
+
+  <header class="sm-guide-intro">
+    <p class="sm-project-eyebrow">Guided route · symmetric phase</p>
+    <h1>Build the equation.</h1>
+    <p>
+      The Standard Model Lagrangian is not a single inspired guess. Its broad
+      structure follows from the chosen fields, Lorentz invariance,
+      renormalisability, and local \(SU(3)_c\times SU(2)_L\times U(1)_Y\)
+      gauge symmetry.
+    </p>
+  </header>
+
+  <div class="sm-guide-layout page-columns page-full">
+    <aside class="sm-guide-rail" aria-label="Chapter steps">
+      <p class="sm-guide-rail-label">Construction</p>
+      <div class="sm-guide-step-list" id="sm-guide-step-list">
+        <button type="button" data-step="0"><span>01</span><b>Symmetry and fields</b></button>
+        <button type="button" data-step="1"><span>02</span><b>Gauge dynamics</b></button>
+        <button type="button" data-step="2"><span>03</span><b>Matter fields</b></button>
+        <button type="button" data-step="3"><span>04</span><b>The Higgs sector</b></button>
+        <button type="button" data-step="4"><span>05</span><b>Yukawa couplings</b></button>
+        <button type="button" data-step="5"><span>06</span><b>The complete structure</b></button>
+      </div>
+    </aside>
+
+    <section class="sm-guide-workspace" aria-live="polite">
+      <div class="sm-guide-progress" aria-hidden="true"><span id="sm-guide-progress"></span></div>
+
+      <section class="sm-guide-formula-card" aria-label="Lagrangian constructed so far">
+        <div class="sm-guide-formula-header">
+          <div>
+            <span>Equation so far</span>
+            <strong id="sm-guide-term-count">Preparing catalogue…</strong>
+          </div>
+          <span id="sm-guide-added">Start with the ingredients</span>
+        </div>
+        <div class="sm-guide-formula is-colour-mode" id="sm-guide-formula" aria-busy="true"></div>
+      </section>
+
+      <article class="sm-guide-copy">
+        <p class="sm-guide-step-kicker" id="sm-guide-kicker">Step 1 of 6</p>
+        <h2 id="sm-guide-title">Symmetry and fields</h2>
+        <p class="sm-guide-question" id="sm-guide-question"></p>
+        <p class="sm-guide-explanation" id="sm-guide-explanation"></p>
+        <ul class="sm-guide-facts" id="sm-guide-facts"></ul>
+      </article>
+
+      <footer class="sm-guide-actions">
+        <button type="button" id="sm-guide-previous"><span aria-hidden="true">←</span> Previous</button>
+        <a id="sm-guide-atlas-link" href="standard-model-lagrangian.html">Open this state in the Atlas</a>
+        <button type="button" id="sm-guide-next">Next <span aria-hidden="true">→</span></button>
+      </footer>
+    </section>
+  </div>
+
+  <aside class="sm-guide-caveat">
+    <strong>What this chapter does—and does not claim.</strong>
+    The symmetry and field content strongly constrain the renormalisable
+    Lagrangian, but they do not predict the numerical gauge couplings, Higgs
+    parameters, or Yukawa matrices. Those remain measured inputs.
+  </aside>
+
+  <noscript>This guided chapter requires JavaScript.</noscript>
+</div>
+
+<script defer="" src="../assets/lagrangian/lagrangian-guide.js"></script>
+</div>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

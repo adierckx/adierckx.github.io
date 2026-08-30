@@ -1,0 +1,422 @@
+.sm-guide-math-bootstrap {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.sm-guide-app {
+  --sm-gluon: #ffbd70;
+  --sm-weak: #b9a1ff;
+  --sm-hypercharge: #77d9ff;
+  --sm-higgs: #72e6ad;
+  --sm-higgs-vev: #9bf0b9;
+  --sm-higgs-potential: #5fd69f;
+  --sm-quark-doublet: #ff9ebc;
+  --sm-lepton-doublet: #f6a4dc;
+  --sm-up-type: #ffadad;
+  --sm-down-type: #eaa0d8;
+  --sm-charged-lepton: #ff9fcb;
+  --sm-neutrino: #d7b4f7;
+  --sm-generic-fermion: #ec98c9;
+}
+
+.sm-guide-intro {
+  margin-bottom: clamp(2.5rem, 6vw, 5rem);
+}
+
+.sm-guide-intro h1 {
+  margin: 0;
+  color: var(--sm-project-text);
+  font-size: clamp(2.8rem, 7vw, 6.4rem);
+  line-height: 0.95;
+  letter-spacing: -0.065em;
+}
+
+.sm-guide-intro > p:last-child {
+  max-width: 850px;
+  margin: 1.2rem 0 0;
+  color: var(--sm-project-muted);
+  font-size: clamp(0.98rem, 1.55vw, 1.15rem);
+  line-height: 1.7;
+}
+
+.sm-guide-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.25fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(1rem, 3vw, 2.5rem);
+}
+
+.sm-guide-rail {
+  position: sticky;
+  top: 86px;
+  padding: 1rem;
+  background: rgba(7, 15, 22, 0.55);
+  border: 1px solid var(--sm-project-line);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+}
+
+.sm-guide-rail-label,
+.sm-guide-step-kicker {
+  margin: 0 0 0.75rem;
+  color: var(--sm-project-teal);
+  font-family: "Fira Code", monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sm-guide-step-list {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.sm-guide-step-list button {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 2.2rem 1fr;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.72rem;
+  color: var(--sm-project-muted);
+  text-align: left;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  font: inherit;
+  cursor: pointer;
+  transition: color 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.sm-guide-step-list button span {
+  color: #718791;
+  font-family: "Fira Code", monospace;
+  font-size: 0.62rem;
+}
+
+.sm-guide-step-list button b {
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.sm-guide-step-list button:hover,
+.sm-guide-step-list button[aria-current="step"] {
+  color: var(--sm-project-text);
+  background: rgba(63, 224, 208, 0.07);
+  border-color: rgba(63, 224, 208, 0.3);
+}
+
+.sm-guide-step-list button[aria-current="step"] span {
+  color: var(--sm-project-teal);
+}
+
+.sm-guide-workspace {
+  min-width: 0;
+}
+
+.sm-guide-progress {
+  height: 3px;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 999px;
+}
+
+.sm-guide-progress span {
+  display: block;
+  width: 16.666%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--sm-project-teal), var(--sm-project-violet));
+  border-radius: inherit;
+  transition: width 260ms ease;
+}
+
+.sm-guide-formula-card {
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.07), transparent 38%),
+    var(--sm-project-surface);
+  border: 1px solid var(--sm-project-line);
+  border-radius: 26px;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.23);
+  backdrop-filter: blur(24px);
+}
+
+.sm-guide-formula-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1.2rem;
+  color: var(--sm-project-muted);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-family: "Fira Code", monospace;
+  font-size: 0.65rem;
+}
+
+.sm-guide-formula-header div {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+}
+
+.sm-guide-formula-header strong {
+  color: var(--sm-project-text);
+  font-weight: 500;
+}
+
+.sm-guide-formula {
+  display: flex;
+  min-height: 230px;
+  max-height: 520px;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: baseline;
+  gap: 0.45rem 0.75rem;
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  overflow: auto;
+  color: var(--sm-project-text);
+  background: radial-gradient(circle at 50% 0, rgba(63, 224, 208, 0.035), transparent 32rem);
+  font-size: clamp(0.88rem, 1.35vw, 1.12rem);
+  line-height: 1.9;
+}
+
+.sm-guide-formula.is-changing {
+  opacity: 0.35;
+}
+
+.sm-guide-term {
+  display: inline-flex;
+  max-width: 100%;
+  align-items: baseline;
+  padding: 0.25rem 0.35rem;
+  overflow: visible;
+  border: 1px solid transparent;
+  border-radius: 9px;
+}
+
+.sm-guide-term.is-new {
+  background: rgba(63, 224, 208, 0.07);
+  border-color: rgba(63, 224, 208, 0.3);
+  box-shadow: 0 0 24px rgba(63, 224, 208, 0.06);
+}
+
+.sm-guide-term mjx-container {
+  display: inline-block !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  color: inherit;
+}
+
+.sm-guide-placeholder {
+  width: 100%;
+  color: var(--sm-project-muted);
+  text-align: center;
+}
+
+.sm-guide-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 0.28fr) minmax(0, 0.72fr);
+  column-gap: 2rem;
+  margin-top: 1rem;
+  padding: clamp(1.4rem, 3vw, 2.2rem);
+  background: rgba(11, 22, 31, 0.58);
+  border: 1px solid rgba(194, 241, 255, 0.12);
+  border-radius: 22px;
+}
+
+.sm-guide-step-kicker,
+.sm-guide-copy h2 {
+  grid-column: 1;
+}
+
+.sm-guide-copy h2 {
+  margin: 0;
+  color: var(--sm-project-text);
+  font-size: clamp(1.65rem, 3vw, 2.55rem);
+  letter-spacing: -0.04em;
+}
+
+.sm-guide-question,
+.sm-guide-explanation,
+.sm-guide-facts {
+  grid-column: 2;
+}
+
+.sm-guide-question {
+  margin: 0;
+  color: var(--sm-project-text);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.sm-guide-explanation {
+  margin: 0.85rem 0 0;
+  color: var(--sm-project-muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.sm-guide-facts {
+  display: grid;
+  gap: 0.45rem;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sm-guide-facts li {
+  position: relative;
+  padding-left: 1.2rem;
+  color: #bed0d8;
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.sm-guide-facts li::before {
+  position: absolute;
+  top: 0.58em;
+  left: 0;
+  width: 0.4rem;
+  height: 0.4rem;
+  content: "";
+  background: var(--sm-project-teal);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(63, 224, 208, 0.55);
+}
+
+.sm-guide-actions {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.sm-guide-actions button,
+.sm-guide-actions a {
+  min-height: 44px;
+  padding: 0.68rem 0.9rem;
+  color: var(--sm-project-text);
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--sm-project-line);
+  border-radius: 12px;
+  font: inherit;
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sm-guide-actions button:last-child {
+  justify-self: end;
+  color: #061716;
+  background: linear-gradient(135deg, var(--sm-project-teal), var(--sm-project-cyan));
+  border-color: transparent;
+}
+
+.sm-guide-actions button:first-child {
+  justify-self: start;
+}
+
+.sm-guide-actions a {
+  color: var(--sm-project-teal);
+  text-align: center;
+}
+
+.sm-guide-actions button:disabled {
+  cursor: default;
+  opacity: 0.35;
+}
+
+.sm-guide-caveat {
+  margin-top: clamp(3rem, 6vw, 5rem);
+  padding: 1.2rem 1.4rem;
+  color: var(--sm-project-muted);
+  background: rgba(12, 23, 33, 0.46);
+  border-left: 3px solid var(--sm-project-violet);
+  border-radius: 0 14px 14px 0;
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.sm-guide-caveat strong {
+  color: var(--sm-project-text);
+}
+
+.sm-guide-formula.is-colour-mode .sm-symbol--gluon { color: var(--sm-gluon) !important; }
+.sm-guide-formula.is-colour-mode .sm-symbol--weak-boson { color: var(--sm-weak) !important; }
+.sm-guide-formula.is-colour-mode .sm-symbol--hypercharge-boson { color: var(--sm-hypercharge) !important; }
+.sm-guide-formula.is-colour-mode :is(.sm-symbol--higgs-doublet, .sm-symbol--higgs-boson) { color: var(--sm-higgs) !important; }
+.sm-guide-formula.is-colour-mode .sm-symbol--higgs-vev { color: var(--sm-higgs-vev) !important; }
+.sm-guide-formula.is-colour-mode .sm-symbol--higgs-potential { color: var(--sm-higgs-potential) !important; }
+.sm-guide-formula.is-colour-mode .sm-symbol--quark-doublet { color: var(--sm-quark-doublet) !important; }
+.sm-guide-formula.is-colour-mode .sm-symbol--lepton-doublet { color: var(--sm-lepton-doublet) !important; }
+.sm-guide-formula.is-colour-mode .sm-symbol--up-type { color: var(--sm-up-type) !important; }
+.sm-guide-formula.is-colour-mode .sm-symbol--down-type { color: var(--sm-down-type) !important; }
+.sm-guide-formula.is-colour-mode .sm-symbol--charged-lepton { color: var(--sm-charged-lepton) !important; }
+.sm-guide-formula.is-colour-mode .sm-symbol--neutrino { color: var(--sm-neutrino) !important; }
+.sm-guide-formula.is-colour-mode .sm-symbol--generic-fermion { color: var(--sm-generic-fermion) !important; }
+
+@media (max-width: 900px) {
+  .sm-guide-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sm-guide-rail {
+    position: static;
+    overflow-x: auto;
+  }
+
+  .sm-guide-step-list {
+    display: flex;
+    min-width: max-content;
+  }
+
+  .sm-guide-step-list button {
+    width: 170px;
+  }
+}
+
+@media (max-width: 680px) {
+  .sm-guide-formula-header > span {
+    display: none;
+  }
+
+  .sm-guide-copy {
+    grid-template-columns: 1fr;
+  }
+
+  .sm-guide-step-kicker,
+  .sm-guide-copy h2,
+  .sm-guide-question,
+  .sm-guide-explanation,
+  .sm-guide-facts {
+    grid-column: 1;
+  }
+
+  .sm-guide-question {
+    margin-top: 1.2rem;
+  }
+
+  .sm-guide-actions {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sm-guide-actions a {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sm-guide-step-list button,
+  .sm-guide-progress span {
+    transition: none;
+  }
+}
