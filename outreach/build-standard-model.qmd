@@ -27,7 +27,6 @@ $\require{html}\class{sm-math-probe}{x}$
     <a href="standard-model.html">Overview</a>
     <a href="build-standard-model.html" aria-current="page">Build the equation</a>
     <a href="standard-model-lagrangian.html">Equation Atlas</a>
-    <span>Art mode later</span>
   </nav>
 
   <header class="sm-guide-intro">

@@ -30,7 +30,6 @@ $\require{html}\class{sm-math-probe}{x}$
     <a href="standard-model.html">Overview</a>
     <a href="build-standard-model.html">Build the equation</a>
     <a href="standard-model-lagrangian.html" aria-current="page">Equation Atlas</a>
-    <span>Art mode later</span>
   </nav>
 
   <header class="sm-app-intro">
@@ -169,8 +168,7 @@ $\require{html}\class{sm-math-probe}{x}$
   <aside class="sm-scope-note">
     <strong>Scope.</strong> This is the classical, gauge-invariant minimal Standard Model.
     Gauge-fixing, ghosts, the QCD theta term, right-handed neutrinos, and
-    higher-dimensional operators are not included. The future “Scope and extensions”
-    chapter will place these omissions explicitly around the equation.
+    higher-dimensional operators are not included.
   </aside>
 
   <noscript>This interactive page requires JavaScript.</noscript>

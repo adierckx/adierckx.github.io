@@ -7,7 +7,6 @@
     path.endsWith("/index.html") ||
     path.includes("/outreach/standard-model") ||
     path.includes("/outreach/build-standard-model") ||
-    path.includes("/outreach/lagrangian-floating") ||
     path.includes("/outreach/foam")
   ) {
     return;
