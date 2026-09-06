@@ -3,6 +3,7 @@ project:
   pre-render:
     - python3 tools/build_lagrangian_catalogue.py
     - python3 tools/build_lqg_catalogue.py
+    - python3 tools/patch_lqg_overview.py
   resources:
     - CNAME
     - assets/lagrangian/**
