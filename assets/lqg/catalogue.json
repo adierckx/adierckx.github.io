@@ -46,7 +46,7 @@
       "route": "both"
     },
     "T": {
-      "title": "Three starting equations",
+      "title": "Basic equations",
       "level": 0,
       "route": "both"
     },
@@ -194,13 +194,13 @@
     },
     {
       "id": "T1",
-      "title": "States on a graph",
+      "title": "Hilbert space of the theory",
       "group": "T",
       "level": 0,
       "route": "both",
       "representation": "spin",
       "latex": "\\boxed{\\mathcal H_\\Gamma=L^2[SU(2)^L/SU(2)^N].}",
-      "note": "A fixed graph carries quantum geometry. The covariant amplitude acts on the same boundary data. This bridge does not establish equivalence with a unique canonical quantum dynamics.",
+      "note": "Γ is the graph used to describe the quantum state, with L oriented links and N nodes. A state is a square-integrable function of L SU(2) holonomies. The quotient by SU(2)^N imposes an independent SU(2) gauge transformation at every node, so H_Γ is the gauge-invariant Hilbert space associated with Γ.",
       "children": [
         "S1",
         "S7"
@@ -212,13 +212,13 @@
     },
     {
       "id": "T2",
-      "title": "Quantum geometry algebra",
+      "title": "Algebra of observables",
       "group": "T",
       "level": 0,
       "route": "both",
       "representation": "spin",
-      "latex": "\\boxed{[\\hat X_l^i,\\hat X_{l'}^j]=i\\ell_0^2\\delta_{ll'}\\epsilon^{ij}{}_k\\hat X_l^k,\\qquad\\hat{\\mathbf X}_l=\\ell_0^2\\hat{\\mathbf L}_l.}",
-      "note": "A fixed graph carries quantum geometry. The covariant amplitude acts on the same boundary data. This bridge does not establish equivalence with a unique canonical quantum dynamics.",
+      "latex": "\\boxed{[\\hat L_l^i,\\hat L_{l'}^j]=i\\delta_{ll'}\\epsilon^{ij}{}_{k}\\hat L_l^k,\\qquad \\hat{\\mathbf E}_l=8\\pi\\gamma\\ell_P^2\\hat{\\mathbf L}_l=8\\pi\\gamma\\frac{G\\hbar}{c^3}\\hat{\\mathbf L}_l.}",
+      "note": "L_l^i are the dimensionless su(2) generators associated with link l; δ_ll′ states that generators on distinct links commute, and ε^{ij}{}_k are the su(2) structure constants. The physical flux E_l has dimensions of area and is obtained by multiplying L_l by 8πγℓ_P², with ℓ_P²=Gℏ/c³. The dimensionless parameter γ is the Barbero–Immirzi parameter.",
       "children": [
         "H3",
         "G1",
@@ -237,7 +237,7 @@
       "route": "both",
       "representation": "spin",
       "latex": "\\boxed{A_v(\\psi_v)=\\left(P_{SL(2,\\mathbb C)}Y_\\gamma\\psi_v\\right)(\\mathbb 1).}",
-      "note": "P denotes formal noncompact averaging with the redundant vertex integration removed; it is not a bounded orthogonal L² projector.",
+      "note": "A_v is the elementary Lorentzian spin-foam vertex amplitude and ψ_v is its SU(2) boundary state. The EPRL map Y_γ sends each SU(2) spin-j sector into the γ-simple SL(2,C) representation (ρ,k)=(γj,j). P_SL(2,C) imposes Lorentz gauge invariance by group averaging at the boundary nodes of the vertex, with one redundant integration removed by gauge fixing. The final evaluation at 𝟙 sets the remaining Lorentz group arguments to the identity and yields the scalar vertex amplitude.",
       "children": [
         "Y4",
         "D2",
