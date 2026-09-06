@@ -7,6 +7,7 @@ format:
   html:
     css:
       - ../assets/lqg/lqg.css
+      - ../assets/lqg/guide.css
 ---
 
 ::: {.column-screen}
@@ -18,13 +19,13 @@ $x$
 ```{=html}
 <div id="lqg-app" class="lqg" data-mode="guide" data-catalogue="../assets/lqg/catalogue.json">
 <nav class="lqg-nav" aria-label="LQG project"><a href="loop-quantum-gravity.html">Overview</a><a href="build-lqg.html" aria-current="page">Build LQG</a><a href="lqg-atlas.html">Equation Atlas</a><a href="lqg-diagrams.html">Diagram Lab</a></nav>
-<header><p class="eyebrow">Loop quantum gravity · guided construction</p><h1>From an action to an amplitude.</h1><p class="lede">Eight steps through the shared structure. Choose the classical variables first, then see where time gauge, quantization and model choices enter.</p></header>
-<div class="lqg-card"><div class="lqg-control-row"><label>Classical variables<select id="lqg-variables"><option value="tetrad">Tetrad &amp; connection</option><option value="metric">Metric</option></select></label><label>Action<select id="lqg-action"><option value="holst">Palatini–Holst</option><option value="palatini">Palatini</option></select></label><label>Classical Λ<select id="lqg-lambda"><option value="zero">Λ = 0</option><option value="nonzero">Keep Λ explicit</option></select></label></div><details><summary>Boundary and topological terms</summary><label><input type="checkbox" id="lqg-boundary"> Smooth non-null metric boundary</label><label><input type="checkbox" id="lqg-topological"> Show independent topological densities</label><p class="muted">These choices expose the corresponding classical terms. They do not define a deformed spin-foam model.</p></details></div>
+<header><p class="eyebrow">Loop quantum gravity · guided construction</p><h1>From an action to an amplitude.</h1><p class="lede">A progressive construction of the classical variables, canonical algebra, Hilbert space and transition amplitude. Each step keeps one central equation visible; definitions and explicit expansions are opened on demand.</p></header>
+<div class="lqg-card lqg-guide-controls"><div class="lqg-control-row"><label>Variables<select id="lqg-variables"><option value="metric">Metric</option><option value="tetrad">Tetrad</option></select></label><label>Action<select id="lqg-action"><option value="eh">Einstein–Hilbert (second order)</option></select></label><label>Λ<select id="lqg-lambda"><option value="zero">Λ = 0</option><option value="nonzero">Λ ≠ 0</option></select></label></div><details><summary>Additional terms</summary><label><input type="checkbox" id="lqg-boundary"> Show a smooth non-null metric boundary term</label><label><input type="checkbox" id="lqg-topological"> Show independent topological densities</label></details></div>
 <nav id="lqg-steps" class="lqg-steps" aria-label="Construction steps"></nav><div id="lqg-guide-copy" class="lqg-guide-copy"></div><div id="lqg-guide-cards"></div><div class="lqg-buttons"><button id="lqg-guide-prev">← Previous</button><button id="lqg-guide-next" class="primary">Next →</button><a class="lqg-download" id="lqg-guide-atlas" href="lqg-atlas.html">Explore this step in the atlas</a></div>
 <p id="lqg-load-status" class="lqg-status" role="status">Loading the equation catalogue…</p>
 <noscript><p>The interactive controls need JavaScript. <a href="../assets/lqg/equations.tex">Download all numbered equations as LaTeX</a>.</p></noscript>
 </div>
-<script type="module" src="../assets/lqg/app.mjs"></script>
+<script type="module" src="../assets/lqg/guide.mjs"></script>
 ```
 
 :::

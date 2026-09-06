@@ -1,0 +1,69 @@
+/* Guided construction: one principal formula with progressive local expansions. */
+.lqg-guide-controls{margin-top:22px}
+.lqg-guide-copy{max-width:980px;margin:24px 0 14px}
+.lqg-guide-copy>p{max-width:920px;color:var(--muted)}
+.lqg-guide-primary{
+  border:1px solid var(--line);
+  border-left:3px solid var(--teal);
+  background:var(--panel);
+  border-radius:10px;
+  padding:24px clamp(18px,3vw,34px);
+  margin-bottom:14px;
+}
+.lqg-guide-primary-head{display:flex;justify-content:space-between;gap:16px;align-items:start}
+.lqg-guide-primary-head small{color:var(--muted);font-size:13px}
+.lqg-guide-primary-head h3{font-size:20px;margin:2px 0 0}
+.lqg-guide-main-equation{
+  overflow-x:auto;
+  overflow-y:hidden;
+  padding:22px 4px 16px;
+  font-size:clamp(1.08rem,1.5vw,1.35rem);
+  scrollbar-color:var(--line) transparent;
+}
+.lqg-guide-main-equation mjx-container[display=true]{margin:10px 0!important;min-width:min-content}
+.lqg-guide-source{border-top:1px solid var(--line);padding-top:8px;margin-top:8px!important}
+.lqg-guide-source p,.lqg-guide-mini-source{font-size:12px;color:var(--muted);margin:8px 0}
+.lqg-guide-develop{
+  border:1px solid var(--line);
+  background:rgba(24,38,48,.62);
+  border-radius:10px;
+  margin:0 0 18px;
+  padding:18px 20px;
+}
+.lqg-guide-develop>h3{font-size:16px;margin:0}
+.lqg-guide-develop>.muted{font-size:13px;margin:4px 0 12px}
+.lqg-guide-detail{
+  border-top:1px solid var(--line);
+  margin:0!important;
+  padding:0;
+}
+.lqg-guide-detail:last-child{border-bottom:1px solid var(--line)}
+.lqg-guide-detail summary{
+  display:grid;
+  grid-template-columns:minmax(180px,.7fr) minmax(260px,1.3fr);
+  gap:20px;
+  align-items:baseline;
+  padding:12px 2px!important;
+  color:var(--ink)!important;
+}
+.lqg-guide-detail summary span{font-size:14px;font-weight:600}
+.lqg-guide-detail summary small{font-size:13px;color:var(--muted);font-weight:400}
+.lqg-guide-detail[open] summary{color:var(--teal)!important}
+.lqg-guide-mini-equation{
+  overflow-x:auto;
+  overflow-y:hidden;
+  padding:8px 8px 4px;
+  font-size:.92rem;
+  color:var(--ink);
+}
+.lqg-guide-mini-equation mjx-container[display=true]{margin:8px 0!important;min-width:min-content}
+.lqg-guide-mini-source{padding:0 8px 8px}
+.lqg-guide-detail>div{padding-bottom:4px}
+.lqg-guide-primary pre{font-size:12px}
+@media(max-width:720px){
+  .lqg-guide-primary{padding:16px 14px}
+  .lqg-guide-main-equation{font-size:1rem;padding:14px 0 10px}
+  .lqg-guide-develop{padding:14px}
+  .lqg-guide-detail summary{grid-template-columns:1fr;gap:3px;padding:11px 0!important}
+  .lqg-guide-mini-equation{font-size:.88rem;padding-left:0;padding-right:0}
+}
