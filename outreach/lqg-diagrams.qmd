@@ -1,0 +1,30 @@
+---
+title: "Diagram Lab · Loop quantum gravity"
+description: "Explore loop quantum gravity through sourced equations, quantum geometry, EPRL boosters and annotated four-simplex diagrams."
+page-layout: full
+toc: false
+format:
+  html:
+    css:
+      - ../assets/lqg/lqg.css
+---
+
+::: {.column-screen}
+
+::: {.lqg-bootstrap aria-hidden="true"}
+$x$
+:::
+
+```{=html}
+<div id="lqg-app" class="lqg" data-mode="diagram" data-catalogue="../assets/lqg/catalogue.json">
+<nav class="lqg-nav" aria-label="LQG project"><a href="loop-quantum-gravity.html">Overview</a><a href="build-lqg.html">Build LQG</a><a href="lqg-atlas.html">Equation Atlas</a><a href="lqg-diagrams.html" aria-current="page">Diagram Lab</a></nav>
+<header><p class="eyebrow">Loop quantum gravity · exact topology</p><h1>Diagram Lab.</h1><p class="lede">The five tetrahedra and ten wires of a four-simplex boundary. The port ordering follows the supplied TikZ macro; crossings carry no extra vertices.</p></header>
+<div class="lqg-diagram-grid"><section class="lqg-diagram-panel"><div class="lqg-control-row"><label>Annotations<select id="lqg-annotations"><option value="2">Labels + arrows</option><option value="1">Labels</option><option value="0">Bare wiring</option></select></label><label>Rotate <output id="lqg-rotation-value">0°</output><input type="range" id="lqg-rotation" min="0" max="360" step="18" value="0"></label></div><div id="lqg-lab-svg" class="lqg-svg-wrap"></div><div class="lqg-buttons"><button id="lqg-save-svg">Download SVG</button><button id="lqg-save-tikz">Download TikZ</button><button id="lqg-diagram-reset">Reset diagram</button></div><p id="lqg-diagram-status" class="lqg-status" role="status" aria-live="polite"></p></section><section><div class="lqg-card"><h2>Inspect a wire or tetrahedron</h2><div id="lqg-selection"></div></div><div class="lqg-card"><h2>Causal assignments</h2><label><input id="lqg-causal-signs" type="checkbox"> Show induced causal signs</label><div id="lqg-sigma" class="lqg-buttons"></div><p id="lqg-cycle-info"></p><a href="lqg-atlas.html?eq=CV1">Open the sign equations →</a></div><details class="lqg-card"><summary>All ten spin labels and wire types</summary><div id="lqg-spin-editor" class="lqg-wire-editor"></div></details></section></div>
+<section class="lqg-section"><h2>Gluing a shared tetrahedron</h2><p class="lede">The two boundary state spaces are dualized. Matching four external spins is necessary; the shared intertwiner is summed in an orthonormal basis. Reversing a port pairing can require a recoupling matrix.</p><div class="lqg-control-row"><label>Port map<select id="lqg-glue-map"><option value="identity">1→1, 2→2, 3→3, 4→4</option><option value="reverse">1→4, 2→3, 3→2, 4→1</option></select></label></div><div id="lqg-glue-svg"></div><div id="lqg-glue-formula"></div></section><section id="lqg-examples" class="lqg-section"></section>
+<p id="lqg-load-status" class="lqg-status" role="status">Loading the equation catalogue…</p>
+<noscript><p>The interactive controls need JavaScript. <a href="../assets/lqg/equations.tex">Download all numbered equations as LaTeX</a>.</p></noscript>
+</div>
+<script type="module" src="../assets/lqg/app.mjs"></script>
+```
+
+:::

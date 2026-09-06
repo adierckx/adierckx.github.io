@@ -2,9 +2,11 @@ project:
   type: website
   pre-render:
     - python3 tools/build_lagrangian_catalogue.py
+    - python3 tools/build_lqg_catalogue.py
   resources:
     - CNAME
     - assets/lagrangian/**
+    - assets/lqg/**
 website:
   site-url: "https://adierckx.com"
   title: "Antoine Dierckx"
@@ -38,6 +40,8 @@ website:
             text: Math Notes (FR)
           - href: outreach/standard-model.qmd
             text: Standard Model, unfolded
+          - href: outreach/loop-quantum-gravity.qmd
+            text: Loop quantum gravity, unfolded
       - href: outreach/projects.qmd
         text: Outreach & Projects
       - href: blog.qmd

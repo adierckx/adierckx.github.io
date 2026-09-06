@@ -1,0 +1,30 @@
+name: Validate LQG atlas
+on:
+  pull_request:
+    paths:
+      - 'assets/lqg/**'
+      - 'tools/lqg/**'
+      - 'tools/build_lqg_catalogue.py'
+      - 'outreach/*lqg*'
+      - 'outreach/loop-quantum-gravity.qmd'
+      - '.github/workflows/lqg-checks.yml'
+jobs:
+  catalogue-and-logic:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Rebuild catalogue and check reproducibility
+        run: |
+          python3 tools/build_lqg_catalogue.py
+          python3 tools/lqg/create_pages.py
+          git diff --exit-code -- assets/lqg/catalogue.json assets/lqg/equations.tex outreach/*lqg* outreach/loop-quantum-gravity.qmd
+      - name: Validate JavaScript, expansion graph, topology and exact spin logic
+        run: |
+          node --check assets/lqg/app.mjs
+          node --check assets/lqg/diagram.mjs
+          node --test tools/lqg/test_core.mjs
