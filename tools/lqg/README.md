@@ -39,6 +39,9 @@ and mathematical calculations are kept independently of the DOM in `core.mjs`.
 - Holonomies: source-left gauge action and right path ordering, explained at H1.
 - Lorentz: Speziale phases on real ρ; Toller phase conversion is explicit in Q3–Q6.
 - EPRL: (ρ,k) = (γj,j), Λ = 0; classical Λ does not alter this amplitude.
+- The first-order action retains the approved catalogue's sign choice. Its
+  identification with the canonical symplectic convention needs a final
+  check with curvature and extrinsic-curvature signs declared together.
 - The all-outgoing contraction D7 defines its duality/port convention. Matching
   its boundary prefactors to the holonomy kernel D4 is not asserted implicitly.
 - B6 displays the normalized booster/tensor structure. The central K₅ tensor

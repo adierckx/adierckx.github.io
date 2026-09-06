@@ -118,7 +118,10 @@ function guide(){let step=0;
     let ids=STEPS[step].slice(1);if(step===0){ids=$('lqg-variables').value==='metric'?['A2','A1']:['A4','A3','A5','A6'];if($('lqg-boundary').checked)ids.push('A8');if($('lqg-topological').checked)ids.push('A7');}
     const cards=$('lqg-guide-cards');clear(cards);ids.forEach(id=>{
       let tex=byId.get(id).latex;
-      if(step===0&&$('lqg-lambda').value==='zero'){tex=tex.replace('(R-2\\Lambda)','R').replace('-\\frac{\\Lambda}{\\kappa}\\int_M\\Vol_e,','');}
+      if($('lqg-lambda').value==='zero'){
+        tex=tex.replace('(R-2\\Lambda)','R').replace('-\\frac{\\Lambda}{\\kappa}\\int_M\\Vol_e,','');
+        if(id==='K8')tex=tex.replace('&+\\frac\\Lambda\\kappa\\int_\\Sigma d^3x\\,N\\sqrt q\\approx0.','&\\approx0.');
+      }
       if(id==='A4'&&$('lqg-action').value==='palatini')tex=tex.replace('+\\gamma^{-1}(e\\wedge e)_{IJ}','');
       cards.append(card(id,{compact:true,latex:tex,note:step===0&&['A2','A4'].includes(id)?`${byId.get(id).note} Displayed specialization: ${$('lqg-lambda').value==='zero'?'Λ = 0':'Λ explicit'}${id==='A4'?`, ${$('lqg-action').value==='palatini'?'Holst term omitted':'Holst term included'}`:''}.`:null}));
     });math(cards);$('lqg-guide-prev').disabled=step===0;$('lqg-guide-next').disabled=step===7;$('lqg-guide-atlas').href=`lqg-atlas.html?eq=${ids[0]}`;
