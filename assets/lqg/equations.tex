@@ -1,0 +1,987 @@
+\documentclass{article}
+\usepackage[margin=20mm]{geometry}
+\usepackage{amsmath,amssymb,hyperref}
+\newcommand{\ket}[1]{\lvert #1\rangle}
+\newcommand{\bra}[1]{\langle #1\rvert}
+\newcommand{\Inv}{\operatorname{Inv}}
+\newcommand{\Contr}{\operatorname{Contr}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Vol}{\operatorname{vol}}
+\allowdisplaybreaks
+\begin{document}
+% Units and metric signature
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\eta_{IJ}=\operatorname{diag}(-1,1,1,1),\quad\kappa=8\pi G,\quad\ell_P^2=G\hbar,\quad\ell_0^2=\kappa\gamma\hbar.
+\tag{C1}
+\end{equation}
+% Generators and dimensions
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+J_i=\frac{\sigma_i}{2},\quad\tau_i=-iJ_i,\quad[J_i,J_j]=i\epsilon_{ij}{}^kJ_k,\quad d_j=2j+1.
+\tag{C2}
+\end{equation}
+% Matrix elements and Haar measure
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+D^j_{mn}(h)=\bra{j,m}D^j(h)\ket{j,n},\qquad\int_{SU(2)}dh=1.
+\tag{C3}
+\end{equation}
+% Duality tensor
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\epsilon^{(j)}_{mn}=(-1)^{j-m}\delta_{m,-n},\qquad\epsilon^{(j)T}=(-1)^{2j}\epsilon^{(j)}.
+\tag{C4}
+\end{equation}
+% States on a graph
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+\boxed{\mathcal H_\Gamma=L^2[SU(2)^L/SU(2)^N].}
+\tag{T1}
+\end{equation}
+% Quantum geometry algebra
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+\boxed{[\hat X_l^i,\hat X_{l'}^j]=i\ell_0^2\delta_{ll'}\epsilon^{ij}{}_k\hat X_l^k,\qquad\hat{\mathbf X}_l=\ell_0^2\hat{\mathbf L}_l.}
+\tag{T2}
+\end{equation}
+% The vertex amplitude
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+\boxed{A_v(\psi_v)=\left(P_{SL(2,\mathbb C)}Y_\gamma\psi_v\right)(\mathbb 1).}
+\tag{T3}
+\end{equation}
+% Metric from a tetrad
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+g_{\mu\nu}=\eta_{IJ}e^I_\mu e^J_\nu.
+\tag{A1}
+\end{equation}
+% Einstein–Hilbert action
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+S_{\rm EH}[g]=\frac1{2\kappa}\int_Md^4x\sqrt{-g}(R-2\Lambda).
+\tag{A2}
+\end{equation}
+% Curvature and internal dual
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+(\star B)_{IJ}=\frac12\epsilon_{IJ}{}^{KL}B_{KL},\qquad F^{IJ}=d\omega^{IJ}+\omega^I{}_K\wedge\omega^{KJ}.
+\tag{A3}
+\end{equation}
+% Palatini–Holst action
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+S[e,\omega]=\frac1{2\kappa}\int_M\left[\star(e\wedge e)_{IJ}+\gamma^{-1}(e\wedge e)_{IJ}\right]\wedge F^{IJ}-\frac{\Lambda}{\kappa}\int_M\Vol_e,
+\tag{A4}
+\end{equation}
+% Oriented four-volume
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+\Vol_e=\frac1{4!}\epsilon_{IJKL}e^I\wedge e^J\wedge e^K\wedge e^L.
+\tag{A5}
+\end{equation}
+% Torsion-free sector
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+T^I=D_\omega e^I,\qquad T^I=0\quad\text{(vacuum, nondegenerate tetrad, real $\gamma$).}
+\tag{A6}
+\end{equation}
+% Topological densities
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+\begin{aligned}
+\mathcal N_{\rm NY}&=d(e_I\wedge T^I)=T_I\wedge T^I-e_I\wedge e_J\wedge F^{IJ},\\
+\mathcal P&=F^{IJ}\wedge F_{IJ},\\
+\mathcal E&=\tfrac12\epsilon_{IJKL}F^{IJ}\wedge F^{KL}.
+\end{aligned}
+\tag{A7}
+\end{equation}
+% Smooth non-null boundary term
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+S_{\rm GHY}=\frac1\kappa\int_{\partial M}d^3x\,\varepsilon_n\sqrt{|h|}\,K,\qquad\varepsilon_n=n_\mu n^\mu=\pm1.
+\tag{A8}
+\end{equation}
+% ADM line element
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+ds^2=-N^2dt^2+q_{ab}(dx^a+N^adt)(dx^b+N^bdt).
+\tag{K1}
+\end{equation}
+% Densitized triad
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+E^a_i=\tfrac12\epsilon^{abc}\epsilon_{ijk}e_b^je_c^k,\quad E^a_iE^{bi}=q\,q^{ab},\quad q=\det q_{ab}.
+\tag{K2}
+\end{equation}
+% Ashtekar–Barbero connection
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+A_a^i=\Gamma_a^i(E)+\gamma K_a^i,\qquad K_a^i=K_{ab}e^{bi}.
+\tag{K3}
+\end{equation}
+% Spin connection
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+de^i+\epsilon^i{}_{jk}\Gamma^j\wedge e^k=0.
+\tag{K4}
+\end{equation}
+% Canonical Poisson bracket
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+\{A_a^i(x),E^b_j(y)\}=\kappa\gamma\delta_a^b\delta^i_j\delta^{(3)}(x-y),\qquad\{A,A\}=\{E,E\}=0.
+\tag{K5}
+\end{equation}
+% Gauss constraint
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+G_i=\partial_aE^a_i+\epsilon_{ij}{}^kA_a^jE^a_k\approx0.
+\tag{K6}
+\end{equation}
+% Spatial diffeomorphisms
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+D[\mathbf N]=\frac1{\kappa\gamma}\int_\Sigma d^3x\,N^a(F_{ab}^iE^b_i-A_a^iG_i)\approx0.
+\tag{K7}
+\end{equation}
+% Hamiltonian constraint
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+\begin{aligned}
+H[N]={}&\frac1{2\kappa}\int_\Sigma d^3x\,N\frac{E^a_iE^b_j}{\sqrt q}
+\left[\epsilon^{ij}{}_kF_{ab}^k-2(1+\gamma^2)K_{[a}^iK_{b]}^j\right]\\
+&+\frac\Lambda\kappa\int_\Sigma d^3x\,N\sqrt q\approx0.
+\end{aligned}
+\tag{K8}
+\end{equation}
+% Smeared variables
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+h_e[A]=\mathcal P\exp\left(\int_e A_a^i\tau_i\,dx^a\right),\qquad E_i(S)=\frac12\int_S\epsilon_{abc}E_i^a\,dx^b\wedge dx^c.
+\tag{H1}
+\end{equation}
+% Endpoint derivatives
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+\begin{aligned}
+(\hat L_s^if)(h)&=-i\left.\frac d{dt}f(e^{t\tau_i}h)\right|_{t=0},\\
+(\hat L_t^if)(h)&=-i\left.\frac d{dt}f(he^{-t\tau_i})\right|_{t=0}.
+\end{aligned}
+\tag{H2}
+\end{equation}
+% Endpoint Lie algebra
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+[\hat L_s^i,\hat L_s^j]=i\epsilon^{ij}{}_k\hat L_s^k,\quad[\hat L_t^i,\hat L_t^j]=i\epsilon^{ij}{}_k\hat L_t^k,\quad[\hat L_s^i,\hat L_t^j]=0.
+\tag{H3}
+\end{equation}
+% Action on a holonomy
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+[\hat L_s^i,\hat h]=-J_i\hat h,\qquad[\hat L_t^i,\hat h]=\hat hJ_i.
+\tag{H4}
+\end{equation}
+% Closure at a node
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+\hat G_n^i\Psi=\left(\sum_{l:s(l)=n}\hat L_{s,l}^i+\sum_{l:t(l)=n}\hat L_{t,l}^i\right)\Psi=0.
+\tag{H5}
+\end{equation}
+% Source–target relation
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+\hat{\mathbf L}_t=-\operatorname{Ad}_{h^{-1}}\hat{\mathbf L}_s.
+\tag{H6}
+\end{equation}
+% Before and after Gauss averaging
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\widetilde{\mathcal H}_\Gamma=L^2(SU(2)^L,dh^L),\qquad\mathcal H_\Gamma=\widetilde{\mathcal H}_\Gamma^{\,SU(2)^N}.
+\tag{S1}
+\end{equation}
+% Peter–Weyl theorem
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+L^2(SU(2))\simeq\widehat{\bigoplus}_{j\in\frac12\mathbb N_0}V_j\otimes V_j^*.
+\tag{S2}
+\end{equation}
+% Wigner orthogonality
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\int dh\,\overline{D^j_{mn}(h)}D^{j'}_{m'n'}(h)=\frac{\delta_{jj'}\delta_{mm'}\delta_{nn'}}{d_j}.
+\tag{S3}
+\end{equation}
+% Fourier coefficients
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\begin{aligned}
+f(h)&=\sum_{jmn}f^j_{mn}\sqrt{d_j}\,D^j_{mn}(h),\\
+f^j_{mn}&=\int dh\sqrt{d_j}\,\overline{D^j_{mn}(h)}f(h).
+\end{aligned}
+\tag{S4}
+\end{equation}
+% Link representation spaces
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\widetilde{\mathcal H}_\Gamma\simeq\widehat{\bigoplus}_{\{j_l\}}\bigotimes_l(V_{j_l}\otimes V_{j_l}^*).
+\tag{S5}
+\end{equation}
+% Gauge averaging
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+(P_\Gamma f)(\{h_l\})=\int\prod_n du_n\,f(\{u_{s(l)}h_lu_{t(l)}^{-1}\}).
+\tag{S6}
+\end{equation}
+% Spin-network decomposition
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\boxed{\mathcal H_\Gamma\simeq\widehat{\bigoplus}_{\{j_l\}}\bigotimes_n\Inv_{SU(2)}\left[\bigotimes_{l:s(l)=n}V_{j_l}\otimes\bigotimes_{l:t(l)=n}V_{j_l}^*\right].}
+\tag{S7}
+\end{equation}
+% Normalized spin-network functions
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\Psi_{\Gamma,j_l,i_n}(\{h_l\})=\Contr_\Gamma\left[\bigotimes_l\sqrt{d_{j_l}}D^{j_l}(h_l)\otimes\bigotimes_n i_n\right].
+\tag{S8}
+\end{equation}
+% Trivalent invariant
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+i_{m_1m_2m_3}=\begin{pmatrix}j_1&j_2&j_3\\m_1&m_2&m_3\end{pmatrix}.
+\tag{I1}
+\end{equation}
+% Clebsch–Gordan and 3j
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+C^{JM}_{j_1m_1\,j_2m_2}=(-1)^{j_1-j_2+M}\sqrt{2J+1}\begin{pmatrix}j_1&j_2&J\\m_1&m_2&-M\end{pmatrix}.
+\tag{I2}
+\end{equation}
+% Trivalent admissibility
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+|j_1-j_2|\le j_3\le j_1+j_2,\quad j_1+j_2+j_3\in\mathbb Z,\quad m_1+m_2+m_3=0.
+\tag{I3}
+\end{equation}
+% Normalized four-valent tensor
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+(i_k)_{m_1m_2m_3m_4}=\sum_{\mu=-k}^k\frac{(-1)^{k-\mu}}{\sqrt{d_k}}C^{k\mu}_{j_1m_1\,j_2m_2}C^{k,-\mu}_{j_3m_3\,j_4m_4}.
+\tag{I4}
+\end{equation}
+% Allowed virtual spins
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\begin{gathered}
+k\in[|j_1-j_2|,j_1+j_2]\cap[|j_3-j_4|,j_3+j_4],\\
+j_1+j_2+k\in\mathbb Z,\qquad j_3+j_4+k\in\mathbb Z.
+\end{gathered}
+\tag{I5}
+\end{equation}
+% Invariant projector
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\langle i_k|i_{k'}\rangle=\delta_{kk'},\qquad P_{\Inv}=\sum_k\ket{i_k}\bra{i_k}.
+\tag{I6}
+\end{equation}
+% 6j change of coupling
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\begin{aligned}
+\ket{((j_1j_2)k\,j_3)JM}={}&\sum_{k'}(-1)^{j_1+j_2+j_3+J}\sqrt{d_kd_{k'}}\\
+&\times\begin{Bmatrix}j_1&j_2&k\\j_3&J&k'\end{Bmatrix}\ket{(j_1(j_2j_3)k')JM}.
+\end{aligned}
+\tag{I7}
+\end{equation}
+% General port-order change
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+U_{k'k}=\sum_{\mathbf m}\overline{(i^{\rm new}_{k'})_{\mathbf m}}(i^{\rm old}_{k})_{\mathbf m}.
+\tag{I8}
+\end{equation}
+% Area spectrum
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+\hat A_l=\ell_0^2\sqrt{\hat{\mathbf L}_l^2},\qquad A_j=\ell_0^2\sqrt{j(j+1)}.
+\tag{G1}
+\end{equation}
+% Area of a surface
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+\hat A(S)=\ell_0^2\sum_{p\in S\cap\Gamma}\sqrt{\hat{\mathbf L}_p^2}.
+\tag{G2}
+\end{equation}
+% Outward-normal angle operator
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+\widehat{\cos\theta_{ab}}=\frac{\hat{\mathbf L}_a\cdot\hat{\mathbf L}_b}{\sqrt{\hat{\mathbf L}_a^2}\sqrt{\hat{\mathbf L}_b^2}}.
+\tag{G3}
+\end{equation}
+% Angle in a coupling basis
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+\cos\theta_{ab}=\frac{k(k+1)-j_a(j_a+1)-j_b(j_b+1)}{2\sqrt{j_a(j_a+1)j_b(j_b+1)}}.
+\tag{G4}
+\end{equation}
+% Quantum tetrahedron volume
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+\hat Q=\epsilon_{ijk}\hat L_1^i\hat L_2^j\hat L_3^k,\qquad\boxed{\hat V_{\rm tet}=\frac{\sqrt2}{3}\ell_0^3\sqrt{|\hat Q|}.}
+\tag{G5}
+\end{equation}
+% Volume from a commutator
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+\begin{aligned}
+\hat Q&=i[\hat{\mathbf L}_1\cdot\hat{\mathbf L}_2,\hat{\mathbf L}_2\cdot\hat{\mathbf L}_3]\\
+&=\frac i4[(\hat{\mathbf L}_1+\hat{\mathbf L}_2)^2,(\hat{\mathbf L}_2+\hat{\mathbf L}_3)^2].
+\end{aligned}
+\tag{G6}
+\end{equation}
+% AL and RS regularizations
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+\begin{aligned}
+\hat V_{{\rm AL},n}&=C_{\rm AL}\ell_0^3\sqrt{\left|\sum_{a<b<c}\epsilon(e_a,e_b,e_c)\hat Q_{abc}\right|},\\
+\hat V_{{\rm RS},n}&=C_{\rm RS}\ell_0^3\sum_{a<b<c}\sqrt{|\hat Q_{abc}|}.
+\end{aligned}
+\tag{G7}
+\end{equation}
+% Normalized one-loop state
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\psi_j(h)=\chi_j(h)=\Tr D^j(h),\qquad\int dh\,\overline{\chi_j(h)}\chi_{j'}(h)=\delta_{jj'}.
+\tag{L1}
+\end{equation}
+% SU(2) character
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\chi_j(h)=\frac{\sin[(2j+1)\theta/2]}{\sin(\theta/2)},
+\tag{L2}
+\end{equation}
+% First three characters
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\chi_0=1,\qquad\chi_{1/2}=2\cos(\theta/2),\qquad\chi_1=1+2\cos\theta.
+\tag{L3}
+\end{equation}
+% A trivalent example
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\ket{i}=\frac1{\sqrt3}\left[\ket{++,-1}-\frac{\ket{+-,0}+\ket{-+,0}}{\sqrt2}+\ket{--,+1}\right].
+\tag{L4}
+\end{equation}
+% Four spins one-half
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\Inv(V_{1/2}^{\otimes4})=\operatorname{span}\{\ket0,\ket1\}.
+\tag{L5}
+\end{equation}
+% Singlet and triplet basis
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\begin{aligned}
+\ket0&=\ket{s}_{12}\ket{s}_{34},\qquad\ket{s}=\frac{\ket{+-}-\ket{-+}}{\sqrt2},\\
+\ket1&=\frac{\ket{t_+}\ket{t_-}-\ket{t_0}\ket{t_0}+\ket{t_-}\ket{t_+}}{\sqrt3}.
+\end{aligned}
+\tag{L6}
+\end{equation}
+% Oriented volume: spin one-half
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\hat Q_{\frac12^4}=\frac{\sqrt3}{4}\begin{pmatrix}0&-i\\i&0\end{pmatrix}.
+\tag{L7}
+\end{equation}
+% Opposite orientations, equal volume
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\ket{q_\pm}=\frac{\ket0\pm i\ket1}{\sqrt2},\quad q_\pm=\pm\frac{\sqrt3}{4},\quad V_\pm=\frac{3^{1/4}}{3\sqrt2}\ell_0^3.
+\tag{L8}
+\end{equation}
+% Oriented volume: spin one
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\hat Q_{1^4}=\begin{pmatrix}0&-2i/\sqrt3&0\\2i/\sqrt3&0&-i\sqrt{5/3}\\0&i\sqrt{5/3}&0\end{pmatrix}.
+\tag{L9}
+\end{equation}
+% Spin-one spectrum
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\operatorname{spec}\hat Q=\{0,+\sqrt3,-\sqrt3\},\qquad\operatorname{spec}\hat V=\left\{0,\frac{\sqrt2\,3^{1/4}}3\ell_0^3\right\}.
+\tag{L10}
+\end{equation}
+% Spin-one zero-volume state
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\ket{q_0}=\frac{\sqrt5\ket0+2\ket2}{3}.
+\tag{L11}
+\end{equation}
+% Lorentz Lie algebra
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+[L_i,L_j]=i\epsilon_{ij}{}^kL_k,\quad[L_i,K_j]=i\epsilon_{ij}{}^kK_k,\quad[K_i,K_j]=-i\epsilon_{ij}{}^kL_k.
+\tag{Y1}
+\end{equation}
+% Principal-series decomposition
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\mathcal V^{(\rho,k)}=\widehat{\bigoplus}_{j=|k|}^\infty V_j,\qquad\rho\in\mathbb R,\quad k\in\tfrac12\mathbb Z.
+\tag{Y2}
+\end{equation}
+% Lorentz Casimirs
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\mathbf K^2-\mathbf L^2=\rho^2-k^2+1,\qquad\mathbf K\cdot\mathbf L=\rho k.
+\tag{Y3}
+\end{equation}
+% The EPRL embedding
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+Y_\gamma:V_j\longrightarrow\mathcal V^{(\gamma j,j)},\qquad Y_\gamma\ket{j,m}=\ket{\gamma j,j;j,m}.
+\tag{Y4}
+\end{equation}
+% Minimal-spin projector
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+Y_\gamma^\dagger Y_\gamma=\mathbb1_{V_j},\qquad Y_\gamma Y_\gamma^\dagger=P_{j,{\rm minimal}}.
+\tag{Y5}
+\end{equation}
+% Projected boost generator
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+P_jK_iP_j=\frac{\rho k}{j(j+1)}L_i.
+\tag{Y6}
+\end{equation}
+% Default weak simplicity
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+Y_\gamma^\dagger K_iY_\gamma=\gamma\frac{j}{j+1}L_i.
+\tag{Y7}
+\end{equation}
+% Alternative finite-spin map
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+\rho=\gamma(j+1),\quad k=j\quad\Longrightarrow\quad Y^\dagger(K_i-\gamma L_i)Y=0.
+\tag{Y8}
+\end{equation}
+% Constrained BF action
+% Martin-Dussaud · A Primer of Group Theory for LQG and Spin-foams — SU(2), SL(2,C), and graphical-calculus sections
+% https://arxiv.org/abs/1902.08439
+\begin{equation}
+S_{\rm BF}=\frac1{2\kappa}\int B_{IJ}\wedge F^{IJ},\qquad B_{IJ}=\star(e\wedge e)_{IJ}+\gamma^{-1}(e\wedge e)_{IJ}.
+\tag{Y9}
+\end{equation}
+% Projected Lorentz kernel
+% Donà & Frisoni · How-To compute EPRL spin foam amplitudes — Vertex decomposition and Appendix A
+% https://arxiv.org/abs/2202.04360
+\begin{equation}
+K_j(g)=Y_\gamma^\dagger D^{(\gamma j,j)}(g)Y_\gamma,\qquad[K_j(g)]_{mn}=D^{(\gamma j,j)}_{jm,jn}(g).
+\tag{D1}
+\end{equation}
+% Formal Lorentz averaging
+% Donà & Frisoni · How-To compute EPRL spin foam amplitudes — Vertex decomposition and Appendix A
+% https://arxiv.org/abs/2202.04360
+\begin{equation}
+(P_{SL(2,\mathbb C)}\Phi)(\{g_l\})=\int\prod_n dG_n\,\Phi(\{G_{s(l)}g_lG_{t(l)}^{-1}\}).
+\tag{D2}
+\end{equation}
+% Relative group elements
+% Donà & Frisoni · How-To compute EPRL spin foam amplitudes — Vertex decomposition and Appendix A
+% https://arxiv.org/abs/2202.04360
+\begin{equation}
+g_1=\mathbb1,\qquad g_{ab}=g_a^{-1}g_b,\qquad1\le a<b\le5.
+\tag{D3}
+\end{equation}
+% Holonomy vertex kernel
+% Donà & Frisoni · How-To compute EPRL spin foam amplitudes — Vertex decomposition and Appendix A
+% https://arxiv.org/abs/2202.04360
+\begin{equation}
+\begin{aligned}
+A_v(\{h_{ab}\})={}&\sum_{\{j_{ab}\}}\left(\prod_{a<b}d_{j_{ab}}\right)\int\prod_{a=2}^5dg_a\\
+&\times\prod_{a<b}\Tr_{j_{ab}}\left[K_{j_{ab}}(g_{ab})D^{j_{ab}}(h_{ab})\right].
+\end{aligned}
+\tag{D4}
+\end{equation}
+% Trace as magnetic sums
+% Donà & Frisoni · How-To compute EPRL spin foam amplitudes — Vertex decomposition and Appendix A
+% https://arxiv.org/abs/2202.04360
+\begin{equation}
+\Tr[K_j(g)D^j(h)]=\sum_{m,n=-j}^j D^{(\gamma j,j)}_{jm,jn}(g)D^j_{nm}(h).
+\tag{D5}
+\end{equation}
+% Fixed-label vertex
+% Donà & Frisoni · How-To compute EPRL spin foam amplitudes — Vertex decomposition and Appendix A
+% https://arxiv.org/abs/2202.04360
+\begin{equation}
+A_v(j_{ab},i_a)=\int\prod_{a=2}^5dg_a\;\Contr_{K_5}\left[\bigotimes_{a<b}K_{j_{ab}}(g_{ab})\otimes\bigotimes_ai_a\right].
+\tag{D6}
+\end{equation}
+% All-outgoing tensor convention
+% Donà & Frisoni · How-To compute EPRL spin foam amplitudes — Vertex decomposition and Appendix A
+% https://arxiv.org/abs/2202.04360
+\begin{equation}
+\begin{aligned}
+A_v(j_{ab},i_a)={}&\int\prod_{a=2}^5dg_a\sum_{\{m_{ab}\}}\left[\prod_a(i_a)_{\{m_{ab}\}_{b\ne a}}\right]\\
+&\times\prod_{a<b}\mathcal K^{j_{ab}}_{m_{ab}m_{ba}}(g_{ab}),
+\end{aligned}
+\tag{D7}
+\end{equation}
+% Kernel and duality tensor
+% Donà & Frisoni · How-To compute EPRL spin foam amplitudes — Vertex decomposition and Appendix A
+% https://arxiv.org/abs/2202.04360
+\begin{equation}
+\mathcal K^j_{mn}(g)=\sum_{p=-j}^j[K_j(g)]_{mp}\epsilon^{(j)}_{pn}.
+\tag{D8}
+\end{equation}
+% Resolve the auxiliary spins
+% Donà & Frisoni · How-To compute EPRL spin foam amplitudes — Vertex decomposition and Appendix A
+% https://arxiv.org/abs/2202.04360
+\begin{equation}
+D^{(\rho,k)}_{jm,jn}(g_a^{-1}g_b)=\sum_{\ell=|k|}^\infty\sum_{p=-\ell}^{\ell}\overline{D^{(\rho,k)}_{\ell p,jm}(g_a)}D^{(\rho,k)}_{\ell p,jn}(g_b).
+\tag{D9}
+\end{equation}
+% A fixed-complex amplitude
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+W_{\mathcal C}(j_\partial,i_\partial)=\sum_{\{j_f,i_e\}_{\rm internal}}\prod_f A_f(j_f)\prod_e A_e(j_f,i_e)\prod_vA_v(j_f,i_e).
+\tag{F1}
+\end{equation}
+% Face and edge weights
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+A_f(j_f)=d_{j_f},\qquad A_e=1,
+\tag{F2}
+\end{equation}
+% Boundary-state evaluation
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+W_{\mathcal C}(\psi)=\sum_{j_\partial,i_\partial}\psi_{j_\partial,i_\partial}W_{\mathcal C}(j_\partial,i_\partial).
+\tag{F3}
+\end{equation}
+% Wedge-variable structure
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+W_{\mathcal C}(h_\partial)=\int\prod_{(v,f)}dh_{vf}\,\prod_f\delta(H_f)\prod_vA_v(\{h_{vf}\}_{f\ni v}).
+\tag{F4}
+\end{equation}
+% Delta distribution
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+\delta(h)=\sum_jd_j\chi_j(h).
+\tag{F5}
+\end{equation}
+% Gluing in an orthonormal basis
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+W_{\mathcal C_2\circ\mathcal C_1}=\sum_{j_\Gamma,i_\Gamma}W_{\mathcal C_2}(\ldots;j_\Gamma,i_\Gamma)W_{\mathcal C_1}(j_\Gamma,i_\Gamma;\ldots).
+\tag{F6}
+\end{equation}
+% Cartan decomposition
+% Speziale · Boosting Wigner’s nj-symbols — Eqs. (11)–(13), (21)–(25)
+% https://arxiv.org/abs/1609.01632
+\begin{equation}
+g=u\,e^{r\sigma_3/2}v^{-1},\qquad u,v\in SU(2),\quad r\ge0.
+\tag{B1}
+\end{equation}
+% Lorentz Haar measure
+% Speziale · Boosting Wigner’s nj-symbols — Eqs. (11)–(13), (21)–(25)
+% https://arxiv.org/abs/1609.01632
+\begin{equation}
+dg=\frac1{4\pi}\sinh^2r\,dr\,du\,dv.
+\tag{B2}
+\end{equation}
+% Rotations and a reduced boost
+% Speziale · Boosting Wigner’s nj-symbols — Eqs. (11)–(13), (21)–(25)
+% https://arxiv.org/abs/1609.01632
+\begin{equation}
+D^{(\rho,k)}_{jm,\ell n}(g)=\sum_{p=-\min(j,\ell)}^{\min(j,\ell)}D^j_{mp}(u)d^{(\rho,k)}_{j\ell p}(r)D^\ell_{pn}(v^{-1}).
+\tag{B3}
+\end{equation}
+% Normalized four-valent booster
+% Speziale · Boosting Wigner’s nj-symbols — Eqs. (11)–(13), normalized using (B5)
+% https://arxiv.org/abs/1609.01632
+\begin{equation}
+\boxed{\begin{aligned}
+\mathcal B_4^\gamma(\mathbf j,\boldsymbol\ell;i,k)={}&\frac1{4\pi}\int_0^\infty dr\,\sinh^2r\sum_{\mathbf p}\overline{(i_i^{\mathbf j})_{\mathbf p}}(i_k^{\boldsymbol\ell})_{\mathbf p}\\
+&\times\prod_{a=1}^4d^{(\gamma j_a,j_a)}_{j_a\ell_a p_a}(r).
+\end{aligned}}
+\tag{B4}
+\end{equation}
+% Normalization conversion
+% Speziale · Boosting Wigner’s nj-symbols — Eqs. (11)–(13), (21)–(25)
+% https://arxiv.org/abs/1609.01632
+\begin{equation}
+\mathcal B_4^\gamma(\mathbf j,\boldsymbol\ell;i,k)=\sqrt{d_id_k}\,B_4^\gamma(\mathbf j,\boldsymbol\ell;i,k).
+\tag{B5}
+\end{equation}
+% Four-booster tensor structure
+% Speziale · Boosting Wigner’s nj-symbols — Eqs. (11)–(13), (21)–(25)
+% https://arxiv.org/abs/1609.01632
+\begin{equation}
+\boxed{\begin{aligned}
+A_v(j_{ab},i_a)={}&\sum_{\substack{\ell_{ab}\ge j_{ab}\\2\le a<b\le5}}\sum_{k_2,\ldots,k_5}
+\mathcal J_{K_5}(\ell_{ab};i_1,k_2,k_3,k_4,k_5)\\
+&\times\prod_{a=2}^5\mathcal B_{4,a}^\gamma.
+\end{aligned}}
+\tag{B6}
+\end{equation}
+% Gauge-fixed auxiliary spins
+% Speziale · Boosting Wigner’s nj-symbols — Eqs. (11)–(13), (21)–(25)
+% https://arxiv.org/abs/1609.01632
+\begin{equation}
+\ell_{1a}=j_{1a},\qquad a=2,3,4,5.
+\tag{B7}
+\end{equation}
+% First-kind 15j reference convention
+% Donà & Frisoni · How-To compute EPRL spin foam amplitudes — Appendix A, first-kind 15j convention
+% https://arxiv.org/abs/2202.04360
+\begin{equation}
+\begin{aligned}
+\begin{Bmatrix}a_1&a_2&a_3&a_4&a_5\\b_1&b_2&b_3&b_4&b_5\\c_1&c_2&c_3&c_4&c_5\end{Bmatrix}_{I}
+={}&(-1)^{\sum_r(a_r+b_r+c_r)}\sum_xd_x\\
+&\times\begin{Bmatrix}a_1&c_1&x\\c_2&a_2&b_1\end{Bmatrix}\begin{Bmatrix}a_2&c_2&x\\c_3&a_3&b_2\end{Bmatrix}\\
+&\times\begin{Bmatrix}a_3&c_3&x\\c_4&a_4&b_3\end{Bmatrix}\begin{Bmatrix}a_4&c_4&x\\c_5&a_5&b_4\end{Bmatrix}\begin{Bmatrix}a_5&c_5&x\\a_1&c_1&b_5\end{Bmatrix}.
+\end{aligned}
+\tag{R1}
+\end{equation}
+% Triangle factor
+% Donà & Frisoni · How-To compute EPRL spin foam amplitudes — Vertex decomposition and Appendix A
+% https://arxiv.org/abs/2202.04360
+\begin{equation}
+\Delta(a,b,c)=\sqrt{\frac{(a+b-c)!(a-b+c)!(-a+b+c)!}{(a+b+c+1)!}}.
+\tag{R2}
+\end{equation}
+% Racah formula for 6j
+% Donà & Frisoni · How-To compute EPRL spin foam amplitudes — Vertex decomposition and Appendix A
+% https://arxiv.org/abs/2202.04360
+\begin{equation}
+\begin{aligned}
+\begin{Bmatrix}a&b&c\\d&e&f\end{Bmatrix}={}&\Delta(a,b,c)\Delta(a,e,f)\Delta(d,b,f)\Delta(d,e,c)\\
+&\times\sum_z\frac{(-1)^z(z+1)!}{(z-a-b-c)!(z-a-e-f)!(z-d-b-f)!(z-d-e-c)!}\\
+&\times\frac1{(a+b+d+e-z)!(a+c+d+f-z)!(b+c+e+f-z)!}.
+\end{aligned}
+\tag{R3}
+\end{equation}
+% Factorial formula for 3j
+% Donà & Frisoni · How-To compute EPRL spin foam amplitudes — Vertex decomposition and Appendix A
+% https://arxiv.org/abs/2202.04360
+\begin{equation}
+\begin{aligned}
+\begin{pmatrix}a&b&c\\m&n&p\end{pmatrix}={}&\delta_{m+n+p,0}(-1)^{a-b-p}\Delta(a,b,c)\\
+&\times\sqrt{(a+m)!(a-m)!(b+n)!(b-n)!(c+p)!(c-p)!}\\
+&\times\sum_z\frac{(-1)^z}{z!(a+b-c-z)!(a-m-z)!(b+n-z)!}\\
+&\times\frac1{(c-b+m+z)!(c-a-n+z)!}.
+\end{aligned}
+\tag{R4}
+\end{equation}
+% Gamma-function phase
+% Speziale · Boosting Wigner’s nj-symbols — Eq. (22)
+% https://arxiv.org/abs/1609.01632
+\begin{equation}
+e^{i\psi_j^\rho}=\frac{\Gamma(j+1+i\rho)}{|\Gamma(j+1+i\rho)|}.
+\tag{M1}
+\end{equation}
+% General reduced matrix
+% Speziale · Boosting Wigner’s nj-symbols — Eq. (21), with (22) phase choice
+% https://arxiv.org/abs/1609.01632
+\begin{equation}
+\begin{aligned}
+d^{(\rho,k)}_{j\ell p}(r)={}&e^{i\pi(j-\ell)/2}e^{i\psi_j^\rho-i\psi_\ell^\rho}\frac{\sqrt{d_jd_\ell}}{(j+\ell+1)!}e^{-(k-i\rho+p+1)r}\\
+&\times\sqrt{(j+k)!(j-k)!(j+p)!(j-p)!(\ell+k)!(\ell-k)!(\ell+p)!(\ell-p)!}\\
+&\times\sum_{s,t}\frac{(-1)^{s+t}e^{-2tr}(k+p+s+t)!(j+\ell-k-p-s-t)!}
+{s!(j-k-s)!(j-p-s)!(k+p+s)!t!(\ell-k-t)!(\ell-p-t)!(k+p+t)!}\\
+&\times{}_2F_1(\ell+1-i\rho,k+p+1+s+t;j+\ell+2;1-e^{-2r}).
+\end{aligned}
+\tag{M2}
+\end{equation}
+% Minimal-to-auxiliary block
+% Speziale · Boosting Wigner’s nj-symbols — Eq. (25), ρ left explicit
+% https://arxiv.org/abs/1609.01632
+\begin{equation}
+\begin{aligned}
+d^{(\rho,j)}_{j\ell p}(r)={}&e^{i\pi(j-\ell)/2}e^{i\psi_j^\rho-i\psi_\ell^\rho}\frac{\sqrt{d_jd_\ell}}{(j+\ell+1)!}\\
+&\times\sqrt{\frac{(2j)!(\ell+j)!(\ell-j)!(\ell+p)!(\ell-p)!}{(j+p)!(j-p)!}}e^{-(j-i\rho+p+1)r}\\
+&\times\sum_{s=0}^{\ell-j}\frac{(-1)^se^{-2sr}}{s!(\ell-j-s)!}\\
+&\times{}_2F_1(\ell+1-i\rho,j+p+1+s;j+\ell+2;1-e^{-2r}).
+\end{aligned}
+\tag{M3}
+\end{equation}
+% Minimal reduced block
+% Speziale · Boosting Wigner’s nj-symbols — Eqs. (11)–(13), (21)–(25)
+% https://arxiv.org/abs/1609.01632
+\begin{equation}
+\boxed{d^{(\rho,j)}_{jjm}(r)=e^{-(j-i\rho+m+1)r}{}_2F_1(j+m+1,j+1-i\rho;2j+2;1-e^{-2r}).}
+\tag{M4}
+\end{equation}
+% Hypergeometric series
+% Speziale · Boosting Wigner’s nj-symbols — Eqs. (11)–(13), (21)–(25)
+% https://arxiv.org/abs/1609.01632
+\begin{equation}
+{}_2F_1(a,b;c;z)=\sum_{n=0}^\infty\frac{(a)_n(b)_n}{(c)_n\,n!}z^n,\qquad(a)_n=\frac{\Gamma(a+n)}{\Gamma(a)}.
+\tag{M5}
+\end{equation}
+% Toller decomposition
+% Bianchi, Chen & Gamonal · Toller matrices and the Feynman iε in spinfoams — Sections II–IV and Appendix A
+% https://arxiv.org/abs/2604.24945v1
+\begin{equation}
+\boxed{T^{(+,\rho,k)}(g)+T^{(-,\rho,k)}(g)=D^{(\rho,k)}(g).}
+\tag{Q1}
+\end{equation}
+% Cartan form of Toller matrices
+% Bianchi, Chen & Gamonal · Toller matrices and the Feynman iε in spinfoams — Sections II–IV and Appendix A
+% https://arxiv.org/abs/2604.24945v1
+\begin{equation}
+T^{(\pm,\rho,k)}_{jm,\ell n}(g)=\sum_pD^j_{mp}(u)t^{(\pm,\rho,k)}_{j\ell p}(r)D^\ell_{pn}(v^{-1}).
+\tag{Q2}
+\end{equation}
+% Common-basis conversion
+% Bianchi, Chen & Gamonal · Toller matrices and the Feynman iε in spinfoams — Sections II–IV and Appendix A
+% https://arxiv.org/abs/2604.24945v1
+\begin{equation}
+D_{\rm S}=\Phi_{j\ell}(\rho)D_{\rm R},\qquad T^\pm_{\rm S}=\Phi_{j\ell}(\rho)T^\pm_{\rm R},
+\tag{Q3}
+\end{equation}
+% Rühl-to-Speziale phase
+% Bianchi, Chen & Gamonal · Toller matrices and the Feynman iε in spinfoams — Eq. (4)
+% https://arxiv.org/abs/2604.24945v1
+\begin{equation}
+\Phi_{j\ell}(\rho)=e^{-i\pi(j-\ell)/2}\frac{\Gamma(j+1+i\rho)}{|\Gamma(j+1+i\rho)|}\frac{\Gamma(\ell+1-i\rho)}{|\Gamma(\ell+1-i\rho)|}.
+\tag{Q4}
+\end{equation}
+% Spectral polynomial
+% Bianchi, Chen & Gamonal · Toller matrices and the Feynman iε in spinfoams — Eq. (16)
+% https://arxiv.org/abs/2604.24945v1
+\begin{equation}
+\begin{aligned}
+P_{j\ell}(\widetilde\rho;\rho)&=\prod_{n=0}^{j+\ell}\frac{i\widetilde\rho-(n-j)}{i\rho-(n-j)}\\
+&=\frac{\Gamma(-j-i\rho)\Gamma(\ell+1-i\widetilde\rho)}{\Gamma(-j-i\widetilde\rho)\Gamma(\ell+1-i\rho)}.
+\end{aligned}
+\tag{Q5}
+\end{equation}
+% Feynman iε representation
+% Bianchi, Chen & Gamonal · Toller matrices and the Feynman iε in spinfoams — Eq. (20), rephased using (4)
+% https://arxiv.org/abs/2604.24945v1
+\begin{equation}
+\boxed{\begin{aligned}
+T^{(\pm,\rho,k)}_{jm,\ell n}(g)={}&\lim_{\varepsilon\downarrow0}\int_{\mathbb R}\frac{d\widetilde\rho}{2\pi i}\frac{\pm1}{\widetilde\rho-\rho\mp i\varepsilon}\\
+&\times P_{j\ell}(\widetilde\rho;\rho)\frac{\Phi_{j\ell}(\rho)}{\Phi_{j\ell}(\widetilde\rho)}D^{(\widetilde\rho,k)}_{jm,\ell n}(g).
+\end{aligned}}
+\tag{Q6}
+\end{equation}
+% Minimal Toller block
+% Bianchi, Chen & Gamonal · Toller matrices and the Feynman iε in spinfoams — Eq. (46)
+% https://arxiv.org/abs/2604.24945v1
+\begin{equation}
+\boxed{\begin{aligned}
+t^{(s,\rho,j)}_{jjm}(r)={}&e^{-(j-si\rho+sm+1)r}\frac{\Gamma(2j+2)\Gamma(si\rho-sm)}{\Gamma(j-sm+1)\Gamma(j+1+si\rho)}\\
+&\times{}_2F_1(j+sm+1,j+1-si\rho;1+sm-si\rho;e^{-2r}).
+\end{aligned}}
+\tag{Q7}
+\end{equation}
+% Terminating-polynomial form
+% Bianchi, Chen & Gamonal · Toller matrices and the Feynman iε in spinfoams — Sections II–IV and Appendix A
+% https://arxiv.org/abs/2604.24945v1
+\begin{equation}
+\begin{aligned}
+t^{(s,\rho,j)}_{jjm}(r)={}&e^{-(j-si\rho+sm+1)r}\frac{\Gamma(2j+2)\Gamma(si\rho-sm)}{\Gamma(j-sm+1)\Gamma(j+1+si\rho)}\frac1{(1-z)^{2j+1}}\\
+&\times\sum_{n=0}^{j-sm}\frac{(-j-si\rho)_n(-j+sm)_n}{(1+sm-si\rho)_n\,n!}z^n.
+\end{aligned}
+\tag{Q8}
+\end{equation}
+% Scalar principal-series example
+% Bianchi, Chen & Gamonal · Toller matrices and the Feynman iε in spinfoams — Scalar examples following Eq. (46)
+% https://arxiv.org/abs/2604.24945v1
+\begin{equation}
+d^{(\rho,0)}_{000}(r)=\frac{\sin(\rho r)}{\rho\sinh r},\qquad t^{(\pm,\rho,0)}_{000}(r)=\pm\frac{e^{\pm i\rho r}}{2i\rho\sinh r}.
+\tag{Q9}
+\end{equation}
+% Spin-one-half Toller branches
+% Bianchi, Chen & Gamonal · Toller matrices and the Feynman iε in spinfoams — Sections II–IV and Appendix A
+% https://arxiv.org/abs/2604.24945v1
+\begin{equation}
+\begin{aligned}
+t^+(r)&=-\frac{e^{i\rho r}}{2(\rho^2+\tfrac14)\sinh^2r},\\
+t^-(r)&=\frac{e^{-i\rho r}(\cosh r+2i\rho\sinh r)}{2(\rho^2+\tfrac14)\sinh^2r}.
+\end{aligned}
+\tag{Q10}
+\end{equation}
+% Failure of composition
+% Bianchi, Chen & Gamonal · Toller matrices and the Feynman iε in spinfoams — Sections II–IV and Appendix A
+% https://arxiv.org/abs/2604.24945v1
+\begin{equation}
+T^\pm(g_1g_2)\ne T^\pm(g_1)T^\pm(g_2)\qquad\text{in general}.
+\tag{Q11}
+\end{equation}
+% Node signs induce wedge signs
+% Bianchi, Chen & Gamonal · Causal spinfoam vertex for 4d Lorentzian quantum gravity — Causal vertex and wedge-orientation prescription
+% https://arxiv.org/abs/2601.23162
+\begin{equation}
+\sigma_a\in\{\pm1\},\qquad\kappa_{ab}=\sigma_a\sigma_b.
+\tag{CV1}
+\end{equation}
+% Causal vertex amplitude
+% Bianchi, Chen & Gamonal · Causal spinfoam vertex for 4d Lorentzian quantum gravity — Causal vertex and wedge-orientation prescription
+% https://arxiv.org/abs/2601.23162
+\begin{equation}
+\begin{aligned}
+A_v^{\boldsymbol\sigma}(j_{ab},i_a)={}&\int\prod_{a=2}^5dg_a\;\Contr_{K_5}\bigg[\bigotimes_{a<b}
+T^{(\kappa_{ab},\gamma j_{ab},j_{ab})}_{j_{ab},j_{ab}}(g_{ab})\\
+&\hspace{47mm}\otimes\bigotimes_ai_a\bigg].
+\end{aligned}
+\tag{CV2}
+\end{equation}
+% Independent wedge expansion
+% Bianchi, Chen & Gamonal · Causal spinfoam vertex for 4d Lorentzian quantum gravity — Causal vertex and wedge-orientation prescription
+% https://arxiv.org/abs/2601.23162
+\begin{equation}
+\prod_{a<b}D_{ab}=\sum_{\{\kappa_{ab}=\pm1\}}\prod_{a<b}T_{ab}^{\kappa_{ab}}.
+\tag{CV3}
+\end{equation}
+% Cycle constraint
+% Bianchi, Chen & Gamonal · Causal spinfoam vertex for 4d Lorentzian quantum gravity — Causal vertex and wedge-orientation prescription
+% https://arxiv.org/abs/2601.23162
+\begin{equation}
+\prod_{(ab)\in C}\kappa_{ab}=1\qquad\text{for every graph cycle }C.
+\tag{CV4}
+\end{equation}
+% The induced sum is a different model
+% Bianchi, Chen & Gamonal · Causal spinfoam vertex for 4d Lorentzian quantum gravity — Causal vertex and wedge-orientation prescription
+% https://arxiv.org/abs/2601.23162
+\begin{equation}
+\sum_{\boldsymbol\sigma/\{\sigma\sim-\sigma\}}A_v^{\boldsymbol\sigma}\ne A_v^{\rm EPRL}.
+\tag{CV5}
+\end{equation}
+% Spin coherent state
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+\ket{j,\mathbf n}=D^j(g_{\mathbf n})\ket{j,j},\qquad g_{\mathbf n}\hat{\mathbf z}=\mathbf n.
+\tag{CO1}
+\end{equation}
+% Coherent intertwiner
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+\|j_a,\mathbf n_a\rangle=\int_{SU(2)}du\,\bigotimes_aD^{j_a}(u)\ket{j_a,\mathbf n_a}.
+\tag{CO2}
+\end{equation}
+% Semiclassical closure
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+\sum_aj_a\mathbf n_a=0.
+\tag{CO3}
+\end{equation}
+% Spinor flux vector
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+\ket z=\begin{pmatrix}z^0\\z^1\end{pmatrix},\quad X_i(z)=\tfrac12\bra z\sigma_i\ket z,\quad|\mathbf X(z)|=\tfrac12\langle z|z\rangle.
+\tag{CO4}
+\end{equation}
+% Spinor direction and state
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+\mathbf n(z)=\frac{\bra z\boldsymbol\sigma\ket z}{\langle z|z\rangle},\qquad\ket{j,z}=\left(\frac{\ket z}{\|z\|}\right)_{\rm sym}^{\otimes2j}.
+\tag{CO5}
+\end{equation}
+% Change to intertwiner coefficients
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+c_i(j_a,\mathbf n_a)=\bra i\bigotimes_a\ket{j_a,\mathbf n_a},\qquad\|j_a,\mathbf n_a\rangle=\sum_i c_i\ket i.
+\tag{CO6}
+\end{equation}
+% Coherent boundary amplitude
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+A_v(j_{ab},\mathbf n_{ab})=\sum_{\{i_a\}}A_v(j_{ab},i_a)\prod_ac_{i_a}(j_{ab},\mathbf n_{ab}).
+\tag{CO7}
+\end{equation}
+% Regge asymptotics
+% Rovelli & Vidotto · Covariant Loop Quantum Gravity — Classical theory, quantum geometry, and transition amplitudes
+% https://www.cpt.univ-mrs.fr/~rovelli/IntroductionLQG.pdf
+\begin{equation}
+A_v(\lambda j,\mathbf n)\sim\lambda^{-12}\left[N_+e^{i\lambda s_{\rm R}}+N_-e^{-i\lambda s_{\rm R}}\right],\qquad s_{\rm R}=\gamma\sum_fj_f\Theta_f.
+\tag{CO8}
+\end{equation}
+\end{document}

@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Explore loop quantum gravity through sourced equations, quantum geometry, EPRL boosters and annotated four-simplex diagrams.">
 
-<title>phys-f-308 – Antoine Dierckx</title>
+<title>Build loop quantum gravity – Antoine Dierckx</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,23 +30,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../assets/css/logo_bi_whiteteal_shad.svg" rel="icon" type="image/svg+xml">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-ae38592f1dc258555b5a45befa63d9f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/css/logo_bi_whiteteal_shad.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-ae38592f1dc258555b5a45befa63d9f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,25 +75,55 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-<script src="../../assets/js/page-backgrounds.js"></script>
+<script src="../assets/js/page-backgrounds.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../../assets/css/styles.css">
-<link rel="stylesheet" href="../../assets/css/page-backgrounds.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../assets/css/styles.css">
+<link rel="stylesheet" href="../assets/css/page-backgrounds.css">
+<link rel="stylesheet" href="../assets/lqg/lqg.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../assets/css/logo_bi_whiteteal_shad.svg" alt="" class="navbar-logo light-content">
-    <img src="../../assets/css/logo_bi_whiteteal_shad.svg" alt="" class="navbar-logo dark-content">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/css/logo_bi_whiteteal_shad.svg" alt="" class="navbar-logo light-content">
+    <img src="../assets/css/logo_bi_whiteteal_shad.svg" alt="" class="navbar-logo dark-content">
     </a>
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Antoine Dierckx</span>
     </a>
   </div>
@@ -103,7 +134,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -112,19 +143,19 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-research">    
         <li>
-    <a class="dropdown-item" href="../../research/themes.html">
+    <a class="dropdown-item" href="../research/themes.html">
  <span class="dropdown-text">Research Themes</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../research/papers.html">
+    <a class="dropdown-item" href="../research/papers.html">
  <span class="dropdown-text">Publications</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../research/talks.html">
+    <a class="dropdown-item" href="../research/talks.html">
  <span class="dropdown-text">Talks &amp; Slides</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../research/early-research.html">
+    <a class="dropdown-item" href="../research/early-research.html">
  <span class="dropdown-text">Early Research</span></a>
   </li>  
     </ul>
@@ -135,37 +166,37 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-notes-and-resources">    
         <li>
-    <a class="dropdown-item" href="../../notes/master.html">
+    <a class="dropdown-item" href="../notes/master.html">
  <span class="dropdown-text">Master Notes</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../notes/bachelor.html">
+    <a class="dropdown-item" href="../notes/bachelor.html">
  <span class="dropdown-text">Bachelor Notes (FR)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../notes/math.html">
+    <a class="dropdown-item" href="../notes/math.html">
  <span class="dropdown-text">Math Notes (FR)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../outreach/standard-model.html">
+    <a class="dropdown-item" href="../outreach/standard-model.html">
  <span class="dropdown-text">Standard Model, unfolded</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../outreach/loop-quantum-gravity.html">
+    <a class="dropdown-item" href="../outreach/loop-quantum-gravity.html">
  <span class="dropdown-text">Loop quantum gravity, unfolded</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../outreach/projects.html"> 
+    <a class="nav-link" href="../outreach/projects.html"> 
 <span class="menu-text">Outreach &amp; Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../blog.html"> 
+    <a class="nav-link" href="../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -176,22 +207,26 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full column-body" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Soft Matter and Solid State Physics</h1>
-<p class="subtitle lead">Synthèse du cours de PHYS-F308</p>
+<h1 class="title">Build loop quantum gravity</h1>
+</div>
+
+<div>
+  <div class="description">
+    Explore loop quantum gravity through sourced equations, quantum geometry, EPRL boosters and annotated four-simplex diagrams.
+  </div>
 </div>
 
 
-
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-body">
 
     
   
@@ -203,9 +238,20 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Enseignant :</strong> Patricia Maria LOSADA PEREZ &amp; Simone NAPOLITANO (Année 2022 - 2023)<br>
-<strong>Ressources officielles :</strong> <a href="https://www.ulb.be/fr/programme/phys-f308" class="btn btn-outline-light btn-sm ms-2"><i class="bi bi-link-45deg"></i> Page de l’ULB</a> <a href="https://dochub.be/catalog/course/phys-f308" class="btn btn-outline-light btn-sm ms-2"><i class="bi bi-folder2-open"></i> Espace Dochub</a></p>
-<hr>
+<div class="column-screen">
+<div class="lqg-bootstrap" aria-hidden="true">
+<p><span class="math inline">\(x\)</span></p>
+</div>
+<div id="lqg-app" class="lqg" data-mode="guide" data-catalogue="../assets/lqg/catalogue.json">
+<nav class="lqg-nav" aria-label="LQG project"><a href="loop-quantum-gravity.html">Overview</a><a href="build-lqg.html" aria-current="page">Build LQG</a><a href="lqg-atlas.html">Equation Atlas</a><a href="lqg-diagrams.html">Diagram Lab</a></nav>
+<header><p class="eyebrow">Loop quantum gravity · guided construction</p><h1>From an action to an amplitude.</h1><p class="lede">Eight steps through the shared structure. Choose the classical variables first, then see where time gauge, quantization and model choices enter.</p></header>
+<div class="lqg-card"><div class="lqg-control-row"><label>Classical variables<select id="lqg-variables"><option value="tetrad">Tetrad &amp; connection</option><option value="metric">Metric</option></select></label><label>Action<select id="lqg-action"><option value="holst">Palatini–Holst</option><option value="palatini">Palatini</option></select></label><label>Classical Λ<select id="lqg-lambda"><option value="zero">Λ = 0</option><option value="nonzero">Keep Λ explicit</option></select></label></div><details><summary>Boundary and topological terms</summary><label><input type="checkbox" id="lqg-boundary"> Smooth non-null metric boundary</label><label><input type="checkbox" id="lqg-topological"> Show independent topological densities</label><p class="muted">These choices expose the corresponding classical terms. They do not define a deformed spin-foam model.</p></details></div>
+<nav id="lqg-steps" class="lqg-steps" aria-label="Construction steps"></nav><div id="lqg-guide-copy" class="lqg-guide-copy"></div><div id="lqg-guide-cards"></div><div class="lqg-buttons"><button id="lqg-guide-prev">← Previous</button><button id="lqg-guide-next" class="primary">Next →</button><a class="lqg-download" id="lqg-guide-atlas" href="lqg-atlas.html">Explore this step in the atlas</a></div>
+<p id="lqg-load-status" class="lqg-status" role="status">Loading the equation catalogue…</p>
+<noscript><p>The interactive controls need JavaScript. <a href="../assets/lqg/equations.tex">Download all numbered equations as LaTeX</a>.</p></noscript>
+</div>
+<script type="module" src="../assets/lqg/app.mjs"></script>
+</div>
 
 
 

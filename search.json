@@ -14,11 +14,46 @@
     "text": "\\(\\require{html}\\class{sm-math-probe}{x}\\)\n\n\n  \n    Overview\n    Build the equation\n    Equation Atlas\n  \n\n  \n    Guided route · symmetric phase\n    Build the equation.\n    \n      The Standard Model Lagrangian is not a single inspired guess. Its broad\n      structure follows from the chosen fields, Lorentz invariance,\n      renormalisability, and local \\(SU(3)_c\\times SU(2)_L\\times U(1)_Y\\)\n      gauge symmetry.\n    \n  \n\n  \n    \n      Construction\n      \n        01Symmetry and fields\n        02Gauge dynamics\n        03Matter fields\n        04The Higgs sector\n        05Yukawa couplings\n        06The complete structure\n      \n    \n\n    \n      \n\n      \n        \n          \n            Equation so far\n            Preparing catalogue…\n          \n          Start with the ingredients\n        \n        \n      \n\n      \n        Step 1 of 6\n        Symmetry and fields\n        \n        \n        \n      \n\n      \n        ← Previous\n        Open this state in the Atlas\n        Next →\n      \n    \n  \n\n  \n    What this chapter does—and does not claim.\n    The symmetry and field content strongly constrain the renormalisable\n    Lagrangian, but they do not predict the numerical gauge couplings, Higgs\n    parameters, or Yukawa matrices. Those remain measured inputs.\n  \n\n  This guided chapter requires JavaScript."
   },
   {
-    "objectID": "outreach/standard-model-lagrangian.html",
-    "href": "outreach/standard-model-lagrangian.html",
-    "title": "Equation Atlas – The Standard Model, unfolded",
+    "objectID": "outreach/lqg-atlas.html",
+    "href": "outreach/lqg-atlas.html",
+    "title": "Equation Atlas · Loop quantum gravity",
     "section": "",
-    "text": "\\(\\require{html}\\class{sm-math-probe}{x}\\)\n\n\n  \n  \n\n  \n    Overview\n    Build the equation\n    Equation Atlas\n  \n\n  \n    Free exploration · Standard Model\n    Equation Atlas.\n    \n      Select a field basis and its sectors, then move from compact notation to\n      explicit generations, internal components, and gauge-field monomials.\n      At the deepest level you can focus on one sector without changing the\n      complete selection used by the LaTeX export.\n    \n  \n\n  \n    \n      \n        Complete expression\n        Loading catalogue…\n      \n      \n    \n\n    \n      \n      \n        \n        Preparing the fields\n      \n    \n\n    \n\n    \n      Connections\n      Every additive term in the current selection is displayed.\n    \n  \n\n  \n    \n      Field basis\n      \n        \n          Symmetric\n          before EWSB\n        \n        \n          Physical\n          after EWSB\n        \n      \n    \n\n    \n      Active sectors\n      \n    \n\n    \n      \n        Development\n        Connections\n      \n      \n      \n        CanonicalMultipletsConnectionsComponentsUnfolded\n      \n      Covariant derivatives and field strengths are exposed.\n    \n\n    \n      Display focus\n      \n        Complete selection\n      \n      Show every selected sector in the equation.\n    \n\n    \n      Reading modes\n      \n        \n          \n          \n            Smart colour\n            Field families and physical flavours\n          \n        \n        \n          \n          \n            Explain symbols\n            Contextual notation guide\n          \n        \n      \n    \n\n    \n      \n        ↖ Guided build\n      \n      \n        ⧉ Copy LaTeX\n      \n      \n        ↓ Download .tex\n      \n    \n  \n\n  \n    \n      \n        Notation guide\n        Symbols in this selection\n      \n      Hover or focus a card to locate the terms that use that symbol.\n    \n    \n  \n\n  \n    \n      Complete LaTeX source\n      The copied and downloaded source stays uncoloured and portable.\n    \n    \n      \n    \n  \n\n  \n    Scope. This is the classical, gauge-invariant minimal Standard Model.\n    Gauge-fixing, ghosts, the QCD theta term, right-handed neutrinos, and\n    higher-dimensional operators are not included.\n  \n\n  This interactive page requires JavaScript."
+    "text": "\\(x\\)\n\n\nOverviewBuild LQGEquation AtlasDiagram Lab\nLoop quantum gravity · free explorationEquation Atlas.Unfold the mathematics one ingredient at a time. Every equation retains its review number, assumptions and source.\n\nFind an equation\nRouteCanonical + covariantCanonicalCovariant\nRepresentationSpins & intertwinersCoherent states & spinors\nDevelopment0 · Compact0—7Sets the starting equations. Expand any card independently.\nBrowse a subjectCurrent development level\nToller matricesCausal vertexLow spins\n Semantic colour Wiring diagram\nReset viewExport visible .tex\nNotation & common conventionj, mSU(2) spin and magnetic index.i, kIntertwiner label and virtual spin; k in (ρ,k) is a Lorentz label.ℓ, rAuxiliary SU(2) spin and boost rapidity.ℓ₀² = 8πγGℏFlux and area unit. γ &gt; 0.σ, κNode and induced wedge signs; distinct from wire arrows.Normalized intertwiners; source-left holonomies; Speziale phases. Toller matrices use the explicit Rühl-to-Speziale conversion.Open conventions\nShared dataCanonicalCovariantFormula ↔ wiringSelect a wire for its projected kernel, or a node for its intertwiner.Full Diagram Lab →\nLoading the equation catalogue…\nThe interactive controls need JavaScript. Download all numbered equations as LaTeX."
+  },
+  {
+    "objectID": "outreach/projects.html",
+    "href": "outreach/projects.html",
+    "title": "Outreach & Creative Projects",
+    "section": "",
+    "text": "Beyond academic research, I participate in science communication, digital content creation, and collaborative design projects aimed at opening up academic and scientific spaces."
+  },
+  {
+    "objectID": "outreach/projects.html#interactive-physics",
+    "href": "outreach/projects.html#interactive-physics",
+    "title": "Outreach & Creative Projects",
+    "section": "Interactive Physics",
+    "text": "Interactive Physics\n\nLoop quantum gravity, unfolded\nExplore quantum geometry and spin-foam amplitudes from three compact equations down to intertwiners, Lorentz matrices and booster functions. A guided chapter, sourced Equation Atlas and annotated Diagram Lab share the same conventions.\nEnter the LQG project\n\n\nThe Standard Model, unfolded\nFollow the Standard Model Lagrangian in both directions: build its compact structure from gauge symmetry and field content, or explore its sectors down to explicit generations, internal components, and gauge-field monomials. The project combines a guided chapter with a free Equation Atlas.\nEnter the Standard Model project"
+  },
+  {
+    "objectID": "outreach/projects.html#science-communication-outreach",
+    "href": "outreach/projects.html#science-communication-outreach",
+    "title": "Outreach & Creative Projects",
+    "section": "Science Communication & Outreach",
+    "text": "Science Communication & Outreach\n\nThe bel.sciences Project (STEMentiel!)\nAs part of the broader STEMentiel! initiative, I contribute to bel.sciences, a digital outreach project focused on sharing diverse pathways into exact sciences. I produce video content and conduct short interviews across TikTok, Instagram, and YouTube, highlighting students and researchers in mathematics and physics from a wide range of backgrounds.\n\nExplore our content via our Linktree bel.sciences."
+  },
+  {
+    "objectID": "outreach/projects.html#graphic-design-collaboration",
+    "href": "outreach/projects.html#graphic-design-collaboration",
+    "title": "Outreach & Creative Projects",
+    "section": "Graphic Design & Collaboration",
+    "text": "Graphic Design & Collaboration\n\nIdentity & Logo Design\nI occasionally collaborate on visual identity and graphic materials for scientific networks and working groups. This includes designing the official logo for the WOST (WithOut SpaceTime) network."
+  },
+  {
+    "objectID": "outreach/loop-quantum-gravity.html",
+    "href": "outreach/loop-quantum-gravity.html",
+    "title": "Loop quantum gravity, unfolded",
+    "section": "",
+    "text": "\\(x\\)\n\n\nOverviewBuild LQGEquation AtlasDiagram Lab\nQuantum geometry · states · amplitudesLoop quantum gravity,unfolded.Start with three compact equations. Follow their ingredients through the classical action, quantum geometry and the Lorentzian vertex, down to magnetic indices, boosters and factorials.\n\n01 · Guided constructionBuild LQGMove from the action to boundary states and dynamics, with the assumptions at each step.Begin the chapter →02 · Free explorationEquation Atlas127 numbered equations. Choose a route, expand locally, inspect a source and copy the LaTeX.Explore the mathematics →03 · Annotated wiringDiagram LabInspect ordered ports, spins, intertwiners and causal signs on the four-simplex boundary.Work with the diagrams →\nOne boundary, two routesCanonical quantization describes states and geometric operators on a graph. The covariant route assigns amplitudes to transitions between those boundary states. Their shared boundary language is explicit here; identifying their full quantum dynamics requires further input.Shared boundary dataCanonical geometryCovariant amplitudes\nLoading the equation catalogue…\nThe interactive controls need JavaScript. Download all numbered equations as LaTeX."
   },
   {
     "objectID": "outreach/standard-model.html",
@@ -679,32 +714,25 @@
     "text": "Second Year (MA2)\n\n\nAdvanced Quantum Field TheoryPHYS-F-417\n\n\nPhysics Beyond the Standard ModelPHYS-F-469\n\n\nThéorie des cordesPHYS-F-483\n\n\nGravitational WavesPHYS-F-484\n\n\nMémoire de MasterMEMO-F-534\n\n\nStage non-académiqueSTAG-F-017"
   },
   {
-    "objectID": "outreach/projects.html",
-    "href": "outreach/projects.html",
-    "title": "Outreach & Creative Projects",
+    "objectID": "outreach/standard-model-lagrangian.html",
+    "href": "outreach/standard-model-lagrangian.html",
+    "title": "Equation Atlas – The Standard Model, unfolded",
     "section": "",
-    "text": "Beyond academic research, I participate in science communication, digital content creation, and collaborative design projects aimed at opening up academic and scientific spaces."
+    "text": "\\(\\require{html}\\class{sm-math-probe}{x}\\)\n\n\n  \n  \n\n  \n    Overview\n    Build the equation\n    Equation Atlas\n  \n\n  \n    Free exploration · Standard Model\n    Equation Atlas.\n    \n      Select a field basis and its sectors, then move from compact notation to\n      explicit generations, internal components, and gauge-field monomials.\n      At the deepest level you can focus on one sector without changing the\n      complete selection used by the LaTeX export.\n    \n  \n\n  \n    \n      \n        Complete expression\n        Loading catalogue…\n      \n      \n    \n\n    \n      \n      \n        \n        Preparing the fields\n      \n    \n\n    \n\n    \n      Connections\n      Every additive term in the current selection is displayed.\n    \n  \n\n  \n    \n      Field basis\n      \n        \n          Symmetric\n          before EWSB\n        \n        \n          Physical\n          after EWSB\n        \n      \n    \n\n    \n      Active sectors\n      \n    \n\n    \n      \n        Development\n        Connections\n      \n      \n      \n        CanonicalMultipletsConnectionsComponentsUnfolded\n      \n      Covariant derivatives and field strengths are exposed.\n    \n\n    \n      Display focus\n      \n        Complete selection\n      \n      Show every selected sector in the equation.\n    \n\n    \n      Reading modes\n      \n        \n          \n          \n            Smart colour\n            Field families and physical flavours\n          \n        \n        \n          \n          \n            Explain symbols\n            Contextual notation guide\n          \n        \n      \n    \n\n    \n      \n        ↖ Guided build\n      \n      \n        ⧉ Copy LaTeX\n      \n      \n        ↓ Download .tex\n      \n    \n  \n\n  \n    \n      \n        Notation guide\n        Symbols in this selection\n      \n      Hover or focus a card to locate the terms that use that symbol.\n    \n    \n  \n\n  \n    \n      Complete LaTeX source\n      The copied and downloaded source stays uncoloured and portable.\n    \n    \n      \n    \n  \n\n  \n    Scope. This is the classical, gauge-invariant minimal Standard Model.\n    Gauge-fixing, ghosts, the QCD theta term, right-handed neutrinos, and\n    higher-dimensional operators are not included.\n  \n\n  This interactive page requires JavaScript."
   },
   {
-    "objectID": "outreach/projects.html#interactive-physics",
-    "href": "outreach/projects.html#interactive-physics",
-    "title": "Outreach & Creative Projects",
-    "section": "Interactive Physics",
-    "text": "Interactive Physics\n\nThe Standard Model, unfolded\nFollow the Standard Model Lagrangian in both directions: build its compact structure from gauge symmetry and field content, or explore its sectors down to explicit generations, internal components, and gauge-field monomials. The project combines a guided chapter with a free Equation Atlas.\nEnter the Standard Model project"
+    "objectID": "outreach/lqg-diagrams.html",
+    "href": "outreach/lqg-diagrams.html",
+    "title": "Diagram Lab · Loop quantum gravity",
+    "section": "",
+    "text": "\\(x\\)\n\n\nOverviewBuild LQGEquation AtlasDiagram Lab\nLoop quantum gravity · exact topologyDiagram Lab.The five tetrahedra and ten wires of a four-simplex boundary. The port ordering follows the supplied TikZ macro; crossings carry no extra vertices.\nAnnotationsLabels + arrowsLabelsBare wiringRotate 0°Download SVGDownload TikZReset diagramInspect a wire or tetrahedronCausal assignments Show induced causal signsOpen the sign equations →All ten spin labels and wire types\nGluing a shared tetrahedronThe two boundary state spaces are dualized. Matching four external spins is necessary; the shared intertwiner is summed in an orthonormal basis. Reversing a port pairing can require a recoupling matrix.Port map1→1, 2→2, 3→3, 4→41→4, 2→3, 3→2, 4→1\nLoading the equation catalogue…\nThe interactive controls need JavaScript. Download all numbered equations as LaTeX."
   },
   {
-    "objectID": "outreach/projects.html#science-communication-outreach",
-    "href": "outreach/projects.html#science-communication-outreach",
-    "title": "Outreach & Creative Projects",
-    "section": "Science Communication & Outreach",
-    "text": "Science Communication & Outreach\n\nThe bel.sciences Project (STEMentiel!)\nAs part of the broader STEMentiel! initiative, I contribute to bel.sciences, a digital outreach project focused on sharing diverse pathways into exact sciences. I produce video content and conduct short interviews across TikTok, Instagram, and YouTube, highlighting students and researchers in mathematics and physics from a wide range of backgrounds.\n\nExplore our content via our Linktree bel.sciences."
-  },
-  {
-    "objectID": "outreach/projects.html#graphic-design-collaboration",
-    "href": "outreach/projects.html#graphic-design-collaboration",
-    "title": "Outreach & Creative Projects",
-    "section": "Graphic Design & Collaboration",
-    "text": "Graphic Design & Collaboration\n\nIdentity & Logo Design\nI occasionally collaborate on visual identity and graphic materials for scientific networks and working groups. This includes designing the official logo for the WOST (WithOut SpaceTime) network."
+    "objectID": "outreach/build-lqg.html",
+    "href": "outreach/build-lqg.html",
+    "title": "Build loop quantum gravity",
+    "section": "",
+    "text": "\\(x\\)\n\n\nOverviewBuild LQGEquation AtlasDiagram Lab\nLoop quantum gravity · guided constructionFrom an action to an amplitude.Eight steps through the shared structure. Choose the classical variables first, then see where time gauge, quantization and model choices enter.\nClassical variablesTetrad & connectionMetricActionPalatini–HolstPalatiniClassical ΛΛ = 0Keep Λ explicitBoundary and topological terms Smooth non-null metric boundary Show independent topological densitiesThese choices expose the corresponding classical terms. They do not define a deformed spin-foam model.\n← PreviousNext →Explore this step in the atlas\nLoading the equation catalogue…\nThe interactive controls need JavaScript. Download all numbered equations as LaTeX."
   },
   {
     "objectID": "posts/links.html",
