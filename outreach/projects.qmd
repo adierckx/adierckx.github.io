@@ -7,6 +7,14 @@ Beyond academic research, I participate in science communication, digital conten
 
 ## Interactive Physics
 
+### Loop quantum gravity, unfolded
+
+Explore quantum geometry and spin-foam amplitudes from three compact equations
+down to intertwiners, Lorentz matrices and booster functions. A guided chapter,
+sourced Equation Atlas and annotated Diagram Lab share the same conventions.
+
+[**Enter the LQG project**](loop-quantum-gravity.qmd){.btn-surface .c-teal .btn-compact}
+
 ### The Standard Model, unfolded
 
 Follow the Standard Model Lagrangian in both directions: build its compact
