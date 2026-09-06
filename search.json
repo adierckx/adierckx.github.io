@@ -732,7 +732,7 @@
     "href": "outreach/build-lqg.html",
     "title": "Build loop quantum gravity",
     "section": "",
-    "text": "\\(x\\)\n\n\nOverviewBuild LQGEquation AtlasDiagram Lab\nLoop quantum gravity · guided constructionFrom an action to an amplitude.Eight steps through the shared structure. Choose the classical variables first, then see where time gauge, quantization and model choices enter.\nClassical variablesTetrad & connectionMetricActionPalatini–HolstPalatiniClassical ΛΛ = 0Keep Λ explicitBoundary and topological terms Smooth non-null metric boundary Show independent topological densitiesThese choices expose the corresponding classical terms. They do not define a deformed spin-foam model.\n← PreviousNext →Explore this step in the atlas\nLoading the equation catalogue…\nThe interactive controls need JavaScript. Download all numbered equations as LaTeX."
+    "text": "\\(x\\)\n\n\nOverviewBuild LQGEquation AtlasDiagram Lab\nLoop quantum gravity · guided constructionFrom an action to an amplitude.A progressive construction of the classical variables, canonical algebra, Hilbert space and transition amplitude. Each step keeps one central equation visible; definitions and explicit expansions are opened on demand.\nVariablesMetricTetradActionEinstein–Hilbert (second order)ΛΛ = 0Λ ≠ 0Additional terms Show a smooth non-null metric boundary term Show independent topological densities\n← PreviousNext →Explore this step in the atlas\nLoading the equation catalogue…\nThe interactive controls need JavaScript. Download all numbered equations as LaTeX."
   },
   {
     "objectID": "posts/links.html",
