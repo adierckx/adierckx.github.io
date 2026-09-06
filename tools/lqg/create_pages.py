@@ -2,7 +2,7 @@
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 PAGES=[('loop-quantum-gravity','Overview','Loop quantum gravity, unfolded','overview'),('build-lqg','Build LQG','Build loop quantum gravity','guide'),('lqg-atlas','Equation Atlas','Equation Atlas · Loop quantum gravity','atlas'),('lqg-diagrams','Diagram Lab','Diagram Lab · Loop quantum gravity','diagram')]
-CONTROLS='''<aside class="lqg-controls" aria-label="Atlas controls">
+CONTROLS='''<div class="lqg-controls" role="complementary" aria-label="Atlas controls">
 <label class="wide">Find an equation<input id="lqg-search" type="search" placeholder="Toller, volume, D9…" autocomplete="off"></label>
 <label>Route<select id="lqg-route"><option value="both">Canonical + covariant</option><option value="canonical">Canonical</option><option value="covariant">Covariant</option></select></label>
 <label>Representation<select id="lqg-representation"><option value="spin">Spins &amp; intertwiners</option><option value="coherent">Coherent states &amp; spinors</option></select></label>
@@ -12,7 +12,7 @@ CONTROLS='''<aside class="lqg-controls" aria-label="Atlas controls">
 <label><input id="lqg-colour" type="checkbox"> Semantic colour</label><label><input id="lqg-show-diagram" type="checkbox"> Wiring diagram</label>
 <div class="wide lqg-buttons"><button id="lqg-reset">Reset view</button><button id="lqg-export">Export visible .tex</button></div>
 <details class="wide"><summary>Notation &amp; common convention</summary><dl class="lqg-notation"><div><dt>j, m</dt><dd>SU(2) spin and magnetic index.</dd></div><div><dt>i, k</dt><dd>Intertwiner label and virtual spin; k in (ρ,k) is a Lorentz label.</dd></div><div><dt>ℓ, r</dt><dd>Auxiliary SU(2) spin and boost rapidity.</dd></div><div><dt>ℓ₀² = 8πγGℏ</dt><dd>Flux and area unit. γ &gt; 0.</dd></div><div><dt>σ, κ</dt><dd>Node and induced wedge signs; distinct from wire arrows.</dd></div></dl><p>Normalized intertwiners; source-left holonomies; Speziale phases. Toller matrices use the explicit Rühl-to-Speziale conversion.</p><button data-open="C1">Open conventions</button></details>
-</aside>'''
+</div>'''
 CONTENT={
 'overview':'''<header><p class="eyebrow">Quantum geometry · states · amplitudes</p><h1>Loop quantum gravity,<br>unfolded.</h1><p class="lede">Start with three compact equations. Follow their ingredients through the classical action, quantum geometry and the Lorentzian vertex, down to magnetic indices, boosters and factorials.</p></header>
 <div id="lqg-overview-equations" class="lqg-start-equations"></div>
