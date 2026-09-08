@@ -192,7 +192,7 @@ function diagram(){
 async function start(){
   try{
     const response=await fetch(root.dataset.catalogue);if(!response.ok)throw Error(`Catalogue HTTP ${response.status}`);data=await response.json();validateCatalogue(data);byId=new Map(data.equations.map(e=>[e.id,e]));
-    switch(root.dataset.mode){case 'atlas':atlas();break;case 'guide':guide();break;case 'diagram':diagram();break;default:for(const id of ['T1','T2','T3'])$('lqg-overview-equations').append(card(id,{compact:true}));math($('lqg-overview-equations'));}
+    switch(root.dataset.mode){case 'atlas':atlas();break;case 'guide':guide();break;case 'diagram':diagram();break;}
     $('lqg-load-status').textContent='';
   }catch(error){console.error('LQG atlas:',error);$('lqg-load-status').innerHTML='The catalogue could not load. <button id="lqg-retry">Retry</button> or <a href="../assets/lqg/equations.tex">download the LaTeX catalogue</a>.';$('lqg-retry').addEventListener('click',()=>location.reload());}
 }

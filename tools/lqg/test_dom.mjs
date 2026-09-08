@@ -70,5 +70,4 @@ $('lqg-save-tikz').click();assert.equal(downloads.at(-1).name,'four-simplex.tex'
 if(process.env.LQG_TIKZ_CHECK_OUTPUT){const text=await (await nativeFetch(downloads.at(-1).href)).text();writeFileSync(process.env.LQG_TIKZ_CHECK_OUTPUT,text);}
 $('lqg-diagram-reset').click();assert.equal($('lqg-causal-signs').checked,false);assert.equal($('lqg-rotation').value,'0');
 console.log('Diagram Lab: ordered ports, causal controls, gluing, reset and SVG/TikZ exports pass.');
-$=await load('loop-quantum-gravity');assert.equal($('lqg-overview-equations').querySelectorAll('[data-eq]').length,3);console.log('Overview: three starting equations and atlas links pass.');
 dom.window.close();
