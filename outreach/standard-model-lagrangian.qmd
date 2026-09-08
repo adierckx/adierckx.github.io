@@ -38,8 +38,6 @@ $\require{html}\class{sm-math-probe}{x}$
     <p class="sm-app-lede">
       Select a field basis and its sectors, then move from compact notation to
       explicit generations, internal components, and gauge-field monomials.
-      At the deepest level you can focus on one sector without changing the
-      complete selection used by the LaTeX export.
     </p>
   </header>
 
@@ -100,19 +98,11 @@ $\require{html}\class{sm-math-probe}{x}$
       <p id="sm-level-description">Covariant derivatives and field strengths are exposed.</p>
     </div>
 
-    <div class="sm-control-block sm-focus-control">
-      <label class="sm-control-title" for="sm-focus-sector">Display focus</label>
-      <select id="sm-focus-sector">
-        <option value="all">Complete selection</option>
-      </select>
-      <p id="sm-focus-description">Show every selected sector in the equation.</p>
-    </div>
-
     <fieldset class="sm-control-block sm-reading-control">
       <legend class="sm-control-title">Reading modes</legend>
       <div class="sm-mode-list">
         <label class="sm-mode-switch">
-          <input id="sm-colour-mode" type="checkbox">
+          <input id="sm-colour-mode" type="checkbox" checked>
           <span>
             <strong>Smart colour</strong>
             <small>Field families and physical flavours</small>
@@ -164,12 +154,6 @@ $\require{html}\class{sm-math-probe}{x}$
       <pre><code id="sm-raw-latex"></code></pre>
     </div>
   </details>
-
-  <aside class="sm-scope-note">
-    <strong>Scope.</strong> This is the classical, gauge-invariant minimal Standard Model.
-    Gauge-fixing, ghosts, the QCD theta term, right-handed neutrinos, and
-    higher-dimensional operators are not included.
-  </aside>
 
   <noscript>This interactive page requires JavaScript.</noscript>
 </div>
