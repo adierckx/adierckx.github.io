@@ -17,8 +17,6 @@
     levelDescription: root.querySelector("#sm-level-description"),
     stageHint: root.querySelector("#sm-stage-hint"),
     sectorList: root.querySelector("#sm-sector-list"),
-    focusSector: root.querySelector("#sm-focus-sector"),
-    focusDescription: root.querySelector("#sm-focus-description"),
     colourMode: root.querySelector("#sm-colour-mode"),
     explainMode: root.querySelector("#sm-explain-mode"),
     colourKey: root.querySelector("#sm-colour-key"),
@@ -63,9 +61,6 @@
     terms: [],
     displayTermIds: [],
     displayTerms: [],
-    focusSector: "all",
-    focusExplicit: false,
-    focusAutomatic: false,
     colour: false,
     explain: false,
     persistentSymbol: null,
@@ -452,80 +447,21 @@
       colour: state.colour ? "1" : "0",
       explain: state.explain ? "1" : "0",
     });
-    if (state.focusSector !== "all" || state.focusExplicit) params.set("focus", state.focusSector);
     const url = new URL(window.location.href);
     url.search = params.toString();
     window.history.replaceState(null, "", url);
   }
 
-  function selectedSectorNames() {
-    return phaseMeta().sectors.filter((sector) => state.selectedSectors.has(sector));
-  }
-
-  function sectorTermCount(sector) {
-    return state.terms.reduce((count, term) => count + (term.sector === sector ? 1 : 0), 0);
-  }
-
-  function chooseFocus() {
-    const selected = selectedSectorNames();
-    state.focusAutomatic = false;
-
-    if (!state.focusExplicit) state.focusSector = "all";
-    if (state.focusSector !== "all" && !selected.includes(state.focusSector)) {
-      state.focusSector = "all";
-      state.focusExplicit = false;
-    }
-
-    if (!state.focusExplicit && state.level === 4 && state.terms.length > DENSE_TERM_COUNT && selected.length > 1) {
-      state.focusSector = [...selected].sort((left, right) => sectorTermCount(left) - sectorTermCount(right))[0];
-      state.focusAutomatic = true;
-    }
-  }
-
-  function updateFocusControl() {
-    elements.focusSector.replaceChildren();
-    const all = document.createElement("option");
-    all.value = "all";
-    all.textContent = `Complete selection · ${state.terms.length.toLocaleString()}`;
-    elements.focusSector.append(all);
-
-    selectedSectorNames().forEach((sector) => {
-      const option = document.createElement("option");
-      option.value = sector;
-      option.textContent = `${phaseMeta().labels[sector]} · ${sectorTermCount(sector).toLocaleString()}`;
-      elements.focusSector.append(option);
-    });
-    elements.focusSector.value = state.focusSector;
-    elements.focusSector.disabled = state.terms.length === 0;
-  }
-
   function updateDisplayedSelection() {
-    const pairs = state.terms.map((term, index) => ({ term, id: state.termIds[index] }));
-    const visible = state.focusSector === "all"
-      ? pairs
-      : pairs.filter(({ term }) => term.sector === state.focusSector);
-    state.displayTerms = visible.map(({ term }) => term);
-    state.displayTermIds = visible.map(({ id }) => id);
+    state.displayTerms = state.terms;
+    state.displayTermIds = state.termIds;
 
-    const visibleCount = state.displayTerms.length;
     const totalCount = state.terms.length;
-    elements.termCount.textContent = state.focusSector === "all"
-      ? `${totalCount.toLocaleString()} additive term${totalCount === 1 ? "" : "s"}`
-      : `${visibleCount.toLocaleString()} shown · ${totalCount.toLocaleString()} selected`;
-    root.classList.toggle("is-dense-equation", visibleCount > DENSE_TERM_COUNT);
+    elements.termCount.textContent = `${totalCount.toLocaleString()} additive term${totalCount === 1 ? "" : "s"}`;
+    root.classList.toggle("is-dense-equation", totalCount > DENSE_TERM_COUNT);
     elements.shell.scrollTop = 0;
     elements.shell.scrollLeft = 0;
-
-    if (state.focusSector === "all") {
-      elements.focusDescription.textContent = "Show every selected sector in the equation and in the export.";
-      elements.stageHint.textContent = "Every additive term in the current selection is displayed.";
-    } else {
-      const label = phaseMeta().labels[state.focusSector] || state.focusSector;
-      elements.focusDescription.textContent = state.focusAutomatic
-        ? `Focused automatically on ${label} to keep the deepest expansion readable.`
-        : `Only ${label} is shown here; the complete selection is preserved.`;
-      elements.stageHint.textContent = `Focused on ${label}. Copy and export still include every selected sector.`;
-    }
+    elements.stageHint.textContent = "Every additive term in the current selection is displayed.";
 
     updateUrlState();
     renderCompleteEquation();
@@ -537,8 +473,6 @@
     state.terms = ids.map((id) => state.catalogue.terms[id]).filter(Boolean);
     state.rawDirty = true;
     if (elements.sourcePanel.open) updateRawSource();
-    chooseFocus();
-    updateFocusControl();
     updateDisplayedSelection();
   }
 
@@ -696,13 +630,6 @@
       state.selectionTimer = 0;
       updateSelection();
     });
-    elements.focusSector.addEventListener("change", () => {
-      state.focusSector = elements.focusSector.value;
-      state.focusExplicit = true;
-      state.focusAutomatic = false;
-      updateFocusControl();
-      updateDisplayedSelection();
-    });
     elements.colourMode.addEventListener("change", () => {
       state.colour = elements.colourMode.checked;
       updateModeClasses();
@@ -737,12 +664,8 @@
       );
     }
 
-    state.colour = params.get("colour") === "1";
+    state.colour = params.has("colour") ? params.get("colour") === "1" : true;
     state.explain = params.get("explain") === "1";
-    if (params.has("focus")) {
-      state.focusSector = params.get("focus") || "all";
-      state.focusExplicit = true;
-    }
 
     elements.development.value = String(state.level);
     elements.colourMode.checked = state.colour;

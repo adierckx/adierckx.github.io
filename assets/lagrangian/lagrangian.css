@@ -100,8 +100,7 @@
 .sm-lagrangian-app .sm-formula-stage,
 .sm-lagrangian-app .sm-controls,
 .sm-lagrangian-app .sm-explainer,
-.sm-lagrangian-app .sm-source-panel,
-.sm-lagrangian-app .sm-scope-note {
+.sm-lagrangian-app .sm-source-panel {
   width: min(1480px, 100%);
   margin-right: auto;
   margin-left: auto;
@@ -385,9 +384,8 @@
 
 .sm-lagrangian-app .sm-phase-control { grid-column: span 4; }
 .sm-lagrangian-app .sm-sector-control { grid-column: span 8; }
-.sm-lagrangian-app .sm-development-control { grid-column: span 6; }
-.sm-lagrangian-app .sm-focus-control { grid-column: span 3; }
-.sm-lagrangian-app .sm-reading-control { grid-column: span 3; }
+.sm-lagrangian-app .sm-development-control { grid-column: span 8; }
+.sm-lagrangian-app .sm-reading-control { grid-column: span 4; }
 .sm-lagrangian-app .sm-actions { grid-column: span 12; }
 
 .sm-lagrangian-app .sm-control-title {
@@ -523,34 +521,11 @@
   font-size: 0.58rem;
 }
 
-.sm-lagrangian-app .sm-development-control p,
-.sm-lagrangian-app .sm-focus-control p {
+.sm-lagrangian-app .sm-development-control p {
   min-height: 1.35em;
   margin: 0.6rem 0 0;
   color: var(--sm-muted);
   font-size: 0.74rem;
-}
-
-.sm-lagrangian-app .sm-focus-control select {
-  width: 100%;
-  min-height: 38px;
-  padding: 0.45rem 2rem 0.45rem 0.65rem;
-  color: var(--sm-text);
-  background: rgba(255, 255, 255, 0.035);
-  border: 1px solid var(--sm-line);
-  border-radius: 10px;
-  font: inherit;
-  font-size: 0.73rem;
-}
-
-.sm-lagrangian-app .sm-focus-control select:focus-visible {
-  outline: 2px solid var(--sm-cyan);
-  outline-offset: 3px;
-}
-
-.sm-lagrangian-app .sm-focus-control select option {
-  color: var(--sm-text);
-  background: #111d28;
 }
 
 .sm-lagrangian-app .sm-mode-list {
@@ -859,17 +834,6 @@
   border: 0;
 }
 
-.sm-lagrangian-app .sm-scope-note {
-  margin-top: 1.35rem;
-  color: var(--sm-muted);
-  font-size: 0.78rem;
-  text-align: center;
-}
-
-.sm-lagrangian-app .sm-scope-note strong {
-  color: var(--sm-teal);
-}
-
 /* MathJax semantic classes. */
 .sm-lagrangian-app.is-colour-mode .sm-symbol--gluon { color: var(--sm-gluon) !important; }
 .sm-lagrangian-app.is-colour-mode .sm-symbol--weak-boson { color: var(--sm-weak) !important; }
@@ -910,7 +874,6 @@
   .sm-lagrangian-app .sm-phase-control,
   .sm-lagrangian-app .sm-sector-control,
   .sm-lagrangian-app .sm-development-control,
-  .sm-lagrangian-app .sm-focus-control,
   .sm-lagrangian-app .sm-reading-control,
   .sm-lagrangian-app .sm-actions {
     grid-column: span 12;
