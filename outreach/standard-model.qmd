@@ -1,6 +1,6 @@
 ---
 title: "The Standard Model, unfolded"
-description: "An interactive journey from the symmetries of the Standard Model to its particles and interactions."
+description: "Two ways to read the Standard Model Lagrangian: a guided build, and an explorer for the full equation."
 page-layout: full
 toc: false
 format:
@@ -20,31 +20,29 @@ $x$
   <nav class="sm-project-nav" aria-label="Standard Model project">
     <a href="standard-model.html" aria-current="page">Overview</a>
     <a href="build-standard-model.html">Build the equation</a>
-    <a href="standard-model-lagrangian.html">Equation Atlas</a>
+    <a href="standard-model-lagrangian.html">Equation explorer</a>
   </nav>
 
   <header class="sm-project-hero">
-    <p class="sm-project-eyebrow">Interactive field theory</p>
+    <p class="sm-project-eyebrow">Interactive particle physics</p>
     <h1>The Standard Model, <span>unfolded.</span></h1>
     <p class="sm-project-lede">
-      Follow the equation in both directions: backwards to the symmetries that
-      constrain it, and forwards to the particles and interactions it describes.
+      Two ways to read the Standard Model Lagrangian: build it up from the gauge
+      symmetry, or open it up term by term.
     </p>
 
     <div class="sm-project-signature" aria-label="The main structural pieces of the minimal Standard Model Lagrangian">
-      <span class="sm-signature-label">One equation</span>
       <span class="sm-signature-equation">\(\mathcal L_{\mathrm{SM}}=\mathcal L_{\mathrm{gauge}}+\mathcal L_{\mathrm{fermions}}+\mathcal L_{\mathrm{Higgs}}+\mathcal L_{\mathrm{Yukawa}}\)</span>
-      <span class="sm-signature-label">many consequences</span>
     </div>
   </header>
 
   <section class="sm-project-section" aria-labelledby="sm-project-start">
     <div class="sm-project-section-heading">
       <div>
-        <p class="sm-project-kicker">Two routes</p>
-        <h2 id="sm-project-start">Choose how you want to enter</h2>
+        <p class="sm-project-kicker">Start here</p>
+        <h2 id="sm-project-start">Two ways in</h2>
       </div>
-      <p>The two views use the same mathematical catalogue, so every term keeps the same notation, sector, and meaning.</p>
+      <p>Both routes read from the same catalogue of terms, so the notation and the definitions match throughout.</p>
     </div>
 
     <div class="sm-project-entry-grid">
@@ -55,15 +53,15 @@ $x$
           <h3>Build the Lagrangian</h3>
           <p>Start from the gauge symmetry and add gauge fields, matter, the Higgs sector, and Yukawa couplings one layer at a time.</p>
         </div>
-        <span class="sm-card-action">Begin the guided chapter <b aria-hidden="true">→</b></span>
+        <span class="sm-card-action">Build the Lagrangian <b aria-hidden="true">→</b></span>
       </a>
 
       <a class="sm-entry-card sm-entry-atlas" href="standard-model-lagrangian.html">
         <span class="sm-card-index">02</span>
         <div>
           <p class="sm-card-label">Free exploration</p>
-          <h3>Open the Equation Atlas</h3>
-          <p>Choose a field basis, isolate sectors, compare five levels of development, explain symbols, and export clean LaTeX.</p>
+          <h3>Equation explorer</h3>
+          <p>Pick the sectors you want, expand them from compact notation down to individual terms, look up any symbol, and copy the LaTeX.</p>
         </div>
         <span class="sm-card-action">Explore the equation <b aria-hidden="true">→</b></span>
       </a>
@@ -71,8 +69,8 @@ $x$
   </section>
 
   <aside class="sm-project-principle">
-    <strong>The organising rule</strong>
-    <p>Every visual explanation points to an exact term, and both routes use the same notation and definitions.</p>
+    <strong>Scope</strong>
+    <p>The classical, gauge-invariant minimal Standard Model. Gauge fixing, ghosts, the QCD theta term, right-handed neutrinos and higher-dimensional operators are left out.</p>
   </aside>
 </div>
 ```

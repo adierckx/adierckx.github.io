@@ -1,5 +1,5 @@
 ---
-title: "Equation Atlas – The Standard Model, unfolded"
+title: "Equation explorer – The Standard Model, unfolded"
 description: "Explore the Standard Model Lagrangian sector by sector, with focused deep expansions, semantic colour, symbol explanations, and portable LaTeX."
 page-layout: full
 toc: false
@@ -29,12 +29,12 @@ $\require{html}\class{sm-math-probe}{x}$
   <nav class="sm-project-nav" aria-label="Standard Model project">
     <a href="standard-model.html">Overview</a>
     <a href="build-standard-model.html">Build the equation</a>
-    <a href="standard-model-lagrangian.html" aria-current="page">Equation Atlas</a>
+    <a href="standard-model-lagrangian.html" aria-current="page">Equation explorer</a>
   </nav>
 
   <header class="sm-app-intro">
     <p class="sm-eyebrow">Free exploration · Standard Model</p>
-    <h1>Equation <span>Atlas.</span></h1>
+    <h1>Equation <span>explorer.</span></h1>
     <p class="sm-app-lede">
       Select a field basis and its sectors, then move from compact notation to
       explicit generations, internal components, and gauge-field monomials.
