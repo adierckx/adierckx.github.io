@@ -17,10 +17,9 @@ sourced Equation Atlas and annotated Diagram Lab share the same conventions.
 
 ### The Standard Model, unfolded
 
-Follow the Standard Model Lagrangian in both directions: build its compact
-structure from gauge symmetry and field content, or explore its sectors down to
-explicit generations, internal components, and gauge-field monomials. The
-project combines a guided chapter with a free Equation Atlas.
+A reading tool for the Standard Model Lagrangian. One route builds the equation
+step by step from the gauge symmetry and the field content; the other lets you
+open any sector and expand it down to individual terms.
 
 [**Enter the Standard Model project**](standard-model.qmd){.btn-surface .c-teal .btn-compact}
 

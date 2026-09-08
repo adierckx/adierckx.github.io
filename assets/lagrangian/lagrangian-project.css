@@ -159,13 +159,13 @@
 }
 
 .sm-project-signature {
-  display: grid;
-  max-width: 1050px;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  display: flex;
+  width: fit-content;
+  max-width: min(1050px, 100%);
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
   margin: clamp(2.5rem, 6vw, 5rem) auto 0;
-  padding: 1.3rem 1.5rem;
+  padding: 1.15rem clamp(1.1rem, 3vw, 1.9rem);
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.07), transparent 38%),
     var(--sm-project-surface);
@@ -175,16 +175,9 @@
   backdrop-filter: blur(24px);
 }
 
-.sm-signature-label {
-  color: #748993;
-  font-family: "Fira Code", monospace;
-  font-size: 0.61rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .sm-signature-equation {
   min-width: 0;
+  max-width: 100%;
   overflow-x: auto;
   color: var(--sm-project-text);
   font-size: clamp(0.84rem, 1.55vw, 1.13rem);
@@ -446,14 +439,6 @@
 }
 
 @media (max-width: 980px) {
-  .sm-project-signature {
-    grid-template-columns: auto minmax(0, 1fr);
-  }
-
-  .sm-signature-label:last-child {
-    display: none;
-  }
-
   .sm-roadmap-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -479,7 +464,6 @@
     margin-left: 0;
   }
 
-  .sm-project-signature,
   .sm-project-section-heading,
   .sm-project-principle {
     grid-template-columns: 1fr;
