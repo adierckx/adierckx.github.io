@@ -9,9 +9,10 @@ Beyond academic research, I participate in science communication, digital conten
 
 ### Loop quantum gravity, unfolded
 
-Explore quantum geometry and spin-foam amplitudes from three compact equations
-down to intertwiners, Lorentz matrices and booster functions. A guided chapter,
-sourced Equation Atlas and annotated Diagram Lab share the same conventions.
+Follow loop quantum gravity in both directions: build the theory step by
+step, from its classical action to its vertex amplitude, or explore its
+equations and diagrams freely. A guided chapter, a sourced Equation Atlas
+and an annotated Diagram Lab share the same conventions throughout.
 
 [**Enter the LQG project**](loop-quantum-gravity.qmd){.btn-surface .c-teal .btn-compact}
 
