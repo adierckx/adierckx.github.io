@@ -8,7 +8,7 @@
 
 <meta name="description" content="Explore the Standard Model Lagrangian sector by sector, with focused deep expansions, semantic colour, symbol explanations, and portable LaTeX.">
 
-<title>Equation Atlas – The Standard Model, unfolded – Antoine Dierckx</title>
+<title>Equation explorer – The Standard Model, unfolded – Antoine Dierckx</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -218,7 +218,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Equation Atlas – The Standard Model, unfolded</h1>
+<h1 class="title">Equation explorer – The Standard Model, unfolded</h1>
 </div>
 
 <div>
@@ -240,28 +240,26 @@ window.Quarto = {
 </header>
 
 
-<div class="column-screen page-columns page-full">
+<div class="column-screen">
 <div class="sm-math-bootstrap" aria-hidden="true">
 <p><span class="math inline">\(\require{html}\class{sm-math-probe}{x}\)</span></p>
 </div>
-<div class="sm-project-page sm-lagrangian-app page-columns page-full" id="sm-lagrangian-app" data-catalogue="../assets/lagrangian/catalogue.json">
+<div class="sm-project-page sm-lagrangian-app" id="sm-lagrangian-app" data-catalogue="../assets/lagrangian/catalogue.json">
   <div class="sm-app-aura sm-app-aura-one" aria-hidden="true"></div>
   <div class="sm-app-aura sm-app-aura-two" aria-hidden="true"></div>
 
   <nav class="sm-project-nav" aria-label="Standard Model project">
     <a href="standard-model.html">Overview</a>
     <a href="build-standard-model.html">Build the equation</a>
-    <a href="standard-model-lagrangian.html" aria-current="page">Equation Atlas</a>
+    <a href="standard-model-lagrangian.html" aria-current="page">Equation explorer</a>
   </nav>
 
   <header class="sm-app-intro">
     <p class="sm-eyebrow">Free exploration · Standard Model</p>
-    <h1>Equation <span>Atlas.</span></h1>
+    <h1>Equation <span>explorer.</span></h1>
     <p class="sm-app-lede">
       Select a field basis and its sectors, then move from compact notation to
       explicit generations, internal components, and gauge-field monomials.
-      At the deepest level you can focus on one sector without changing the
-      complete selection used by the LaTeX export.
     </p>
   </header>
 
@@ -322,19 +320,11 @@ window.Quarto = {
       <p id="sm-level-description">Covariant derivatives and field strengths are exposed.</p>
     </div>
 
-    <div class="sm-control-block sm-focus-control">
-      <label class="sm-control-title" for="sm-focus-sector">Display focus</label>
-      <select id="sm-focus-sector">
-        <option value="all">Complete selection</option>
-      </select>
-      <p id="sm-focus-description">Show every selected sector in the equation.</p>
-    </div>
-
     <fieldset class="sm-control-block sm-reading-control">
       <legend class="sm-control-title">Reading modes</legend>
       <div class="sm-mode-list">
         <label class="sm-mode-switch">
-          <input id="sm-colour-mode" type="checkbox">
+          <input id="sm-colour-mode" type="checkbox" checked="">
           <span>
             <strong>Smart colour</strong>
             <small>Field families and physical flavours</small>
@@ -383,12 +373,6 @@ window.Quarto = {
       <pre><code id="sm-raw-latex"></code></pre>
     </div>
   </details>
-
-  <aside class="sm-scope-note">
-    <strong>Scope.</strong> This is the classical, gauge-invariant minimal Standard Model.
-    Gauge-fixing, ghosts, the QCD theta term, right-handed neutrinos, and
-    higher-dimensional operators are not included.
-  </aside>
 
   <noscript>This interactive page requires JavaScript.</noscript>
 </div>
