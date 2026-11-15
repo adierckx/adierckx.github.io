@@ -12,17 +12,13 @@
 }
 
 .sm-lagrangian-app {
-  --sm-bg: #0b121b;
-  --sm-glass: rgba(22, 32, 44, 0.62);
-  --sm-glass-strong: rgba(17, 26, 37, 0.88);
-  --sm-line: rgba(194, 241, 255, 0.16);
-  --sm-line-bright: rgba(194, 241, 255, 0.34);
-  --sm-text: #f3fbff;
-  --sm-muted: #9bb0bd;
-  --sm-teal: #3fe0d0;
-  --sm-cyan: #8ae9ff;
-  --sm-violet: #d3a3ff;
-  --sm-pink: #ff82c8;
+  --sm-glass: var(--sm-project-surface);
+  --sm-glass-strong: var(--sm-project-surface-strong);
+  --sm-line: var(--sm-project-line);
+  --sm-line-bright: var(--sm-project-line-bright);
+  --sm-text: var(--sm-project-text);
+  --sm-muted: var(--sm-project-muted);
+  --sm-accent: var(--sm-project-accent);
 
   /* Semantic field palette.  Fermion flavours deliberately stay in one
      magenta/coral family, with generation-dependent changes of hue/lightness. */
@@ -61,38 +57,12 @@
   padding: clamp(3rem, 7vw, 6rem) clamp(1rem, 4vw, 4rem) 5rem;
   overflow: hidden;
   color: var(--sm-text);
-  background:
-    radial-gradient(circle at 50% -15%, rgba(63, 224, 208, 0.12), transparent 40%),
-    linear-gradient(155deg, rgba(11, 18, 27, 0.3), rgba(11, 18, 27, 0.9));
 }
 
 .sm-lagrangian-app *,
 .sm-lagrangian-app *::before,
 .sm-lagrangian-app *::after {
   box-sizing: border-box;
-}
-
-.sm-lagrangian-app .sm-app-aura {
-  position: absolute;
-  z-index: -2;
-  width: min(50rem, 72vw);
-  aspect-ratio: 1;
-  border-radius: 44% 56% 63% 37% / 51% 37% 63% 49%;
-  filter: blur(70px);
-  opacity: 0.14;
-  pointer-events: none;
-}
-
-.sm-lagrangian-app .sm-app-aura-one {
-  top: 9rem;
-  left: -22rem;
-  background: var(--sm-teal);
-}
-
-.sm-lagrangian-app .sm-app-aura-two {
-  top: 34rem;
-  right: -19rem;
-  background: linear-gradient(135deg, var(--sm-violet), var(--sm-pink));
 }
 
 .sm-lagrangian-app .sm-app-intro,
@@ -117,7 +87,7 @@
 
 .sm-lagrangian-app .sm-eyebrow {
   margin: 0 0 0.65rem;
-  color: var(--sm-teal);
+  color: var(--sm-accent);
   font-family: "Fira Code", monospace;
   font-size: 0.76rem;
   font-weight: 500;
@@ -135,11 +105,7 @@
 }
 
 .sm-lagrangian-app .sm-app-intro h1 span {
-  color: transparent;
-  background: linear-gradient(100deg, var(--sm-teal), var(--sm-cyan) 42%, var(--sm-violet) 78%, var(--sm-pink));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--sm-accent);
 }
 
 .sm-lagrangian-app .sm-app-lede {
@@ -214,8 +180,8 @@
   overflow-x: auto;
   overscroll-behavior: contain;
   background:
-    radial-gradient(circle at 50% 0, rgba(63, 224, 208, 0.035), transparent 34rem),
-    rgba(4, 10, 16, 0.16);
+    radial-gradient(circle at 50% 0, color-mix(in srgb, var(--sm-accent) 3.5%, transparent), transparent 34rem),
+    var(--sm-project-bg);
 }
 
 .sm-lagrangian-app .sm-formula-track {
@@ -289,8 +255,8 @@
 }
 
 .sm-lagrangian-app .sm-formula-term.is-symbol-match {
-  background: rgba(63, 224, 208, 0.07);
-  border-color: rgba(63, 224, 208, 0.34);
+  background: color-mix(in srgb, var(--sm-accent) 7%, transparent);
+  border-color: color-mix(in srgb, var(--sm-accent) 34%, transparent);
 }
 
 .sm-lagrangian-app .sm-loading {
@@ -303,7 +269,7 @@
   justify-content: center;
   gap: 0.45rem;
   color: var(--sm-muted);
-  background: rgba(11, 18, 27, 0.48);
+  background: var(--sm-project-surface-strong);
   transition: opacity 220ms ease, visibility 220ms ease;
 }
 
@@ -316,7 +282,7 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--sm-teal);
+  background: var(--sm-accent);
   animation: sm-loading-pulse 1.2s ease-in-out infinite;
 }
 
@@ -340,7 +306,7 @@
   gap: 0.48rem 0.9rem;
   padding: 0.8rem clamp(1rem, 2.5vw, 2rem);
   color: var(--sm-muted);
-  background: rgba(3, 8, 13, 0.2);
+  background: rgb(0 0 0 / 20%);
   border-top: 1px solid rgba(255, 255, 255, 0.045);
   font-size: 0.66rem;
 }
@@ -377,7 +343,7 @@
 .sm-lagrangian-app .sm-control-block {
   min-width: 0;
   padding: 1.25rem clamp(1rem, 2vw, 1.5rem);
-  background: rgba(8, 14, 21, 0.18);
+  background: rgb(0 0 0 / 18%);
   border: 0;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.045);
 }
@@ -444,10 +410,10 @@
 }
 
 .sm-lagrangian-app .sm-segmented button[aria-pressed="true"] {
-  color: #061716;
-  background: linear-gradient(135deg, var(--sm-teal), var(--sm-cyan));
+  color: var(--sm-project-bg);
+  background: var(--sm-accent);
   border-color: transparent;
-  box-shadow: 0 8px 25px rgba(63, 224, 208, 0.16);
+  box-shadow: 0 8px 25px color-mix(in srgb, var(--sm-accent) 16%, transparent);
 }
 
 .sm-lagrangian-app .sm-segmented button[aria-pressed="true"] small {
@@ -490,9 +456,9 @@
 
 .sm-lagrangian-app .sm-sector-chip input:checked + span {
   color: var(--sm-text);
-  background: rgba(63, 224, 208, 0.1);
-  border-color: rgba(63, 224, 208, 0.52);
-  box-shadow: inset 0 0 16px rgba(63, 224, 208, 0.05);
+  background: color-mix(in srgb, var(--sm-accent) 10%, transparent);
+  border-color: color-mix(in srgb, var(--sm-accent) 52%, transparent);
+  box-shadow: inset 0 0 16px color-mix(in srgb, var(--sm-accent) 5%, transparent);
 }
 
 .sm-lagrangian-app .sm-sector-chip input:focus-visible + span,
@@ -500,7 +466,7 @@
 .sm-lagrangian-app button:focus-visible,
 .sm-lagrangian-app a:focus-visible,
 .sm-lagrangian-app summary:focus-visible {
-  outline: 2px solid var(--sm-cyan);
+  outline: 2px solid var(--sm-accent);
   outline-offset: 3px;
 }
 
@@ -508,7 +474,7 @@
   width: 100%;
   height: 18px;
   margin: 0;
-  accent-color: var(--sm-teal);
+  accent-color: var(--sm-accent);
   cursor: pointer;
 }
 
@@ -517,7 +483,7 @@
   justify-content: space-between;
   gap: 0.4rem;
   margin-top: 0.3rem;
-  color: #708592;
+  color: var(--sm-muted);
   font-size: 0.58rem;
 }
 
@@ -570,7 +536,7 @@
   left: 0.75rem;
   width: 1.22rem;
   height: 0.72rem;
-  background: #4d5d68;
+  background: var(--sm-line-bright);
   border-radius: 999px;
 }
 
@@ -579,7 +545,7 @@
   left: 0.88rem;
   width: 0.46rem;
   height: 0.46rem;
-  background: #d9e4e9;
+  background: var(--sm-text);
   border-radius: 50%;
 }
 
@@ -599,17 +565,17 @@
 }
 
 .sm-lagrangian-app .sm-mode-switch input:checked + span {
-  background: rgba(63, 224, 208, 0.085);
-  border-color: rgba(63, 224, 208, 0.46);
+  background: color-mix(in srgb, var(--sm-accent) 8.5%, transparent);
+  border-color: color-mix(in srgb, var(--sm-accent) 46%, transparent);
 }
 
 .sm-lagrangian-app .sm-mode-switch input:checked + span::before {
-  background: var(--sm-teal);
+  background: var(--sm-accent);
 }
 
 .sm-lagrangian-app .sm-mode-switch input:checked + span::after {
   left: 1.38rem;
-  background: #061716;
+  background: var(--sm-project-bg);
 }
 
 .sm-lagrangian-app .sm-actions {
@@ -640,19 +606,19 @@
 }
 
 .sm-lagrangian-app .sm-action-primary {
-  color: #081718;
-  background: linear-gradient(135deg, var(--sm-teal), var(--sm-cyan));
+  color: var(--sm-project-bg);
+  background: var(--sm-accent);
   border-color: transparent;
 }
 
 .sm-lagrangian-app .sm-action-primary:hover {
-  color: #081718;
+  color: var(--sm-project-bg);
 }
 
 .sm-lagrangian-app .sm-guide-button {
   margin-right: auto;
-  background: linear-gradient(135deg, rgba(211, 163, 255, 0.16), rgba(255, 130, 200, 0.1));
-  border-color: rgba(211, 163, 255, 0.38);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--sm-project-secondary) 16%, transparent), color-mix(in srgb, var(--sm-accent) 10%, transparent));
+  border-color: color-mix(in srgb, var(--sm-project-secondary) 38%, transparent);
 }
 
 .sm-lagrangian-app .sm-explainer {
@@ -676,7 +642,7 @@
 
 .sm-lagrangian-app .sm-explainer-header .sm-control-title {
   margin-bottom: 0.35rem;
-  color: var(--sm-teal);
+  color: var(--sm-accent);
 }
 
 .sm-lagrangian-app .sm-explainer-header h2 {
@@ -722,7 +688,7 @@
   padding: 0.8rem;
   color: var(--sm-text);
   text-align: left;
-  background: rgba(3, 9, 14, 0.28);
+  background: rgb(0 0 0 / 20%);
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 13px;
   font: inherit;
@@ -732,8 +698,8 @@
 
 .sm-lagrangian-app .sm-symbol-card:hover,
 .sm-lagrangian-app .sm-symbol-card.is-active {
-  background: rgba(63, 224, 208, 0.055);
-  border-color: rgba(63, 224, 208, 0.36);
+  background: color-mix(in srgb, var(--sm-accent) 5.5%, transparent);
+  border-color: color-mix(in srgb, var(--sm-accent) 36%, transparent);
   transform: translateY(-1px);
 }
 
@@ -795,7 +761,7 @@
 
 .sm-lagrangian-app .sm-source-panel summary::after {
   content: "+";
-  color: var(--sm-teal);
+  color: var(--sm-accent);
   font-family: "Fira Code", monospace;
   font-size: 1.2rem;
 }
@@ -819,8 +785,8 @@
 .sm-lagrangian-app .sm-source-inner pre {
   margin: 0;
   padding: 1.1rem;
-  color: #d7edf2;
-  background: rgba(4, 9, 14, 0.78);
+  color: var(--sm-text);
+  background: var(--sm-project-bg);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 12px;
   font-size: 0.71rem;

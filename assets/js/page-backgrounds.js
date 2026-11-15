@@ -1,42 +1,22 @@
 (() => {
-  const path = window.location.pathname.replace(/\/+$/, "") || "/";
+  const path = window.location.pathname.replace(/\/+$/, '').replace(/\.html$/, '');
 
-  // Pages with their own bespoke/full-screen backgrounds stay untouched.
-  if (
-    path === "/" ||
-    path.endsWith("/index.html") ||
-    path.includes("/outreach/standard-model") ||
-    path.includes("/outreach/build-standard-model") ||
-    path.includes("/outreach/foam")
-  ) {
-    return;
-  }
+  // The full-screen foam demo supplies its own background.
+  if (path.endsWith('/outreach/foam')) return;
 
-  let theme = null;
+  const sections = [
+    [/\/research\/papers$/, 'publications'],
+    [/\/research\/talks$/, 'talks'],
+    [/\/research\/early-research$/, 'early-research'],
+    [/\/research\//, 'research'],
+    [/\/notes\/(?:bachelor$|ba[123]\/)/, 'bachelor'],
+    [/\/notes\/(?:master$|ma[12]\/)/, 'master'],
+    [/\/notes\/math(?:\/|$)/, 'math'],
+    [/\/outreach\//, 'outreach'],
+    [/\/posts\/|\/blog$/, 'blog'],
+    [/\/about$/, 'about'],
+  ];
 
-  if (path.includes("/research/papers")) {
-    theme = "publications";
-  } else if (path.includes("/research/talks")) {
-    theme = "talks";
-  } else if (path.includes("/research/early-research")) {
-    theme = "early-research";
-  } else if (path.includes("/research/")) {
-    theme = "research";
-  } else if (path.includes("/notes/ba1/") || path.includes("/notes/ba2/") || path.includes("/notes/ba3/") || path.includes("/notes/bachelor")) {
-    theme = "bachelor";
-  } else if (path.includes("/notes/ma1/") || path.includes("/notes/ma2/") || path.includes("/notes/master")) {
-    theme = "master";
-  } else if (path.includes("/notes/math")) {
-    theme = "math";
-  } else if (path.includes("/outreach/")) {
-    theme = "outreach";
-  } else if (path.includes("/posts/") || path.endsWith("/blog") || path.endsWith("/blog.html")) {
-    theme = "blog";
-  } else if (path.endsWith("/about") || path.endsWith("/about.html")) {
-    theme = "about";
-  }
-
-  if (theme) {
-    document.documentElement.dataset.pageTheme = theme;
-  }
+  const section = sections.find(([route]) => route.test(path));
+  if (section) document.documentElement.dataset.pageTheme = section[1];
 })();

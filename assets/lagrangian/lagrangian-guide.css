@@ -54,7 +54,7 @@
   position: sticky;
   top: 86px;
   padding: 1rem;
-  background: rgba(7, 15, 22, 0.55);
+  background: var(--sm-project-surface);
   border: 1px solid var(--sm-project-line);
   border-radius: 20px;
   backdrop-filter: blur(20px);
@@ -63,7 +63,7 @@
 .sm-guide-rail-label,
 .sm-guide-step-kicker {
   margin: 0 0 0.75rem;
-  color: var(--sm-project-teal);
+  color: var(--sm-project-accent);
   font-family: "Fira Code", monospace;
   font-size: 0.66rem;
   letter-spacing: 0.1em;
@@ -93,7 +93,7 @@
 }
 
 .sm-guide-step-list button span {
-  color: #718791;
+  color: var(--sm-project-muted);
   font-family: "Fira Code", monospace;
   font-size: 0.62rem;
 }
@@ -106,12 +106,12 @@
 .sm-guide-step-list button:hover,
 .sm-guide-step-list button[aria-current="step"] {
   color: var(--sm-project-text);
-  background: rgba(63, 224, 208, 0.07);
-  border-color: rgba(63, 224, 208, 0.3);
+  background: color-mix(in srgb, var(--sm-project-accent) 7%, transparent);
+  border-color: color-mix(in srgb, var(--sm-project-accent) 30%, transparent);
 }
 
 .sm-guide-step-list button[aria-current="step"] span {
-  color: var(--sm-project-teal);
+  color: var(--sm-project-accent);
 }
 
 .sm-guide-workspace {
@@ -130,7 +130,7 @@
   display: block;
   width: 16.666%;
   height: 100%;
-  background: linear-gradient(90deg, var(--sm-project-teal), var(--sm-project-violet));
+  background: linear-gradient(90deg, var(--sm-project-accent), var(--sm-project-secondary));
   border-radius: inherit;
   transition: width 260ms ease;
 }
@@ -180,7 +180,7 @@
   padding: clamp(1.5rem, 4vw, 3.5rem);
   overflow: auto;
   color: var(--sm-project-text);
-  background: radial-gradient(circle at 50% 0, rgba(63, 224, 208, 0.035), transparent 32rem);
+  background: radial-gradient(circle at 50% 0, color-mix(in srgb, var(--sm-project-accent) 3.5%, transparent), transparent 32rem);
   font-size: clamp(0.88rem, 1.35vw, 1.12rem);
   line-height: 1.9;
 }
@@ -200,9 +200,9 @@
 }
 
 .sm-guide-term.is-new {
-  background: rgba(63, 224, 208, 0.07);
-  border-color: rgba(63, 224, 208, 0.3);
-  box-shadow: 0 0 24px rgba(63, 224, 208, 0.06);
+  background: color-mix(in srgb, var(--sm-project-accent) 7%, transparent);
+  border-color: color-mix(in srgb, var(--sm-project-accent) 30%, transparent);
+  box-shadow: 0 0 24px color-mix(in srgb, var(--sm-project-accent) 6%, transparent);
 }
 
 .sm-guide-term mjx-container {
@@ -224,8 +224,8 @@
   column-gap: 2rem;
   margin-top: 1rem;
   padding: clamp(1.4rem, 3vw, 2.2rem);
-  background: rgba(11, 22, 31, 0.58);
-  border: 1px solid rgba(194, 241, 255, 0.12);
+  background: var(--sm-project-surface-strong);
+  border: 1px solid color-mix(in srgb, var(--sm-project-accent) 12%, transparent);
   border-radius: 22px;
 }
 
@@ -273,7 +273,7 @@
 .sm-guide-facts li {
   position: relative;
   padding-left: 1.2rem;
-  color: #bed0d8;
+  color: var(--sm-project-muted);
   font-size: 0.78rem;
   line-height: 1.55;
 }
@@ -285,9 +285,9 @@
   width: 0.4rem;
   height: 0.4rem;
   content: "";
-  background: var(--sm-project-teal);
+  background: var(--sm-project-accent);
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(63, 224, 208, 0.55);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--sm-project-accent) 55%, transparent);
 }
 
 .sm-guide-actions {
@@ -315,8 +315,8 @@
 
 .sm-guide-actions button:last-child {
   justify-self: end;
-  color: #061716;
-  background: linear-gradient(135deg, var(--sm-project-teal), var(--sm-project-cyan));
+  color: var(--sm-project-bg);
+  background: var(--sm-project-accent);
   border-color: transparent;
 }
 
@@ -325,7 +325,7 @@
 }
 
 .sm-guide-actions a {
-  color: var(--sm-project-teal);
+  color: var(--sm-project-accent);
   text-align: center;
 }
 
@@ -338,8 +338,8 @@
   margin-top: clamp(3rem, 6vw, 5rem);
   padding: 1.2rem 1.4rem;
   color: var(--sm-project-muted);
-  background: rgba(12, 23, 33, 0.46);
-  border-left: 3px solid var(--sm-project-violet);
+  background: var(--sm-project-surface);
+  border-left: 3px solid var(--sm-project-secondary);
   border-radius: 0 14px 14px 0;
   font-size: 0.78rem;
   line-height: 1.6;

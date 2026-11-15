@@ -415,28 +415,28 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Antoine Dierckx",
+    "title": "Covariant loop quantum gravity, spinfoam cosmology, and phenomenology of primordial black holes.",
     "section": "",
-    "text": "PhD Candidate in Theoretical Physics\n\n\n\n  arXiv  |   ORCiD  |   iNSPIRE HEP"
+    "text": "PhD Candidate in Theoretical Physics\n    \n    \n      \n         arXiv\n      \n      \n         ORCiD\n      \n      \n         iNSPIRE HEP"
   },
   {
     "objectID": "index.html#recent-releases",
     "href": "index.html#recent-releases",
-    "title": "Antoine Dierckx",
+    "title": "Covariant loop quantum gravity, spinfoam cosmology, and phenomenology of primordial black holes.",
     "section": "Recent Releases",
-    "text": "Recent Releases\n\n\n\n\nNew Paper\n\n\nSignatures of LQG in PBH cosmologies\nIn collaboration with F. Vidotto & S. Clesse.\nExploring the phenomenological signatures of Loop Quantum Gravity in the context of Primordial Black Hole cosmologies.\n   Read on arXiv ➔ \n\n\n\n\n\n\nNew Code\n\n\nFramework pbh-rem\nDeveloped in Mathematica.\nComputational framework to evaluate phenomenological constraints on Primordial Black Holes with stable remnants (Planckian relics and Memory Burden effects).\n  Read the blog post ➔"
+    "text": "Recent Releases\n\n\n\n\nNew Paper\n\n\nSignatures of LQG in PBH cosmologies\nIn collaboration with F. Vidotto & S. Clesse.\nExploring the phenomenological signatures of Loop Quantum Gravity in the context of Primordial Black Hole cosmologies.\n  Read on arXiv ➔ \n\n\n\n\n\n\nNew Code\n\n\nFramework pbh-rem\nDeveloped in Mathematica.\nComputational framework to evaluate phenomenological constraints on Primordial Black Holes with stable remnants (Planckian relics and Memory Burden effects).\n Read the blog post ➔"
   },
   {
     "objectID": "index.html#research-focus",
     "href": "index.html#research-focus",
-    "title": "Antoine Dierckx",
+    "title": "Covariant loop quantum gravity, spinfoam cosmology, and phenomenology of primordial black holes.",
     "section": "Research Focus",
     "text": "Research Focus\n\n\nPrimordial Black Holes & Remnants\nStudying the phenomenological consequences of stabilization mechanisms in PBH evaporation, focusing on Planckian relics within Loop Quantum Gravity and macroscopic remnants induced by the Memory Burden effect.\n\n\nSpinfoam Numerics & Cosmology\nDeveloping numerical and computational tools to evaluate spin foam amplitudes, with a specific application to structural transitions in spinfoam cosmology."
   },
   {
     "objectID": "index.html#navigation",
     "href": "index.html#navigation",
-    "title": "Antoine Dierckx",
+    "title": "Covariant loop quantum gravity, spinfoam cosmology, and phenomenology of primordial black holes.",
     "section": "Navigation",
     "text": "Navigation\n\nAcademic Research\n\n\nResearch Themes\n\n\nPublications\n\n\nTalks & Slides\n\n\nEarly Research\n\n\n\n\nTeaching & Notes\n\n\nBachelor Notes\n\n\nMaster Notes\n\n\n\n\nEngagement & Projects\n\n\nOutreach & Projects\n\n\nBlog"
   },
@@ -676,7 +676,7 @@
     "href": "outreach/standard-model-lagrangian.html",
     "title": "Equation explorer – The Standard Model, unfolded",
     "section": "",
-    "text": "\\(\\require{html}\\class{sm-math-probe}{x}\\)\n\n\n  \n  \n\n  \n    Overview\n    Build the equation\n    Equation explorer\n  \n\n  \n    Free exploration · Standard Model\n    Equation explorer.\n    \n      Select a field basis and its sectors, then move from compact notation to\n      explicit generations, internal components, and gauge-field monomials.\n    \n  \n\n  \n    \n      \n        Complete expression\n        Loading catalogue…\n      \n      \n    \n\n    \n      \n      \n        \n        Preparing the fields\n      \n    \n\n    \n\n    \n      Connections\n      Every additive term in the current selection is displayed.\n    \n  \n\n  \n    \n      Field basis\n      \n        \n          Symmetric\n          before EWSB\n        \n        \n          Physical\n          after EWSB\n        \n      \n    \n\n    \n      Active sectors\n      \n    \n\n    \n      \n        Development\n        Connections\n      \n      \n      \n        CanonicalMultipletsConnectionsComponentsUnfolded\n      \n      Covariant derivatives and field strengths are exposed.\n    \n\n    \n      Reading modes\n      \n        \n          \n          \n            Smart colour\n            Field families and physical flavours\n          \n        \n        \n          \n          \n            Explain symbols\n            Contextual notation guide\n          \n        \n      \n    \n\n    \n      \n        ↖ Guided build\n      \n      \n        ⧉ Copy LaTeX\n      \n      \n        ↓ Download .tex\n      \n    \n  \n\n  \n    \n      \n        Notation guide\n        Symbols in this selection\n      \n      Hover or focus a card to locate the terms that use that symbol.\n    \n    \n  \n\n  \n    \n      Complete LaTeX source\n      The copied and downloaded source stays uncoloured and portable.\n    \n    \n      \n    \n  \n\n  This interactive page requires JavaScript."
+    "text": "\\(\\require{html}\\class{sm-math-probe}{x}\\)\n\n\n  \n    Overview\n    Build the equation\n    Equation explorer\n  \n\n  \n    Free exploration · Standard Model\n    Equation explorer.\n    \n      Select a field basis and its sectors, then move from compact notation to\n      explicit generations, internal components, and gauge-field monomials.\n    \n  \n\n  \n    \n      \n        Complete expression\n        Loading catalogue…\n      \n      \n    \n\n    \n      \n      \n        \n        Preparing the fields\n      \n    \n\n    \n\n    \n      Connections\n      Every additive term in the current selection is displayed.\n    \n  \n\n  \n    \n      Field basis\n      \n        \n          Symmetric\n          before EWSB\n        \n        \n          Physical\n          after EWSB\n        \n      \n    \n\n    \n      Active sectors\n      \n    \n\n    \n      \n        Development\n        Connections\n      \n      \n      \n        CanonicalMultipletsConnectionsComponentsUnfolded\n      \n      Covariant derivatives and field strengths are exposed.\n    \n\n    \n      Reading modes\n      \n        \n          \n          \n            Smart colour\n            Field families and physical flavours\n          \n        \n        \n          \n          \n            Explain symbols\n            Contextual notation guide\n          \n        \n      \n    \n\n    \n      \n        ↖ Guided build\n      \n      \n        ⧉ Copy LaTeX\n      \n      \n        ↓ Download .tex\n      \n    \n  \n\n  \n    \n      \n        Notation guide\n        Symbols in this selection\n      \n      Hover or focus a card to locate the terms that use that symbol.\n    \n    \n  \n\n  \n    \n      Complete LaTeX source\n      The copied and downloaded source stays uncoloured and portable.\n    \n    \n      \n    \n  \n\n  This interactive page requires JavaScript."
   },
   {
     "objectID": "posts/links.html",
