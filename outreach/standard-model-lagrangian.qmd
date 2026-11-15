@@ -23,9 +23,6 @@ $\require{html}\class{sm-math-probe}{x}$
   id="sm-lagrangian-app"
   data-catalogue="../assets/lagrangian/catalogue.json"
 >
-  <div class="sm-app-aura sm-app-aura-one" aria-hidden="true"></div>
-  <div class="sm-app-aura sm-app-aura-two" aria-hidden="true"></div>
-
   <nav class="sm-project-nav" aria-label="Standard Model project">
     <a href="standard-model.html">Overview</a>
     <a href="build-standard-model.html">Build the equation</a>

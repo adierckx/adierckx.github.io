@@ -2,29 +2,38 @@ document.addEventListener("DOMContentLoaded", function() {
   const canvas = document.getElementById('spinfoamCanvas'); 
   if (!canvas) return; 
   const ctx = canvas.getContext('2d'); 
-  let width, height; 
+  if (!ctx) return;
+
+  const inkColors = [
+    [164, 194, 161], // sage
+    [222, 161, 120], // copper
+    [195, 155, 197], // mauve
+    [143, 178, 204], // slate blue
+  ];
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const nodes = [];
+  const bridges = [];
+  let animationFrame = 0;
+  let width = 0;
+  let height = 0;
 
 // ======================================================================
   // CONFIGURATION 
   // ======================================================================
-  // Détection d'un affichage mobile au chargement
-  const isMobile = window.innerWidth < 768;
+  const isMobile = canvas.clientWidth < 380;
 
   const CONFIG = {
     // Topologie de base
-    numNodes: isMobile ? 250 : 1000,            // Densité drastiquement réduite sur mobile
-    maxDistance: isMobile ? 150 : 120,          // Légèrement augmenté sur mobile pour maintenir la connectivité
+    numNodes: isMobile ? 99 : 190,
+    maxDistance: isMobile ? 87 : 115,
     
     // Interaction
     mouseRadius: isMobile ? 120 : 180,          // Zone d'interaction réduite sur petit écran
     mouseForce: 1.5,            
     
-    // Esthétique (Iridescence)
-    colorTeal: { r: 0, g: 168, b: 168 },     
-    colorFushia: { r: 255, g: 0, b: 150 },   
-    waveSpeed: 0.005,           
-    waveFreq: 0.003,            
-    maxFushiaRatio: 0.45,       
+    // Variation de la couleur de l’encre
+    waveSpeed: 0.004,
+    waveFreq: 0.004,
     
     // Fluctuations Quantiques (Création/Destruction douce)
     fluctuationRate: 0.01,     
@@ -41,14 +50,23 @@ document.addEventListener("DOMContentLoaded", function() {
   const maxDistSq = CONFIG.maxDistance * CONFIG.maxDistance;
 
   function resizeCanvas() { 
-    width = canvas.width = window.innerWidth; 
-    height = canvas.height = canvas.parentElement.offsetHeight; 
-  } 
-  window.addEventListener('resize', resizeCanvas); 
+    const nextWidth = canvas.clientWidth;
+    const nextHeight = canvas.clientHeight;
+    const density = Math.min(window.devicePixelRatio || 1, 2);
+
+    for (const node of nodes) {
+      node.x *= nextWidth / width;
+      node.y *= nextHeight / height;
+    }
+
+    width = nextWidth;
+    height = nextHeight;
+    canvas.width = Math.round(width * density);
+    canvas.height = Math.round(height * density);
+    ctx.setTransform(density, 0, 0, density, 0, 0);
+  }
   resizeCanvas(); 
 
-  const nodes = []; 
-  const bridges = []; 
   let globalTime = 0; 
   let mouse = { x: null, y: null }; 
 
@@ -73,19 +91,22 @@ document.addEventListener("DOMContentLoaded", function() {
       kinematicPhase: Math.random() * Math.PI * 2, 
       existencePhase: Math.random() * Math.PI * 2, 
       amplitude: 1, // Champ d'existence continu entre 0 et 1
-      colorRatio: 0 
+      colorPhase: 0
     }); 
   } 
 
-  function getMixedColor(ratio, alpha) {
-    const r = Math.round(CONFIG.colorTeal.r * (1 - ratio) + CONFIG.colorFushia.r * ratio);
-    const g = Math.round(CONFIG.colorTeal.g * (1 - ratio) + CONFIG.colorFushia.g * ratio);
-    const b = Math.round(CONFIG.colorTeal.b * (1 - ratio) + CONFIG.colorFushia.b * ratio);
-    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  function getMixedColor(phase, alpha) {
+    const index = Math.floor(phase);
+    const first = inkColors[index % inkColors.length];
+    const second = inkColors[(index + 1) % inkColors.length];
+    const t = phase - index;
+    const blend = t * t * (3 - 2 * t);
+    const rgb = first.map((channel, i) => Math.round(channel + (second[i] - channel) * blend));
+    return `rgba(${rgb.join(', ')}, ${alpha})`;
   }
 
-  function animate() { 
-    ctx.clearRect(0, 0, width, height); 
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
     globalTime += CONFIG.waveSpeed;
 
     // 1. MISE À JOUR (Cinématique, Onde de couleur et Amplitude)
@@ -97,9 +118,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const rawSine = Math.sin(node.existencePhase);
       node.amplitude = Math.max(0, Math.min(1, (rawSine + CONFIG.fadeOffset) * CONFIG.fadeSmoothness));
       
-      const waveX = Math.sin(node.x * CONFIG.waveFreq + globalTime);
-      const waveY = Math.cos(node.y * CONFIG.waveFreq + globalTime * 0.8);
-      node.colorRatio = Math.max(0, (waveX + waveY) * 0.5) * CONFIG.maxFushiaRatio;
+      node.colorPhase = globalTime + Math.max(0, node.x + node.y * 0.65) * CONFIG.waveFreq;
 
       node.x += node.vx + Math.sin(node.kinematicPhase) * 0.1; 
       node.y += node.vy + Math.cos(node.kinematicPhase) * 0.1; 
@@ -113,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const distSq = dx * dx + dy * dy;
         const mouseRadiusSq = CONFIG.mouseRadius * CONFIG.mouseRadius;
         
-        if (distSq < mouseRadiusSq) { 
+        if (distSq > 0 && distSq < mouseRadiusSq) {
           const dist = Math.sqrt(distSq);
           const force = (CONFIG.mouseRadius - dist) / CONFIG.mouseRadius; 
           node.x += (dx / dist) * force * CONFIG.mouseForce; 
@@ -148,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       
       const timeAmplitude = Math.sin((b.life / b.maxLife) * Math.PI); 
-      const avgColorRatio = (b.n1.colorRatio + b.n2.colorRatio) / 2;
+      const colorPhase = (b.n1.colorPhase + b.n2.colorPhase) / 2;
       
       // Transparence pondérée par l'amplitude temporelle ET spatiale (topologique)
       const finalAlpha = timeAmplitude * 0.6 * b.n1.amplitude * b.n2.amplitude;
@@ -156,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function() {
       ctx.beginPath();
       ctx.moveTo(b.n1.x, b.n1.y);
       ctx.lineTo(b.n2.x, b.n2.y);
-      ctx.strokeStyle = getMixedColor(avgColorRatio, finalAlpha);
+      ctx.strokeStyle = getMixedColor(colorPhase, finalAlpha);
       ctx.lineWidth = 1.5;
       ctx.stroke();
     }
@@ -178,17 +197,17 @@ document.addEventListener("DOMContentLoaded", function() {
           const dist = Math.sqrt(distSq);
           
           // La transparence dépend de la distance ET du produit des amplitudes des nœuds
-          const distanceAlpha = (1 - dist / CONFIG.maxDistance) * 0.4; 
+          const distanceAlpha = (1 - dist / CONFIG.maxDistance) * 0.52;
           const jointAmplitude = nodes[i].amplitude * nodes[j].amplitude;
           const finalAlpha = distanceAlpha * jointAmplitude;
           
-          const thickness = (Math.sin(nodes[i].kinematicPhase + j) + 1.5) * 1.0; 
-          const avgColorRatio = (nodes[i].colorRatio + nodes[j].colorRatio) / 2;
+          const thickness = (Math.sin(nodes[i].kinematicPhase + j) + 1.5) * 0.64;
+          const colorPhase = (nodes[i].colorPhase + nodes[j].colorPhase) / 2;
           
           ctx.beginPath(); 
           ctx.moveTo(nodes[i].x, nodes[i].y); 
           ctx.lineTo(nodes[j].x, nodes[j].y); 
-          ctx.strokeStyle = getMixedColor(avgColorRatio, finalAlpha); 
+          ctx.strokeStyle = getMixedColor(colorPhase, finalAlpha);
           ctx.lineWidth = thickness; 
           ctx.stroke(); 
         } 
@@ -202,12 +221,24 @@ document.addEventListener("DOMContentLoaded", function() {
       ctx.beginPath(); 
       ctx.arc(node.x, node.y, node.baseRadius + Math.sin(node.kinematicPhase) * 0.5, 0, Math.PI * 2); 
       // L'opacité du nœud est directement son champ d'amplitude
-      ctx.fillStyle = getMixedColor(node.colorRatio, node.amplitude * 0.9); 
+      ctx.fillStyle = getMixedColor(node.colorPhase, node.amplitude * 0.85);
       ctx.fill(); 
     }); 
 
-    requestAnimationFrame(animate); 
-  } 
+    if (!motionPreference.matches) {
+      animationFrame = requestAnimationFrame(animate);
+    }
+  }
 
-  animate(); 
+  function restartDrawing() {
+    cancelAnimationFrame(animationFrame);
+    animationFrame = requestAnimationFrame(animate);
+  }
+
+  window.addEventListener('resize', () => {
+    resizeCanvas();
+    if (motionPreference.matches) restartDrawing();
+  });
+  motionPreference.addEventListener('change', restartDrawing);
+  restartDrawing();
 });

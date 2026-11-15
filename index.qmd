@@ -3,30 +3,28 @@ page-layout: full
 ---
 
 ::: {.column-screen .hero-section}
-<canvas id="spinfoamCanvas"></canvas>
-
-::: {.hero-content}
-<p class="hero-subtitle">PhD Candidate in Theoretical Physics</p>
-<h2 class="hero-title">Covariant loop quantum gravity,<br> 
-<span class="highlight">spinfoam cosmology</span>,<br>
- and phenomenology of
-<span class="highlight">primordial black holes</span>.</h2>
-
-<div class="hero-links">
-  <a href="https://arxiv.org/search/gr-qc?searchtype=author&query=Dierckx,+A" target="_blank">
-    <i class="ai ai-arxiv" style="color: #d3a3ff;"></i> arXiv
-  </a>
-  <span class="separator">|</span>
-  <a href="https://orcid.org/0009-0001-8717-1712" target="_blank">
-    <i class="ai ai-orcid" style="color: #d3a3ff;"></i> ORCiD
-  </a>
-  <span class="separator">|</span>
-  <a href="https://inspirehep.net/authors/3157664" target="_blank">
-    <i class="ai ai-inspire" style="color: #d3a3ff;"></i> iNSPIRE HEP
-  </a>
+```{=html}
+<div class="hero-inner">
+  <div class="hero-content">
+    <p class="hero-subtitle">PhD Candidate in Theoretical Physics</p>
+    <h1 class="hero-title">Covariant loop quantum gravity, <span class="highlight">spinfoam cosmology</span>, and phenomenology of <span class="highlight">primordial black holes</span>.</h1>
+    <div class="hero-links">
+      <a href="https://arxiv.org/search/gr-qc?searchtype=author&amp;query=Dierckx,+A" target="_blank" rel="noopener">
+        <i class="ai ai-arxiv" aria-hidden="true"></i> arXiv
+      </a>
+      <a href="https://orcid.org/0009-0001-8717-1712" target="_blank" rel="noopener">
+        <i class="ai ai-orcid" aria-hidden="true"></i> ORCiD
+      </a>
+      <a href="https://inspirehep.net/authors/3157664" target="_blank" rel="noopener">
+        <i class="ai ai-inspire" aria-hidden="true"></i> iNSPIRE HEP
+      </a>
+    </div>
+  </div>
+  <div class="hero-sketch" aria-hidden="true">
+    <canvas id="spinfoamCanvas"></canvas>
+  </div>
 </div>
-
-:::
+```
 
 <script defer src="assets/js/spinfoam.js"></script>
 :::
@@ -45,7 +43,6 @@ page-layout: full
 
 Exploring the phenomenological signatures of Loop Quantum Gravity in the context of Primordial Black Hole cosmologies.
 
-<br>
 <a href="https://arxiv.org/abs/2605.28953" target="_blank" class="btn btn-outline-primary btn-sm release-btn">
   <i class="ai ai-arxiv"></i> Read on arXiv ➔
 </a>
@@ -60,7 +57,6 @@ Exploring the phenomenological signatures of Loop Quantum Gravity in the context
 
 Computational framework to evaluate phenomenological constraints on Primordial Black Holes with stable remnants (Planckian relics and Memory Burden effects).
 
-<br>
 <a href="./posts/pbh-rem.qmd" class="btn btn-outline-info btn-sm release-btn">
   Read the blog post ➔
 </a>
@@ -123,7 +119,7 @@ Developing numerical and computational tools to evaluate spin foam amplitudes, w
 [Outreach & Projects](./outreach/projects.qmd){.btn .btn-surface .c-rose .w-100}
 :::
 ::: {.g-col-12 .g-col-md-6}
-[Blog](./blog.qmd){.btn .btn-surface .c-indigo .w-100}
+[Blog](./blog.qmd){.btn .btn-surface .c-copper .w-100}
 :::
 :::
 

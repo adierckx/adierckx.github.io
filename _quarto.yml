@@ -19,10 +19,9 @@ website:
   site-url: "https://adierckx.com"
   title: "Antoine Dierckx"
   description: "Antoine Dierckx — theoretical physicist working on loop quantum gravity, primordial black holes and quantum cosmology."
-  favicon: assets/css/logo_bi_whiteteal_shad.svg
+  favicon: assets/css/logo-coffee.png
   navbar:
     logo: assets/css/logo_bi_whiteteal_shad.svg
-    background: dark
     collapse: true
     search: true
     left:
@@ -57,11 +56,9 @@ website:
 
 format:
   html:
-    theme:
-      - darkly
+    theme: [darkly, assets/css/paper-dark.scss]
     css:
       - assets/css/styles.css
-      - assets/css/page-backgrounds.css
     toc: false
     code-fold: true
     html-math-method: mathjax

@@ -12,17 +12,15 @@
 }
 
 .sm-project-page {
-  --sm-project-bg: #09121a;
-  --sm-project-surface: rgba(18, 31, 43, 0.68);
-  --sm-project-surface-strong: rgba(12, 23, 33, 0.9);
-  --sm-project-line: rgba(194, 241, 255, 0.16);
-  --sm-project-line-bright: rgba(194, 241, 255, 0.34);
-  --sm-project-text: #f3fbff;
-  --sm-project-muted: #9cb0bd;
-  --sm-project-teal: #3fe0d0;
-  --sm-project-cyan: #8ae9ff;
-  --sm-project-violet: #d3a3ff;
-  --sm-project-pink: #ff82c8;
+  --sm-project-bg: var(--bg-color);
+  --sm-project-surface: var(--card-bg);
+  --sm-project-surface-strong: var(--card-hover);
+  --sm-project-line: var(--border-flat);
+  --sm-project-line-bright: color-mix(in srgb, var(--sm-project-accent) 45%, var(--border-flat));
+  --sm-project-text: var(--text-main);
+  --sm-project-muted: var(--text-muted);
+  --sm-project-accent: var(--section-accent, var(--palette-rose));
+  --sm-project-secondary: var(--palette-purple);
 
   position: relative;
   isolation: isolate;
@@ -32,9 +30,9 @@
   overflow: hidden;
   color: var(--sm-project-text);
   background:
-    radial-gradient(circle at 16% 15%, rgba(63, 224, 208, 0.11), transparent 30rem),
-    radial-gradient(circle at 86% 56%, rgba(211, 163, 255, 0.09), transparent 34rem),
-    linear-gradient(155deg, rgba(9, 18, 26, 0.32), rgba(9, 18, 26, 0.92));
+    radial-gradient(ellipse 50rem 30rem at 50% 0,
+      color-mix(in srgb, var(--sm-project-accent) 12%, transparent), transparent 90%),
+    var(--sm-project-bg);
 }
 
 /* Quarto adds its page-columns class to the full-width raw HTML wrapper.
@@ -79,7 +77,7 @@
   gap: 0.35rem;
   margin-bottom: clamp(3rem, 7vw, 6rem);
   padding: 0.42rem;
-  background: rgba(5, 12, 18, 0.48);
+  background: var(--sm-project-surface);
   border: 1px solid var(--sm-project-line);
   border-radius: 999px;
   box-shadow: 0 18px 55px rgba(0, 0, 0, 0.18);
@@ -103,8 +101,8 @@
 
 .sm-project-nav a:hover,
 .sm-project-nav a[aria-current="page"] {
-  color: #061716;
-  background: linear-gradient(135deg, var(--sm-project-teal), var(--sm-project-cyan));
+  color: var(--sm-project-bg);
+  background: var(--sm-project-accent);
 }
 
 .sm-project-nav a:hover {
@@ -113,7 +111,7 @@
 
 .sm-project-nav span {
   margin-left: auto;
-  color: #71838d;
+  color: var(--sm-project-muted);
 }
 
 .sm-project-hero {
@@ -124,7 +122,7 @@
 .sm-project-eyebrow,
 .sm-project-kicker,
 .sm-card-label {
-  color: var(--sm-project-teal);
+  color: var(--sm-project-accent);
   font-family: "Fira Code", monospace;
   font-size: 0.72rem;
   font-weight: 500;
@@ -143,11 +141,7 @@
 }
 
 .sm-project-hero h1 span {
-  color: transparent;
-  background: linear-gradient(100deg, var(--sm-project-teal), var(--sm-project-cyan) 42%, var(--sm-project-violet) 78%, var(--sm-project-pink));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--sm-project-accent);
 }
 
 .sm-project-lede {
@@ -254,15 +248,15 @@
   width: 70%;
   aspect-ratio: 1;
   content: "";
-  background: var(--card-glow, var(--sm-project-teal));
+  background: var(--card-glow, var(--sm-project-accent));
   border-radius: 50%;
   filter: blur(75px);
   opacity: 0.1;
   pointer-events: none;
 }
 
-.sm-entry-build { --card-glow: var(--sm-project-teal); }
-.sm-entry-atlas { --card-glow: var(--sm-project-violet); }
+.sm-entry-build { --card-glow: var(--sm-project-accent); }
+.sm-entry-atlas { --card-glow: var(--sm-project-secondary); }
 
 .sm-entry-card:hover {
   color: inherit;
@@ -272,7 +266,7 @@
 }
 
 .sm-card-index {
-  color: #718690;
+  color: var(--sm-project-muted);
   font-family: "Fira Code", monospace;
   font-size: 0.72rem;
 }
@@ -304,7 +298,7 @@
 }
 
 .sm-card-action b {
-  color: var(--sm-project-teal);
+  color: var(--sm-project-accent);
   font-size: 1.2rem;
 }
 
@@ -317,14 +311,14 @@
 .sm-roadmap-grid article {
   min-height: 260px;
   padding: 1.35rem;
-  background: rgba(12, 23, 33, 0.52);
+  background: var(--sm-project-surface);
   border: 1px solid rgba(194, 241, 255, 0.11);
   border-radius: 20px;
 }
 
 .sm-roadmap-grid article > span,
 .sm-roadmap-grid small {
-  color: var(--sm-project-teal);
+  color: var(--sm-project-accent);
   font-family: "Fira Code", monospace;
   font-size: 0.65rem;
   letter-spacing: 0.08em;
@@ -361,13 +355,13 @@
   gap: 2rem;
   margin-top: clamp(4rem, 8vw, 7rem);
   padding: clamp(1.4rem, 3vw, 2rem);
-  background: linear-gradient(120deg, rgba(63, 224, 208, 0.08), rgba(211, 163, 255, 0.06));
+  background: linear-gradient(120deg, color-mix(in srgb, var(--sm-project-accent) 8%, transparent), color-mix(in srgb, var(--sm-project-secondary) 6%, transparent));
   border: 1px solid var(--sm-project-line);
   border-radius: 22px;
 }
 
 .sm-project-principle strong {
-  color: var(--sm-project-teal);
+  color: var(--sm-project-accent);
   font-family: "Fira Code", monospace;
   font-size: 0.68rem;
   letter-spacing: 0.09em;
@@ -433,8 +427,8 @@
 }
 
 .sm-art-hold-actions a:first-child {
-  color: #061716;
-  background: linear-gradient(135deg, var(--sm-project-teal), var(--sm-project-cyan));
+  color: var(--sm-project-bg);
+  background: var(--sm-project-accent);
   border-color: transparent;
 }
 
