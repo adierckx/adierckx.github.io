@@ -1,20 +1,27 @@
 ---
 title: "Publications"
+description: "Antoine Dierckx’s preprints and scientific software, with links to code and slides."
 toc: true
 ---
 
-A complete and automatically updated list of my publications can also be found on [iNSPIRE HEP](https://inspirehep.net/authors/3157664) and [ORCID](https://orcid.org/0009-0001-8717-1712).
+## Preprints
 
-## Preprints & Working Papers
+### Signatures of loop quantum gravity in primordial black hole cosmologies
 
-* **Signatures of loop quantum gravity in primordial black hole cosmologies** [[arXiv:2605.28953]](https://arxiv.org/abs/2605.28953)
-  Antoine Dierckx, Sébastien Clesse, Francesca Vidotto. (2026)
+Antoine Dierckx, Sébastien Clesse, and Francesca Vidotto
 
-<!-- 
-## Published Papers
-*(Peer-reviewed articles will be listed here)*
--->
+*arXiv preprint · 27 May 2026*
 
-## Scientific Software & Repositories
+We derive cosmological bounds on light primordial black holes that leave Planck-scale remnants. In the model we study, black holes born with masses near one tonne can reheat the early universe through Hawking evaporation and leave enough remnants to account for the observed dark matter.
 
-* **[pbh-rem](https://github.com/adierckx/pbh-rem):** A Mathematica framework developed to compute phenomenological constraints on Primordial Black Holes with stable remnants (including LQG Planckian relics and macroscopic remnants from the memory burden effect).
+[arXiv:2605.28953](https://arxiv.org/abs/2605.28953) · [INSPIRE record](https://inspirehep.net/literature/3162406) · [Code](https://github.com/adierckx/pbh-rem) · [Slides](assets/talk_RERS8_20260526.pdf)
+
+## Scientific software
+
+### pbh-rem
+
+*Release announcement · 27 May 2026*
+
+A set of Mathematica notebooks for computing the cosmological evolution of primordial black holes and deriving abundance constraints for models with long-lived remnants.
+
+[GitHub repository](https://github.com/adierckx/pbh-rem) · [Release notes](../posts/pbh-rem.qmd)

@@ -1,29 +1,19 @@
 ---
 title: "Research Themes"
+description: "Research on primordial black hole evaporation, early-universe cosmology, and the dark matter abundance of black hole remnants."
 toc: true
 ---
 
-## Primordial Black Holes & Dark Matter Remnants
+I study how light primordial black holes (PBHs) change the evolution of the early universe. If they are abundant enough, they can briefly dominate the energy density before they evaporate. I model this transition to work out how much radiation the evaporation produces and how much dark matter any surviving remnants could account for.
 
-My research investigates the phenomenological consequences of non-perturbative quantum gravity corrections on the evolution of light Primordial Black Holes (**PBHs**) in the early universe. Standard semi-classical Hawking evaporation predicts runaway evaporation, but Loop Quantum Gravity (**LQG**) introduces a natural UV cut-off that fundamentally alters this late-stage behavior.
+## Planck-scale remnants from loop quantum gravity
 
-### Planckian Relics in Loop Quantum Gravity
-In LQG, the quantization of geometric operators resolves the central singularity, replacing it with a quantum bounce into an antitrapped spacetime region. A central prediction is the quantum tunneling of the classical black hole geometry to a white hole geometry, with a transition probability exponentially suppressed by the squared mass:
+In the scenario we consider, motivated by loop quantum gravity, Hawking evaporation ends with a long-lived remnant of approximately the Planck mass. We calculate which initial PBH masses and abundances are compatible with the observed radiation and dark matter densities. In this model, a population with initial masses near one tonne can reheat the early universe and leave enough remnants to make up the observed dark matter.
 
-$$
-P \sim e^{-(m/m_{\mathrm{Pl}})^2}~.
-$$ {#eq-tunneling-probability}
+- [Preprint with Sébastien Clesse and Francesca Vidotto](https://arxiv.org/abs/2605.28953)
+- [Slides from the RER-S8 Cosmology Meeting](assets/talk_RERS8_20260526.pdf)
+- [Mathematica framework](https://github.com/adierckx/pbh-rem)
 
-This mechanism leads to Planckian relics, which represent a viable, non-baryonic candidate for dark matter and introduce specific signatures in primordial cosmological backgrounds.
+## Memory burden and massive remnants
 
-* **Associated Code:** A Mathematica framework developed to derive constraints on these PBH models can be found in the repo [pbh-rem](https://github.com/adierckx/pbh-rem).
-* **Recent Preprint:** A preprint exploring the signatures of LQG in PBH cosmologies, in collaboration with Francesca Vidotto and Sébastien Clesse, is available on the arXiv: [arXiv:2605.28953](https://inspirehep.net/literature/3162406).
-
-### Macroscopic Remnants via the Memory Burden Effect
-Other stabilization mechanisms include the Memory Burden effect (**MBe**), in which the suppression of the evaporation rate is related to the information capacity of the black hole. The remnants predicted by this mechanism are macroscopic, typically after the black hole has evaporated roughly half of its initial mass ($m \sim m_0 / 2$). 
-
----
-
-## Spinfoam Numerics & Cosmology
-
-The second axis of my work focuses on Covariant Loop Quantum Gravity (**Spinfoam models**) and its application to early-universe cosmology.
+Memory-burden models propose that information stored in a black hole can slow its evaporation. I study scenarios in which this suppression becomes important after the black hole has lost about half its initial mass. The surviving objects can then be much heavier than the Planck mass. I use cosmological constraints to investigate which initial masses and abundances could give a viable population of such remnants.

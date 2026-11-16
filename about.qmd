@@ -12,9 +12,9 @@ resources:
 
 ## Bio
 
-I am a PhD candidate in theoretical physics at the **Instituto de Estructura de la Materia (IEM-CSIC)** in Madrid. My research lies at the interface of loop quantum gravity, quantum cosmology, and early-Universe phenomenology.
+I am a PhD candidate in theoretical physics at the **Instituto de Estructura de la Materia (IEM-CSIC)** in Madrid.
 
-A central part of my work concerns **primordial black holes and black-hole remnants**, including their possible role as dark matter and the cosmological signatures of quantum-gravity effects. I also work on numerical tools for **Lorentzian spinfoam amplitudes** and their applications to spinfoam cosmology.
+I study **primordial black holes and their remnants**. My research follows how light black holes affect the expansion and reheating of the early universe, and asks whether remnants could survive as dark matter.
 
 ## Current Position
 

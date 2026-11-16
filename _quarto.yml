@@ -18,8 +18,24 @@ project:
 website:
   site-url: "https://adierckx.com"
   title: "Antoine Dierckx"
-  description: "Antoine Dierckx — theoretical physicist working on loop quantum gravity, primordial black holes and quantum cosmology."
+  description: "Antoine Dierckx, PhD candidate in theoretical physics studying primordial black holes, their remnants, and the early universe."
   favicon: assets/css/logo-coffee.png
+  drafts:
+    - outreach/loop-quantum-gravity.qmd
+    - outreach/build-lqg.qmd
+    - outreach/lqg-atlas.qmd
+    - outreach/lqg-diagrams.qmd
+  page-footer:
+    left: "Antoine Dierckx · IEM-CSIC / Universidad Autónoma de Madrid"
+    right:
+      - text: Email
+        href: mailto:a.d@csic.es
+      - text: arXiv
+        href: https://arxiv.org/search/gr-qc?searchtype=author&query=Dierckx,+A
+      - text: ORCID
+        href: https://orcid.org/0009-0001-8717-1712
+      - text: INSPIRE
+        href: https://inspirehep.net/authors/3157664
   navbar:
     logo: assets/css/logo_bi_whiteteal_shad.svg
     collapse: true
@@ -45,8 +61,6 @@ website:
             text: Bachelor Notes (FR)
           - href: notes/math.qmd
             text: Math Notes (FR)
-          - href: outreach/standard-model.qmd
-            text: Standard Model, unfolded
       - href: outreach/projects.qmd
         text: Outreach & Projects
       - href: blog.qmd

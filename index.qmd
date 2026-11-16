@@ -1,23 +1,22 @@
 ---
 page-layout: full
+description: "Antoine Dierckx, PhD candidate at IEM-CSIC and Universidad Autónoma de Madrid, studying primordial black holes, remnants, and the early universe."
+resources:
+  - assets/docs/CV_Antoine-Dierckx.pdf
 ---
 
 ::: {.column-screen .hero-section}
 ```{=html}
 <div class="hero-inner">
   <div class="hero-content">
-    <p class="hero-subtitle">PhD Candidate in Theoretical Physics</p>
-    <h1 class="hero-title">Covariant loop quantum gravity, <span class="highlight">spinfoam cosmology</span>, and phenomenology of <span class="highlight">primordial black holes</span>.</h1>
+    <p class="hero-subtitle">PhD candidate in theoretical physics</p>
+    <h1 class="hero-title"><span class="highlight">Primordial black holes</span> and the early universe</h1>
+    <p class="hero-affiliation">IEM-CSIC · Universidad Autónoma de Madrid</p>
     <div class="hero-links">
-      <a href="https://arxiv.org/search/gr-qc?searchtype=author&amp;query=Dierckx,+A" target="_blank" rel="noopener">
-        <i class="ai ai-arxiv" aria-hidden="true"></i> arXiv
-      </a>
-      <a href="https://orcid.org/0009-0001-8717-1712" target="_blank" rel="noopener">
-        <i class="ai ai-orcid" aria-hidden="true"></i> ORCiD
-      </a>
-      <a href="https://inspirehep.net/authors/3157664" target="_blank" rel="noopener">
-        <i class="ai ai-inspire" aria-hidden="true"></i> iNSPIRE HEP
-      </a>
+      <a href="research/papers.qmd">Publications</a>
+      <a href="research/themes.qmd">Research themes</a>
+      <a href="assets/docs/CV_Antoine-Dierckx.pdf">CV</a>
+      <a href="mailto:a.d@csic.es">Email</a>
     </div>
   </div>
   <div class="hero-sketch" aria-hidden="true">
@@ -31,96 +30,36 @@ page-layout: full
 
 ::: {.column-page}
 
-## Recent Releases
+## Selected work
 
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-6}
 ::: {.release-card}
-<div class="release-badge paper-badge">New Paper</div>
-### Signatures of LQG in PBH cosmologies
-*In collaboration with F. Vidotto & S. Clesse.* 
+<div class="release-badge">Preprint · <time datetime="2026-05-27">May 2026</time></div>
 
-Exploring the phenomenological signatures of Loop Quantum Gravity in the context of Primordial Black Hole cosmologies.
+### Signatures of loop quantum gravity in primordial black hole cosmologies
 
-<a href="https://arxiv.org/abs/2605.28953" target="_blank" class="btn btn-outline-primary btn-sm release-btn">
-  <i class="ai ai-arxiv"></i> Read on arXiv ➔
-</a>
+*With Sébastien Clesse and Francesca Vidotto.*
+
+In the Planck-scale remnant model we study, primordial black holes of about one tonne can reheat the early universe through Hawking evaporation and leave remnants that account for today’s dark matter.
+
+[Read on arXiv](https://arxiv.org/abs/2605.28953){.btn-surface .c-indigo .btn-compact .release-btn}
 :::
 :::
 
 ::: {.g-col-12 .g-col-md-6}
 ::: {.release-card}
-<div class="release-badge code-badge">New Code</div>
-### Framework `pbh-rem`
-*Developed in Mathematica.*
+<div class="release-badge code-badge">Software · <time datetime="2026-05-27">May 2026</time></div>
 
-Computational framework to evaluate phenomenological constraints on Primordial Black Holes with stable remnants (Planckian relics and Memory Burden effects).
+### `pbh-rem`
 
-<a href="./posts/pbh-rem.qmd" class="btn btn-outline-info btn-sm release-btn">
-  Read the blog post ➔
-</a>
+Mathematica notebooks for modelling the evolution of primordial black holes and their remnants, and computing cosmological bounds on their abundances.
+
+[View the code](https://github.com/adierckx/pbh-rem){.btn-surface .c-teal .btn-compact .release-btn}
+[Release notes](posts/pbh-rem.qmd){.btn-surface .c-copper .btn-compact .release-btn}
 :::
-:::
-
-:::
-
----
-
-## Research Focus
-
-::: {.grid}
-
-::: {.g-col-12 .g-col-md-6}
-### Primordial Black Holes & Remnants
-Studying the phenomenological consequences of stabilization mechanisms in **PBH** evaporation, focusing on **Planckian relics** within Loop Quantum Gravity and macroscopic remnants induced by the **Memory Burden effect**.
-:::
-
-::: {.g-col-12 .g-col-md-6}
-### Spinfoam Numerics & Cosmology
-Developing numerical and computational tools to evaluate spin foam amplitudes, with a specific application to structural transitions in **spinfoam cosmology**.
 :::
 
 :::
-
----
-
-## Navigation
-
-### Academic Research
-::: {.grid}
-::: {.g-col-12 .g-col-md-3}
-[Research Themes](./research/themes.qmd){.btn .btn-surface .c-teal .w-100}
-:::
-::: {.g-col-12 .g-col-md-3}
-[Publications](./research/papers.qmd){.btn .btn-surface .c-indigo .w-100}
-:::
-::: {.g-col-12 .g-col-md-3}
-[Talks & Slides](./research/talks.qmd){.btn .btn-surface .c-purple .w-100}
-:::
-::: {.g-col-12 .g-col-md-3}
-[Early Research](./research/early-research.qmd){.btn .btn-surface .c-blue .w-100}
-:::
-:::
-
-### Teaching & Notes
-::: {.grid}
-::: {.g-col-12 .g-col-md-6}
-[Bachelor Notes](./notes/bachelor.qmd){.btn .btn-surface .c-emerald .w-100}
-:::
-::: {.g-col-12 .g-col-md-6}
-[Master Notes](./notes/master.qmd){.btn .btn-surface .c-teal .w-100}
-:::
-:::
-
-### Engagement & Projects
-::: {.grid}
-::: {.g-col-12 .g-col-md-6}
-[Outreach & Projects](./outreach/projects.qmd){.btn .btn-surface .c-rose .w-100}
-:::
-::: {.g-col-12 .g-col-md-6}
-[Blog](./blog.qmd){.btn .btn-surface .c-copper .w-100}
-:::
-:::
-
 :::

@@ -5,18 +5,6 @@ toc: true
 
 Beyond academic research, I participate in science communication, digital content creation, and collaborative design projects aimed at opening up academic and scientific spaces.
 
-## Interactive Physics
-
-### The Standard Model, unfolded
-
-A reading tool for the Standard Model Lagrangian. One route builds the equation
-step by step from the gauge symmetry and the field content; the other lets you
-open any sector and expand it down to individual terms.
-
-[**Enter the Standard Model project**](standard-model.qmd){.btn-surface .c-teal .btn-compact}
-
----
-
 ## Science Communication & Outreach
 
 ### The bel.sciences Project (STEMentiel!)
@@ -30,3 +18,13 @@ As part of the broader **STEMentiel!** initiative, I contribute to **bel.science
 
 ### Identity & Logo Design
 I occasionally collaborate on visual identity and graphic materials for scientific networks and working groups. This includes designing the official logo for the **WOST** (WithOut SpaceTime) network.
+
+---
+
+## Interactive Physics
+
+### The Standard Model Lagrangian
+
+A small interactive project for taking apart the Standard Model Lagrangian. Start with the fields and symmetries in the guided version, or use the explorer to expand individual terms and look up symbols.
+
+[Open the project](standard-model.qmd){.btn-surface .c-rose .btn-compact}

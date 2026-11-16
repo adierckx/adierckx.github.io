@@ -9,7 +9,7 @@ toc: true
 The [**pbh-rem**](https://github.com/adierckx/pbh-rem) repository is a Mathematica-based model designed to simulate the cosmological evolution of **Primordial Black Holes** and the remnants they leave behind. 
 
 <div align="center">
-  <svg width="500" height="100" viewBox="0 0 400 80" xmlns="http://www.w3.org/2000/svg">
+  <svg class="pbh-rem-wordmark" width="500" height="100" viewBox="0 0 400 80" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="pbh-rem-grad-center" x1="0%" y1="100%" x2="100%" y2="90%">
         <stop offset="0%" stop-color="#a855f7" />
