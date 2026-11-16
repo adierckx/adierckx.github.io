@@ -10,8 +10,12 @@ resources:
 <div class="hero-inner">
   <div class="hero-content">
     <p class="hero-subtitle">PhD candidate in theoretical physics</p>
-    <h1 class="hero-title"><span class="highlight">Primordial black holes</span> and the early universe</h1>
-    <p class="hero-affiliation">IEM-CSIC · Universidad Autónoma de Madrid</p>
+    <h1 class="hero-title">loop quantum gravity, <span class="highlight">primordial black holes</span> and the early universe</h1>
+    <p class="hero-affiliation">
+      <a href="https://withoutspacetime.org/">WOST</a> ·
+      <a href="https://www.iem.csic.es/">IEM-CSIC</a> ·
+      <a href="https://www.ift.uam-csic.es/en/ift-en/">IFT-UAM</a>
+    </p>
     <div class="hero-links">
       <a href="research/papers.qmd">Publications</a>
       <a href="research/themes.qmd">Research themes</a>
