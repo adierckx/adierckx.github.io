@@ -8,7 +8,7 @@
 <title>Antoine Dierckx</title>
 <link>https://adierckx.com/blog.html</link>
 <atom:link href="https://adierckx.com/blog.xml" rel="self" type="application/rss+xml"/>
-<description>Antoine Dierckx — theoretical physicist working on loop quantum gravity, primordial black holes and quantum cosmology.</description>
+<description>Antoine Dierckx, PhD candidate in theoretical physics studying primordial black holes, their remnants, and the early universe.</description>
 <generator>quarto-1.11.9</generator>
 <lastBuildDate>Wed, 27 May 2026 00:00:00 GMT</lastBuildDate>
 <item>
@@ -21,7 +21,7 @@
 
 <p>The <a href="https://github.com/adierckx/pbh-rem"><strong>pbh-rem</strong></a> repository is a Mathematica-based model designed to simulate the cosmological evolution of <strong>Primordial Black Holes</strong> and the remnants they leave behind.</p>
 <div data-align="center">
-<p><svg width="500" height="100" viewbox="0 0 400 80" xmlns="http://www.w3.org/2000/svg"> <defs> <lineargradient id="pbh-rem-grad-center" x1="0%" y1="100%" x2="100%" y2="90%"> <stop offset="0%" stop-color="#a855f7"></stop> <stop offset="50%" stop-color="#0d9488"></stop> <stop offset="100%" stop-color="#0d9488"></stop> </lineargradient> </defs> <text x="50%" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="52" font-weight="800" text-anchor="middle" fill="url(#pbh-rem-grad-center)"> PBH-REM </text> </svg></p>
+<p><svg class="pbh-rem-wordmark" width="500" height="100" viewbox="0 0 400 80" xmlns="http://www.w3.org/2000/svg"> <defs> <lineargradient id="pbh-rem-grad-center" x1="0%" y1="100%" x2="100%" y2="90%"> <stop offset="0%" stop-color="#a855f7"></stop> <stop offset="50%" stop-color="#0d9488"></stop> <stop offset="100%" stop-color="#0d9488"></stop> </lineargradient> </defs> <text x="50%" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="52" font-weight="800" text-anchor="middle" fill="url(#pbh-rem-grad-center)"> PBH-REM </text> </svg></p>
 </div>
 <p>In standard physics, semi-classical Hawking radiation suggests that black holes evaporate completely. However, mechanisms like <strong>Loop Quantum Gravity</strong> or the <strong>Memory Burden effect</strong> introduce a limit to this evaporation, leaving behind stable or very long-lived remnants. To understand the impact of these objects on our universe, we need to carefully track their energy density across all cosmic eras; from radiation to matter and dark energy.</p>
 <p>This code provides a rigorous way to do exactly that.</p>

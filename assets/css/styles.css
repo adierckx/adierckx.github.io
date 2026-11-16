@@ -62,9 +62,19 @@ h1, h2, h3, h4 {
   line-height: 1.12;
 }
 
-h1 { font-size: clamp(2.65rem, 5vw, 4.35rem); }
-h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); }
-h3 { font-size: 1.65rem; }
+h1 { font-size: clamp(2.1rem, 4vw, 3.45rem); }
+h2 { font-size: clamp(1.65rem, 2.6vw, 2.25rem); }
+h3 { font-size: clamp(1.35rem, 2vw, 1.65rem); }
+
+#quarto-document-content:not(.page-full) > :is(p, ul, ol, blockquote),
+#quarto-document-content:not(.page-full) section > :is(p, ul, ol, blockquote) {
+  max-inline-size: 72ch;
+}
+
+.pbh-rem-wordmark {
+  max-inline-size: 100%;
+  height: auto;
+}
 
 h2, hr {
   border-color: var(--border-flat);
@@ -186,6 +196,17 @@ img[src$="logo_bi_whiteteal_shad.svg"] {
   color: var(--accent-teal);
 }
 
+.hero-affiliation {
+  margin: .95rem 0 .35rem;
+  font-weight: 600;
+}
+
+.hero-description {
+  max-width: 47ch;
+  margin: 0;
+  color: var(--text-muted);
+}
+
 .hero-links {
   display: flex;
   flex-wrap: wrap;
@@ -205,12 +226,6 @@ img[src$="logo_bi_whiteteal_shad.svg"] {
 .hero-links a:hover {
   color: var(--accent-teal);
   text-decoration-color: currentColor;
-}
-
-.hero-links .ai {
-  margin-inline-end: .2rem;
-  color: var(--ink-warm);
-  vertical-align: -.04em;
 }
 
 .hero-sketch {

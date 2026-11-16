@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Research on primordial black hole evaporation, early-universe cosmology, and the dark matter abundance of black hole remnants.">
 
 <title>Research Themes – Antoine Dierckx</title>
 <style>
@@ -77,35 +78,6 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 <script src="../assets/js/page-backgrounds.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
@@ -174,10 +146,6 @@ window.Quarto = {
     <a class="dropdown-item" href="../notes/math.html">
  <span class="dropdown-text">Math Notes (FR)</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="../outreach/standard-model.html">
- <span class="dropdown-text">Standard Model, unfolded</span></a>
-  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -209,12 +177,8 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#primordial-black-holes-dark-matter-remnants" id="toc-primordial-black-holes-dark-matter-remnants" class="nav-link active" data-scroll-target="#primordial-black-holes-dark-matter-remnants">Primordial Black Holes &amp; Dark Matter Remnants</a>
-  <ul class="collapse">
-  <li><a href="#planckian-relics-in-loop-quantum-gravity" id="toc-planckian-relics-in-loop-quantum-gravity" class="nav-link" data-scroll-target="#planckian-relics-in-loop-quantum-gravity">Planckian Relics in Loop Quantum Gravity</a></li>
-  <li><a href="#macroscopic-remnants-via-the-memory-burden-effect" id="toc-macroscopic-remnants-via-the-memory-burden-effect" class="nav-link" data-scroll-target="#macroscopic-remnants-via-the-memory-burden-effect">Macroscopic Remnants via the Memory Burden Effect</a></li>
-  </ul></li>
-  <li><a href="#spinfoam-numerics-cosmology" id="toc-spinfoam-numerics-cosmology" class="nav-link" data-scroll-target="#spinfoam-numerics-cosmology">Spinfoam Numerics &amp; Cosmology</a></li>
+  <li><a href="#planck-scale-remnants-from-loop-quantum-gravity" id="toc-planck-scale-remnants-from-loop-quantum-gravity" class="nav-link active" data-scroll-target="#planck-scale-remnants-from-loop-quantum-gravity">Planck-scale remnants from loop quantum gravity</a></li>
+  <li><a href="#memory-burden-and-massive-remnants" id="toc-memory-burden-and-massive-remnants" class="nav-link" data-scroll-target="#memory-burden-and-massive-remnants">Memory burden and massive remnants</a></li>
   </ul>
 </nav>
     </div>
@@ -226,6 +190,11 @@ window.Quarto = {
 <h1 class="title">Research Themes</h1>
 </div>
 
+<div>
+  <div class="description">
+    Research on primordial black hole evaporation, early-universe cosmology, and the dark matter abundance of black hole remnants.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -240,30 +209,19 @@ window.Quarto = {
 </header>
 
 
-<section id="primordial-black-holes-dark-matter-remnants" class="level2">
-<h2 data-anchor-id="primordial-black-holes-dark-matter-remnants">Primordial Black Holes &amp; Dark Matter Remnants</h2>
-<p>My research investigates the phenomenological consequences of non-perturbative quantum gravity corrections on the evolution of light Primordial Black Holes (<strong>PBHs</strong>) in the early universe. Standard semi-classical Hawking evaporation predicts runaway evaporation, but Loop Quantum Gravity (<strong>LQG</strong>) introduces a natural UV cut-off that fundamentally alters this late-stage behavior.</p>
-<section id="planckian-relics-in-loop-quantum-gravity" class="level3">
-<h3 data-anchor-id="planckian-relics-in-loop-quantum-gravity">Planckian Relics in Loop Quantum Gravity</h3>
-<p>In LQG, the quantization of geometric operators resolves the central singularity, replacing it with a quantum bounce into an antitrapped spacetime region. A central prediction is the quantum tunneling of the classical black hole geometry to a white hole geometry, with a transition probability exponentially suppressed by the squared mass:</p>
-<p><span id="eq-tunneling-probability"><span class="math display">\[
-P \sim e^{-(m/m_{\mathrm{Pl}})^2}~.
-\tag{1}\]</span></span></p>
-<p>This mechanism leads to Planckian relics, which represent a viable, non-baryonic candidate for dark matter and introduce specific signatures in primordial cosmological backgrounds.</p>
+<p>I study how light primordial black holes (PBHs) change the evolution of the early universe. If they are abundant enough, they can briefly dominate the energy density before they evaporate. I model this transition to work out how much radiation the evaporation produces and how much dark matter any surviving remnants could account for.</p>
+<section id="planck-scale-remnants-from-loop-quantum-gravity" class="level2">
+<h2 data-anchor-id="planck-scale-remnants-from-loop-quantum-gravity">Planck-scale remnants from loop quantum gravity</h2>
+<p>In the scenario we consider, motivated by loop quantum gravity, Hawking evaporation ends with a long-lived remnant of approximately the Planck mass. We calculate which initial PBH masses and abundances are compatible with the observed radiation and dark matter densities. In this model, a population with initial masses near one tonne can reheat the early universe and leave enough remnants to make up the observed dark matter.</p>
 <ul>
-<li><strong>Associated Code:</strong> A Mathematica framework developed to derive constraints on these PBH models can be found in the repo <a href="https://github.com/adierckx/pbh-rem">pbh-rem</a>.</li>
-<li><strong>Recent Preprint:</strong> A preprint exploring the signatures of LQG in PBH cosmologies, in collaboration with Francesca Vidotto and Sébastien Clesse, is available on the arXiv: <a href="https://inspirehep.net/literature/3162406">arXiv:2605.28953</a>.</li>
+<li><a href="https://arxiv.org/abs/2605.28953">Preprint with Sébastien Clesse and Francesca Vidotto</a></li>
+<li><a href="assets/talk_RERS8_20260526.pdf">Slides from the RER-S8 Cosmology Meeting</a></li>
+<li><a href="https://github.com/adierckx/pbh-rem">Mathematica framework</a></li>
 </ul>
 </section>
-<section id="macroscopic-remnants-via-the-memory-burden-effect" class="level3">
-<h3 data-anchor-id="macroscopic-remnants-via-the-memory-burden-effect">Macroscopic Remnants via the Memory Burden Effect</h3>
-<p>Other stabilization mechanisms include the Memory Burden effect (<strong>MBe</strong>), in which the suppression of the evaporation rate is related to the information capacity of the black hole. The remnants predicted by this mechanism are macroscopic, typically after the black hole has evaporated roughly half of its initial mass (<span class="math inline">\(m \sim m_0 / 2\)</span>).</p>
-<hr>
-</section>
-</section>
-<section id="spinfoam-numerics-cosmology" class="level2">
-<h2 data-anchor-id="spinfoam-numerics-cosmology">Spinfoam Numerics &amp; Cosmology</h2>
-<p>The second axis of my work focuses on Covariant Loop Quantum Gravity (<strong>Spinfoam models</strong>) and its application to early-universe cosmology.</p>
+<section id="memory-burden-and-massive-remnants" class="level2">
+<h2 data-anchor-id="memory-burden-and-massive-remnants">Memory burden and massive remnants</h2>
+<p>Memory-burden models propose that information stored in a black hole can slow its evaporation. I study scenarios in which this suppression becomes important after the black hole has lost about half its initial mass. The surviving objects can then be much heavier than the Planck mass. I use cosmological constraints to investigate which initial masses and abundances could give a viable population of such remnants.</p>
 
 
 </section>
@@ -739,6 +697,40 @@ P \sim e^{-(m/m_{\mathrm{Pl}})^2}~.
   window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Antoine Dierckx · IEM-CSIC / Universidad Autónoma de Madrid</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="mailto:a.d@csic.es">
+<p>Email</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://arxiv.org/search/gr-qc?searchtype=author&amp;query=Dierckx,+A">
+<p>arXiv</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://orcid.org/0009-0001-8717-1712">
+<p>ORCID</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://inspirehep.net/authors/3157664">
+<p>INSPIRE</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 
