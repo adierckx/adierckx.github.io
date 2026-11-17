@@ -22,17 +22,9 @@
   --sm-project-accent: var(--section-accent, var(--palette-rose));
   --sm-project-secondary: var(--palette-purple);
 
-  position: relative;
-  isolation: isolate;
-  min-height: calc(100vh - 70px);
-  margin-top: -1.5rem;
-  padding: clamp(1rem, 3vw, 2rem) clamp(1rem, 4vw, 4rem) 5rem;
-  overflow: hidden;
+  width: var(--panel-width);
+  margin: 0 auto var(--panel-gap);
   color: var(--sm-project-text);
-  background:
-    radial-gradient(ellipse 50rem 30rem at 50% 0,
-      color-mix(in srgb, var(--sm-project-accent) 12%, transparent), transparent 90%),
-    var(--sm-project-bg);
 }
 
 /* Quarto adds its page-columns class to the full-width raw HTML wrapper.
@@ -40,7 +32,6 @@
    which makes our sections escape their padding at intermediate widths. */
 .sm-project-page.page-columns {
   display: block;
-  width: 100%;
   grid-template-columns: none;
 }
 
@@ -58,16 +49,15 @@
   color: inherit;
 }
 
-.sm-project-nav,
-.sm-project-hero,
-.sm-project-section,
-.sm-project-principle,
-.sm-guide-intro,
-.sm-guide-layout,
-.sm-guide-caveat {
-  width: min(1420px, 100%);
-  margin-right: auto;
-  margin-left: auto;
+.sm-project-page > :is(.sm-project-hero, .sm-guide-intro, .sm-app-intro) {
+  margin-bottom: var(--panel-gap);
+  padding: var(--panel-padding);
+  background:
+    radial-gradient(ellipse 50rem 30rem at 50% 0,
+      color-mix(in srgb, var(--sm-project-accent) 12%, transparent), transparent 90%),
+    var(--sm-project-bg);
+  border-radius: var(--panel-radius);
+  box-shadow: 0 3px 12px var(--panel-shadow);
 }
 
 .sm-project-nav {
@@ -75,7 +65,7 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 0.35rem;
-  margin-bottom: clamp(3rem, 7vw, 6rem);
+  margin-bottom: var(--panel-gap);
   padding: 0.42rem;
   background: var(--sm-project-surface);
   border: 1px solid var(--sm-project-line);
@@ -115,7 +105,6 @@
 }
 
 .sm-project-hero {
-  max-width: 1080px;
   text-align: center;
 }
 
@@ -183,10 +172,6 @@
   overflow-y: hidden;
   margin: 0 !important;
   padding: 0.1rem 0;
-}
-
-.sm-project-section {
-  margin-top: clamp(2rem, 4vw, 3.5rem);
 }
 
 .sm-project-entry-grid {
@@ -299,9 +284,9 @@
   display: grid;
   grid-template-columns: minmax(180px, 0.3fr) 1fr;
   gap: 2rem;
-  margin-top: clamp(4rem, 8vw, 7rem);
-  padding: clamp(1.4rem, 3vw, 2rem);
-  background: linear-gradient(120deg, color-mix(in srgb, var(--sm-project-accent) 8%, transparent), color-mix(in srgb, var(--sm-project-secondary) 6%, transparent));
+  margin-top: var(--panel-gap);
+  padding: var(--panel-padding);
+  background: var(--sm-project-bg);
   border: 1px solid var(--sm-project-line);
   border-radius: 22px;
 }
@@ -385,12 +370,7 @@
 }
 
 @media (max-width: 760px) {
-  .sm-project-page {
-    padding: 1rem 0.7rem 3rem;
-  }
-
   .sm-project-nav {
-    margin-bottom: 3rem;
     border-radius: 18px;
   }
 

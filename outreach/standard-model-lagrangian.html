@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Choose sectors of the Standard Model Lagrangian, expand the terms, look up symbols, and copy the LaTeX.">
+<meta name="description" content="Choose sectors of the Standard Model Lagrangian, expand the terms, and look up symbols.">
 
-<title>Equation explorer | Standard Model Lagrangian – Antoine Dierckx</title>
+<title>Standard model lagrangian – Antoine Dierckx</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-2bdba9438929c91d7f96efb8598dcf51.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-14d58400b71c08e81f10e5a03e6e3161.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -109,7 +109,6 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../assets/css/styles.css">
-<link rel="stylesheet" href="../assets/lagrangian/lagrangian-project.css">
 <link rel="stylesheet" href="../assets/lagrangian/lagrangian.css">
 <link rel="stylesheet" href="../assets/lagrangian/lagrangian-colour-variation.css">
 </head>
@@ -210,12 +209,12 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Equation explorer | Standard Model Lagrangian</h1>
+<h1 class="title">Standard model lagrangian</h1>
 </div>
 
 <div>
   <div class="description">
-    Choose sectors of the Standard Model Lagrangian, expand the terms, look up symbols, and copy the LaTeX.
+    Choose sectors of the Standard Model Lagrangian, expand the terms, and look up symbols.
   </div>
 </div>
 
@@ -236,48 +235,10 @@ window.Quarto = {
 <div class="sm-math-bootstrap" aria-hidden="true">
 <p><span class="math inline">\(\require{html}\class{sm-math-probe}{x}\)</span></p>
 </div>
-<div class="sm-project-page sm-lagrangian-app" id="sm-lagrangian-app" data-catalogue="../assets/lagrangian/catalogue.json">
-  <nav class="sm-project-nav" aria-label="Standard Model project">
-    <a href="standard-model.html">Overview</a>
-    <a href="build-standard-model.html">Build the equation</a>
-    <a href="standard-model-lagrangian.html" aria-current="page">Equation explorer</a>
-  </nav>
+<div class="sm-lagrangian-app" id="sm-lagrangian-app" data-catalogue="../assets/lagrangian/catalogue.json">
+  <h1 class="sm-explorer-title">Standard model lagrangian</h1>
 
-  <header class="sm-app-intro">
-    <p class="sm-eyebrow">Standard Model</p>
-    <h1>Equation <span>explorer</span></h1>
-    <p class="sm-app-lede">
-      Select a field basis and its sectors, then move from compact notation to
-      explicit generations, internal components, and gauge-field monomials.
-    </p>
-  </header>
-
-  <section class="sm-glass sm-formula-stage" aria-label="Complete selected Lagrangian">
-    <div class="sm-stage-header">
-      <div class="sm-stage-stat">
-        <span class="sm-stage-label">Complete expression</span>
-        <strong id="sm-term-count">Loading catalogue…</strong>
-      </div>
-      <div class="sm-render-status" id="sm-render-status" role="status"></div>
-    </div>
-
-    <div class="sm-equation-shell" id="sm-equation-shell" aria-busy="true">
-      <div class="sm-formula-track" id="sm-formula-track"></div>
-      <div class="sm-loading" id="sm-loading">
-        <span></span><span></span><span></span>
-        <b id="sm-loading-label">Preparing the fields</b>
-      </div>
-    </div>
-
-    <div class="sm-colour-key" id="sm-colour-key" hidden=""></div>
-
-    <div class="sm-stage-footer">
-      <span id="sm-level-caption">Connections</span>
-      <span class="sm-stage-hint" id="sm-stage-hint">Every additive term in the current selection is displayed.</span>
-    </div>
-  </section>
-
-  <section class="sm-glass sm-controls" aria-label="Lagrangian controls">
+  <section class="sm-panel sm-controls" aria-label="Lagrangian controls">
     <div class="sm-control-block sm-phase-control">
       <span class="sm-control-title">Field basis</span>
       <div class="sm-segmented" role="group" aria-label="Field basis">
@@ -300,13 +261,13 @@ window.Quarto = {
     <div class="sm-control-block sm-development-control">
       <div class="sm-control-heading">
         <label class="sm-control-title" for="sm-development">Development</label>
-        <output id="sm-level-name" for="sm-development">Connections</output>
+        <output id="sm-level-name" for="sm-development">Canonical</output>
       </div>
-      <input id="sm-development" type="range" min="0" max="4" step="1" value="2">
+      <input id="sm-development" type="range" min="0" max="4" step="1" value="0" aria-describedby="sm-level-description">
       <div class="sm-range-ticks" aria-hidden="true">
         <span>Canonical</span><span>Multiplets</span><span>Connections</span><span>Components</span><span>Unfolded</span>
       </div>
-      <p id="sm-level-description">Covariant derivatives and field strengths are exposed.</p>
+      <p id="sm-level-description">The usual compact Standard Model notation.</p>
     </div>
 
     <fieldset class="sm-control-block sm-reading-control">
@@ -315,7 +276,7 @@ window.Quarto = {
         <label class="sm-mode-switch">
           <input id="sm-colour-mode" type="checkbox" checked="">
           <span>
-            <strong>Smart colour</strong>
+            <strong>Colour</strong>
             <small>Field families and physical flavours</small>
           </span>
         </label>
@@ -328,36 +289,28 @@ window.Quarto = {
         </label>
       </div>
     </fieldset>
-
-    <div class="sm-control-block sm-actions">
-      <a class="sm-action-button sm-guide-button" href="build-standard-model.html">
-        <span aria-hidden="true">↖</span> Guided build
-      </a>
-      <button type="button" id="sm-copy" class="sm-action-button">
-        <span aria-hidden="true">⧉</span> Copy LaTeX
-      </button>
-      <button type="button" id="sm-download" class="sm-action-button sm-action-primary">
-        <span aria-hidden="true">↓</span> Download .tex
-      </button>
-    </div>
   </section>
 
-  <section class="sm-glass sm-explainer" id="sm-explainer" hidden="" aria-label="Symbol explanations">
+  <section class="sm-panel sm-formula-stage" aria-label="Selected Lagrangian">
+    <div class="sm-equation-shell" id="sm-equation-shell" aria-busy="true">
+      <div class="sm-formula-track" id="sm-formula-track"></div>
+      <p class="sm-loading" id="sm-loading" role="status">Loading equation…</p>
+    </div>
+    <p class="sm-render-error" id="sm-render-error" role="status" hidden=""></p>
+    <div class="sm-colour-key" id="sm-colour-key" hidden=""></div>
+    <p class="sm-level-caption" id="sm-level-caption">Canonical · Compact</p>
+  </section>
+
+  <section class="sm-panel sm-explainer" id="sm-explainer" hidden="" aria-label="Symbol explanations">
     <div class="sm-explainer-header">
-      <div>
-        <p class="sm-control-title">Notation guide</p>
-        <h2>Symbols in this selection</h2>
-      </div>
+      <h2>Symbols in this selection</h2>
       <p>Hover or focus a card to locate the terms that use that symbol.</p>
     </div>
     <div class="sm-symbol-groups" id="sm-symbol-groups"></div>
   </section>
 
-  <details class="sm-glass sm-source-panel">
-    <summary>
-      <span>Complete LaTeX source</span>
-      <small>The copied and downloaded source stays uncoloured and portable.</small>
-    </summary>
+  <details class="sm-panel sm-source-panel">
+    <summary>Complete LaTeX source</summary>
     <div class="sm-source-inner">
       <pre><code id="sm-raw-latex"></code></pre>
     </div>
@@ -845,7 +798,7 @@ window.Quarto = {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Antoine Dierckx · IEM-CSIC / Universidad Autónoma de Madrid</p>
+<p>Antoine Dierckx</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

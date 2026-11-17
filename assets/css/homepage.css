@@ -1,0 +1,178 @@
+/* The hero and selected work sit on separate panels. */
+.hero-section,
+.home-selected {
+  width: var(--panel-width);
+  margin-inline: auto;
+  margin-bottom: var(--panel-gap);
+}
+
+.home-selected > h2 {
+  padding-bottom: .65rem;
+  border-bottom-color: rgb(242 232 216 / 22%);
+}
+
+.hero-section {
+  overflow: hidden;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.22fr) minmax(0, 1fr);
+  gap: clamp(1rem, 4vw, 4rem);
+  align-items: center;
+  min-height: clamp(24rem, 36vw, 33rem);
+  padding: clamp(1rem, 3vw, 2rem) 0;
+}
+
+.hero-content {
+  min-width: 0;
+}
+
+.hero-subtitle {
+  margin-bottom: 1rem;
+  color: var(--ink-warm);
+  font: 500 .74rem/1.6 var(--font-mono);
+  letter-spacing: .085em;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  margin: 0;
+  font-size: clamp(2.45rem, 4.2vw, 3.85rem);
+  font-weight: 600;
+  letter-spacing: -.035em;
+  line-height: 1.03;
+  text-wrap: pretty;
+}
+
+.hero-title .highlight {
+  color: var(--accent-teal);
+}
+
+.hero-affiliation {
+  margin: .95rem 0 .35rem;
+  font-weight: 600;
+}
+
+.hero-affiliation a {
+  text-underline-offset: .18em;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .45rem 1.3rem;
+  margin-top: 1.55rem;
+}
+
+.hero-links a {
+  color: var(--text-main);
+  font-size: .98rem;
+  font-weight: 600;
+  text-decoration-color: var(--border-flat);
+  text-underline-offset: .24em;
+}
+
+.hero-links a:hover {
+  color: var(--accent-teal);
+  text-decoration-color: currentColor;
+}
+
+.hero-sketch {
+  position: relative;
+  min-height: clamp(16rem, 29vw, 26rem);
+}
+
+.hero-sketch::before {
+  content: "";
+  position: absolute;
+  inset: -12%;
+  pointer-events: none;
+  background: radial-gradient(ellipse,
+    color-mix(in srgb, var(--ink-warm) 9%, transparent),
+    color-mix(in srgb, var(--ink-warm) 4%, transparent) 48%, transparent 73%);
+}
+
+#spinfoamCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  mask-image: radial-gradient(ellipse, black 45%, transparent 75%);
+}
+
+/* Selected work cards */
+.home-work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--panel-gap);
+}
+
+.release-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: clamp(1rem, 3vw, 1.6rem);
+  border-top: 2px solid var(--border-flat);
+}
+
+.release-card .release-badge {
+  align-self: flex-start;
+  color: var(--ink-warm);
+  font: 500 .68rem/1.45 var(--font-mono);
+  letter-spacing: .065em;
+  text-transform: uppercase;
+}
+
+.release-card .code-badge {
+  color: var(--accent-teal);
+}
+
+.release-card > section {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.release-card h3 {
+  margin: .6rem 0 .5rem;
+}
+
+.release-card h3 code {
+  padding: .1em .32em;
+  border-radius: .2em;
+  background-color: #3a281f;
+  color: #f0c6aa;
+}
+
+.release-card p {
+  margin-bottom: .65rem;
+}
+
+.release-card > section > p:last-child {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767.98px) {
+  .home-work-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+    padding: 1rem 0 0;
+    gap: .3rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 8.2vw, 3.55rem);
+  }
+
+  .hero-sketch {
+    min-height: clamp(10rem, 39vw, 16rem);
+  }
+}

@@ -46,49 +46,14 @@
     "href": "posts/pbh-rem.html",
     "title": "Releasing pbh-rem: A framework for PBH remnants",
     "section": "",
-    "text": "The pbh-rem repository is a Mathematica-based model designed to simulate the cosmological evolution of Primordial Black Holes and the remnants they leave behind.\n\n         PBH-REM  \n\nIn standard physics, semi-classical Hawking radiation suggests that black holes evaporate completely. However, mechanisms like Loop Quantum Gravity or the Memory Burden effect introduce a limit to this evaporation, leaving behind stable or very long-lived remnants. To understand the impact of these objects on our universe, we need to carefully track their energy density across all cosmic eras; from radiation to matter and dark energy.\nThis code provides a rigorous way to do exactly that.\n\nHow the framework works\nBuilt for Mathematica 14.1, the pbh-rem pipeline is designed to handle the differential equations that occur around the exact moment a black hole evaporates. The workflow is split into three main parts:\n\nAnalytical Derivations (01_alpha.nb): A helper notebook that computes the analytical expressions for the initial abundance coefficients \\(\\alpha_{A}\\) for each species \\(A\\).\nThe Numerical Engine (02_model.nb): The core solver. It integrates the evolution of the PBH population across cosmic time, computing the transitions between standard evaporation and the stable remnant phase.\nVisualization & Data Export (03_visuals.nb): This notebook generates plots of the universe’s history. It also runs an optimization algorithm to find the maximum allowed initial PBH abundance \\(\\beta_{\\rm max}\\), exporting detailed datasets. For every tested configuration, it tracks 96 different physical variables across four distinct cosmological milestones (Formation, Evaporation, Remnant Diffusion, and Today).\n\n\n\nThe Paper\nThis code was developed for our paper: “Signatures of loop quantum gravity in primordial black hole cosmologies” (Antoine Dierckx, Sébastien Clesse, Francesca Vidotto).\nYou can find the preprint here. Feel free to explore the repository, run the visualizer notebook to see the cosmic history plots, or adapt the model to test your own phenomenological constraints.\n\nView the pbh-rem repository on GitHub →"
+    "text": "The pbh-rem repository is a Mathematica-based model designed to simulate the cosmological evolution of Primordial Black Holes and the remnants they leave behind.\n\n         PBH-REM  \n\nIn standard physics, semi-classical Hawking radiation suggests that black holes evaporate completely. However, mechanisms like Loop Quantum Gravity or the Memory Burden effect introduce a limit to this evaporation, leaving behind stable or very long-lived remnants. To understand the impact of these objects on our universe, we need to carefully track their energy density across all cosmic eras; from radiation to matter and dark energy.\nThis code provides a rigorous way to do exactly that.\n\n\nHow the framework works\nBuilt for Mathematica 14.1, the pbh-rem pipeline is designed to handle the differential equations that occur around the exact moment a black hole evaporates. The workflow is split into three main parts:\n\nAnalytical Derivations (01_alpha.nb): A helper notebook that computes the analytical expressions for the initial abundance coefficients \\(\\alpha_{A}\\) for each species \\(A\\).\nThe Numerical Engine (02_model.nb): The core solver. It integrates the evolution of the PBH population across cosmic time, computing the transitions between standard evaporation and the stable remnant phase.\nVisualization & Data Export (03_visuals.nb): This notebook generates plots of the universe’s history. It also runs an optimization algorithm to find the maximum allowed initial PBH abundance \\(\\beta_{\\rm max}\\), exporting detailed datasets. For every tested configuration, it tracks 96 different physical variables across four distinct cosmological milestones (Formation, Evaporation, Remnant Diffusion, and Today).\n\n\n\nThe Paper\nThis code was developed for our paper: “Signatures of loop quantum gravity in primordial black hole cosmologies” (Antoine Dierckx, Sébastien Clesse, Francesca Vidotto).\nYou can find the preprint here. Feel free to explore the repository, run the visualizer notebook to see the cosmic history plots, or adapt the model to test your own phenomenological constraints.\n\nView the pbh-rem repository on GitHub →"
   },
   {
-    "objectID": "outreach/standard-model.html",
-    "href": "outreach/standard-model.html",
-    "title": "The Standard Model Lagrangian",
+    "objectID": "outreach/standard-model-lagrangian.html",
+    "href": "outreach/standard-model-lagrangian.html",
+    "title": "Standard model lagrangian",
     "section": "",
-    "text": "\\(x\\)\n\n\n  \n    Overview\n    Build the equation\n    Equation explorer\n  \n\n  \n    The Standard Model Lagrangian\n    \n      A small interactive project on how the fields and interactions of the Standard Model fit together.\n    \n\n    \n      \\(\\mathcal L_{\\mathrm{SM}}=\\mathcal L_{\\mathrm{gauge}}+\\mathcal L_{\\mathrm{fermions}}+\\mathcal L_{\\mathrm{Higgs}}+\\mathcal L_{\\mathrm{Yukawa}}\\)\n    \n  \n\n  \n    \n      \n        Build the equation\n        Start with the gauge symmetry and field content. Add the gauge, matter, Higgs, and Yukawa terms step by step.\n      \n\n      \n        Equation explorer\n        Select sectors, expand individual terms, look up symbols, and copy the LaTeX.\n      \n    \n  \n\n  \n    Scope\n    The classical, gauge-invariant minimal Standard Model. Gauge fixing, ghosts, the QCD theta term, right-handed neutrinos and higher-dimensional operators are left out."
-  },
-  {
-    "objectID": "outreach/projects.html",
-    "href": "outreach/projects.html",
-    "title": "Outreach & Creative Projects",
-    "section": "",
-    "text": "Beyond academic research, I participate in science communication, digital content creation, and collaborative design projects aimed at opening up academic and scientific spaces."
-  },
-  {
-    "objectID": "outreach/projects.html#science-communication-outreach",
-    "href": "outreach/projects.html#science-communication-outreach",
-    "title": "Outreach & Creative Projects",
-    "section": "Science Communication & Outreach",
-    "text": "Science Communication & Outreach\n\nThe bel.sciences Project (STEMentiel!)\nAs part of the broader STEMentiel! initiative, I contribute to bel.sciences, a digital outreach project focused on sharing diverse pathways into exact sciences. I produce video content and conduct short interviews across TikTok, Instagram, and YouTube, highlighting students and researchers in mathematics and physics from a wide range of backgrounds.\n\nExplore our content via our Linktree bel.sciences."
-  },
-  {
-    "objectID": "outreach/projects.html#graphic-design-collaboration",
-    "href": "outreach/projects.html#graphic-design-collaboration",
-    "title": "Outreach & Creative Projects",
-    "section": "Graphic Design & Collaboration",
-    "text": "Graphic Design & Collaboration\n\nIdentity & Logo Design\nI occasionally collaborate on visual identity and graphic materials for scientific networks and working groups. This includes designing the official logo for the WOST (WithOut SpaceTime) network."
-  },
-  {
-    "objectID": "outreach/projects.html#interactive-physics",
-    "href": "outreach/projects.html#interactive-physics",
-    "title": "Outreach & Creative Projects",
-    "section": "Interactive Physics",
-    "text": "Interactive Physics\n\nThe Standard Model Lagrangian\nA small interactive project for taking apart the Standard Model Lagrangian. Start with the fields and symmetries in the guided version, or use the explorer to expand individual terms and look up symbols.\nOpen the project"
-  },
-  {
-    "objectID": "outreach/build-standard-model.html",
-    "href": "outreach/build-standard-model.html",
-    "title": "Build the Standard Model Lagrangian",
-    "section": "",
-    "text": "\\(\\require{html}\\class{sm-math-probe}{x}\\)\n\n\n  \n    Overview\n    Build the equation\n    Equation explorer\n  \n\n  \n    Guided route · symmetric phase\n    Build the equation\n    \n      Start with the field content and local \\(SU(3)_c\\times SU(2)_L\\times U(1)_Y\\)\n      gauge symmetry. Lorentz and gauge invariance, together with\n      renormalisability, constrain which terms can appear.\n    \n  \n\n  \n    \n      Construction\n      \n        01Symmetry and fields\n        02Gauge dynamics\n        03Matter fields\n        04The Higgs sector\n        05Yukawa couplings\n        06The complete structure\n      \n    \n\n    \n      \n\n      \n        \n          \n            Equation so far\n            Preparing catalogue…\n          \n          Start with the ingredients\n        \n        \n      \n\n      \n        Step 1 of 6\n        Symmetry and fields\n        \n        \n        \n      \n\n      \n        ← Previous\n        Open this step in the explorer\n        Next →\n      \n    \n  \n\n  \n    Model parameters\n    The gauge couplings, Higgs parameters, and Yukawa matrices are inputs to the model.\n  \n\n  This guided chapter requires JavaScript."
+    "text": "\\(\\require{html}\\class{sm-math-probe}{x}\\)\n\n\n  Standard model lagrangian\n\n  \n    \n      Field basis\n      \n        \n          Symmetric\n          before EWSB\n        \n        \n          Physical\n          after EWSB\n        \n      \n    \n\n    \n      Active sectors\n      \n    \n\n    \n      \n        Development\n        Canonical\n      \n      \n      \n        CanonicalMultipletsConnectionsComponentsUnfolded\n      \n      The usual compact Standard Model notation.\n    \n\n    \n      Reading modes\n      \n        \n          \n          \n            Colour\n            Field families and physical flavours\n          \n        \n        \n          \n          \n            Explain symbols\n            Contextual notation guide\n          \n        \n      \n    \n  \n\n  \n    \n      \n      Loading equation…\n    \n    \n    \n    Canonical · Compact\n  \n\n  \n    \n      Symbols in this selection\n      Hover or focus a card to locate the terms that use that symbol.\n    \n    \n  \n\n  \n    Complete LaTeX source\n    \n      \n    \n  \n\n  This interactive page requires JavaScript."
   },
   {
     "objectID": "notes/master.html",
@@ -389,14 +354,14 @@
     "href": "about.html#selected-background",
     "title": "Antoine Dierckx",
     "section": "Selected Background",
-    "text": "Selected Background\nMaster in Physics (magna cum laude) | Sep 2023 – Jun 2025\nUniversité libre de Bruxelles, Belgium\nVisiting Graduate Researcher | Sep 2024 – Jun 2025\nWestern University, Canada & Université libre de Bruxelles, Belgium\nWorked on primordial-black-hole phenomenology in loop quantum gravity, with a focus on remnants, evaporation, and observational constraints.\nCERN Summer Student | Jul 2024 – Aug 2024\nCompact Muon Solenoid (CMS), CERN, Geneva\nDeveloped graph neural networks for VBF tagging and studied algorithm stability for the \\(H\\rightarrow\\mathrm{invisible}\\) channel."
+    "text": "Selected Background\n\n\nMaster in Physics (magna cum laude) | Sep 2023 – Jun 2025 Université libre de Bruxelles, Belgium\nVisiting Graduate Researcher | Sep 2024 – Jun 2025 Western University, Canada & Université libre de Bruxelles, Belgium Worked on primordial-black-hole phenomenology in loop quantum gravity, with a focus on remnants, evaporation, and observational constraints.\nCERN Summer Student | Jul 2024 – Aug 2024 Compact Muon Solenoid (CMS), CERN, Geneva Developed graph neural networks for VBF tagging and studied algorithm stability for the \\(H\\rightarrow\\mathrm{invisible}\\) channel."
   },
   {
     "objectID": "about.html#research-networks",
     "href": "about.html#research-networks",
     "title": "Antoine Dierckx",
     "section": "Research Networks",
-    "text": "Research Networks\n\nWithOut SpaceTime (WOST): International network exploring physics beyond classical space and time; my PhD research is based in the Madrid hub.\nCOST Action CA23130 (BridgeQG): Member of WG1 (High-energy quantum gravity theory) and WG2 (High-energy quantum gravity experiment).\nCOST Action CA23115 (RQI): Member of WG2 (Gravitational quantum physics and metrology) and WG3 (Time, causality, and memory in quantum physics).\n\nFor a complete academic history, training record, and technical skills, see the Full CV above."
+    "text": "Research Networks\n\n\nWithOut SpaceTime (WOST): International network exploring physics beyond classical space and time; my PhD research is based in the Madrid hub.\nCOST Action CA23130 (BridgeQG): Member of WG1 (High-energy quantum gravity theory) and WG2 (High-energy quantum gravity experiment).\nCOST Action CA23115 (RQI): Member of WG2 (Gravitational quantum physics and metrology) and WG3 (Time, causality, and memory in quantum physics).\n\n\nFor a complete academic history, training record, and technical skills, see the Full CV above."
   },
   {
     "objectID": "index.html",
@@ -410,7 +375,7 @@
     "href": "index.html#selected-work",
     "title": "loop quantum gravity, primordial black holes and the early universe",
     "section": "Selected work",
-    "text": "Selected work\n\n\n\n\nPreprint · May 2026\n\n\nSignatures of loop quantum gravity in primordial black hole cosmologies\nWith Sébastien Clesse and Francesca Vidotto.\nIn the Planck-scale remnant model we study, primordial black holes of about one tonne can reheat the early universe through Hawking evaporation and leave remnants that account for today’s dark matter.\nRead on arXiv\n\n\n\n\n\n\nSoftware · May 2026\n\n\npbh-rem\nMathematica notebooks for modelling the evolution of primordial black holes and their remnants, and computing cosmological bounds on their abundances.\nView the code Release notes"
+    "text": "Selected work\n\n\n\nPreprint · May 2026\n\n\nSignatures of loop quantum gravity in primordial black hole cosmologies\nWith Sébastien Clesse and Francesca Vidotto.\nIn the Planck-scale remnant model we study, primordial black holes of about one tonne can reheat the early universe through Hawking evaporation and leave remnants that account for today’s dark matter.\nRead on arXiv\n\n\n\n\nSoftware · May 2026\n\n\npbh-rem\nMathematica notebooks for modelling the evolution of primordial black holes and their remnants, and computing cosmological bounds on their abundances.\nView the code Release notes"
   },
   {
     "objectID": "notes/ba1/math-f-101.html",
@@ -644,46 +609,67 @@
     "text": "Structure du volume\nCe premier volume se concentre sur l’étude des fonctions et s’articule autour des cinq parties suivantes :\n\n\n\nPartie I : Rappels\n\nCalcul numérique : Concepts fondamentaux (vocabulaire, règle des signes, fractions, règle PEMDAS).\nCalcul littéral : Introduction aux formules de distributivité, identités remarquables et lois des puissances.\n\n\n\n\n\nPartie II : Généralités\n\nNotations mathématiques : Égalités, opérateurs logiques, ensembles et leurs relations.\nNombres et ensembles : Types de nombres (naturels, rationnels, réels) et notations.\nFonction et variable : Exploration des concepts de base.\nAnalyse d’une fonction : Racines, signes, croissance et ordonnée à l’origine.\n\n\n\n\n\nPartie III : Fonctions polynomiales\n\nIntroduction : Présentation des polynômes et propriétés générales.\nPremier degré : Équations, graphes, tableaux de signes, et inéquations simples.\nSecond degré : Équations quadratiques, graphes, tableaux de signes, et formes des solutions.\n\n\n\n\n\nPartie IV : Solutions\n\nExercices et problèmes : Résolution détaillée et méthodique des exercices associés aux polynômes du premier et du second degré pour s’auto-évaluer.\n\n\n\n\n\nPartie V : Formulaire\n\nAide-mémoire : Résumé structuré des formules clés pour les calculs numériques, littéraux, et les fonctions polynomiales."
   },
   {
-    "objectID": "outreach/standard-model-lagrangian.html",
-    "href": "outreach/standard-model-lagrangian.html",
-    "title": "Equation explorer | Standard Model Lagrangian",
+    "objectID": "outreach/projects.html",
+    "href": "outreach/projects.html",
+    "title": "Outreach & Creative Projects",
     "section": "",
-    "text": "\\(\\require{html}\\class{sm-math-probe}{x}\\)\n\n\n  \n    Overview\n    Build the equation\n    Equation explorer\n  \n\n  \n    Standard Model\n    Equation explorer\n    \n      Select a field basis and its sectors, then move from compact notation to\n      explicit generations, internal components, and gauge-field monomials.\n    \n  \n\n  \n    \n      \n        Complete expression\n        Loading catalogue…\n      \n      \n    \n\n    \n      \n      \n        \n        Preparing the fields\n      \n    \n\n    \n\n    \n      Connections\n      Every additive term in the current selection is displayed.\n    \n  \n\n  \n    \n      Field basis\n      \n        \n          Symmetric\n          before EWSB\n        \n        \n          Physical\n          after EWSB\n        \n      \n    \n\n    \n      Active sectors\n      \n    \n\n    \n      \n        Development\n        Connections\n      \n      \n      \n        CanonicalMultipletsConnectionsComponentsUnfolded\n      \n      Covariant derivatives and field strengths are exposed.\n    \n\n    \n      Reading modes\n      \n        \n          \n          \n            Smart colour\n            Field families and physical flavours\n          \n        \n        \n          \n          \n            Explain symbols\n            Contextual notation guide\n          \n        \n      \n    \n\n    \n      \n        ↖ Guided build\n      \n      \n        ⧉ Copy LaTeX\n      \n      \n        ↓ Download .tex\n      \n    \n  \n\n  \n    \n      \n        Notation guide\n        Symbols in this selection\n      \n      Hover or focus a card to locate the terms that use that symbol.\n    \n    \n  \n\n  \n    \n      Complete LaTeX source\n      The copied and downloaded source stays uncoloured and portable.\n    \n    \n      \n    \n  \n\n  This interactive page requires JavaScript."
+    "text": "Beyond academic research, I participate in science communication, digital content creation, and collaborative design projects aimed at opening up academic and scientific spaces."
+  },
+  {
+    "objectID": "outreach/projects.html#science-communication-outreach",
+    "href": "outreach/projects.html#science-communication-outreach",
+    "title": "Outreach & Creative Projects",
+    "section": "Science Communication & Outreach",
+    "text": "Science Communication & Outreach\n\nThe bel.sciences Project (STEMentiel!)\nAs part of the broader STEMentiel! initiative, I contribute to bel.sciences, a digital outreach project focused on sharing diverse pathways into exact sciences. I produce video content and conduct short interviews across TikTok, Instagram, and YouTube, highlighting students and researchers in mathematics and physics from a wide range of backgrounds.\n\nExplore our content via our Linktree bel.sciences."
+  },
+  {
+    "objectID": "outreach/projects.html#graphic-design-collaboration",
+    "href": "outreach/projects.html#graphic-design-collaboration",
+    "title": "Outreach & Creative Projects",
+    "section": "Graphic Design & Collaboration",
+    "text": "Graphic Design & Collaboration\n\nIdentity & Logo Design\nI occasionally collaborate on visual identity and graphic materials for scientific networks and working groups. This includes designing the official logo for the WOST (WithOut SpaceTime) network."
+  },
+  {
+    "objectID": "outreach/projects.html#interactive-physics",
+    "href": "outreach/projects.html#interactive-physics",
+    "title": "Outreach & Creative Projects",
+    "section": "Interactive Physics",
+    "text": "Interactive Physics\n\nThe Standard Model Lagrangian\nChoose a field basis, select sectors, and expand the terms of the Standard Model Lagrangian.\nOpen the Lagrangian"
   },
   {
     "objectID": "posts/links.html",
     "href": "posts/links.html",
     "title": "Some useful links for physics students",
     "section": "",
-    "text": "This page brings together some of the resources I have found most useful. The list is personal, but I hope it can also be useful to other students and researchers.\n\n\nThese are some of the best resources I know for learning or revisiting the essentials:\n\nDavid Tong - Lecture Notes: The definitive standard for clear, rigorous introductions to everything from Classical Dynamics to Quantum Field Theory.\nThe Feynman Lectures on Physics: Old but gold.\nPaul’s Online Math Notes: High school level.\nMIT OpenCourseWare: Check out the course on general relativity, it’s fantastic.\nLibreTexts Physics: Peer-authored, open-access textbook content.\n\n\n\n\nIf like me the reviews on arXiv make you a bit anxious, these are a great way to get a more digestible overview of the latest developments in various topics:\n\nPerimeter Institute (PIRSA): A massive archive of recorded seminars and specialized courses.\nCollège de France - Physique et Chimie: High-level academic seminars and colloquia.\nGeneral Relativity II (Piotr Chruściel): All about black holes.\nLes Samedis de la Physique (Bruxelles): High-quality lectures from ULB professors.\n\n\n\n\nIf you’re looking to do early research or find internships, check out these resources:\n\nCERN Summer Student Programme: Particle physics stuff in Geneva.\nDESY Summer Student Programme: Particle physics stuff in Hamburg.\nESA Student Internships: Space science at the European Space Agency.\nPSI Start (Perimeter Institute): Theoretical physics research at Perimeter Institute in Canada.\n\n\n\n\nAll the nice textbooks for free, because knowledge should be free:\n\nSci-Hub: For academic papers.\nLibrary Genesis and Anna’s Archive: For books."
+    "text": "This page brings together some of the resources I have found most useful. The list is personal, but I hope it can also be useful to other students and researchers."
   },
   {
     "objectID": "posts/links.html#foundations-lecture-notes",
     "href": "posts/links.html#foundations-lecture-notes",
     "title": "Some useful links for physics students",
-    "section": "",
-    "text": "These are some of the best resources I know for learning or revisiting the essentials:\n\nDavid Tong - Lecture Notes: The definitive standard for clear, rigorous introductions to everything from Classical Dynamics to Quantum Field Theory.\nThe Feynman Lectures on Physics: Old but gold.\nPaul’s Online Math Notes: High school level.\nMIT OpenCourseWare: Check out the course on general relativity, it’s fantastic.\nLibreTexts Physics: Peer-authored, open-access textbook content."
+    "section": "1. Foundations & Lecture Notes",
+    "text": "1. Foundations & Lecture Notes\nThese are some of the best resources I know for learning or revisiting the essentials:\n\n\nDavid Tong - Lecture Notes: The definitive standard for clear, rigorous introductions to everything from Classical Dynamics to Quantum Field Theory.\nThe Feynman Lectures on Physics: Old but gold.\nPaul’s Online Math Notes: High school level.\nMIT OpenCourseWare: Check out the course on general relativity, it’s fantastic.\nLibreTexts Physics: Peer-authored, open-access textbook content."
   },
   {
     "objectID": "posts/links.html#advanced-lectures-seminars",
     "href": "posts/links.html#advanced-lectures-seminars",
     "title": "Some useful links for physics students",
-    "section": "",
-    "text": "If like me the reviews on arXiv make you a bit anxious, these are a great way to get a more digestible overview of the latest developments in various topics:\n\nPerimeter Institute (PIRSA): A massive archive of recorded seminars and specialized courses.\nCollège de France - Physique et Chimie: High-level academic seminars and colloquia.\nGeneral Relativity II (Piotr Chruściel): All about black holes.\nLes Samedis de la Physique (Bruxelles): High-quality lectures from ULB professors."
+    "section": "2. Advanced Lectures & Seminars",
+    "text": "2. Advanced Lectures & Seminars\nIf like me the reviews on arXiv make you a bit anxious, these are a great way to get a more digestible overview of the latest developments in various topics:\n\n\nPerimeter Institute (PIRSA): A massive archive of recorded seminars and specialized courses.\nCollège de France - Physique et Chimie: High-level academic seminars and colloquia.\nGeneral Relativity II (Piotr Chruściel): All about black holes.\nLes Samedis de la Physique (Bruxelles): High-quality lectures from ULB professors."
   },
   {
     "objectID": "posts/links.html#career-growth-internships-research",
     "href": "posts/links.html#career-growth-internships-research",
     "title": "Some useful links for physics students",
-    "section": "",
-    "text": "If you’re looking to do early research or find internships, check out these resources:\n\nCERN Summer Student Programme: Particle physics stuff in Geneva.\nDESY Summer Student Programme: Particle physics stuff in Hamburg.\nESA Student Internships: Space science at the European Space Agency.\nPSI Start (Perimeter Institute): Theoretical physics research at Perimeter Institute in Canada."
+    "section": "3. Career Growth: Internships & Research",
+    "text": "3. Career Growth: Internships & Research\nIf you’re looking to do early research or find internships, check out these resources:\n\n\nCERN Summer Student Programme: Particle physics stuff in Geneva.\nDESY Summer Student Programme: Particle physics stuff in Hamburg.\nESA Student Internships: Space science at the European Space Agency.\nPSI Start (Perimeter Institute): Theoretical physics research at Perimeter Institute in Canada."
   },
   {
     "objectID": "posts/links.html#free-books",
     "href": "posts/links.html#free-books",
     "title": "Some useful links for physics students",
-    "section": "",
-    "text": "All the nice textbooks for free, because knowledge should be free:\n\nSci-Hub: For academic papers.\nLibrary Genesis and Anna’s Archive: For books."
+    "section": "4. Free books",
+    "text": "4. Free books\nAll the nice textbooks for free, because knowledge should be free:\n\n\nSci-Hub: For academic papers.\nLibrary Genesis and Anna’s Archive: For books."
   },
   {
     "objectID": "research/early-research.html",
@@ -711,7 +697,7 @@
     "href": "research/early-research.html#undergraduate-research-lab-reports",
     "title": "Early Research & Internships",
     "section": "Undergraduate Research & Lab Reports",
-    "text": "Undergraduate Research & Lab Reports\nDuring my curriculum, I completed several hands-on projects and short internships in both experimental high-energy physics and formal theory:\n\nIIHE Internship (2023): Analysis of scalar-boson production in \\(pp\\) collisions using CMS data at \\(\\sqrt{s}=13\\,\\mathrm{TeV}\\).  Report\nTheoretical Physics Projects: Advanced study projects on Dark Photons  Report and Generalized Symmetries  Report."
+    "text": "Undergraduate Research & Lab Reports\nDuring my curriculum, I completed several hands-on projects and short internships in both experimental high-energy physics and formal theory:\n\n\nIIHE Internship (2023): Analysis of scalar-boson production in \\(pp\\) collisions using CMS data at \\(\\sqrt{s}=13\\,\\mathrm{TeV}\\).  Report\nTheoretical Physics Projects: Advanced study projects on Dark Photons  Report and Generalized Symmetries  Report."
   },
   {
     "objectID": "research/talks.html",
