@@ -26,21 +26,29 @@ I study **primordial black holes and their remnants**. My research follows how l
 
 ## Selected Background
 
-**Master in Physics** (*magna cum laude*) | Sep 2023 – Jun 2025  
-*Université libre de Bruxelles, Belgium*
+::: {.entry-list}
 
-**Visiting Graduate Researcher** | Sep 2024 – Jun 2025  
-*Western University, Canada & Université libre de Bruxelles, Belgium*  
-Worked on primordial-black-hole phenomenology in loop quantum gravity, with a focus on remnants, evaporation, and observational constraints.
+- **Master in Physics** (*magna cum laude*) | Sep 2023 – Jun 2025<br>
+  *Université libre de Bruxelles, Belgium*
 
-**CERN Summer Student** | Jul 2024 – Aug 2024  
-*Compact Muon Solenoid (CMS), CERN, Geneva*  
-Developed graph neural networks for VBF tagging and studied algorithm stability for the $H\rightarrow\mathrm{invisible}$ channel.
+- **Visiting Graduate Researcher** | Sep 2024 – Jun 2025<br>
+  *Western University, Canada & Université libre de Bruxelles, Belgium*<br>
+  Worked on primordial-black-hole phenomenology in loop quantum gravity, with a focus on remnants, evaporation, and observational constraints.
+
+- **CERN Summer Student** | Jul 2024 – Aug 2024<br>
+  *Compact Muon Solenoid (CMS), CERN, Geneva*<br>
+  Developed graph neural networks for VBF tagging and studied algorithm stability for the $H\rightarrow\mathrm{invisible}$ channel.
+
+:::
 
 ## Research Networks
+
+::: {.entry-list}
 
 * **[WithOut SpaceTime (WOST)](https://withoutspacetime.org/):** International network exploring physics beyond classical space and time; my PhD research is based in the Madrid hub.
 * **[COST Action CA23130 (BridgeQG)](https://web.infn.it/BridgeQG/):** Member of WG1 (*High-energy quantum gravity theory*) and WG2 (*High-energy quantum gravity experiment*).
 * **[COST Action CA23115 (RQI)](https://rqi-cost.org/):** Member of WG2 (*Gravitational quantum physics and metrology*) and WG3 (*Time, causality, and memory in quantum physics*).
+
+:::
 
 For a complete academic history, training record, and technical skills, see the **Full CV** above.

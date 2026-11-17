@@ -52,11 +52,13 @@ document.addEventListener("DOMContentLoaded", function() {
   function resizeCanvas() { 
     const nextWidth = canvas.clientWidth;
     const nextHeight = canvas.clientHeight;
+    if (!nextWidth || !nextHeight) return;
+
     const density = Math.min(window.devicePixelRatio || 1, 2);
 
     for (const node of nodes) {
-      node.x *= nextWidth / width;
-      node.y *= nextHeight / height;
+      node.x = width ? node.x * (nextWidth / width) : Math.random() * nextWidth;
+      node.y = height ? node.y * (nextHeight / height) : Math.random() * nextHeight;
     }
 
     width = nextWidth;

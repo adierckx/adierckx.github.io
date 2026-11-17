@@ -8,6 +8,8 @@ toc: true
 <!-- ## Past Presentations & Seminars -->
 ## Presentations & Seminars
 
+::: {.entry-list .talk-list}
+
 * **Black holes and their remnants** *[Black Holes & Cosmology Conference](https://indico.mpp.mpg.de/event/11604/overview)* — Granada, ES (Jun 15–19, 2026)
 <br>[<i class="bi bi-file-earmark-slides"></i> Slides](./assets/talk_20260618_BH&Cosmo.pdf){.btn-surface .c-teal .btn-compact}
 
@@ -25,3 +27,5 @@ toc: true
 
 * **Group introduction on Causal Spinfoams** *[ILQGS](https://relativity.phys.lsu.edu/ilqgs/) Group Intro Session* — IEM-CSIC, Madrid, ES (Feb 2, 2026)
 <br>[<i class="bi bi-file-earmark-slides"></i> Slides](./assets/talk_Intro-ILQGS_20260202.pdf){.btn-surface .c-teal .btn-compact}
+
+:::

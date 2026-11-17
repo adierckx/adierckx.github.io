@@ -25,6 +25,6 @@ I occasionally collaborate on visual identity and graphic materials for scientif
 
 ### The Standard Model Lagrangian
 
-A small interactive project for taking apart the Standard Model Lagrangian. Start with the fields and symmetries in the guided version, or use the explorer to expand individual terms and look up symbols.
+Choose a field basis, select sectors, and expand the terms of the Standard Model Lagrangian.
 
-[Open the project](standard-model.qmd){.btn-surface .c-rose .btn-compact}
+[Open the Lagrangian](standard-model-lagrangian.qmd){.btn-surface .c-rose .btn-compact}

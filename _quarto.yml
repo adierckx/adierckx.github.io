@@ -26,7 +26,7 @@ website:
     - outreach/lqg-atlas.qmd
     - outreach/lqg-diagrams.qmd
   page-footer:
-    left: "Antoine Dierckx · IEM-CSIC / Universidad Autónoma de Madrid"
+    left: Antoine Dierckx
     right:
       - text: Email
         href: mailto:a.d@csic.es

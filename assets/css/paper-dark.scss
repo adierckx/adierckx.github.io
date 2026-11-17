@@ -1,31 +1,34 @@
 /*-- scss:defaults --*/
-$body-bg: #23221f;
-$body-color: #eee3d2;
+$body-bg: #39312b;
+$body-color: #f2e8d8;
 $headings-color: inherit;
 $primary: #acc8b4;
-$secondary: #c2b3a0;
+$secondary: #cdbfac;
 $info: #dfaa82;
-$link-color: #acc8b4;
+$link-color: $primary;
 $link-hover-color: #d0e5d6;
-$border-color: #4b453c;
-$navbar-bg: #27251f;
-$navbar-fg: #d5c8b5;
+$border-color: #67584c;
+$navbar-bg: $body-bg;
+$navbar-fg: $body-color;
 $navbar-hl: #c8decf;
 $code-color: #e5b097;
-$input-bg: #2e2c26;
-$dropdown-bg: #2e2c26;
-$dropdown-link-hover-bg: #3b382f;
-$popover-bg: #2e2c26;
+$input-bg: #463b33;
+$dropdown-bg: $input-bg;
+$dropdown-link-hover-bg: #50443a;
+$popover-bg: $input-bg;
 
 /*-- scss:rules --*/
 :root {
   color-scheme: dark;
-  --card-bg: #2d2a24;
-  --card-hover: #353127;
-  --paper-hero: #29261f;
-  --paper-wash: rgb(204 161 109 / 5%);
-  --text-muted: #c2b3a0;
-  --ink-warm: #d9a585;
+  --site-background: #b8aa94;
+  --paper-ink: #332920;
+  --paper-link: #294b3d;
+  --panel-light: #6b5a4b;
+  --panel-shadow: rgb(57 49 43 / 17%);
+  --card-bg: #{$input-bg};
+  --card-hover: #{$dropdown-link-hover-bg};
+  --text-muted: #{$secondary};
+  --ink-warm: #d9b699;
   --paper-shadow: rgb(0 0 0 / 26%);
   --logo-ink: grayscale(1) brightness(1.16) sepia(.55) saturate(.85);
   --palette-teal: #9cbdb1;

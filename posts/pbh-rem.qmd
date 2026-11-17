@@ -6,6 +6,8 @@ categories: [code, cosmology, quantum gravity, primordial black holes]
 toc: true
 ---
 
+::: {.content-panel}
+
 The [**pbh-rem**](https://github.com/adierckx/pbh-rem) repository is a Mathematica-based model designed to simulate the cosmological evolution of **Primordial Black Holes** and the remnants they leave behind. 
 
 <div align="center">
@@ -31,6 +33,8 @@ The [**pbh-rem**](https://github.com/adierckx/pbh-rem) repository is a Mathemati
 In standard physics, semi-classical Hawking radiation suggests that black holes evaporate completely. However, mechanisms like **Loop Quantum Gravity** or the **Memory Burden effect** introduce a limit to this evaporation, leaving behind stable or very long-lived remnants. To understand the impact of these objects on our universe, we need to carefully track their energy density across all cosmic eras; from radiation to matter and dark energy. 
 
 This code provides a rigorous way to do exactly that.
+
+:::
 
 ### How the framework works
 

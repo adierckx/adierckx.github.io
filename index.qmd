@@ -1,11 +1,14 @@
 ---
 page-layout: full
+format:
+  html:
+    css: assets/css/homepage.css
 description: "Antoine Dierckx, PhD candidate at IEM-CSIC and Universidad Autónoma de Madrid, studying primordial black holes, remnants, and the early universe."
 resources:
   - assets/docs/CV_Antoine-Dierckx.pdf
 ---
 
-::: {.column-screen .hero-section}
+::: {.column-screen .content-panel .hero-section}
 ```{=html}
 <div class="hero-inner">
   <div class="hero-content">
@@ -32,13 +35,12 @@ resources:
 <script defer src="assets/js/spinfoam.js"></script>
 :::
 
-::: {.column-page}
+::: {.column-screen .content-panel .panel-group .home-selected}
 
 ## Selected work
 
-::: {.grid}
+::: {.home-work-grid}
 
-::: {.g-col-12 .g-col-md-6}
 ::: {.release-card}
 <div class="release-badge">Preprint · <time datetime="2026-05-27">May 2026</time></div>
 
@@ -48,11 +50,9 @@ resources:
 
 In the Planck-scale remnant model we study, primordial black holes of about one tonne can reheat the early universe through Hawking evaporation and leave remnants that account for today’s dark matter.
 
-[Read on arXiv](https://arxiv.org/abs/2605.28953){.btn-surface .c-indigo .btn-compact .release-btn}
-:::
+[Read on arXiv](https://arxiv.org/abs/2605.28953){.btn-surface .c-indigo .btn-compact}
 :::
 
-::: {.g-col-12 .g-col-md-6}
 ::: {.release-card}
 <div class="release-badge code-badge">Software · <time datetime="2026-05-27">May 2026</time></div>
 
@@ -60,9 +60,8 @@ In the Planck-scale remnant model we study, primordial black holes of about one 
 
 Mathematica notebooks for modelling the evolution of primordial black holes and their remnants, and computing cosmological bounds on their abundances.
 
-[View the code](https://github.com/adierckx/pbh-rem){.btn-surface .c-teal .btn-compact .release-btn}
-[Release notes](posts/pbh-rem.qmd){.btn-surface .c-copper .btn-compact .release-btn}
-:::
+[View the code](https://github.com/adierckx/pbh-rem){.btn-surface .c-teal .btn-compact}
+[Release notes](posts/pbh-rem.qmd){.btn-surface .c-copper .btn-compact}
 :::
 
 :::

@@ -1,8 +1,12 @@
 (() => {
   const path = window.location.pathname.replace(/\/+$/, '').replace(/\.html$/, '');
+  const { dataset } = document.documentElement;
 
-  // The full-screen foam demo supplies its own background.
-  if (path.endsWith('/outreach/foam')) return;
+  // The foam demo owns the entire viewport.
+  if (path.endsWith('/outreach/foam')) {
+    dataset.siteLayout = 'fullscreen';
+    return;
+  }
 
   const sections = [
     [/\/research\/papers$/, 'publications'],
@@ -18,5 +22,5 @@
   ];
 
   const section = sections.find(([route]) => route.test(path));
-  if (section) document.documentElement.dataset.pageTheme = section[1];
+  if (section) dataset.pageTheme = section[1];
 })();
